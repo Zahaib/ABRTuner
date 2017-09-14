@@ -23,11 +23,16 @@ rebuf_penalty = 4.3
 file_names = os.listdir(log_path)
 dash_QoE = dict()
 average_QoE = dict()
+file_name_dict = dict()
 for file_name in file_names:
     if "DS_" in file_name: continue
-    print (file_name)
+    print(file_name)
+    fname = "_".join(file_name.split("_")[1:6]) + ".txt"
+    if fname not in file_name_dict.keys():
+      file_name_dict[fname] = dict()
     scheme = file_name.split("_")[0]
     name = file_name.split("_")[4] + file_name.split("_")[5]
+    #name = '_'.join(file_name.split(" ")[1:])
     #continue    
     f = open(log_path+file_name,"r")
     #continue
@@ -101,6 +106,8 @@ for file_name in file_names:
     #if scheme not in dash_QoE[name].keys():
     dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
     average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100) / 49.0
+
+    file_name_dict[fname][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
     print (len(chunks_dash))
     print ("")
 
@@ -172,4 +179,11 @@ f_out.close()
 f_out = open(output_dir + "/cdf_qoe_tuner.txt",'w')
 for i in range(0,101):
   f_out.write(str(i)+" "+str(np.percentile(tuner_QoE, i))+"\n")
+f_out.close()
+
+f_out = open("tuner_rebuf_bad_list.txt",'w')
+for fname in file_name_dict.keys():
+  if file_name_dict[fname]['tuner'][1] > file_name_dict[fname]["pensieve-pensvid"][1]:
+    #print fname, file_name_dict[fname]['tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
+    f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
 f_out.close()
