@@ -256,18 +256,24 @@ MediaPlayer.dependencies.AbrController = function () {
 		    return tot;
 		},
 
-                // returns intermediate bandwidth samples computed from chunk download trace
-                last_chunk_bw_samples: function (lastreq) {
-                    var chunkBWArray = [];
-                    for ( var tt = 0; tt < lastreq.trace.length; tt++ ) {
-                      bytes_downloaded = lastreq.trace[tt]['b'][0];
-                      duration = lastreq.trace[tt]['d'];
-                      bw = ((bytes_downloaded * 8) / 1000) / (duration / 1000.0);
-                      chunkBWArray.push(bw);
-                    }
-                    return chunkBWArray;
-                },
-
+        // returns intermediate bandwidth samples computed from chunk download trace
+		last_chunk_bw: function (lastreq) {
+			console.log("ZA getting intermediate BW values");
+            var chunkBWArray = [];
+            var bytes_downloaded = 0;
+            var duration = 0;
+            var bw = 0
+            for ( var tt = 1; tt < lastreq.trace.length; tt++ ) {
+              	bytes_downloaded = lastreq.trace[tt]['b'][0] - lastreq.trace[tt - 1]['b'][0];
+               	duration = lastreq.trace[tt]['d'];
+               	if ((duration > 0) && (bytes_downloaded > 0)){
+               		bw = (bytes_downloaded * 8) / duration;
+               		chunkBWArray.push(bw);
+	               	console.log("last_chunk_bw " + tt + " bytes " + bytes_downloaded + " dur " + duration + " bw " + bw);
+               	}
+            }
+            return chunkBWArray;
+		},
 
 		getPlaybackQuality: function (type, data, /*Xiaoqi*/lastRequestedSegmentIndex, lastBufferedSegmentIndex, bufferLevel, representation/*Xiaoqi*/, currentVideoTime, rebuffer) {
 			var self = this,
@@ -385,6 +391,7 @@ MediaPlayer.dependencies.AbrController = function () {
 										// Xiaoqi_new
 										if (lastRequested >=0  && metrics){
 											lastHTTPRequest = self.metricsExt.getCurrentHttpRequest(metrics);
+
 											if (lastHTTPRequest) {
 												if (lastRequestedSegmentIndex===0) sessionStartTime = lastHTTPRequest.trequest.getTime();
 												var start_temp = lastHTTPRequest.trequest.getTime() - sessionStartTime,
@@ -442,7 +449,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 												// Xiaoqi: Visual
 												// self.debug.log("NNNNNNNNNNNNNNNNNNNNNNNNNNNN AbrAlgo is: " + abrAlgo)
-												abrAlgo = 6
+												abrAlgo = 7
 												switch (abrAlgo) {
 													case -1: // same as 0
 														bandwidthEstError = self.bwPredictor.getCombinedPredictionError(lastRequested);
@@ -502,37 +509,39 @@ MediaPlayer.dependencies.AbrController = function () {
 										                self.debug.log("QUALITY RETURNED IS: " + quality);														 
 														break;
 													case 7: // this is tuner with online CD
-                                                                                                                self.debug.log("Using Tuner OnlineCD...Tuner Online CD");
-                                                                                                var quality = 0;
-                                                                                                var xhr = new XMLHttpRequest();
-                                                                                                xhr.open("POST", "http://localhost:8333", false);
-                                                                                                self.debug.log("Using Tuner Online CD...Tuner Online CD, got xhr: " + xhr);
+                                                    	self.debug.log("Using Tuner OnlineCD...Tuner Online CD");
+                                                        var quality = 0;
+														var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
 
-                                                                                                xhr.onreadystatechange = function() {
-                                                                                                    if ( xhr.readyState == 4 && xhr.status == 200 ) {
-                                                                                                        console.log("GOT RESPONSE:" + xhr.responseText + "---");
-                                                                                                        if ( xhr.responseText != "REFRESH" ) {
-                                                                                                            quality = parseInt(xhr.responseText, 10);
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
-                                                                                                                        'lastquality': lastQuality,
-                                                                                                                        'buffer': bufferLevel,
-                                                                                                                        'bufferAdjusted': bufferLevelAdjusted_mpc,
-                                                                                                                        'bandwidthEst': bandwidthEst,
-                                                                                                                        'lastRequest': lastRequested,
-                                                                                                                        'RebufferTime': rebuffer,
-															'lastChunkBWArray': self.last_chunk_bw_samples(lastHTTPRequest),
-                                                                                                                        'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
-                                                                                                                        'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
-                                                                                                                        'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
-                                                                                                var dataStringified = JSON.stringify(data)
-                                                                                                self.debug.log("Using Tuner Online CD..., got dataStringified: " + dataStringified);
-                                                                                                xhr.send(dataStringified);
-                                                                                                self.debug.log("QUALITY RETURNED IS: " + quality);
-                                                                                                                break;
+                                                        var xhr = new XMLHttpRequest();
+                                                        xhr.open("POST", "http://localhost:8333", false);
+                                                        self.debug.log("Using Tuner Online CD...Tuner Online CD, got xhr: " + xhr);
 
+                                                        xhr.onreadystatechange = function() {
+                                                            if ( xhr.readyState == 4 && xhr.status == 200 ) {
+                                                                console.log("GOT RESPONSE:" + xhr.responseText + "---");
+                                                                if ( xhr.responseText != "REFRESH" ) {
+                                                                    quality = parseInt(xhr.responseText, 10);
+                                                                }
+                                                            }
+                                                        }
+
+										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
+										                			'lastquality': lastQuality,
+									                				'buffer': bufferLevel,
+									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
+									                				'bandwidthEst': bandwidthEst,
+									                				'lastRequest': lastRequested,
+									                				'RebufferTime': rebuffer,
+									                				'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
+																	'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
+									                				'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
+									                				'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
+                                                        var dataStringified = JSON.stringify(data);
+                                                        self.debug.log("Using Tuner Online CD..., got dataStringified: " + dataStringified);
+                                                        xhr.send(dataStringified);
+                                                        self.debug.log("QUALITY RETURNED IS: " + quality);
+                                                        break;
 													case 8:
 														self.debug.log("Using HYB...HHHHHHYYYYYBBBBBB");
 														quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
