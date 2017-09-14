@@ -1,0 +1,3004 @@
+pensieve-pensvid_mobile_dash_trace_38_10289_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 959.74, 'rebufRatio=', 0.0)
+3810289 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_239_12016_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+23912016 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_34_10244_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1942.17, 'rebufRatio=', 0.0)
+3410244 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_190_11535_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+19011535 tuner
+49
+
+tuner_mobile_dash_trace_122_10985_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 714.58, 'rebufRatio=', 0.0)
+12210985 tuner
+49
+
+tuner_mobile_dash_trace_135_11042_out_txt
+('total buffering events=', 1, 'total buffering time=', 3.073999999999984)
+('avgBitrate=', 736.78, 'rebufRatio=', 0.015441494117765173)
+13511042 tuner
+49
+
+tuner_mobile_dash_trace_181_11455_out_txt
+('total buffering events=', 1, 'total buffering time=', 1.0459999999999994)
+('avgBitrate=', 3224.25, 'rebufRatio=', 0.005308405143976531)
+18111455 tuner
+49
+
+tuner_mobile_dash_trace_85_10677_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 982.97, 'rebufRatio=', 0.0)
+8510677 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_46_10379_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2309.47, 'rebufRatio=', 0.0)
+4610379 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_206_11709_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3421.77, 'rebufRatio=', 0.0)
+20611709 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_20_10128_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+2010128 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_6_10065_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3684.21, 'rebufRatio=', 0.0)
+610065 tuner
+49
+
+tuner_mobile_dash_trace_172_11304_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3925.33, 'rebufRatio=', 0.0)
+17211304 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_23_10160_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3891.73, 'rebufRatio=', 0.0)
+2310160 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_83_10674_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+8310674 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_90_10697_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+9010697 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_118_10938_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+11810938 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_222_11878_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+22211878 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_18_10122_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3023.66, 'rebufRatio=', 0.0)
+1810122 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_246_12114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+24612114 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_223_11880_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+22311880 tuner
+49
+
+tuner_mobile_dash_trace_25_10172_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3785.04, 'rebufRatio=', 0.0)
+2510172 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_250_12143_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+25012143 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_213_11751_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3008.72, 'rebufRatio=', 0.0)
+21311751 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_70_10575_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+7010575 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_170_11294_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3636.0, 'rebufRatio=', 0.0)
+17011294 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_94_10743_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3142.13, 'rebufRatio=', 0.0)
+9410743 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_247_1212_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2916.58, 'rebufRatio=', 0.0)
+2471212 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_104_10818_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2847.36, 'rebufRatio=', 0.0)
+10410818 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_120_10941_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.6870000000000003)
+('avgBitrate=', 3885.15, 'rebufRatio=', 0.0034928592128610444)
+12010941 tuner
+49
+
+tuner_mobile_dash_trace_161_11231_out_txt
+('total buffering events=', 1, 'total buffering time=', 2.6720000000000006)
+('avgBitrate=', 2873.93, 'rebufRatio=', 0.01344930337440606)
+16111231 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_157_11211_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2038.23, 'rebufRatio=', 0.0)
+15711211 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_179_11398_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+17911398 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_97_10779_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1382.84, 'rebufRatio=', 0.0)
+9710779 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_214_11762_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1490.08, 'rebufRatio=', 0.0)
+21411762 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_12_10091_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3032.24, 'rebufRatio=', 0.0)
+1210091 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_65_10505_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2597.83, 'rebufRatio=', 0.0)
+6510505 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_125_11002_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+12511002 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_86_10680_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3030.97, 'rebufRatio=', 0.0)
+8610680 tuner
+49
+
+tuner_mobile_dash_trace_21_10150_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3148.6, 'rebufRatio=', 0.0)
+2110150 tuner
+49
+
+tuner_mobile_dash_trace_94_10743_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3284.75, 'rebufRatio=', 0.0)
+9410743 tuner
+49
+
+tuner_mobile_dash_trace_152_11197_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2387.35, 'rebufRatio=', 0.0)
+15211197 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_59_1046_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2699.56, 'rebufRatio=', 0.0)
+591046 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_192_11566_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1218.59, 'rebufRatio=', 0.0)
+19211566 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_26_10176_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1410.53, 'rebufRatio=', 0.0)
+2610176 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_93_10728_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1067.84, 'rebufRatio=', 0.0)
+9310728 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_54_10418_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 352.56, 'rebufRatio=', 0.0)
+5410418 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_31_10225_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3942.84, 'rebufRatio=', 0.0)
+3110225 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_197_11675_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.7680000000000007)
+('avgBitrate=', 3509.0, 'rebufRatio=', 0.0039030736705155345)
+19711675 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_79_10662_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3891.73, 'rebufRatio=', 0.0)
+7910662 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_81_10669_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 835.55, 'rebufRatio=', 0.0)
+8110669 tuner
+49
+
+tuner_mobile_dash_trace_240_12022_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+24012022 tuner
+49
+
+tuner_mobile_dash_trace_104_10818_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3017.27, 'rebufRatio=', 0.0)
+10410818 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_111_10868_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3646.55, 'rebufRatio=', 0.0)
+11110868 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_198_11677_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 883.77, 'rebufRatio=', 0.0)
+19811677 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_18_10122_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2935.77, 'rebufRatio=', 0.0)
+1810122 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_56_10445_out_txt
+('total buffering events=', 1, 'total buffering time=', 4.138999999999982)
+('avgBitrate=', 2499.8, 'rebufRatio=', 0.02068062696425975)
+5610445 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_188_11529_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2951.99, 'rebufRatio=', 0.0)
+18811529 tuner
+49
+
+tuner_mobile_dash_trace_59_1046_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2986.71, 'rebufRatio=', 0.0)
+591046 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_51_10404_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2165.09, 'rebufRatio=', 0.0)
+5110404 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_21_10150_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3044.34, 'rebufRatio=', 0.0)
+2110150 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_36_10286_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3568.15, 'rebufRatio=', 0.0)
+3610286 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_112_10874_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.480999999999999)
+('avgBitrate=', 3381.67, 'rebufRatio=', 0.0024480738595589343)
+11210874 tuner
+49
+
+tuner_mobile_dash_trace_133_1104_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3893.39, 'rebufRatio=', 0.0)
+1331104 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_39_10304_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1644.44, 'rebufRatio=', 0.0)
+3910304 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_28_1021_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+281021 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_184_1148_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3079.2, 'rebufRatio=', 0.0)
+1841148 tuner
+49
+
+tuner_mobile_dash_trace_238_1201_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3143.58, 'rebufRatio=', 0.0)
+2381201 tuner
+49
+
+tuner_mobile_dash_trace_165_11273_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1665.0, 'rebufRatio=', 0.0)
+16511273 tuner
+49
+
+tuner_mobile_dash_trace_146_1114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+1461114 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_216_11798_out_txt
+('total buffering events=', 1, 'total buffering time=', 5.6129999999999995)
+('avgBitrate=', 814.23, 'rebufRatio=', 0.027840466636576012)
+21611798 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_118_10938_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+11810938 tuner
+49
+
+tuner_mobile_dash_trace_235_11964_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 792.06, 'rebufRatio=', 0.0)
+23511964 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_29_1022_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3642.5, 'rebufRatio=', 0.0)
+291022 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_117_10918_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 623.55, 'rebufRatio=', 0.0)
+11710918 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_210_11724_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3920.03, 'rebufRatio=', 0.0)
+21011724 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_126_11010_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3470.78, 'rebufRatio=', 0.0)
+12611010 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_80_10668_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4039.85, 'rebufRatio=', 0.0)
+8010668 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_110_10865_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1114.16, 'rebufRatio=', 0.0)
+11010865 tuner
+49
+
+tuner_mobile_dash_trace_230_11934_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2368.43, 'rebufRatio=', 0.0)
+23011934 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_25_10172_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3622.98, 'rebufRatio=', 0.0)
+2510172 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_175_11320_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3954.06, 'rebufRatio=', 0.0)
+17511320 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_85_10677_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 970.28, 'rebufRatio=', 0.0)
+8510677 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_189_11533_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3856.87, 'rebufRatio=', 0.0)
+18911533 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_133_1104_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3748.14, 'rebufRatio=', 0.0)
+1331104 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_98_10783_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 895.24, 'rebufRatio=', 0.0)
+9810783 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_2_10027_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3517.58, 'rebufRatio=', 0.0)
+210027 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_27_10194_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3677.79, 'rebufRatio=', 0.0)
+2710194 tuner
+49
+
+tuner_mobile_dash_trace_84_10675_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3480.02, 'rebufRatio=', 0.0)
+8410675 tuner
+49
+
+tuner_mobile_dash_trace_91_10699_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1290.74, 'rebufRatio=', 0.0)
+9110699 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_197_11675_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3441.45, 'rebufRatio=', 0.0)
+19711675 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_206_11709_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3221.32, 'rebufRatio=', 0.0)
+20611709 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_164_11267_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1821.49, 'rebufRatio=', 0.0)
+16411267 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_5_10050_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1039.29, 'rebufRatio=', 0.0)
+510050 tuner
+49
+
+tuner_mobile_dash_trace_137_11044_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.11500000000000021)
+('avgBitrate=', 3596.41, 'rebufRatio=', 0.0005863906381459868)
+13711044 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_57_1045_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3942.84, 'rebufRatio=', 0.0)
+571045 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_172_11304_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3668.05, 'rebufRatio=', 0.0)
+17211304 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_81_10669_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 786.67, 'rebufRatio=', 0.0)
+8110669 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_95_10761_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3792.46, 'rebufRatio=', 0.0)
+9510761 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_141_11104_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3857.35, 'rebufRatio=', 0.0)
+14111104 tuner
+49
+
+tuner_mobile_dash_trace_150_11167_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3822.98, 'rebufRatio=', 0.0)
+15011167 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_101_10803_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+10110803 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_95_10761_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+9510761 tuner
+49
+
+tuner_mobile_dash_trace_107_10844_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3898.74, 'rebufRatio=', 0.0)
+10710844 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_155_11207_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 871.49, 'rebufRatio=', 0.0)
+15511207 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_75_10601_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3360.84, 'rebufRatio=', 0.0)
+7510601 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_211_11746_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3847.42, 'rebufRatio=', 0.0)
+21111746 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_150_11167_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3598.18, 'rebufRatio=', 0.0)
+15011167 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_217_11823_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+21711823 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_157_11211_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2289.22, 'rebufRatio=', 0.0)
+15711211 tuner
+49
+
+tuner_mobile_dash_trace_115_10895_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1249.06, 'rebufRatio=', 0.0)
+11510895 tuner
+49
+
+tuner_mobile_dash_trace_68_10560_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3986.0, 'rebufRatio=', 0.0)
+6810560 tuner
+49
+
+tuner_mobile_dash_trace_241_12059_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3854.88, 'rebufRatio=', 0.0)
+24112059 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_223_11880_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+22311880 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_71_10583_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3602.48, 'rebufRatio=', 0.0)
+7110583 tuner
+49
+
+tuner_mobile_dash_trace_88_10685_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2715.22, 'rebufRatio=', 0.0)
+8810685 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_230_11934_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2223.29, 'rebufRatio=', 0.0)
+23011934 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_74_10597_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3772.75, 'rebufRatio=', 0.0)
+7410597 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_170_11294_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3504.67, 'rebufRatio=', 0.0)
+17011294 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_202_11689_out_txt
+('total buffering events=', 2, 'total buffering time=', 7.759999999999991)
+('avgBitrate=', 1853.74, 'rebufRatio=', 0.03808402041617585)
+20211689 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_220_11851_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1050.65, 'rebufRatio=', 0.0)
+22011851 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_238_1201_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3040.75, 'rebufRatio=', 0.0)
+2381201 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_227_11920_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 908.81, 'rebufRatio=', 0.0)
+22711920 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_237_11998_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2746.61, 'rebufRatio=', 0.0)
+23711998 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_42_10324_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1051.29, 'rebufRatio=', 0.0)
+4210324 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_149_11160_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2532.49, 'rebufRatio=', 0.0)
+14911160 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_86_10680_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2844.9, 'rebufRatio=', 0.0)
+8610680 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_82_10673_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3893.39, 'rebufRatio=', 0.0)
+8210673 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_231_11935_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3473.59, 'rebufRatio=', 0.0)
+23111935 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_185_11496_out_txt
+('total buffering events=', 5, 'total buffering time=', 32.07300000000001)
+('avgBitrate=', 1028.99, 'rebufRatio=', 0.14062602763150397)
+18511496 tuner
+49
+
+tuner_mobile_dash_trace_61_10471_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+6110471 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_159_11217_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 982.75, 'rebufRatio=', 0.0)
+15911217 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_24_10161_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+2410161 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_140_11091_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3551.81, 'rebufRatio=', 0.0)
+14011091 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_235_11964_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 802.55, 'rebufRatio=', 0.0)
+23511964 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_88_10685_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2543.45, 'rebufRatio=', 0.0)
+8810685 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_113_10879_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+11310879 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_62_10479_out_txt
+('total buffering events=', 4, 'total buffering time=', 15.085000000000003)
+('avgBitrate=', 607.75, 'rebufRatio=', 0.07146410213894877)
+6210479 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_124_11000_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3343.58, 'rebufRatio=', 0.0)
+12411000 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_1_10016_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.2550000000000008)
+('avgBitrate=', 2578.3, 'rebufRatio=', 0.0012993299533769881)
+110016 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_165_11273_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1675.74, 'rebufRatio=', 0.0)
+16511273 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_224_11899_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 368.1, 'rebufRatio=', 0.0)
+22411899 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_113_10879_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+11310879 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_13_10095_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2118.65, 'rebufRatio=', 0.0)
+1310095 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_169_11291_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3073.51, 'rebufRatio=', 0.0)
+16911291 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_33_10239_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2444.95, 'rebufRatio=', 0.0)
+3310239 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_66_10510_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3063.26, 'rebufRatio=', 0.0)
+6610510 tuner
+49
+
+tuner_mobile_dash_trace_233_11956_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 983.76, 'rebufRatio=', 0.0)
+23311956 tuner
+49
+
+tuner_mobile_dash_trace_40_10314_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2803.94, 'rebufRatio=', 0.0)
+4010314 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_228_11927_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1440.15, 'rebufRatio=', 0.0)
+22811927 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_246_12114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+24612114 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_184_1148_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2948.75, 'rebufRatio=', 0.0)
+1841148 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_193_11570_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1941.84, 'rebufRatio=', 0.0)
+19311570 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_16_10114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2546.27, 'rebufRatio=', 0.0)
+1610114 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_239_12016_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3718.41, 'rebufRatio=', 0.0)
+23912016 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_122_10985_out_txt
+('total buffering events=', 2, 'total buffering time=', 6.722000000000001)
+('avgBitrate=', 722.76, 'rebufRatio=', 0.03315870995747872)
+12210985 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_15_10113_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2633.37, 'rebufRatio=', 0.0)
+1510113 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_32_10232_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3289.66, 'rebufRatio=', 0.0)
+3210232 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_130_11028_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3888.26, 'rebufRatio=', 0.0)
+13011028 tuner
+49
+
+tuner_mobile_dash_trace_90_10697_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+9010697 tuner
+49
+
+tuner_mobile_dash_trace_236_11992_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1087.74, 'rebufRatio=', 0.0)
+23611992 tuner
+49
+
+tuner_mobile_dash_trace_145_11135_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2960.79, 'rebufRatio=', 0.0)
+14511135 tuner
+49
+
+tuner_mobile_dash_trace_195_11592_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4018.34, 'rebufRatio=', 0.0)
+19511592 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_117_10918_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 628.84, 'rebufRatio=', 0.0)
+11710918 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_163_11257_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3718.41, 'rebufRatio=', 0.0)
+16311257 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_17_10115_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2282.33, 'rebufRatio=', 0.0)
+1710115 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_144_1112_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2636.67, 'rebufRatio=', 0.0)
+1441112 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_67_10536_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+6710536 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_185_11496_out_txt
+('total buffering events=', 7, 'total buffering time=', 35.861)
+('avgBitrate=', 1072.61, 'rebufRatio=', 0.15466594209461704)
+18511496 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_24_10161_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+2410161 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_161_11231_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2808.53, 'rebufRatio=', 0.0)
+16111231 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_125_11002_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3925.33, 'rebufRatio=', 0.0)
+12511002 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_14_1011_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+141011 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_47_10384_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3367.69, 'rebufRatio=', 0.0)
+4710384 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_76_10632_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+7610632 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_6_10065_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3473.59, 'rebufRatio=', 0.0)
+610065 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_173_11305_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1889.84, 'rebufRatio=', 0.0)
+17311305 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_228_11927_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1448.57, 'rebufRatio=', 0.0)
+22811927 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_241_12059_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3541.92, 'rebufRatio=', 0.0)
+24112059 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_209_1172_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2312.79, 'rebufRatio=', 0.0)
+2091172 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_229_11932_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3750.85, 'rebufRatio=', 0.0)
+22911932 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_166_11275_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.0600000000000005)
+('avgBitrate=', 1516.44, 'rebufRatio=', 0.0003060287667040727)
+16611275 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_20_10128_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+2010128 tuner
+49
+
+tuner_mobile_dash_trace_16_10114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2723.74, 'rebufRatio=', 0.0)
+1610114 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_181_11455_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3152.75, 'rebufRatio=', 0.0)
+18111455 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_226_11914_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 673.94, 'rebufRatio=', 0.0)
+22611914 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_123_10990_out_txt
+('total buffering events=', 1, 'total buffering time=', 4.600999999999999)
+('avgBitrate=', 643.81, 'rebufRatio=', 0.022936077088349504)
+12310990 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_160_11224_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 411.14, 'rebufRatio=', 0.0)
+16011224 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_71_10583_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3557.89, 'rebufRatio=', 0.0)
+7110583 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_114_10883_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1095.26, 'rebufRatio=', 0.0)
+11410883 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_60_10468_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2280.26, 'rebufRatio=', 0.0)
+6010468 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_4_10034_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+410034 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_153_11201_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3310.84, 'rebufRatio=', 0.0)
+15311201 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_167_11287_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3364.91, 'rebufRatio=', 0.0)
+16711287 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_75_10601_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3401.39, 'rebufRatio=', 0.0)
+7510601 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_128_11026_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3956.72, 'rebufRatio=', 0.0)
+12811026 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_209_1172_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2145.39, 'rebufRatio=', 0.0)
+2091172 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_105_10829_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1164.25, 'rebufRatio=', 0.0)
+10510829 tuner
+49
+
+tuner_mobile_dash_trace_229_11932_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3875.38, 'rebufRatio=', 0.0)
+22911932 tuner
+49
+
+tuner_mobile_dash_trace_2_10027_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3917.83, 'rebufRatio=', 0.0)
+210027 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_115_10895_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1209.59, 'rebufRatio=', 0.0)
+11510895 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_168_11288_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 588.37, 'rebufRatio=', 0.0)
+16811288 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_131_11035_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3121.93, 'rebufRatio=', 0.0)
+13111035 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_110_10865_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1084.72, 'rebufRatio=', 0.0)
+11010865 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_212_1175_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+2121175 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_103_10816_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2797.02, 'rebufRatio=', 0.0)
+10310816 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_99_1079_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4115.79, 'rebufRatio=', 0.0)
+991079 tuner
+49
+
+tuner_mobile_dash_trace_96_10773_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 329.44, 'rebufRatio=', 0.0)
+9610773 tuner
+49
+
+tuner_mobile_dash_trace_220_11851_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1110.04, 'rebufRatio=', 0.0)
+22011851 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_78_10660_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2582.08, 'rebufRatio=', 0.0)
+7810660 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_166_11275_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1503.16, 'rebufRatio=', 0.0)
+16611275 tuner
+49
+
+tuner_mobile_dash_trace_13_10095_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2286.77, 'rebufRatio=', 0.0)
+1310095 tuner
+49
+
+tuner_mobile_dash_trace_147_11149_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3040.54, 'rebufRatio=', 0.0)
+14711149 tuner
+49
+
+tuner_mobile_dash_trace_34_10244_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2037.3, 'rebufRatio=', 0.0)
+3410244 tuner
+49
+
+tuner_mobile_dash_trace_41_10322_out_txt
+('total buffering events=', 2, 'total buffering time=', 1.1010000000000026)
+('avgBitrate=', 3799.32, 'rebufRatio=', 0.005585968615075533)
+4110322 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_204_11692_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3120.73, 'rebufRatio=', 0.0)
+20411692 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_112_10874_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3419.09, 'rebufRatio=', 0.0)
+11210874 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_177_11381_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2876.69, 'rebufRatio=', 0.0)
+17711381 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_168_11288_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.3990000000000009)
+('avgBitrate=', 588.28, 'rebufRatio=', 0.0020315785721923274)
+16811288 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_102_10814_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 754.64, 'rebufRatio=', 0.0)
+10210814 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_136_11043_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3942.84, 'rebufRatio=', 0.0)
+13611043 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_249_1214_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2070.58, 'rebufRatio=', 0.0)
+2491214 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_51_10404_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2416.98, 'rebufRatio=', 0.0)
+5110404 tuner
+49
+
+tuner_mobile_dash_trace_158_11214_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1235.98, 'rebufRatio=', 0.0)
+15811214 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_134_11040_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3966.58, 'rebufRatio=', 0.0)
+13411040 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_119_1094_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1202.78, 'rebufRatio=', 0.0)
+1191094 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_114_10883_out_txt
+('total buffering events=', 1, 'total buffering time=', 2.291000000000011)
+('avgBitrate=', 1126.79, 'rebufRatio=', 0.011553726593743594)
+11410883 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_225_11903_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+22511903 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_207_1171_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+2071171 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_234_11958_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3619.69, 'rebufRatio=', 0.0)
+23411958 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_41_10322_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3517.58, 'rebufRatio=', 0.0)
+4110322 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_189_11533_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3551.81, 'rebufRatio=', 0.0)
+18911533 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_242_12065_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3668.05, 'rebufRatio=', 0.0)
+24212065 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_93_10728_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1046.09, 'rebufRatio=', 0.0)
+9310728 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_141_11104_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3797.23, 'rebufRatio=', 0.0)
+14111104 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_212_1175_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3690.86, 'rebufRatio=', 0.0)
+2121175 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_106_10833_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3642.5, 'rebufRatio=', 0.0)
+10610833 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_124_11000_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3386.72, 'rebufRatio=', 0.0)
+12411000 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_137_11044_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3520.07, 'rebufRatio=', 0.0)
+13711044 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_102_10814_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 754.12, 'rebufRatio=', 0.0)
+10210814 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_105_10829_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1176.31, 'rebufRatio=', 0.0)
+10510829 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_240_12022_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+24012022 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_145_11135_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2778.29, 'rebufRatio=', 0.0)
+14511135 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_187_11519_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1089.7, 'rebufRatio=', 0.0)
+18711519 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_221_11876_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2515.18, 'rebufRatio=', 0.0)
+22111876 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_30_10220_out_txt
+('total buffering events=', 6, 'total buffering time=', 7.048999999999978)
+('avgBitrate=', 451.5, 'rebufRatio=', 0.03471575826524621)
+3010220 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_48_10392_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1412.03, 'rebufRatio=', 0.0)
+4810392 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_127_11019_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3942.84, 'rebufRatio=', 0.0)
+12711019 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_148_1115_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3327.88, 'rebufRatio=', 0.0)
+1481115 tuner
+49
+
+tuner_mobile_dash_trace_244_12099_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3154.41, 'rebufRatio=', 0.0)
+24412099 tuner
+49
+
+tuner_mobile_dash_trace_77_10654_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.9220000000000041)
+('avgBitrate=', 2734.2, 'rebufRatio=', 0.004682056854998447)
+7710654 tuner
+49
+
+tuner_mobile_dash_trace_201_11685_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 694.48, 'rebufRatio=', 0.0)
+20111685 tuner
+49
+
+tuner_mobile_dash_trace_217_11823_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+21711823 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_162_11249_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3275.68, 'rebufRatio=', 0.0)
+16211249 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_231_11935_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3665.19, 'rebufRatio=', 0.0)
+23111935 tuner
+49
+
+tuner_mobile_dash_trace_250_12143_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4098.4, 'rebufRatio=', 0.0)
+25012143 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_50_1040_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+501040 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_180_11412_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 792.53, 'rebufRatio=', 0.0)
+18011412 tuner
+49
+
+tuner_mobile_dash_trace_106_10833_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+10610833 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_7_10068_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+710068 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_43_10326_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3266.85, 'rebufRatio=', 0.0)
+4310326 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_32_10232_out_txt
+('total buffering events=', 1, 'total buffering time=', 1.3769999999999998)
+('avgBitrate=', 3483.99, 'rebufRatio=', 0.00697649675494105)
+3210232 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_109_10851_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3517.58, 'rebufRatio=', 0.0)
+10910851 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_108_10845_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 744.39, 'rebufRatio=', 0.0)
+10810845 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_180_11412_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 770.92, 'rebufRatio=', 0.0)
+18011412 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_160_11224_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 403.8, 'rebufRatio=', 0.0)
+16011224 tuner
+49
+
+tuner_mobile_dash_trace_156_11210_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+15611210 tuner
+49
+
+tuner_mobile_dash_trace_97_10779_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1383.99, 'rebufRatio=', 0.0)
+9710779 tuner
+49
+
+tuner_mobile_dash_trace_153_11201_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3317.4, 'rebufRatio=', 0.0)
+15311201 tuner
+49
+
+tuner_mobile_dash_trace_19_10125_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3153.65, 'rebufRatio=', 0.0)
+1910125 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_183_11468_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 588.32, 'rebufRatio=', 0.0)
+18311468 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_43_10326_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.8189999999999991)
+('avgBitrate=', 3392.97, 'rebufRatio=', 0.004161183625564601)
+4310326 tuner
+49
+
+tuner_mobile_dash_trace_176_11352_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3628.89, 'rebufRatio=', 0.0)
+17611352 tuner
+49
+
+tuner_mobile_dash_trace_7_10068_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+710068 tuner
+49
+
+tuner_mobile_dash_trace_87_10681_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2577.33, 'rebufRatio=', 0.0)
+8710681 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_5_10050_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1012.29, 'rebufRatio=', 0.0)
+510050 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_190_11535_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+19011535 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_49_10393_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3709.91, 'rebufRatio=', 0.0)
+4910393 tuner
+49
+
+tuner_mobile_dash_trace_121_10981_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2408.89, 'rebufRatio=', 0.0)
+12110981 tuner
+49
+
+tuner_mobile_dash_trace_31_10225_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+3110225 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_119_1094_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1208.72, 'rebufRatio=', 0.0)
+1191094 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_37_10288_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2371.56, 'rebufRatio=', 0.0)
+3710288 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_158_11214_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1184.13, 'rebufRatio=', 0.0)
+15811214 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_128_11026_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+12811026 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_64_10500_out_txt
+('total buffering events=', 4, 'total buffering time=', 10.486999999999995)
+('avgBitrate=', 354.99, 'rebufRatio=', 0.05078770092063905)
+6410500 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_232_11952_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3876.1, 'rebufRatio=', 0.0)
+23211952 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_116_10903_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+11610903 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_66_10510_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2871.59, 'rebufRatio=', 0.0)
+6610510 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_55_10441_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+5510441 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_171_1130_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1643.85, 'rebufRatio=', 0.0)
+1711130 tuner
+49
+
+tuner_mobile_dash_trace_52_1041_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2767.61, 'rebufRatio=', 0.0)
+521041 tuner
+49
+
+tuner_mobile_dash_trace_12_10091_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3154.45, 'rebufRatio=', 0.0)
+1210091 tuner
+49
+
+tuner_mobile_dash_trace_211_11746_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3939.45, 'rebufRatio=', 0.0)
+21111746 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_37_10288_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2249.68, 'rebufRatio=', 0.0)
+3710288 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_56_10445_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2465.67, 'rebufRatio=', 0.0)
+5610445 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_1_10016_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2290.26, 'rebufRatio=', 0.0)
+110016 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_126_11010_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3509.55, 'rebufRatio=', 0.0)
+12611010 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_244_12099_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3134.47, 'rebufRatio=', 0.0)
+24412099 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_167_11287_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3543.32, 'rebufRatio=', 0.0)
+16711287 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_100_10792_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2801.13, 'rebufRatio=', 0.0)
+10010792 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_26_10176_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1362.26, 'rebufRatio=', 0.0)
+2610176 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_215_11784_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+21511784 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_214_11762_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1496.15, 'rebufRatio=', 0.0)
+21411762 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_11_10089_out_txt
+('total buffering events=', 1, 'total buffering time=', 1.8610000000000007)
+('avgBitrate=', 3653.91, 'rebufRatio=', 0.00940559281515812)
+1110089 tuner
+49
+
+tuner_mobile_dash_trace_155_11207_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 874.64, 'rebufRatio=', 0.0)
+15511207 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_139_11071_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3942.84, 'rebufRatio=', 0.0)
+13911071 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_147_11149_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2970.79, 'rebufRatio=', 0.0)
+14711149 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_192_11566_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1243.27, 'rebufRatio=', 0.0)
+19211566 tuner
+49
+
+tuner_mobile_dash_trace_202_11689_out_txt
+('total buffering events=', 1, 'total buffering time=', 3.3940000000000055)
+('avgBitrate=', 1792.13, 'rebufRatio=', 0.01702157537338137)
+20211689 tuner
+49
+
+tuner_mobile_dash_trace_55_10441_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+5510441 tuner
+49
+
+tuner_mobile_dash_trace_116_10903_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4115.79, 'rebufRatio=', 0.0)
+11610903 tuner
+49
+
+tuner_mobile_dash_trace_63_10485_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 302.21, 'rebufRatio=', 0.0)
+6310485 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_215_11784_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3891.73, 'rebufRatio=', 0.0)
+21511784 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_177_11381_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2747.68, 'rebufRatio=', 0.0)
+17711381 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_224_11899_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 386.14, 'rebufRatio=', 0.0)
+22411899 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_73_10591_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2727.81, 'rebufRatio=', 0.0)
+7310591 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_121_10981_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2199.67, 'rebufRatio=', 0.0)
+12110981 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_65_10505_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2490.81, 'rebufRatio=', 0.0)
+6510505 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_156_11210_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+15611210 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_151_11176_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3696.9, 'rebufRatio=', 0.0)
+15111176 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_9_10082_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3920.03, 'rebufRatio=', 0.0)
+910082 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_174_1132_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3891.73, 'rebufRatio=', 0.0)
+1741132 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_8_10069_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.13300000000000267)
+('avgBitrate=', 507.52, 'rebufRatio=', 0.0006781112816303358)
+810069 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_186_11497_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 904.96, 'rebufRatio=', 0.0)
+18611497 tuner
+49
+
+tuner_mobile_dash_trace_213_11751_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2943.7, 'rebufRatio=', 0.0)
+21311751 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_35_10250_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 820.21, 'rebufRatio=', 0.0)
+3510250 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_69_10574_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1053.14, 'rebufRatio=', 0.0)
+6910574 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_40_10314_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2767.54, 'rebufRatio=', 0.0)
+4010314 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_208_11710_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1937.46, 'rebufRatio=', 0.0)
+20811710 tuner
+49
+
+tuner_mobile_dash_trace_154_11204_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 989.98, 'rebufRatio=', 0.0)
+15411204 tuner
+49
+
+tuner_mobile_dash_trace_140_11091_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3410.43, 'rebufRatio=', 0.0)
+14011091 tuner
+49
+
+tuner_mobile_dash_trace_198_11677_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 892.31, 'rebufRatio=', 0.0)
+19811677 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_193_11570_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1826.35, 'rebufRatio=', 0.0)
+19311570 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_226_11914_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 665.94, 'rebufRatio=', 0.0)
+22611914 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_219_1185_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1142.69, 'rebufRatio=', 0.0)
+2191185 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_227_11920_out_txt
+('total buffering events=', 1, 'total buffering time=', 5.788999999999987)
+('avgBitrate=', 937.29, 'rebufRatio=', 0.02868838241925966)
+22711920 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_151_11176_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3608.93, 'rebufRatio=', 0.0)
+15111176 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_218_11825_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1322.51, 'rebufRatio=', 0.0)
+21811825 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_10_10083_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2353.49, 'rebufRatio=', 0.0)
+1010083 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_15_10113_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2441.23, 'rebufRatio=', 0.0)
+1510113 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_152_11197_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2217.15, 'rebufRatio=', 0.0)
+15211197 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_200_11684_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1005.15, 'rebufRatio=', 0.0)
+20011684 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_87_10681_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2395.73, 'rebufRatio=', 0.0)
+8710681 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_91_10699_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1274.29, 'rebufRatio=', 0.0)
+9110699 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_8_10069_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 493.25, 'rebufRatio=', 0.0)
+810069 tuner
+49
+
+tuner_mobile_dash_trace_44_10341_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1441.56, 'rebufRatio=', 0.0)
+4410341 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_82_10673_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3774.74, 'rebufRatio=', 0.0)
+8210673 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_49_10393_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3496.07, 'rebufRatio=', 0.0)
+4910393 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_164_11267_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1886.28, 'rebufRatio=', 0.0)
+16411267 tuner
+49
+
+tuner_mobile_dash_trace_73_10591_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2794.81, 'rebufRatio=', 0.0)
+7310591 tuner
+49
+
+tuner_mobile_dash_trace_245_12103_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 474.88, 'rebufRatio=', 0.0)
+24512103 tuner
+49
+
+tuner_mobile_dash_trace_23_10160_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+2310160 tuner
+49
+
+tuner_mobile_dash_trace_42_10324_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1077.99, 'rebufRatio=', 0.0)
+4210324 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_74_10597_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3668.05, 'rebufRatio=', 0.0)
+7410597 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_182_11458_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2520.96, 'rebufRatio=', 0.0)
+18211458 tuner
+49
+
+tuner_mobile_dash_trace_222_11878_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4096.79, 'rebufRatio=', 0.0)
+22211878 tuner
+49
+
+tuner_mobile_dash_trace_187_11519_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1119.03, 'rebufRatio=', 0.0)
+18711519 tuner
+49
+
+tuner_mobile_dash_trace_142_11111_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1143.75, 'rebufRatio=', 0.0)
+14211111 tuner
+49
+
+tuner_mobile_dash_trace_80_10668_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+8010668 tuner
+49
+
+tuner_mobile_dash_trace_29_1022_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3598.21, 'rebufRatio=', 0.0)
+291022 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_123_10990_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.8599999999999994)
+('avgBitrate=', 652.46, 'rebufRatio=', 0.0043685868129635244)
+12310990 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_242_12065_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.4949999999999992)
+('avgBitrate=', 4037.17, 'rebufRatio=', 0.0025191480699254393)
+24212065 tuner
+49
+
+tuner_mobile_dash_trace_78_10660_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2606.89, 'rebufRatio=', 0.0)
+7810660 tuner
+49
+
+tuner_mobile_dash_trace_127_11019_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+12711019 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_186_11497_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 905.07, 'rebufRatio=', 0.0)
+18611497 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_171_1130_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1629.95, 'rebufRatio=', 0.0)
+1711130 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_50_1040_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+501040 tuner
+49
+
+tuner_mobile_dash_trace_129_11027_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 575.08, 'rebufRatio=', 0.0)
+12911027 tuner
+49
+
+tuner_mobile_dash_trace_134_11040_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+13411040 tuner
+49
+
+tuner_mobile_dash_trace_237_11998_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2774.93, 'rebufRatio=', 0.0)
+23711998 tuner
+49
+
+tuner_mobile_dash_trace_194_11572_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.22300000000000075)
+('avgBitrate=', 4082.6, 'rebufRatio=', 0.0011364620865036246)
+19411572 tuner
+49
+
+tuner_mobile_dash_trace_53_10415_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3865.46, 'rebufRatio=', 0.0)
+5310415 tuner
+49
+
+tuner_mobile_dash_trace_36_10286_out_txt
+('total buffering events=', 1, 'total buffering time=', 1.0789999999999988)
+('avgBitrate=', 3576.02, 'rebufRatio=', 0.005474961817342278)
+3610286 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_188_11529_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2681.99, 'rebufRatio=', 0.0)
+18811529 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_173_11305_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1917.16, 'rebufRatio=', 0.0)
+17311305 tuner
+49
+
+tuner_mobile_dash_trace_136_11043_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+13611043 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_27_10194_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3774.74, 'rebufRatio=', 0.0)
+2710194 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_243_12068_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3922.26, 'rebufRatio=', 0.0)
+24312068 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_89_1069_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3891.73, 'rebufRatio=', 0.0)
+891069 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_132_11037_out_txt
+('total buffering events=', 1, 'total buffering time=', 1.4260000000000002)
+('avgBitrate=', 3345.72, 'rebufRatio=', 0.007222959488618522)
+13211037 tuner
+49
+
+tuner_mobile_dash_trace_219_1185_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1145.64, 'rebufRatio=', 0.0)
+2191185 tuner
+49
+
+tuner_mobile_dash_trace_138_11051_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1321.91, 'rebufRatio=', 0.0)
+13811051 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_76_10632_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+7610632 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_79_10662_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+7910662 tuner
+49
+
+tuner_mobile_dash_trace_183_11468_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 572.21, 'rebufRatio=', 0.0)
+18311468 tuner
+49
+
+tuner_mobile_dash_trace_57_1045_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+571045 tuner
+49
+
+tuner_mobile_dash_trace_100_10792_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3060.64, 'rebufRatio=', 0.0)
+10010792 tuner
+49
+
+tuner_mobile_dash_trace_249_1214_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2133.58, 'rebufRatio=', 0.0)
+2491214 tuner
+49
+
+tuner_mobile_dash_trace_45_10375_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 572.38, 'rebufRatio=', 0.0)
+4510375 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_148_1115_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3212.43, 'rebufRatio=', 0.0)
+1481115 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_58_10458_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2518.28, 'rebufRatio=', 0.0)
+5810458 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_169_11291_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2920.87, 'rebufRatio=', 0.0)
+16911291 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_72_10587_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3477.03, 'rebufRatio=', 0.0)
+7210587 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_44_10341_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1451.57, 'rebufRatio=', 0.0)
+4410341 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_132_11037_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3387.9, 'rebufRatio=', 0.0)
+13211037 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_53_10415_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+5310415 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_195_11592_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+19511592 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_96_10773_out_txt
+('total buffering events=', 4, 'total buffering time=', 1.2299999999999756)
+('avgBitrate=', 348.44, 'rebufRatio=', 0.006236373776808679)
+9610773 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_3_10029_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1604.77, 'rebufRatio=', 0.0)
+310029 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_28_1021_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+281021 tuner
+49
+
+tuner_mobile_dash_trace_39_10304_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1634.4, 'rebufRatio=', 0.0)
+3910304 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_143_11118_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3273.18, 'rebufRatio=', 0.0)
+14311118 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_9_10082_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+910082 tuner
+49
+
+tuner_mobile_dash_trace_178_11392_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1548.28, 'rebufRatio=', 0.0)
+17811392 tuner
+49
+
+tuner_mobile_dash_trace_22_1016_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1097.6, 'rebufRatio=', 0.0)
+221016 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_130_11028_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3650.53, 'rebufRatio=', 0.0)
+13011028 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_11_10089_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3389.99, 'rebufRatio=', 0.0)
+1110089 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_92_10714_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+9210714 tuner
+49
+
+tuner_mobile_dash_trace_144_1112_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2777.81, 'rebufRatio=', 0.0)
+1441112 tuner
+49
+
+tuner_mobile_dash_trace_89_1069_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4131.37, 'rebufRatio=', 0.0)
+891069 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_179_11398_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3769.65, 'rebufRatio=', 0.0)
+17911398 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_70_10575_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+7010575 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_236_11992_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1046.69, 'rebufRatio=', 0.0)
+23611992 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_233_11956_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 942.52, 'rebufRatio=', 0.0)
+23311956 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_245_12103_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 478.15, 'rebufRatio=', 0.0)
+24512103 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_176_11352_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3674.41, 'rebufRatio=', 0.0)
+17611352 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_109_10851_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3544.93, 'rebufRatio=', 0.0)
+10910851 tuner
+49
+
+tuner_mobile_dash_trace_101_10803_out_txt
+('total buffering events=', 1, 'total buffering time=', 2.8249999999999993)
+('avgBitrate=', 4007.26, 'rebufRatio=', 0.01420847478938765)
+10110803 tuner
+49
+
+tuner_mobile_dash_trace_60_10468_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2401.14, 'rebufRatio=', 0.0)
+6010468 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_22_1016_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1091.04, 'rebufRatio=', 0.0)
+221016 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_138_11051_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1328.26, 'rebufRatio=', 0.0)
+13811051 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_62_10479_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 571.03, 'rebufRatio=', 0.0)
+6210479 tuner
+49
+
+tuner_mobile_dash_trace_64_10500_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 337.01, 'rebufRatio=', 0.0)
+6410500 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_48_10392_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1437.79, 'rebufRatio=', 0.0)
+4810392 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_201_11685_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 712.41, 'rebufRatio=', 0.0)
+20111685 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_191_11536_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3391.91, 'rebufRatio=', 0.0)
+19111536 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_107_10844_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+10710844 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_77_10654_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2617.12, 'rebufRatio=', 0.0)
+7710654 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_129_11027_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 585.91, 'rebufRatio=', 0.0)
+12911027 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_225_11903_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4035.25, 'rebufRatio=', 0.0)
+22511903 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_194_11572_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3668.05, 'rebufRatio=', 0.0)
+19411572 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_203_11691_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+20311691 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_98_10783_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 895.16, 'rebufRatio=', 0.0)
+9810783 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_207_1171_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4162.34, 'rebufRatio=', 0.0)
+2071171 tuner
+49
+
+tuner_mobile_dash_trace_221_11876_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2849.45, 'rebufRatio=', 0.0)
+22111876 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_135_11042_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 719.41, 'rebufRatio=', 0.0)
+13511042 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_146_1114_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3989.39, 'rebufRatio=', 0.0)
+1461114 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_35_10250_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 828.94, 'rebufRatio=', 0.0)
+3510250 tuner
+49
+
+tuner_mobile_dash_trace_159_11217_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1025.6, 'rebufRatio=', 0.0)
+15911217 tuner
+49
+
+tuner_mobile_dash_trace_162_11249_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3430.89, 'rebufRatio=', 0.0)
+16211249 tuner
+49
+
+tuner_mobile_dash_trace_163_11257_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4053.83, 'rebufRatio=', 0.0)
+16311257 tuner
+49
+
+tuner_mobile_dash_trace_205_11708_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3815.13, 'rebufRatio=', 0.0)
+20511708 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_63_10485_out_txt
+('total buffering events=', 1, 'total buffering time=', 0.45599999999998886)
+('avgBitrate=', 319.1, 'rebufRatio=', 0.0023211304312415445)
+6310485 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_47_10384_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3550.98, 'rebufRatio=', 0.0)
+4710384 tuner
+49
+
+tuner_mobile_dash_trace_14_1011_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+141011 tuner
+49
+
+tuner_mobile_dash_trace_33_10239_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2588.88, 'rebufRatio=', 0.0)
+3310239 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_178_11392_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1541.41, 'rebufRatio=', 0.0)
+17811392 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_196_11593_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3774.74, 'rebufRatio=', 0.0)
+19611593 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_52_1041_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2663.14, 'rebufRatio=', 0.0)
+521041 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_19_10125_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3223.32, 'rebufRatio=', 0.0)
+1910125 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_111_10868_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3866.8, 'rebufRatio=', 0.0)
+11110868 tuner
+49
+
+tuner_mobile_dash_trace_58_10458_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2678.61, 'rebufRatio=', 0.0)
+5810458 tuner
+49
+
+tuner_mobile_dash_trace_143_11118_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3433.25, 'rebufRatio=', 0.0)
+14311118 tuner
+49
+
+tuner_mobile_dash_trace_234_11958_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3610.06, 'rebufRatio=', 0.0)
+23411958 tuner
+49
+
+tuner_mobile_dash_trace_69_10574_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1077.47, 'rebufRatio=', 0.0)
+6910574 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_67_10536_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+6710536 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_99_1079_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+991079 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_103_10816_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3045.86, 'rebufRatio=', 0.0)
+10310816 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_17_10115_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2090.22, 'rebufRatio=', 0.0)
+1710115 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_4_10034_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+410034 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_92_10714_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3920.03, 'rebufRatio=', 0.0)
+9210714 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_216_11798_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 791.93, 'rebufRatio=', 0.0)
+21611798 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_84_10675_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3420.08, 'rebufRatio=', 0.0)
+8410675 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_208_11710_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1884.95, 'rebufRatio=', 0.0)
+20811710 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_205_11708_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+20511708 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_243_12068_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3824.93, 'rebufRatio=', 0.0)
+24312068 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_72_10587_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3286.68, 'rebufRatio=', 0.0)
+7210587 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_142_11111_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1158.43, 'rebufRatio=', 0.0)
+14211111 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_203_11691_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3741.22, 'rebufRatio=', 0.0)
+20311691 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_139_11071_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4090.65, 'rebufRatio=', 0.0)
+13911071 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_248_12130_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3741.22, 'rebufRatio=', 0.0)
+24812130 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_210_11724_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+21011724 tuner
+49
+
+tuner_mobile_dash_trace_199_11683_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4190.56, 'rebufRatio=', 0.0)
+19911683 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_154_11204_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1003.54, 'rebufRatio=', 0.0)
+15411204 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_218_11825_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1398.36, 'rebufRatio=', 0.0)
+21811825 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_175_11320_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3876.03, 'rebufRatio=', 0.0)
+17511320 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_108_10845_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 729.98, 'rebufRatio=', 0.0)
+10810845 tuner
+49
+
+tuner_mobile_dash_trace_196_11593_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3893.39, 'rebufRatio=', 0.0)
+19611593 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_232_11952_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+23211952 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_30_10220_out_txt
+('total buffering events=', 2, 'total buffering time=', 2.843999999999994)
+('avgBitrate=', 446.97, 'rebufRatio=', 0.014302669429301333)
+3010220 tuner
+49
+
+tuner_mobile_dash_trace_38_10289_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1018.01, 'rebufRatio=', 0.0)
+3810289 tuner
+49
+
+tuner_mobile_dash_trace_191_11536_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3426.66, 'rebufRatio=', 0.0)
+19111536 tuner
+49
+
+tuner_mobile_dash_trace_131_11035_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3232.3, 'rebufRatio=', 0.0)
+13111035 tuner
+49
+
+tuner_mobile_dash_trace_200_11684_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1015.72, 'rebufRatio=', 0.0)
+20011684 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_120_10941_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+12010941 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_45_10375_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 589.09, 'rebufRatio=', 0.0)
+4510375 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_61_10471_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3841.54, 'rebufRatio=', 0.0)
+6110471 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_46_10379_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2450.57, 'rebufRatio=', 0.0)
+4610379 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_54_10418_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 373.78, 'rebufRatio=', 0.0)
+5410418 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_199_11683_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3868.93, 'rebufRatio=', 0.0)
+19911683 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_83_10674_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3818.73, 'rebufRatio=', 0.0)
+8310674 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_3_10029_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 1630.08, 'rebufRatio=', 0.0)
+310029 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_182_11458_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2320.88, 'rebufRatio=', 0.0)
+18211458 pensieve-pensvid
+49
+
+pensieve-pensvid_mobile_dash_trace_68_10560_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3868.93, 'rebufRatio=', 0.0)
+6810560 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_174_1132_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3984.92, 'rebufRatio=', 0.0)
+1741132 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_149_11160_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2551.03, 'rebufRatio=', 0.0)
+14911160 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_248_12130_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 4077.86, 'rebufRatio=', 0.0)
+24812130 tuner
+49
+
+tuner_mobile_dash_trace_247_1212_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3012.47, 'rebufRatio=', 0.0)
+2471212 tuner
+49
+
+pensieve-pensvid_mobile_dash_trace_10_10083_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 2289.46, 'rebufRatio=', 0.0)
+1010083 pensieve-pensvid
+49
+
+tuner_mobile_dash_trace_204_11692_out_txt
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('avgBitrate=', 3404.06, 'rebufRatio=', 0.0)
+20411692 tuner
+49
+
+tuner 2769.33948 1279.45606645 250
+pensieve-pensvid 2643.88852 1193.4849237 250
+tuner 0.120875433764 0.925483125435 0.519764365186 250
+pensieve-pensvid 0.195032498419 1.21061197582 0.838639743203 250
