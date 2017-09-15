@@ -74,6 +74,9 @@ Chrome(function (chrome) {
 			//main_html = "http://68.181.99.194/yz_index.html.en.tuner"
                         main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
 		}
+                else if(scheme=="online-tuner"){
+                        main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
+                }
                 else if(scheme=="pensieve-mpcvid"){
                         main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
                         //main_html = "http://68.181.99.194/myindex_RL.html"

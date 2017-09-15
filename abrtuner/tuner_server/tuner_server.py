@@ -114,7 +114,7 @@ def make_request_handler(input_dict):
                 p2_median, \
                 p2_max,p3_min, \
                 p3_median, \
-                p3_max = tuner_logic.getDynamicconfig_self(tuner_lookup_tables.dash_syth_hyb_table_1000, \
+                p3_max = tuner_logic.getDynamicconfig_self(tuner_lookup_tables.dash_syth_hyb_pen_table_1000, \
                 	                                      avg_bw, \
                 	                                      std_bw, \
                 	                                      300)
