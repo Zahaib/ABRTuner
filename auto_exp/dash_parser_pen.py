@@ -183,7 +183,10 @@ f_out.close()
 
 f_out = open("tuner_rebuf_bad_list.txt",'w')
 for fname in file_name_dict.keys():
-  if file_name_dict[fname]['tuner'][1] > file_name_dict[fname]["pensieve-pensvid"][1]:
-    #print fname, file_name_dict[fname]['tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
-    f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
+  try:
+    if file_name_dict[fname]['tuner'][1] < file_name_dict[fname]["pensieve-pensvid"][1]:
+      print fname, file_name_dict[fname]['tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
+      #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
+  except KeyError:
+    pass
 f_out.close()

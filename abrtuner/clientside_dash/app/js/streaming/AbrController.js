@@ -449,6 +449,7 @@ MediaPlayer.dependencies.AbrController = function () {
 								bufferLevelAdjusted_mpc = bufferLevel-0.15-0.4-baseBuffer;
 								//bufferLevelAdjusted = bufferLevel-0.51;
 								bufferLevelAdjusted = bufferLevel-0.15-0.4-baseBuffer;
+								bufferLevelAdjusted = bufferLevelAdjusted < 0 ? 0 : bufferLevelAdjusted;
 								self.debug.log("-----abrController: baseBuffer="+baseBuffer);
 								// bufferLevelAdjusted = bufferLevel-0.15-0.4; // mpc_nobuffer
 								// bufferLevelAdjusted = bufferLevel-0.15-0.4-2; // mpc

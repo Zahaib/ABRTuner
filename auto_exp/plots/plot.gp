@@ -12,7 +12,7 @@ set term pngcairo dashed dl 2.0 font ",16"
 set output 'RebufCDF.png'
 set xlabel 'Rebuf'
 set ylabel 'CDF'
-set yrange [40:100]
+set yrange [85:100]
 set key bottom right
 plot 'cdf_rebuf_tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
 'cdf_rebuf_mpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
