@@ -75,7 +75,7 @@ Chrome(function (chrome) {
                         main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
 		}
                 else if(scheme=="online-tuner"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
+                        main_html = "http://localhost/yz_index.html.en.onlinetuner"
                 }
                 else if(scheme=="pensieve-mpcvid"){
                         main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
@@ -104,7 +104,7 @@ Chrome(function (chrome) {
                         	process.exit();
     			}
 		}
-                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") ){
+                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner")){
                         if (params.request.url.match(/finishme.txt/)) {
                                 console.log("Weird video Yun Final : Timeout - End experiment");
                                 close();

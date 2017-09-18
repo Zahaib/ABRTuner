@@ -123,15 +123,15 @@ for i in dash_QoE.keys():
             bitrate_cdf[ii] = []
         if ii not in rebuf_cdf.keys():
             rebuf_cdf[ii] = []
-        if ii != "tuner" and ii not in rebuf_per_cdf.keys():
+        if ii != "online-tuner" and ii not in rebuf_per_cdf.keys():
             rebuf_per_cdf[ii] = []
-        if ii != "tuner" and ii not in bitrate_per_cdf.keys():
+        if ii != "online-tuner" and ii not in bitrate_per_cdf.keys():
             bitrate_per_cdf[ii] = []
         bitrate_cdf[ii].append(float(dash_QoE[i][ii][0]))
         rebuf_cdf[ii].append(100*float(dash_QoE[i][ii][1]))
-        if ii != "tuner":
-            bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
-            rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["tuner"][1])))
+        if ii != "online-tuner":
+            bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
+            rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["online-tuner"][1])))
 
 for sh in bitrate_cdf.keys():
     f_out = open(output_dir + "/cdf_bitrate_"+str(sh)+".txt",'w')
@@ -168,7 +168,7 @@ for name in average_QoE.keys():
   for scheme in average_QoE[name].keys():
     if scheme == "pensieve-pensvid":
       pens_QoE.append(average_QoE[name][scheme])
-    if scheme == "tuner":
+    if scheme == "online-tuner":
       tuner_QoE.append(average_QoE[name][scheme])
 
 f_out = open(output_dir + "/cdf_qoe_pensieve.txt",'w')
@@ -184,8 +184,8 @@ f_out.close()
 f_out = open("tuner_rebuf_bad_list.txt",'w')
 for fname in file_name_dict.keys():
   try:
-    if file_name_dict[fname]['tuner'][1] < file_name_dict[fname]["pensieve-pensvid"][1]:
-      print fname, file_name_dict[fname]['tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
+    if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["pensieve-pensvid"][1]:
+      print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
       #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
   except KeyError:
     pass

@@ -399,6 +399,12 @@ MediaPlayer.dependencies.AbrController = function () {
 												ttfb_temp = lastHTTPRequest.tresponse.getTime() - sessionStartTime;
 												//self.debug.log("Yun Final Log : chunkID="+lastHTTPRequest.index+", requestStar="+lastHTTPRequest.requestStartDate+", timeToFirstByte="+lastHTTPRequest.firstByteDate+", requestEnd="+lastHTTPRequest.requestEndDate+", Bitrate="+lastHTTPRequest.quality+", availabilityStartTime="+lastHTTPRequest.availabilityStartTime+", startTime="+lastHTTPRequest.startTime);
 												self.debug.log("Yun Final Log chunk information: url="+lastHTTPRequest.url+", trequest="+start_temp+", tresponse="+ttfb_temp+", tfinish="+end_temp+", currentPlaylocation="+currentVideoTime+", bufferLength="+bufferLevel);
+			                                    if (lastRequestedSegmentIndex === 48) {
+			                                        var xmlHttp = new XMLHttpRequest();
+			                                        xmlHttp.open( "GET", "http://localhost/finishme.txt", false);
+			                                        xmlHttp.send( null );
+			                                    }
+
 												//for (var bw=0; bw<lastHTTPRequest.trace.length; bw++){
 												//	if (lastHTTPRequest.trace[bw].b!==0) self.debug.log("Yun Final Log chunk information bandwidth: url="+lastHTTPRequest.url+", start="+lastHTTPRequest.trace[bw].s+", end="+lastHTTPRequest.trace[bw].d+", byte="+lastHTTPRequest.trace[bw].b);
 												//}
@@ -419,8 +425,9 @@ MediaPlayer.dependencies.AbrController = function () {
 												// Adjust buffer level to avoid latency, etc
 												var baseBuffer = 4;
 												bufferLevelAdjusted_mpc = bufferLevel-0.15-0.4-baseBuffer;
-												bufferLevelAdjusted = bufferLevel;
-												self.debug.log("-----abrController: baseBuffer="+baseBuffer);
+                                                                                                bufferLevelAdjusted = bufferLevel-0.15-0.4-baseBuffer;
+                                                                                                bufferLevelAdjusted = bufferLevelAdjusted < 0 ? 0 : bufferLevelAdjusted;
+                                                                                                self.debug.log("-----abrController: baseBuffer="+baseBuffer);
 												// bufferLevelAdjusted = bufferLevel-0.15-0.4; // mpc_nobuffer
 												// bufferLevelAdjusted = bufferLevel-0.15-0.4-2; // mpc
 												// bufferLevelAdjusted = bufferLevel-0.15-0.4-4; // mpc
@@ -528,7 +535,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevel,
+									                				'buffer': bufferLevelAdjusted,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
