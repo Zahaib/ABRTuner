@@ -105,7 +105,7 @@ for file_name in file_names:
         dash_QoE[name] = dict()
     #if scheme not in dash_QoE[name].keys():
     dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
-    average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100) / 49.0
+    average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100)
 
     file_name_dict[fname][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
     print (len(chunks_dash))
@@ -163,8 +163,10 @@ for sh in rebuf_cdf.keys():
 
 pens_QoE = []
 tuner_QoE = []
-
+QoE_diff = []
 for name in average_QoE.keys():
+  percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["pensieve-pensvid"]) / average_QoE[name]["pensieve-pensvid"] * 100
+  QoE_diff.append(percentage_diff)
   for scheme in average_QoE[name].keys():
     if scheme == "pensieve-pensvid":
       pens_QoE.append(average_QoE[name][scheme])
@@ -179,6 +181,11 @@ f_out.close()
 f_out = open(output_dir + "/cdf_qoe_tuner.txt",'w')
 for i in range(0,101):
   f_out.write(str(i)+" "+str(np.percentile(tuner_QoE, i))+"\n")
+f_out.close()
+
+f_out = open(output_dir + "/cdf_qoe_percentage_diff.txt",'w')
+for i in range(0,101):
+  f_out.write(str(i)+" "+str(np.percentile(QoE_diff, i))+"\n")
 f_out.close()
 
 f_out = open("tuner_rebuf_bad_list.txt",'w')

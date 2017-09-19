@@ -47,3 +47,13 @@ set ylabel 'CDF'
 set key bottom right
 plot 'cdf_qoe_tuner.txt' u 2:1 with lines lw 3 t 'Tuner', \
 'cdf_qoe_pensieve.txt' u 2:1 with lines lw 3 t 'Penseive'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'qoeDiffCDF.png'
+set xlabel 'QoE Diff (%)'
+set ylabel 'CDF'
+set key top left
+set yzeroaxis lt 1 lw 3 lc rgb 'black'
+plot 'cdf_qoe_percentage_diff_mpc.txt' u 2:1 with lines lw 3 t 'MPC', \
+'cdf_qoe_percentage_diff.txt' u 2:1 with lines lw 3 t 'Penseive'
