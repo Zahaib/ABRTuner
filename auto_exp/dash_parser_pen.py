@@ -165,8 +165,11 @@ pens_QoE = []
 tuner_QoE = []
 QoE_diff = []
 for name in average_QoE.keys():
-  percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["pensieve-pensvid"]) / average_QoE[name]["pensieve-pensvid"] * 100
-  QoE_diff.append(percentage_diff)
+  try:
+    percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["pensieve-pensvid"]) / average_QoE[name]["pensieve-pensvid"] * 100
+    QoE_diff.append(percentage_diff)
+  except KeyError:
+    pass
   for scheme in average_QoE[name].keys():
     if scheme == "pensieve-pensvid":
       pens_QoE.append(average_QoE[name][scheme])

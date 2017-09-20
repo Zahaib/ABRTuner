@@ -106,6 +106,8 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
+                cellsize = 900
+                table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
                 ABRChoice, \
                 p1_min_new, \
                 p1_median, \
@@ -114,10 +116,10 @@ def make_request_handler(input_dict):
                 p2_median, \
                 p2_max,p3_min, \
                 p3_median, \
-                p3_max = tuner_logic.getDynamicconfig_self(tuner_lookup_tables.dash_syth_hyb_pen_table_1000, \
+                p3_max = tuner_logic.getDynamicconfig_self(table, \
                 	                                      avg_bw, \
                 	                                      std_bw, \
-                	                                      300)
+                	                                      cellsize)
                 self.input_dict['beta'] = p1_min_new
 
             quality = tuner_logic.getUtilityBitrateDecision_dash(bandwidthEst, \
