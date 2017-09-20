@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js abrtuner pen</title>
+    </head>
+    <body>
+        <div>
+            <video id="videoPlayer" controls="true"></video>
+        </div>
+	<!-- <script src="/Users/ynam/testbed/player_code_noMPC/dash.all.js"></script> -->
+	 <script src="dash.all.abrtunerpen.js"></script> 
+	<!-- <script src="/Users/ynam/emulation/dash.js-Public_Release_v1.6.0/dist/dash.all.js"></script> -->
+        <script>
+            (function(){
+		<!-- var url = "http://localhost:8080/xiaoqi.mpd"; -->
+		 var url = "penVideo/Manifest.mpd";
+		<!-- var url = "OfForestAndMen_4sec/OfForestAndMen_4s_simple_2014_05_09_simple_5level.mpd";-->
+		<!-- var url = "BigBuckBunny_10s_isoffmain_url_relative_DIS_23009_1_v_2_1c2_2011_08_30.mpd"; -->
+		<!-- var url = "BigBuckBunny_10s_isoffmain_DIS_23009_1_v_2_1c2_2011_08_30.mpd"; --> 
+		var context = new Dash.di.DashContext(); 
+		var player = new MediaPlayer(context); 
+		player.startup(); 
+		player.attachView(document.querySelector("#videoPlayer")); 
+		player.attachSource(url); 
+		<!-- var player = MediaPlayer().create(); --> 
+		<!-- player.initialize(document.querySelector("#videoPlayer"), url, true); -->
+            })();
+        </script>
+    </body>
+</html>
