@@ -116,7 +116,7 @@ rebuf_cdf = dict()
 bitrate_per_cdf = dict()
 rebuf_per_cdf = dict()
 for i in dash_QoE.keys():
-    if len(dash_QoE[i]) !=2:
+    if len(dash_QoE[i]) !=3:
         continue
     for ii in dash_QoE[i].keys():
         if ii not in bitrate_cdf.keys():
@@ -161,42 +161,42 @@ for sh in bitrate_cdf.keys():
 for sh in rebuf_cdf.keys():
   print sh, np.mean(rebuf_cdf[sh]),np.std(rebuf_cdf[sh]), np.mean(rebuf_cdf[sh]) * rebuf_penalty, len(rebuf_cdf[sh])
 
-pens_QoE = []
-tuner_QoE = []
-QoE_diff = []
-for name in average_QoE.keys():
-  try:
-    percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["robustmpc"]) / average_QoE[name]["robustmpc"] * 100
-    QoE_diff.append(percentage_diff)
-  except KeyError:
-    pass
-  for scheme in average_QoE[name].keys():
-    if scheme == "robustmpc":
-      pens_QoE.append(average_QoE[name][scheme])
-    if scheme == "online-tuner":
-      tuner_QoE.append(average_QoE[name][scheme])
+# pens_QoE = []
+# tuner_QoE = []
+# QoE_diff = []
+# for name in average_QoE.keys():
+#   try:
+#     percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["robustmpc"]) / average_QoE[name]["robustmpc"] * 100
+#     QoE_diff.append(percentage_diff)
+#   except KeyError:
+#     pass
+#   for scheme in average_QoE[name].keys():
+#     if scheme == "robustmpc":
+#       pens_QoE.append(average_QoE[name][scheme])
+#     if scheme == "online-tuner":
+#       tuner_QoE.append(average_QoE[name][scheme])
 
-f_out = open(output_dir + "/cdf_qoe_pensieve.txt",'w')
-for i in range(0,101):
-  f_out.write(str(i)+" "+str(np.percentile(pens_QoE, i))+"\n")
-f_out.close()
+# f_out = open(output_dir + "/cdf_qoe_pensieve.txt",'w')
+# for i in range(0,101):
+#   f_out.write(str(i)+" "+str(np.percentile(pens_QoE, i))+"\n")
+# f_out.close()
 
-f_out = open(output_dir + "/cdf_qoe_tuner.txt",'w')
-for i in range(0,101):
-  f_out.write(str(i)+" "+str(np.percentile(tuner_QoE, i))+"\n")
-f_out.close()
+# f_out = open(output_dir + "/cdf_qoe_tuner.txt",'w')
+# for i in range(0,101):
+#   f_out.write(str(i)+" "+str(np.percentile(tuner_QoE, i))+"\n")
+# f_out.close()
 
-f_out = open(output_dir + "/cdf_qoe_percentage_diff.txt",'w')
-for i in range(0,101):
-  f_out.write(str(i)+" "+str(np.percentile(QoE_diff, i))+"\n")
-f_out.close()
+# f_out = open(output_dir + "/cdf_qoe_percentage_diff.txt",'w')
+# for i in range(0,101):
+#   f_out.write(str(i)+" "+str(np.percentile(QoE_diff, i))+"\n")
+# f_out.close()
 
-f_out = open("tuner_rebuf_bad_list.txt",'w')
-for fname in file_name_dict.keys():
-  try:
-    if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["robustmpc"][1]:
-      print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["robustmpc"][1]
-      #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
-  except KeyError:
-    pass
-f_out.close()
+# f_out = open("tuner_rebuf_bad_list.txt",'w')
+# for fname in file_name_dict.keys():
+#   try:
+#     if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["robustmpc"][1]:
+#       print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["robustmpc"][1]
+#       #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
+#   except KeyError:
+#     pass
+# f_out.close()
