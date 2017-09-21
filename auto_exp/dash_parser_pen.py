@@ -166,12 +166,12 @@ tuner_QoE = []
 QoE_diff = []
 for name in average_QoE.keys():
   try:
-    percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["pensieve-pensvid"]) / average_QoE[name]["pensieve-pensvid"] * 100
+    percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["robustmpc"]) / average_QoE[name]["robustmpc"] * 100
     QoE_diff.append(percentage_diff)
   except KeyError:
     pass
   for scheme in average_QoE[name].keys():
-    if scheme == "pensieve-pensvid":
+    if scheme == "robustmpc":
       pens_QoE.append(average_QoE[name][scheme])
     if scheme == "online-tuner":
       tuner_QoE.append(average_QoE[name][scheme])
@@ -194,8 +194,8 @@ f_out.close()
 f_out = open("tuner_rebuf_bad_list.txt",'w')
 for fname in file_name_dict.keys():
   try:
-    if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["pensieve-pensvid"][1]:
-      print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["pensieve-pensvid"][1]
+    if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["robustmpc"][1]:
+      print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["robustmpc"][1]
       #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
   except KeyError:
     pass

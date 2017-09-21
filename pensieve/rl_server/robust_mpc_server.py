@@ -257,6 +257,7 @@ def make_request_handler(input_dict):
 
                 end_of_video = False
                 if ( post_data['lastRequest'] == TOTAL_VIDEO_CHUNKS ):
+                    print "...END VIDEO..."
                     send_data = "REFRESH"
                     end_of_video = True
                     self.input_dict['last_total_rebuf'] = 0
