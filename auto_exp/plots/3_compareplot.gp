@@ -19,6 +19,26 @@ plot 'cdf_rebuf_online-tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
 'cdf_rebuf_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
 'cdf_rebuf_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve'
 
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'changeCDF.png'
+set xlabel 'Average bitrate change (kbps)'
+set ylabel 'CDF'
+#set yrange [85:100]
+set key bottom right
+plot 'cdf_change_online-tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
+'cdf_change_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
+'cdf_change_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'qoeCDF.png'
+set xlabel 'QoE as used by Pensieve'
+set ylabel 'CDF'
+set key bottom right
+plot 'cdf_qoe_online-tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
+'cdf_qoe_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
+'cdf_qoe_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve'
 
 reset
 set term pngcairo dashed dl 2.0 font ",16"
@@ -39,3 +59,24 @@ set key bottom right
 set yzeroaxis lt 1 lw 3 lc rgb 'black'
 plot 'cdf_rebuf_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC', \
 'cdf_rebuf_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Penseive'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'changeDiffCDF.png'
+set xlabel 'Change Diff (%)'
+set ylabel 'CDF'
+set key top left
+set yzeroaxis lt 1 lw 3 lc rgb 'black'
+plot 'cdf_change_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC', \
+'cdf_change_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Penseive'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'qoeDiffCDF.png'
+set xlabel 'QoE Diff (%)'
+set ylabel 'CDF'
+set key bottom right
+set yzeroaxis lt 1 lw 3 lc rgb 'black'
+set xrange [-100:100]
+plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC', \
+'cdf_qoe_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Penseive'

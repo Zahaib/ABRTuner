@@ -13,13 +13,15 @@ if len(sys.argv) < 3:
 #Envivio
 #video_to_index = {5:0, 4:1, 3:2, 2:3, 1:4}
 video_to_index = {6:0, 5:1, 4:2, 3:3, 2:4, 1:5}
-index_to_bitrate = {0:325,1:600,2:1000,3:2000,4:3000}
-actualbitrate_to_index = {824821:0, 3744774:5, 1260896:1, 1754001:2, 2506133:3,3170853:4}
+index_to_bitrate = {0:300,1:750,2:1200,3:1850,4:2850,5:4300}
+num_chunks_video = 49
+# actualbitrate_to_index = {824821:0, 3744774:5, 1260896:1, 1754001:2, 2506133:3,3170853:4}
 
 #log_path = "/home/zahaib/zahaibVM/convivaProj/automation_zahaib/trace_500_out/"
 log_path = sys.argv[1].rstrip("/") + "/"
 output_dir = sys.argv[2].rstrip("/") + "/"
 rebuf_penalty = 4.3
+change_penalty = 1
 file_names = os.listdir(log_path)
 dash_QoE = dict()
 average_QoE = dict()
@@ -38,6 +40,9 @@ for file_name in file_names:
     #continue
     chunks_dash = dict()
     buffering_dash = []
+    last_quality = 0
+    total_quality_change_events = 0
+    total_quality_change = 0
     for line in f:
         #print line
         line = line.replace("\n","").replace(",","").replace("\"","")
@@ -51,17 +56,10 @@ for file_name in file_names:
             #print temp1, video_to_index[temp1]
             quality = video_to_index[temp1]
             ID = int(chunk[2].split("/")[-1].split(".")[0])
-            #print quality, ID
+            # print quality, ID
             size = size_Envivio[quality][ID-1]
             #print quality, ID, size
             
-            
-            
-            #ID = int(chunk[2].split("_")[-1].split(".")[0].split("s")[1])-1
-            #print ID
-            #quality = actualbitrate_to_index[int(chunk[2].split("bps")[0].split("_")[-1])]
-            #bitrate = index_to_bitrate[quality]
-            #size = size_OfForest[quality][ID]
             start = float(chunk[3].split("=")[-1])
             #start = float(chunk[4].split("=")[-1])
             end = float(chunk[5].split("=")[-1])
@@ -74,6 +72,14 @@ for file_name in file_names:
             chunks_dash[ID]["end"] = end
             chunks_dash[ID]["bufferlen"] = bufferlen
             chunks_dash[ID]["play"] = play
+            chunks_dash[ID]["bitrate"] = index_to_bitrate[quality]
+            if ID == 1:
+                last_quality = quality
+            else:
+                if quality != last_quality:
+                    total_quality_change_events += 1
+                    total_quality_change += abs(index_to_bitrate[last_quality] - index_to_bitrate[quality])
+                    last_quality = quality    
             #if file_name=="desktop_dash_trace_4_out_txt": print chunks_dash[ID]
         if "buffering" in chunk[0]:
             start = float(chunk[4].split("=")[-1])/1000.0
@@ -83,38 +89,56 @@ for file_name in file_names:
             buffering_dash.append([start,play,bufferlen,end])
             #print buffering_dash[-1], buffering_dash[-1][3]-buffering_dash[-1][0]
         #break
-    #print chunks_dash
+    # print chunks_dash
     buffering_dash = buffering_dash[1:]
     total_size = 0.0
     total_time = 0.0
     total_buffering = 0.0
 
+    # print len(buffering_dash), len(chunks_dash.keys()), buffering_dash
+
+    print ("total quality change events=", total_quality_change_events, "total_quality_change=", total_quality_change)
     for i in buffering_dash:
         total_buffering+=((i[3]-i[0]))
     print ("total buffering events=", len(buffering_dash), "total buffering time=",total_buffering)
-    for i in range(1,len(chunks_dash) + 1):
-        total_size+=chunks_dash[i]["size"]
-    print ("avgBitrate=", round((total_size*8/(4.0*len(chunks_dash)))/1000.0,2), "rebufRatio=", total_buffering/(4.0*len(chunks_dash)+total_buffering))
-    avgBitrate = round((total_size*8/(4.0*len(chunks_dash)))/1000.0,2)
+    # for i in range(1,len(chunks_dash) + 1):
+    #     total_size+=chunks_dash[i]["size"]
+    # avgBitrate = round((total_size*8/(4.0*len(chunks_dash)))/1000.0,2)
+
+    for i in range(1, len(chunks_dash) + 1):
+    	total_size += chunks_dash[i]["bitrate"]
+    avgBitrate = round(total_size / float(len(chunks_dash)) ,2)
+
+    print ("total bitrate=", total_size)
+
     rebufRatio = total_buffering/(4.0*len(chunks_dash)+total_buffering)
+    QoE = (total_size / 1000.0 - rebuf_penalty * total_buffering - change_penalty * total_quality_change / 1000.0) / float(len(chunks_dash))
+
+    print ("avgBitrate=", avgBitrate, "rebufRatio=", rebufRatio, "QoE=", QoE)    	
+
     #dash_QoE[file_name] = (avgBitrate,rebufRatio, len(chunks_dash))
     print name, scheme
-    if name not in average_QoE.keys():
-        average_QoE[name] = dict()
+    # if name not in average_QoE.keys():
+    #     average_QoE[name] = dict()
     if name not in dash_QoE.keys():
         dash_QoE[name] = dict()
     #if scheme not in dash_QoE[name].keys():
-    dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
-    average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100)
+    dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash), QoE, total_quality_change/float(num_chunks_video))
+    # average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100)
 
-    file_name_dict[fname][scheme] = (avgBitrate,rebufRatio, len(chunks_dash))
+    file_name_dict[fname][scheme] = (avgBitrate,rebufRatio, len(chunks_dash), QoE, total_quality_change/float(num_chunks_video))
     print (len(chunks_dash))
     print ("")
 
 bitrate_cdf = dict()
 rebuf_cdf = dict()
+qoe_cdf = dict()
+change_cdf = dict()
 bitrate_per_cdf = dict()
 rebuf_per_cdf = dict()
+qoe_per_cdf = dict()
+change_per_cdf = dict()
+
 for i in dash_QoE.keys():
     if len(dash_QoE[i]) !=3:
         continue
@@ -123,15 +147,32 @@ for i in dash_QoE.keys():
             bitrate_cdf[ii] = []
         if ii not in rebuf_cdf.keys():
             rebuf_cdf[ii] = []
+        if ii not in qoe_cdf.keys():
+            qoe_cdf[ii] = []            
+        if ii not in change_cdf.keys():
+            change_cdf[ii] = []            
         if ii != "online-tuner" and ii not in rebuf_per_cdf.keys():
             rebuf_per_cdf[ii] = []
         if ii != "online-tuner" and ii not in bitrate_per_cdf.keys():
             bitrate_per_cdf[ii] = []
+        if ii != "online-tuner" and ii not in qoe_per_cdf.keys():
+            qoe_per_cdf[ii] = []
+        if ii != "online-tuner" and ii not in change_per_cdf.keys():
+            change_per_cdf[ii] = []
+
         bitrate_cdf[ii].append(float(dash_QoE[i][ii][0]))
         rebuf_cdf[ii].append(100*float(dash_QoE[i][ii][1]))
+        qoe_cdf[ii].append(float(dash_QoE[i][ii][3]))
+        change_cdf[ii].append(float(dash_QoE[i][ii][4]))
         if ii != "online-tuner":
             bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
             rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["online-tuner"][1])))
+            qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]))
+            if float(dash_QoE[i][ii][4]) == 0:
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/0.01)
+            else:	
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/float(dash_QoE[i][ii][4]))
+
 
 for sh in bitrate_cdf.keys():
     f_out = open(output_dir + "/cdf_bitrate_"+str(sh)+".txt",'w')
@@ -143,23 +184,53 @@ for sh in rebuf_cdf.keys():
     for i in range(0,101):
         f_out.write(str(i)+" "+str(np.percentile(rebuf_cdf[sh], i))+"\n")
     f_out.close()
+for sh in qoe_cdf.keys():
+    f_out = open(output_dir +"/cdf_qoe_"+str(sh)+".txt",'w')
+    for i in range(0,101):
+        f_out.write(str(i)+" "+str(np.percentile(qoe_cdf[sh], i))+"\n")
+    f_out.close()
+for sh in change_cdf.keys():
+    f_out = open(output_dir +"/cdf_change_"+str(sh)+".txt",'w')
+    for i in range(0,101):
+        f_out.write(str(i)+" "+str(np.percentile(change_cdf[sh], i))+"\n")
+    f_out.close()
+
 for sh in bitrate_per_cdf.keys():
     f_out = open(output_dir +"/cdf_bitrate_percentage_diff_"+str(sh)+".txt",'w')
     for i in range(0,101):
         f_out.write(str(i)+" "+str(np.percentile(bitrate_per_cdf[sh], i))+"\n")
     f_out.close()
-
 for sh in rebuf_per_cdf.keys():
     f_out = open(output_dir + "/cdf_rebuf_percentage_diff_"+str(sh)+".txt",'w')
     for i in range(0,101):
         f_out.write(str(i)+" "+str(np.percentile(rebuf_per_cdf[sh], i))+"\n")
     f_out.close()
+for sh in qoe_per_cdf.keys():
+    f_out = open(output_dir + "/cdf_qoe_percentage_diff_"+str(sh)+".txt",'w')
+    for i in range(0,101):
+        f_out.write(str(i)+" "+str(np.percentile(qoe_per_cdf[sh], i))+"\n")
+    f_out.close()
+for sh in change_per_cdf.keys():
+    f_out = open(output_dir + "/cdf_change_percentage_diff_"+str(sh)+".txt",'w')
+    for i in range(0,101):
+        f_out.write(str(i)+" "+str(np.percentile(change_per_cdf[sh], i))+"\n")
+    f_out.close()
 
+print "\navg. bitrate"
 for sh in bitrate_cdf.keys():
   print sh, np.mean(bitrate_cdf[sh]), np.std(bitrate_cdf[sh]), len(bitrate_cdf[sh])
 
+print "\nrebuf"
 for sh in rebuf_cdf.keys():
   print sh, np.mean(rebuf_cdf[sh]),np.std(rebuf_cdf[sh]), np.mean(rebuf_cdf[sh]) * rebuf_penalty, len(rebuf_cdf[sh])
+
+print "\nchange"
+for sh in change_cdf.keys():
+  print sh, np.mean(change_cdf[sh]),np.std(change_cdf[sh]), np.mean(change_cdf[sh]) * change_penalty, len(change_cdf[sh])
+
+print "\nQoE"
+for sh in qoe_cdf.keys():
+  print sh, np.mean(qoe_cdf[sh]),np.std(qoe_cdf[sh]), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
 
 # pens_QoE = []
 # tuner_QoE = []
