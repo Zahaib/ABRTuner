@@ -80,3 +80,14 @@ set yzeroaxis lt 1 lw 3 lc rgb 'black'
 set xrange [-100:100]
 plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC', \
 'cdf_qoe_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Penseive'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'bw_traces.png'
+set xlabel 'Avg bw (kbps)'
+set ylabel 'Std (kbps)'
+set xtics 1500
+plot 'conviva_traces.dat' u 1:2 with points ps 2 t 'Our traces', \
+'pensieve_train_traces.dat' u 1:2 with points ps 2 t 'Pensieve train traces', \
+'pensieve_traces.dat' u 1:2 with points ps 2 t 'Pensieve test traces'
+
