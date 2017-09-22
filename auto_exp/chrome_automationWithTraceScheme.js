@@ -85,6 +85,10 @@ Chrome(function (chrome) {
                         main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
                         //main_html = "http://68.181.99.194/myindex_RL.html"
                 }
+                else if(scheme=="robustmpc"){
+                        main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.pens-vid"
+                        //main_html = "http://68.181.99.194/myindex_RL.html"
+                }
                 else if(scheme=="pensieve-orig"){
                         main_html = "http://68.181.99.194/myindex_RL.html"
                         //main_html = "http://68.181.99.194/myindex_RL.html"
@@ -104,7 +108,7 @@ Chrome(function (chrome) {
                         	process.exit();
     			}
 		}
-                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner")){
+                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc")){
                         if (params.request.url.match(/finishme.txt/)) {
                                 console.log("Weird video Yun Final : Timeout - End experiment");
                                 close();
