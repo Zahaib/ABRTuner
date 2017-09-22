@@ -140,7 +140,7 @@ qoe_per_cdf = dict()
 change_per_cdf = dict()
 
 for i in dash_QoE.keys():
-    if len(dash_QoE[i]) !=3:
+    if len(dash_QoE[i]) !=4:
         continue
     for ii in dash_QoE[i].keys():
         if ii not in bitrate_cdf.keys():
