@@ -36,6 +36,7 @@ set output 'qoeCDF.png'
 set xlabel 'QoE as used by Pensieve'
 set ylabel 'CDF'
 set key bottom right
+set xrange[-0.5:4.5]
 plot 'cdf_qoe_online-tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
 'cdf_qoe_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
 'cdf_qoe_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve'
@@ -77,7 +78,7 @@ set xlabel 'QoE Diff (%)'
 set ylabel 'CDF'
 set key bottom right
 set yzeroaxis lt 1 lw 3 lc rgb 'black'
-set xrange [-100:100]
+set xrange [-50:50]
 plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC', \
 'cdf_qoe_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Penseive'
 
