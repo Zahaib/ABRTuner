@@ -12,7 +12,7 @@ for i in `ls trace_500_pen/*`; do
   a=$(awk '{avg += $2} END {printf "%f \n", avg/NR}' < $i)
   #echo $a
 
-  if (( $(bc <<< "$a <= 3000") ))
+  if (( $(bc <<< "$a <= 1000") ))
   then
       fn=$(echo $i | cut -d/ -f1 --complement | cut -d. -f1)
       echo $fn

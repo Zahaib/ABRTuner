@@ -39,7 +39,7 @@ set output 'qoeCDF.png'
 set xlabel 'QoE'
 set ylabel 'CDF'
 set key bottom right
-set xrange[-0.25:2.25]
+set xrange[-0.25:1.0]
 plot 'cdf_qoe_online-tuner.txt' u 2:1 with lines lw 3 t 'ABRTuner', \
 'cdf_qoe_robustmpc.txt' u 2:1 with lines lw 3 t 'MPC' , \
 'cdf_qoe_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve', \
