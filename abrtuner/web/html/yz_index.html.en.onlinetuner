@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js abrtuner</title>
+    </head>
+    <body>
+        <div>
+            <video id="videoPlayer" controls="true"></video>
+        </div>
+         <script src="yz_dashplayers/onlinecd_pens_video.dash.all.mpc.new.js"></script>
+        <script>
+            (function(){
+                var url = "http://204.57.7.30/Manifest.mpd";
+                var context = new Dash.di.DashContext(); 
+                var player = new MediaPlayer(context); 
+                player.startup(); 
+                player.attachView(document.querySelector("#videoPlayer")); 
+                player.attachSource(url); 
+                <!-- var player = MediaPlayer().create(); --> 
+                <!-- player.initialize(document.querySelector("#videoPlayer"), url, true); -->
+            })();
+        </script>
+    </body>
+</html>        
