@@ -140,7 +140,7 @@ qoe_per_cdf = dict()
 change_per_cdf = dict()
 
 for i in dash_QoE.keys():
-    if len(dash_QoE[i]) !=4:
+    if len(dash_QoE[i]) != 2:
         continue
     for ii in dash_QoE[i].keys():
         if ii not in bitrate_cdf.keys():
@@ -218,19 +218,19 @@ for sh in change_per_cdf.keys():
 
 print "\navg. bitrate"
 for sh in bitrate_cdf.keys():
-  print sh, np.mean(bitrate_cdf[sh]), np.std(bitrate_cdf[sh]), len(bitrate_cdf[sh])
+  print sh, np.mean(bitrate_cdf[sh]), np.std(bitrate_cdf[sh]), np.percentile(bitrate_cdf[sh], 50), len(bitrate_cdf[sh])
 
 print "\nrebuf"
 for sh in rebuf_cdf.keys():
-  print sh, np.mean(rebuf_cdf[sh]),np.std(rebuf_cdf[sh]), np.mean(rebuf_cdf[sh]) * rebuf_penalty, len(rebuf_cdf[sh])
+  print sh, np.mean(rebuf_cdf[sh]),np.std(rebuf_cdf[sh]), np.percentile(rebuf_cdf[sh], 50), np.mean(rebuf_cdf[sh]) * rebuf_penalty, len(rebuf_cdf[sh])
 
 print "\nchange"
 for sh in change_cdf.keys():
-  print sh, np.mean(change_cdf[sh]),np.std(change_cdf[sh]), np.mean(change_cdf[sh]) * change_penalty, len(change_cdf[sh])
+  print sh, np.mean(change_cdf[sh]),np.std(change_cdf[sh]), np.percentile(change_cdf[sh], 50), np.mean(change_cdf[sh]) * change_penalty, len(change_cdf[sh])
 
 print "\nQoE"
 for sh in qoe_cdf.keys():
-  print sh, np.mean(qoe_cdf[sh]),np.std(qoe_cdf[sh]), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
+  print sh, np.mean(qoe_cdf[sh]), np.std(qoe_cdf[sh]), np.percentile(qoe_cdf[sh], 50), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
 
 # pens_QoE = []
 # tuner_QoE = []
