@@ -20,8 +20,8 @@ num_chunks_video = 49
 #log_path = "/home/zahaib/zahaibVM/convivaProj/automation_zahaib/trace_500_out/"
 log_path = sys.argv[1].rstrip("/") + "/"
 output_dir = sys.argv[2].rstrip("/") + "/"
-rebuf_penalty = 4.3
-change_penalty = 1
+rebuf_penalty = 8.6 #4.3
+change_penalty = 0.0 #1
 file_names = os.listdir(log_path)
 dash_QoE = dict()
 average_QoE = dict()
@@ -167,7 +167,9 @@ for i in dash_QoE.keys():
         if ii != "online-tuner":
             bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
             rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["online-tuner"][1])))
-            qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]))
+            qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3])))
+            #if 100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]) < -30:
+            #    print >> sys.stderr, i, dash_QoE[i]["online-tuner"][3], dash_QoE[i][ii][3], float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3])
             if float(dash_QoE[i][ii][4]) == 0:
                 change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/0.01)
             else:	
