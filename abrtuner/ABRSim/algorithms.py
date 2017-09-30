@@ -36,6 +36,9 @@ def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid,
     #print bufferlen,est_bandwidth,br,new_chunkid,size_envivo[br][new_chunkid],estBufferingTime
   return tempquality
 
+def getMPCDecision(sessionHistory, bufferlen, candidateBitrates, chunkid, CHUNKSIZE):
+
+
 def getUtilityBitrateDecision(bufferlen, candidateBitrates, bandwidth, chunkid, CHUNKSIZE, BUFFER_SAFETY_MARGIN, buffering_weight, sessionHistory, chunk_residue, currbitratePlaying, clock, decision_cycle, bwArray, usedBWArray, sessiontimems, oldbw, attempt_id):
   if BUFFER_SAFETY_MARGIN == -1:
     BUFFER_SAFETY_MARGIN = 0.275
