@@ -26,7 +26,7 @@ BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 TOTAL_VIDEO_CHUNKS = 48
 DEFAULT_QUALITY = 0  # default video quality without agent
-REBUF_PENALTY = 8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+REBUF_PENALTY = 4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
 SMOOTH_PENALTY = 0.0 #1
 TRAIN_SEQ_LEN = 100  # take as a train batch
 MODEL_SAVE_INTERVAL = 100
@@ -131,6 +131,7 @@ def make_request_handler(input_dict):
                 state = np.roll(state, -1, axis=1)
 
                 # this should be S_INFO number of terms
+                # print video_chunk_size, video_chunk_fetch_time, M_IN_K, float(video_chunk_size) / float(video_chunk_fetch_time) / M_IN_K
                 try:
                     state[0, -1] = VIDEO_BIT_RATE[post_data['lastquality']] / float(np.max(VIDEO_BIT_RATE))
                     state[1, -1] = post_data['buffer'] / BUFFER_NORM_FACTOR
@@ -197,6 +198,7 @@ def make_request_handler(input_dict):
                 best_combo = ()
                 start_buffer = float(post_data['buffer'])
                 #start = time.time()
+                # print "Future BW ", future_bandwidth, " harmonic BW", harmonic_bandwidth, " max_error ", max_error, " len_past_errors ", len(past_errors), " Kbyte/ms ", float(video_chunk_size) / float(video_chunk_fetch_time) / M_IN_K, "\n"
                 for full_combo in CHUNK_COMBO_OPTIONS:
                     combo = full_combo[0:future_chunk_length]
                     # calculate total rebuffer time for this combination (start with start_buffer and subtract
@@ -210,6 +212,7 @@ def make_request_handler(input_dict):
                         chunk_quality = combo[position]
                         index = last_index + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
                         download_time = (get_chunk_size(chunk_quality, index)/1000000.)/future_bandwidth # this is MB/MB/s --> seconds
+                        # print "chunksize ", get_chunk_size(chunk_quality, index), " in MB ", (get_chunk_size(chunk_quality, index)/1000000.), ' futureBW ', future_bandwidth, " download_time ", download_time, "\n"
                         if ( curr_buffer < download_time ):
                             curr_rebuffer_time += (download_time - curr_buffer)
                             curr_buffer = 0

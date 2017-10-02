@@ -6,6 +6,14 @@ online-tuner_mobile_dash_trace_40_10314_out_txt
 4010314 online-tuner
 49
 
+robustmpc_desktop_dash_trace_3_10068_out_txt
+('total quality change events=', 36, 'total_quality_change=', 67500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 96500.0)
+('avgBitrate=', 1969.39, 'rebufRatio=', 0.0, 'QoE=', 1.969387755102041)
+310068 robustmpc
+49
+
 online-tuner_desktop_dash_trace_117_13053_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 12850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -62,12 +70,28 @@ online-tuner_mobile_dash_trace_14_1011_out_txt
 141011 online-tuner
 49
 
+robustmpc_desktop_dash_trace_119_13082_out_txt
+('total quality change events=', 22, 'total_quality_change=', 39500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 42250.0)
+('avgBitrate=', 862.24, 'rebufRatio=', 0.0, 'QoE=', 0.8622448979591837)
+11913082 robustmpc
+49
+
 online-tuner_desktop_dash_trace_112_12872_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 11800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 159850.0)
 ('avgBitrate=', 3262.24, 'rebufRatio=', 0.0, 'QoE=', 3.2622448979591834)
 11212872 online-tuner
+49
+
+robustmpc_desktop_dash_trace_121_1310_out_txt
+('total quality change events=', 5, 'total_quality_change=', 4050)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 16950.0)
+('avgBitrate=', 345.92, 'rebufRatio=', 0.0, 'QoE=', 0.34591836734693876)
+1211310 robustmpc
 49
 
 online-tuner_desktop_dash_trace_49_111_out_txt
@@ -110,12 +134,28 @@ online-tuner_desktop_dash_trace_35_10680_out_txt
 3510680 online-tuner
 49
 
+robustmpc_mobile_dash_trace_208_11710_out_txt
+('total quality change events=', 40, 'total_quality_change=', 83100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 102650.0)
+('avgBitrate=', 2094.9, 'rebufRatio=', 0.0, 'QoE=', 2.0948979591836734)
+20811710 robustmpc
+49
+
 online-tuner_desktop_dash_trace_185_1854_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 20200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 83700.0)
 ('avgBitrate=', 1708.16, 'rebufRatio=', 0.0, 'QoE=', 1.7081632653061225)
 1851854 online-tuner
+49
+
+robustmpc_desktop_dash_trace_26_10534_out_txt
+('total quality change events=', 8, 'total_quality_change=', 14000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 192350.0)
+('avgBitrate=', 3925.51, 'rebufRatio=', 0.0, 'QoE=', 3.9255102040816325)
+2610534 robustmpc
 49
 
 online-tuner_desktop_dash_trace_158_13836_out_txt
@@ -142,6 +182,22 @@ online-tuner_desktop_dash_trace_23_10468_out_txt
 2310468 online-tuner
 49
 
+robustmpc_desktop_dash_trace_37_10854_out_txt
+('total quality change events=', 3, 'total_quality_change=', 6900)
+('total buffering events=', 1, 'total buffering time=', 0.4330000000000003)
+('total bitrate=', 205250.0)
+('avgBitrate=', 4188.78, 'rebufRatio=', 0.00220431393910392, 'QoE=', 4.112779591836734)
+3710854 robustmpc
+49
+
+robustmpc_mobile_dash_trace_224_11899_out_txt
+('total quality change events=', 7, 'total_quality_change=', 9350)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 20150.0)
+('avgBitrate=', 411.22, 'rebufRatio=', 0.0, 'QoE=', 0.41122448979591836)
+22411899 robustmpc
+49
+
 online-tuner_desktop_dash_trace_179_1664_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 17100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -166,6 +222,22 @@ online-tuner_mobile_dash_trace_168_11288_out_txt
 16811288 online-tuner
 49
 
+robustmpc_mobile_dash_trace_80_10668_out_txt
+('total quality change events=', 3, 'total_quality_change=', 6000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 198800.0)
+('avgBitrate=', 4057.14, 'rebufRatio=', 0.0, 'QoE=', 4.057142857142857)
+8010668 robustmpc
+49
+
+robustmpc_mobile_dash_trace_30_10220_out_txt
+('total quality change events=', 7, 'total_quality_change=', 13300)
+('total buffering events=', 2, 'total buffering time=', 2.6119999999999948)
+('total bitrate=', 22250.0)
+('avgBitrate=', 454.08, 'rebufRatio=', 0.013151269812498716, 'QoE=', -0.004351020408162333)
+3010220 robustmpc
+49
+
 online-tuner_mobile_dash_trace_87_10681_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 21800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -180,6 +252,22 @@ online-tuner_desktop_dash_trace_120_13097_out_txt
 ('total bitrate=', 190350.0)
 ('avgBitrate=', 3884.69, 'rebufRatio=', 0.0, 'QoE=', 3.8846938775510202)
 12013097 online-tuner
+49
+
+robustmpc_mobile_dash_trace_108_10845_out_txt
+('total quality change events=', 24, 'total_quality_change=', 42050)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 39250.0)
+('avgBitrate=', 801.02, 'rebufRatio=', 0.0, 'QoE=', 0.8010204081632653)
+10810845 robustmpc
+49
+
+robustmpc_desktop_dash_trace_83_12150_out_txt
+('total quality change events=', 7, 'total_quality_change=', 17300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191600.0)
+('avgBitrate=', 3910.2, 'rebufRatio=', 0.0, 'QoE=', 3.910204081632653)
+8312150 robustmpc
 49
 
 robustmpc_desktop_dash_trace_73_11874_out_txt
@@ -214,6 +302,14 @@ online-tuner_mobile_dash_trace_215_11784_out_txt
 21511784 online-tuner
 49
 
+robustmpc_mobile_dash_trace_114_10883_out_txt
+('total quality change events=', 29, 'total_quality_change=', 49150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 55800.0)
+('avgBitrate=', 1138.78, 'rebufRatio=', 0.0, 'QoE=', 1.1387755102040815)
+11410883 robustmpc
+49
+
 online-tuner_desktop_dash_trace_234_3060_out_txt
 ('total quality change events=', 1, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -230,12 +326,28 @@ online-tuner_desktop_dash_trace_171_1557_out_txt
 1711557 online-tuner
 49
 
+robustmpc_desktop_dash_trace_141_13537_out_txt
+('total quality change events=', 39, 'total_quality_change=', 78800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 109850.0)
+('avgBitrate=', 2241.84, 'rebufRatio=', 0.0, 'QoE=', 2.2418367346938775)
+14113537 robustmpc
+49
+
 online-tuner_desktop_dash_trace_242_3260_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 7200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 39000.0)
 ('avgBitrate=', 795.92, 'rebufRatio=', 0.0, 'QoE=', 0.7959183673469388)
 2423260 online-tuner
+49
+
+robustmpc_mobile_dash_trace_205_11708_out_txt
+('total quality change events=', 7, 'total_quality_change=', 15100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 185900.0)
+('avgBitrate=', 3793.88, 'rebufRatio=', 0.0, 'QoE=', 3.793877551020408)
+20511708 robustmpc
 49
 
 online-tuner_mobile_dash_trace_202_11689_out_txt
@@ -262,6 +374,22 @@ online-tuner_mobile_dash_trace_104_10818_out_txt
 10410818 online-tuner
 49
 
+robustmpc_desktop_dash_trace_147_13680_out_txt
+('total quality change events=', 15, 'total_quality_change=', 21100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 29050.0)
+('avgBitrate=', 592.86, 'rebufRatio=', 0.0, 'QoE=', 0.5928571428571429)
+14713680 robustmpc
+49
+
+robustmpc_desktop_dash_trace_18_10372_out_txt
+('total quality change events=', 29, 'total_quality_change=', 45100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 163650.0)
+('avgBitrate=', 3339.8, 'rebufRatio=', 0.0, 'QoE=', 3.339795918367347)
+1810372 robustmpc
+49
+
 robustmpc_desktop_dash_trace_45_11049_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -284,6 +412,14 @@ online-tuner_mobile_dash_trace_155_11207_out_txt
 ('total bitrate=', 42800.0)
 ('avgBitrate=', 873.47, 'rebufRatio=', 0.0, 'QoE=', 0.873469387755102)
 15511207 online-tuner
+49
+
+robustmpc_desktop_dash_trace_156_13817_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 204250.0)
+('avgBitrate=', 4168.37, 'rebufRatio=', 0.0, 'QoE=', 4.168367346938775)
+15613817 robustmpc
 49
 
 online-tuner_mobile_dash_trace_183_11468_out_txt
@@ -414,12 +550,36 @@ online-tuner_mobile_dash_trace_99_1079_out_txt
 991079 online-tuner
 49
 
+robustmpc_mobile_dash_trace_33_10239_out_txt
+('total quality change events=', 34, 'total_quality_change=', 49100)
+('total buffering events=', 2, 'total buffering time=', 0.9369999999999834)
+('total bitrate=', 137750.0)
+('avgBitrate=', 2811.22, 'rebufRatio=', 0.0047578667289538456, 'QoE=', 2.6467714285714314)
+3310239 robustmpc
+49
+
+robustmpc_mobile_dash_trace_54_10418_out_txt
+('total quality change events=', 11, 'total_quality_change=', 6300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 18300.0)
+('avgBitrate=', 373.47, 'rebufRatio=', 0.0, 'QoE=', 0.3734693877551021)
+5410418 robustmpc
+49
+
 online-tuner_desktop_dash_trace_209_2565_out_txt
 ('total quality change events=', 19, 'total_quality_change=', 14850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 71500.0)
 ('avgBitrate=', 1459.18, 'rebufRatio=', 0.0, 'QoE=', 1.4591836734693877)
 2092565 online-tuner
+49
+
+robustmpc_mobile_dash_trace_47_10384_out_txt
+('total quality change events=', 10, 'total_quality_change=', 16900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 175000.0)
+('avgBitrate=', 3571.43, 'rebufRatio=', 0.0, 'QoE=', 3.5714285714285716)
+4710384 robustmpc
 49
 
 robustmpc_mobile_dash_trace_99_1079_out_txt
@@ -436,6 +596,22 @@ online-tuner_mobile_dash_trace_150_11167_out_txt
 ('total bitrate=', 185550.0)
 ('avgBitrate=', 3786.73, 'rebufRatio=', 0.0, 'QoE=', 3.7867346938775515)
 15011167 online-tuner
+49
+
+robustmpc_desktop_dash_trace_133_13362_out_txt
+('total quality change events=', 32, 'total_quality_change=', 49700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 61250.0)
+('avgBitrate=', 1250.0, 'rebufRatio=', 0.0, 'QoE=', 1.25)
+13313362 robustmpc
+49
+
+robustmpc_desktop_dash_trace_149_13705_out_txt
+('total quality change events=', 36, 'total_quality_change=', 66500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 97150.0)
+('avgBitrate=', 1982.65, 'rebufRatio=', 0.0, 'QoE=', 1.98265306122449)
+14913705 robustmpc
 49
 
 online-tuner_mobile_dash_trace_114_10883_out_txt
@@ -470,6 +646,14 @@ online-tuner_mobile_dash_trace_91_10699_out_txt
 9110699 online-tuner
 49
 
+robustmpc_mobile_dash_trace_157_11211_out_txt
+('total quality change events=', 42, 'total_quality_change=', 72300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 118100.0)
+('avgBitrate=', 2410.2, 'rebufRatio=', 0.0, 'QoE=', 2.410204081632653)
+15711211 robustmpc
+49
+
 online-tuner_desktop_dash_trace_218_2816_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 13850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -494,6 +678,14 @@ online-tuner_desktop_dash_trace_221_2887_out_txt
 2212887 online-tuner
 49
 
+robustmpc_desktop_dash_trace_191_1995_out_txt
+('total quality change events=', 11, 'total_quality_change=', 27100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170900.0)
+('avgBitrate=', 3487.76, 'rebufRatio=', 0.0, 'QoE=', 3.4877551020408166)
+1911995 robustmpc
+49
+
 online-tuner_mobile_dash_trace_230_11934_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 24550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -508,6 +700,14 @@ robustmpc_mobile_dash_trace_171_1130_out_txt
 ('total bitrate=', 86000.0)
 ('avgBitrate=', 1755.1, 'rebufRatio=', 0.0, 'QoE=', 1.7551020408163265)
 1711130 robustmpc
+49
+
+robustmpc_desktop_dash_trace_146_13669_out_txt
+('total quality change events=', 14, 'total_quality_change=', 26600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 173800.0)
+('avgBitrate=', 3546.94, 'rebufRatio=', 0.0, 'QoE=', 3.5469387755102044)
+14613669 robustmpc
 49
 
 online-tuner_desktop_dash_trace_240_3246_out_txt
@@ -534,6 +734,14 @@ online-tuner_desktop_dash_trace_94_12453_out_txt
 9412453 online-tuner
 49
 
+robustmpc_mobile_dash_trace_198_11677_out_txt
+('total quality change events=', 27, 'total_quality_change=', 43950)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 46800.0)
+('avgBitrate=', 955.1, 'rebufRatio=', 0.0, 'QoE=', 0.9551020408163264)
+19811677 robustmpc
+49
+
 online-tuner_mobile_dash_trace_29_1022_out_txt
 ('total quality change events=', 27, 'total_quality_change=', 38800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -558,12 +766,28 @@ online-tuner_desktop_dash_trace_27_10553_out_txt
 2710553 online-tuner
 49
 
+robustmpc_desktop_dash_trace_108_12811_out_txt
+('total quality change events=', 21, 'total_quality_change=', 43300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 158000.0)
+('avgBitrate=', 3224.49, 'rebufRatio=', 0.0, 'QoE=', 3.2244897959183674)
+10812811 robustmpc
+49
+
 robustmpc_mobile_dash_trace_66_10510_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 50850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 153700.0)
 ('avgBitrate=', 3136.73, 'rebufRatio=', 0.0, 'QoE=', 3.1367346938775507)
 6610510 robustmpc
+49
+
+robustmpc_desktop_dash_trace_193_208_out_txt
+('total quality change events=', 12, 'total_quality_change=', 21800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181650.0)
+('avgBitrate=', 3707.14, 'rebufRatio=', 0.0, 'QoE=', 3.7071428571428573)
+193208 robustmpc
 49
 
 robustmpc_mobile_dash_trace_62_10479_out_txt
@@ -580,6 +804,14 @@ online-tuner_desktop_dash_trace_55_11302_out_txt
 ('total bitrate=', 139500.0)
 ('avgBitrate=', 2846.94, 'rebufRatio=', 0.0, 'QoE=', 2.8469387755102042)
 5511302 online-tuner
+49
+
+robustmpc_desktop_dash_trace_161_13982_out_txt
+('total quality change events=', 29, 'total_quality_change=', 47300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 140950.0)
+('avgBitrate=', 2876.53, 'rebufRatio=', 0.0, 'QoE=', 2.8765306122448977)
+16113982 robustmpc
 49
 
 online-tuner_desktop_dash_trace_76_11917_out_txt
@@ -654,6 +886,14 @@ online-tuner_mobile_dash_trace_207_1171_out_txt
 2071171 online-tuner
 49
 
+robustmpc_mobile_dash_trace_85_10677_out_txt
+('total quality change events=', 25, 'total_quality_change=', 41100)
+('total buffering events=', 1, 'total buffering time=', 0.7469999999999999)
+('total bitrate=', 50900.0)
+('avgBitrate=', 1038.78, 'rebufRatio=', 0.0037967542071797784, 'QoE=', 0.9076693877551021)
+8510677 robustmpc
+49
+
 robustmpc_desktop_dash_trace_17_10324_out_txt
 ('total quality change events=', 39, 'total_quality_change=', 82300)
 ('total buffering events=', 1, 'total buffering time=', 1.9709999999999894)
@@ -686,6 +926,22 @@ robustmpc_mobile_dash_trace_74_10597_out_txt
 7410597 robustmpc
 49
 
+robustmpc_desktop_dash_trace_109_12826_out_txt
+('total quality change events=', 28, 'total_quality_change=', 58700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 132400.0)
+('avgBitrate=', 2702.04, 'rebufRatio=', 0.0, 'QoE=', 2.7020408163265306)
+10912826 robustmpc
+49
+
+robustmpc_mobile_dash_trace_75_10601_out_txt
+('total quality change events=', 10, 'total_quality_change=', 17500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174900.0)
+('avgBitrate=', 3569.39, 'rebufRatio=', 0.0, 'QoE=', 3.5693877551020408)
+7510601 robustmpc
+49
+
 online-tuner_mobile_dash_trace_233_11956_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 11050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -700,6 +956,38 @@ online-tuner_desktop_dash_trace_102_12589_out_txt
 ('total bitrate=', 143800.0)
 ('avgBitrate=', 2934.69, 'rebufRatio=', 0.0, 'QoE=', 2.9346938775510205)
 10212589 online-tuner
+49
+
+robustmpc_mobile_dash_trace_233_11956_out_txt
+('total quality change events=', 30, 'total_quality_change=', 47500)
+('total buffering events=', 1, 'total buffering time=', 5.986000000000018)
+('total bitrate=', 53150.0)
+('avgBitrate=', 1084.69, 'rebufRatio=', 0.02963571732694354, 'QoE=', 0.034089795918364175)
+23311956 robustmpc
+49
+
+robustmpc_desktop_dash_trace_126_13250_out_txt
+('total quality change events=', 38, 'total_quality_change=', 73200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 72050.0)
+('avgBitrate=', 1470.41, 'rebufRatio=', 0.0, 'QoE=', 1.470408163265306)
+12613250 robustmpc
+49
+
+robustmpc_desktop_dash_trace_86_12194_out_txt
+('total quality change events=', 13, 'total_quality_change=', 18200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 176900.0)
+('avgBitrate=', 3610.2, 'rebufRatio=', 0.0, 'QoE=', 3.610204081632653)
+8612194 robustmpc
+49
+
+robustmpc_mobile_dash_trace_213_11751_out_txt
+('total quality change events=', 29, 'total_quality_change=', 43200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 152000.0)
+('avgBitrate=', 3102.04, 'rebufRatio=', 0.0, 'QoE=', 3.1020408163265305)
+21311751 robustmpc
 49
 
 online-tuner_mobile_dash_trace_125_11002_out_txt
@@ -734,6 +1022,14 @@ robustmpc_desktop_dash_trace_41_10960_out_txt
 4110960 robustmpc
 49
 
+robustmpc_mobile_dash_trace_118_10938_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 202800.0)
+('avgBitrate=', 4138.78, 'rebufRatio=', 0.0, 'QoE=', 4.1387755102040815)
+11810938 robustmpc
+49
+
 online-tuner_mobile_dash_trace_217_11823_out_txt
 ('total quality change events=', 7, 'total_quality_change=', 9800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -750,12 +1046,52 @@ robustmpc_desktop_dash_trace_10_10247_out_txt
 1010247 robustmpc
 49
 
+robustmpc_mobile_dash_trace_110_10865_out_txt
+('total quality change events=', 39, 'total_quality_change=', 61000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 60750.0)
+('avgBitrate=', 1239.8, 'rebufRatio=', 0.0, 'QoE=', 1.239795918367347)
+11010865 robustmpc
+49
+
+robustmpc_mobile_dash_trace_25_10172_out_txt
+('total quality change events=', 14, 'total_quality_change=', 25100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 178000.0)
+('avgBitrate=', 3632.65, 'rebufRatio=', 0.0, 'QoE=', 3.63265306122449)
+2510172 robustmpc
+49
+
+robustmpc_desktop_dash_trace_61_11601_out_txt
+('total quality change events=', 37, 'total_quality_change=', 66000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 130600.0)
+('avgBitrate=', 2665.31, 'rebufRatio=', 0.0, 'QoE=', 2.6653061224489796)
+6111601 robustmpc
+49
+
 robustmpc_mobile_dash_trace_223_11880_out_txt
 ('total quality change events=', 1, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 206700.0)
 ('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
 22311880 robustmpc
+49
+
+robustmpc_mobile_dash_trace_159_11217_out_txt
+('total quality change events=', 31, 'total_quality_change=', 52400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 56700.0)
+('avgBitrate=', 1157.14, 'rebufRatio=', 0.0, 'QoE=', 1.1571428571428573)
+15911217 robustmpc
+49
+
+robustmpc_mobile_dash_trace_6_10065_out_txt
+('total quality change events=', 5, 'total_quality_change=', 16000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181150.0)
+('avgBitrate=', 3696.94, 'rebufRatio=', 0.0, 'QoE=', 3.6969387755102043)
+610065 robustmpc
 49
 
 online-tuner_desktop_dash_trace_10_10247_out_txt
@@ -774,6 +1110,14 @@ online-tuner_desktop_dash_trace_90_12320_out_txt
 9012320 online-tuner
 49
 
+robustmpc_mobile_dash_trace_249_1214_out_txt
+('total quality change events=', 37, 'total_quality_change=', 67900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 112450.0)
+('avgBitrate=', 2294.9, 'rebufRatio=', 0.0, 'QoE=', 2.2948979591836736)
+2491214 robustmpc
+49
+
 robustmpc_mobile_dash_trace_129_11027_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 25750)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -782,12 +1126,28 @@ robustmpc_mobile_dash_trace_129_11027_out_txt
 12911027 robustmpc
 49
 
+robustmpc_desktop_dash_trace_60_11499_out_txt
+('total quality change events=', 26, 'total_quality_change=', 52800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 136650.0)
+('avgBitrate=', 2788.78, 'rebufRatio=', 0.0, 'QoE=', 2.788775510204082)
+6011499 robustmpc
+49
+
 online-tuner_desktop_dash_trace_189_1939_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 26300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 141050.0)
 ('avgBitrate=', 2878.57, 'rebufRatio=', 0.0, 'QoE=', 2.878571428571429)
 1891939 online-tuner
+49
+
+robustmpc_mobile_dash_trace_28_1021_out_txt
+('total quality change events=', 3, 'total_quality_change=', 6900)
+('total buffering events=', 1, 'total buffering time=', 0.1549999999999998)
+('total bitrate=', 205250.0)
+('avgBitrate=', 4188.78, 'rebufRatio=', 0.0007901914302464877, 'QoE=', 4.1615714285714285)
+281021 robustmpc
 49
 
 robustmpc_mobile_dash_trace_11_10089_out_txt
@@ -846,12 +1206,28 @@ online-tuner_mobile_dash_trace_191_11536_out_txt
 19111536 online-tuner
 49
 
+robustmpc_mobile_dash_trace_78_10660_out_txt
+('total quality change events=', 23, 'total_quality_change=', 33300)
+('total buffering events=', 1, 'total buffering time=', 1.1159999999999997)
+('total bitrate=', 133750.0)
+('avgBitrate=', 2729.59, 'rebufRatio=', 0.005661640861218773, 'QoE=', 2.5337224489795918)
+7810660 robustmpc
+49
+
 online-tuner_mobile_dash_trace_92_10714_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 198800.0)
 ('avgBitrate=', 4057.14, 'rebufRatio=', 0.0, 'QoE=', 4.057142857142857)
 9210714 online-tuner
+49
+
+robustmpc_desktop_dash_trace_92_12422_out_txt
+('total quality change events=', 13, 'total_quality_change=', 21100)
+('total buffering events=', 1, 'total buffering time=', 3.151)
+('total bitrate=', 178800.0)
+('avgBitrate=', 3648.98, 'rebufRatio=', 0.01582216509081049, 'QoE=', 3.0959469387755103)
+9212422 robustmpc
 49
 
 online-tuner_mobile_dash_trace_197_11675_out_txt
@@ -870,6 +1246,14 @@ online-tuner_mobile_dash_trace_234_11958_out_txt
 23411958 online-tuner
 49
 
+robustmpc_desktop_dash_trace_99_12489_out_txt
+('total quality change events=', 31, 'total_quality_change=', 51000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 55000.0)
+('avgBitrate=', 1122.45, 'rebufRatio=', 0.0, 'QoE=', 1.1224489795918366)
+9912489 robustmpc
+49
+
 robustmpc_desktop_dash_trace_195_2116_out_txt
 ('total quality change events=', 39, 'total_quality_change=', 71300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -884,6 +1268,14 @@ online-tuner_desktop_dash_trace_67_1171_out_txt
 ('total bitrate=', 148400.0)
 ('avgBitrate=', 3028.57, 'rebufRatio=', 0.0, 'QoE=', 3.0285714285714285)
 671171 online-tuner
+49
+
+robustmpc_desktop_dash_trace_52_11167_out_txt
+('total quality change events=', 17, 'total_quality_change=', 20150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 27400.0)
+('avgBitrate=', 559.18, 'rebufRatio=', 0.0, 'QoE=', 0.5591836734693877)
+5211167 robustmpc
 49
 
 online-tuner_mobile_dash_trace_176_11352_out_txt
@@ -934,6 +1326,22 @@ online-tuner_desktop_dash_trace_210_2579_out_txt
 2102579 online-tuner
 49
 
+robustmpc_mobile_dash_trace_160_11224_out_txt
+('total quality change events=', 10, 'total_quality_change=', 12150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 22500.0)
+('avgBitrate=', 459.18, 'rebufRatio=', 0.0, 'QoE=', 0.45918367346938777)
+16011224 robustmpc
+49
+
+robustmpc_desktop_dash_trace_163_14016_out_txt
+('total quality change events=', 29, 'total_quality_change=', 44500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 138200.0)
+('avgBitrate=', 2820.41, 'rebufRatio=', 0.0, 'QoE=', 2.8204081632653057)
+16314016 robustmpc
+49
+
 online-tuner_mobile_dash_trace_188_11529_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 37400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -958,6 +1366,22 @@ robustmpc_desktop_dash_trace_14_10302_out_txt
 1410302 robustmpc
 49
 
+robustmpc_desktop_dash_trace_115_130_out_txt
+('total quality change events=', 19, 'total_quality_change=', 38000)
+('total buffering events=', 1, 'total buffering time=', 0.08000000000000007)
+('total bitrate=', 169100.0)
+('avgBitrate=', 3451.02, 'rebufRatio=', 0.0004079967360261121, 'QoE=', 3.4369795918367347)
+115130 robustmpc
+49
+
+robustmpc_desktop_dash_trace_94_12453_out_txt
+('total quality change events=', 22, 'total_quality_change=', 43100)
+('total buffering events=', 1, 'total buffering time=', 0.875)
+('total bitrate=', 45500.0)
+('avgBitrate=', 928.57, 'rebufRatio=', 0.0044444444444444444, 'QoE=', 0.775)
+9412453 robustmpc
+49
+
 online-tuner_desktop_dash_trace_182_1808_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 9650)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -972,6 +1396,14 @@ online-tuner_desktop_dash_trace_127_13270_out_txt
 ('total bitrate=', 128500.0)
 ('avgBitrate=', 2622.45, 'rebufRatio=', 0.0, 'QoE=', 2.622448979591837)
 12713270 online-tuner
+49
+
+robustmpc_desktop_dash_trace_143_13581_out_txt
+('total quality change events=', 20, 'total_quality_change=', 32700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 139050.0)
+('avgBitrate=', 2837.76, 'rebufRatio=', 0.0, 'QoE=', 2.8377551020408167)
+14313581 robustmpc
 49
 
 robustmpc_desktop_dash_trace_181_1776_out_txt
@@ -998,12 +1430,28 @@ online-tuner_desktop_dash_trace_97_12470_out_txt
 9712470 online-tuner
 49
 
+robustmpc_desktop_dash_trace_124_13183_out_txt
+('total quality change events=', 41, 'total_quality_change=', 72800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 101400.0)
+('avgBitrate=', 2069.39, 'rebufRatio=', 0.0, 'QoE=', 2.0693877551020408)
+12413183 robustmpc
+49
+
 online-tuner_mobile_dash_trace_120_10941_out_txt
 ('total quality change events=', 12, 'total_quality_change=', 20500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 190100.0)
 ('avgBitrate=', 3879.59, 'rebufRatio=', 0.0, 'QoE=', 3.8795918367346935)
 12010941 online-tuner
+49
+
+robustmpc_mobile_dash_trace_16_10114_out_txt
+('total quality change events=', 23, 'total_quality_change=', 34700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 143550.0)
+('avgBitrate=', 2929.59, 'rebufRatio=', 0.0, 'QoE=', 2.9295918367346943)
+1610114 robustmpc
 49
 
 robustmpc_mobile_dash_trace_106_10833_out_txt
@@ -1046,6 +1494,14 @@ online-tuner_desktop_dash_trace_126_13250_out_txt
 12613250 online-tuner
 49
 
+robustmpc_mobile_dash_trace_214_11762_out_txt
+('total quality change events=', 33, 'total_quality_change=', 71500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 79750.0)
+('avgBitrate=', 1627.55, 'rebufRatio=', 0.0, 'QoE=', 1.6275510204081634)
+21411762 robustmpc
+49
+
 online-tuner_mobile_dash_trace_154_11204_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 15550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1060,6 +1516,14 @@ online-tuner_desktop_dash_trace_71_1177_out_txt
 ('total bitrate=', 151550.0)
 ('avgBitrate=', 3092.86, 'rebufRatio=', 0.0, 'QoE=', 3.092857142857143)
 711177 online-tuner
+49
+
+robustmpc_desktop_dash_trace_243_3278_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 205250.0)
+('avgBitrate=', 4188.78, 'rebufRatio=', 0.0, 'QoE=', 4.188775510204081)
+2433278 robustmpc
 49
 
 online-tuner_desktop_dash_trace_7_10176_out_txt
@@ -1084,6 +1548,14 @@ robustmpc_desktop_dash_trace_64_11621_out_txt
 ('total bitrate=', 94850.0)
 ('avgBitrate=', 1935.71, 'rebufRatio=', 0.00624141235404168, 'QoE=', 1.7196612244897969)
 6411621 robustmpc
+49
+
+robustmpc_desktop_dash_trace_67_1171_out_txt
+('total quality change events=', 18, 'total_quality_change=', 29300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 140100.0)
+('avgBitrate=', 2859.18, 'rebufRatio=', 0.0, 'QoE=', 2.8591836734693876)
+671171 robustmpc
 49
 
 online-tuner_mobile_dash_trace_116_10903_out_txt
@@ -1116,6 +1588,14 @@ online-tuner_mobile_dash_trace_193_11570_out_txt
 ('total bitrate=', 89900.0)
 ('avgBitrate=', 1834.69, 'rebufRatio=', 0.0, 'QoE=', 1.8346938775510204)
 19311570 online-tuner
+49
+
+robustmpc_desktop_dash_trace_107_12761_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186700.0)
+('avgBitrate=', 3810.2, 'rebufRatio=', 0.0, 'QoE=', 3.810204081632653)
+10712761 robustmpc
 49
 
 robustmpc_desktop_dash_trace_242_3260_out_txt
@@ -1190,6 +1670,14 @@ robustmpc_desktop_dash_trace_226_2955_out_txt
 2262955 robustmpc
 49
 
+robustmpc_desktop_dash_trace_145_13640_out_txt
+('total quality change events=', 15, 'total_quality_change=', 19750)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 27150.0)
+('avgBitrate=', 554.08, 'rebufRatio=', 0.0, 'QoE=', 0.5540816326530612)
+14513640 robustmpc
+49
+
 online-tuner_desktop_dash_trace_150_1372_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 12050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1204,6 +1692,14 @@ online-tuner_desktop_dash_trace_155_1379_out_txt
 ('total bitrate=', 171050.0)
 ('avgBitrate=', 3490.82, 'rebufRatio=', 0.0, 'QoE=', 3.4908163265306125)
 1551379 online-tuner
+49
+
+robustmpc_mobile_dash_trace_194_11572_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193250.0)
+('avgBitrate=', 3943.88, 'rebufRatio=', 0.0, 'QoE=', 3.943877551020408)
+19411572 robustmpc
 49
 
 robustmpc_desktop_dash_trace_148_13687_out_txt
@@ -1230,12 +1726,36 @@ online-tuner_desktop_dash_trace_166_1456_out_txt
 1661456 online-tuner
 49
 
+robustmpc_desktop_dash_trace_6_10145_out_txt
+('total quality change events=', 26, 'total_quality_change=', 51100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 148450.0)
+('avgBitrate=', 3029.59, 'rebufRatio=', 0.0, 'QoE=', 3.0295918367346935)
+610145 robustmpc
+49
+
+robustmpc_mobile_dash_trace_181_11455_out_txt
+('total quality change events=', 12, 'total_quality_change=', 22200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146250.0)
+('avgBitrate=', 2984.69, 'rebufRatio=', 0.0, 'QoE=', 2.9846938775510203)
+18111455 robustmpc
+49
+
 online-tuner_mobile_dash_trace_199_11683_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 201250.0)
 ('avgBitrate=', 4107.14, 'rebufRatio=', 0.0, 'QoE=', 4.107142857142857)
 19911683 online-tuner
+49
+
+robustmpc_desktop_dash_trace_159_13897_out_txt
+('total quality change events=', 33, 'total_quality_change=', 54700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 95000.0)
+('avgBitrate=', 1938.78, 'rebufRatio=', 0.0, 'QoE=', 1.9387755102040816)
+15913897 robustmpc
 49
 
 online-tuner_desktop_dash_trace_196_2118_out_txt
@@ -1252,6 +1772,14 @@ online-tuner_desktop_dash_trace_106_12713_out_txt
 ('total bitrate=', 118550.0)
 ('avgBitrate=', 2419.39, 'rebufRatio=', 0.0, 'QoE=', 2.419387755102041)
 10612713 online-tuner
+49
+
+robustmpc_mobile_dash_trace_163_11257_out_txt
+('total quality change events=', 6, 'total_quality_change=', 8900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193900.0)
+('avgBitrate=', 3957.14, 'rebufRatio=', 0.0, 'QoE=', 3.9571428571428573)
+16311257 robustmpc
 49
 
 online-tuner_desktop_dash_trace_20_10409_out_txt
@@ -1278,6 +1806,14 @@ online-tuner_mobile_dash_trace_55_10441_out_txt
 5510441 online-tuner
 49
 
+robustmpc_mobile_dash_trace_190_11535_out_txt
+('total quality change events=', 4, 'total_quality_change=', 4900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193700.0)
+('avgBitrate=', 3953.06, 'rebufRatio=', 0.0, 'QoE=', 3.9530612244897956)
+19011535 robustmpc
+49
+
 online-tuner_desktop_dash_trace_92_12422_out_txt
 ('total quality change events=', 9, 'total_quality_change=', 11100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1286,12 +1822,36 @@ online-tuner_desktop_dash_trace_92_12422_out_txt
 9212422 online-tuner
 49
 
+robustmpc_mobile_dash_trace_149_11160_out_txt
+('total quality change events=', 25, 'total_quality_change=', 47900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 126400.0)
+('avgBitrate=', 2579.59, 'rebufRatio=', 0.0, 'QoE=', 2.579591836734694)
+14911160 robustmpc
+49
+
 online-tuner_mobile_dash_trace_227_11920_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 17300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 44700.0)
 ('avgBitrate=', 912.24, 'rebufRatio=', 0.0, 'QoE=', 0.9122448979591837)
 22711920 online-tuner
+49
+
+robustmpc_mobile_dash_trace_175_11320_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 197450.0)
+('avgBitrate=', 4029.59, 'rebufRatio=', 0.0, 'QoE=', 4.029591836734694)
+17511320 robustmpc
+49
+
+robustmpc_desktop_dash_trace_85_12172_out_txt
+('total quality change events=', 7, 'total_quality_change=', 13100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 189250.0)
+('avgBitrate=', 3862.24, 'rebufRatio=', 0.0, 'QoE=', 3.8622448979591835)
+8512172 robustmpc
 49
 
 online-tuner_desktop_dash_trace_46_11077_out_txt
@@ -1326,6 +1886,22 @@ online-tuner_desktop_dash_trace_220_2878_out_txt
 2202878 online-tuner
 49
 
+robustmpc_mobile_dash_trace_206_11709_out_txt
+('total quality change events=', 15, 'total_quality_change=', 19400)
+('total buffering events=', 1, 'total buffering time=', 0.2190000000000225)
+('total bitrate=', 177100.0)
+('avgBitrate=', 3614.29, 'rebufRatio=', 0.001116099868004742, 'QoE=', 3.5758489795918327)
+20611709 robustmpc
+49
+
+robustmpc_desktop_dash_trace_12_10268_out_txt
+('total quality change events=', 7, 'total_quality_change=', 6150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 24150.0)
+('avgBitrate=', 492.86, 'rebufRatio=', 0.0, 'QoE=', 0.4928571428571428)
+1210268 robustmpc
+49
+
 online-tuner_desktop_dash_trace_165_1445_out_txt
 ('total quality change events=', 14, 'total_quality_change=', 6300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1350,6 +1926,14 @@ online-tuner_mobile_dash_trace_192_11566_out_txt
 19211566 online-tuner
 49
 
+robustmpc_mobile_dash_trace_120_10941_out_txt
+('total quality change events=', 7, 'total_quality_change=', 11800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184350.0)
+('avgBitrate=', 3762.24, 'rebufRatio=', 0.0, 'QoE=', 3.7622448979591834)
+12010941 robustmpc
+49
+
 online-tuner_desktop_dash_trace_163_14016_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 27400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1366,6 +1950,14 @@ robustmpc_mobile_dash_trace_243_12068_out_txt
 24312068 robustmpc
 49
 
+robustmpc_mobile_dash_trace_26_10176_out_txt
+('total quality change events=', 35, 'total_quality_change=', 66200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 75700.0)
+('avgBitrate=', 1544.9, 'rebufRatio=', 0.0, 'QoE=', 1.5448979591836736)
+2610176 robustmpc
+49
+
 online-tuner_desktop_dash_trace_51_11136_out_txt
 ('total quality change events=', 9, 'total_quality_change=', 10900)
 ('total buffering events=', 1, 'total buffering time=', 0.049000000000006594)
@@ -1380,6 +1972,22 @@ online-tuner_mobile_dash_trace_182_11458_out_txt
 ('total bitrate=', 124900.0)
 ('avgBitrate=', 2548.98, 'rebufRatio=', 0.0, 'QoE=', 2.548979591836735)
 18211458 online-tuner
+49
+
+robustmpc_mobile_dash_trace_77_10654_out_txt
+('total quality change events=', 29, 'total_quality_change=', 63500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 140250.0)
+('avgBitrate=', 2862.24, 'rebufRatio=', 0.0, 'QoE=', 2.8622448979591835)
+7710654 robustmpc
+49
+
+robustmpc_mobile_dash_trace_167_11287_out_txt
+('total quality change events=', 18, 'total_quality_change=', 34500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181200.0)
+('avgBitrate=', 3697.96, 'rebufRatio=', 0.0, 'QoE=', 3.6979591836734693)
+16711287 robustmpc
 49
 
 online-tuner_mobile_dash_trace_195_11592_out_txt
@@ -1412,6 +2020,14 @@ online-tuner_mobile_dash_trace_218_11825_out_txt
 ('total bitrate=', 67650.0)
 ('avgBitrate=', 1380.61, 'rebufRatio=', 0.0, 'QoE=', 1.3806122448979592)
 21811825 online-tuner
+49
+
+robustmpc_mobile_dash_trace_218_11825_out_txt
+('total quality change events=', 38, 'total_quality_change=', 77400)
+('total buffering events=', 1, 'total buffering time=', 0.24899999999999523)
+('total bitrate=', 76550.0)
+('avgBitrate=', 1562.24, 'rebufRatio=', 0.0012687962741211177, 'QoE=', 1.5185428571428579)
+21811825 robustmpc
 49
 
 robustmpc_desktop_dash_trace_9_10228_out_txt
@@ -1494,12 +2110,28 @@ online-tuner_desktop_dash_trace_3_10068_out_txt
 310068 online-tuner
 49
 
+robustmpc_mobile_dash_trace_1_10016_out_txt
+('total quality change events=', 25, 'total_quality_change=', 36600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 124300.0)
+('avgBitrate=', 2536.73, 'rebufRatio=', 0.0, 'QoE=', 2.536734693877551)
+110016 robustmpc
+49
+
 robustmpc_mobile_dash_trace_124_11000_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 27800)
 ('total buffering events=', 1, 'total buffering time=', 0.17499999999998295)
 ('total bitrate=', 177650.0)
 ('avgBitrate=', 3625.51, 'rebufRatio=', 0.0008920606601248017, 'QoE=', 3.59479591836735)
 12411000 robustmpc
+49
+
+robustmpc_mobile_dash_trace_138_11051_out_txt
+('total quality change events=', 36, 'total_quality_change=', 52650)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 65900.0)
+('avgBitrate=', 1344.9, 'rebufRatio=', 0.0, 'QoE=', 1.3448979591836736)
+13811051 robustmpc
 49
 
 online-tuner_desktop_dash_trace_147_13680_out_txt
@@ -1606,6 +2238,14 @@ robustmpc_desktop_dash_trace_170_1547_out_txt
 1701547 robustmpc
 49
 
+robustmpc_mobile_dash_trace_128_11026_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 198450.0)
+('avgBitrate=', 4050.0, 'rebufRatio=', 0.0, 'QoE=', 4.05)
+12811026 robustmpc
+49
+
 online-tuner_mobile_dash_trace_185_11496_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 36050)
 ('total buffering events=', 4, 'total buffering time=', 25.905999999999988)
@@ -1670,6 +2310,14 @@ online-tuner_mobile_dash_trace_34_10244_out_txt
 3410244 online-tuner
 49
 
+robustmpc_desktop_dash_trace_122_13109_out_txt
+('total quality change events=', 34, 'total_quality_change=', 59400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 84400.0)
+('avgBitrate=', 1722.45, 'rebufRatio=', 0.0, 'QoE=', 1.722448979591837)
+12213109 robustmpc
+49
+
 online-tuner_desktop_dash_trace_202_2303_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 20800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1686,6 +2334,14 @@ online-tuner_desktop_dash_trace_26_10534_out_txt
 2610534 online-tuner
 49
 
+robustmpc_mobile_dash_trace_174_1132_out_txt
+('total quality change events=', 8, 'total_quality_change=', 17100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182900.0)
+('avgBitrate=', 3732.65, 'rebufRatio=', 0.0, 'QoE=', 3.73265306122449)
+1741132 robustmpc
+49
+
 online-tuner_desktop_dash_trace_118_13079_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 9800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1700,6 +2356,14 @@ online-tuner_mobile_dash_trace_50_1040_out_txt
 ('total bitrate=', 200250.0)
 ('avgBitrate=', 4086.73, 'rebufRatio=', 0.0, 'QoE=', 4.086734693877551)
 501040 online-tuner
+49
+
+robustmpc_desktop_dash_trace_36_10689_out_txt
+('total quality change events=', 19, 'total_quality_change=', 40200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 173900.0)
+('avgBitrate=', 3548.98, 'rebufRatio=', 0.0, 'QoE=', 3.548979591836735)
+3610689 robustmpc
 49
 
 online-tuner_desktop_dash_trace_116_13042_out_txt
@@ -1756,6 +2420,14 @@ online-tuner_desktop_dash_trace_105_1265_out_txt
 ('total bitrate=', 170650.0)
 ('avgBitrate=', 3482.65, 'rebufRatio=', 0.0, 'QoE=', 3.48265306122449)
 1051265 online-tuner
+49
+
+robustmpc_desktop_dash_trace_65_11673_out_txt
+('total quality change events=', 15, 'total_quality_change=', 23800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174850.0)
+('avgBitrate=', 3568.37, 'rebufRatio=', 0.0, 'QoE=', 3.5683673469387753)
+6511673 robustmpc
 49
 
 online-tuner_mobile_dash_trace_41_10322_out_txt
@@ -1838,12 +2510,28 @@ online-tuner_desktop_dash_trace_131_1335_out_txt
 1311335 online-tuner
 49
 
+robustmpc_mobile_dash_trace_247_1212_out_txt
+('total quality change events=', 22, 'total_quality_change=', 44400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 154000.0)
+('avgBitrate=', 3142.86, 'rebufRatio=', 0.0, 'QoE=', 3.142857142857143)
+2471212 robustmpc
+49
+
 robustmpc_mobile_dash_trace_4_10034_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 199800.0)
 ('avgBitrate=', 4077.55, 'rebufRatio=', 0.0, 'QoE=', 4.077551020408164)
 410034 robustmpc
+49
+
+robustmpc_desktop_dash_trace_101_12569_out_txt
+('total quality change events=', 25, 'total_quality_change=', 41200)
+('total buffering events=', 1, 'total buffering time=', 0.12699999999998113)
+('total bitrate=', 151800.0)
+('avgBitrate=', 3097.96, 'rebufRatio=', 0.000647539604439884, 'QoE=', 3.0756693877551053)
+10112569 robustmpc
 49
 
 online-tuner_mobile_dash_trace_53_10415_out_txt
@@ -1854,6 +2542,14 @@ online-tuner_mobile_dash_trace_53_10415_out_txt
 5310415 online-tuner
 49
 
+robustmpc_desktop_dash_trace_246_3437_out_txt
+('total quality change events=', 12, 'total_quality_change=', 19800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 189900.0)
+('avgBitrate=', 3875.51, 'rebufRatio=', 0.0, 'QoE=', 3.8755102040816327)
+2463437 robustmpc
+49
+
 robustmpc_mobile_dash_trace_34_10244_out_txt
 ('total quality change events=', 37, 'total_quality_change=', 63700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1862,12 +2558,28 @@ robustmpc_mobile_dash_trace_34_10244_out_txt
 3410244 robustmpc
 49
 
+robustmpc_mobile_dash_trace_83_10674_out_txt
+('total quality change events=', 4, 'total_quality_change=', 6200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 195250.0)
+('avgBitrate=', 3984.69, 'rebufRatio=', 0.0, 'QoE=', 3.9846938775510203)
+8310674 robustmpc
+49
+
 online-tuner_mobile_dash_trace_17_10115_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 24000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 114250.0)
 ('avgBitrate=', 2331.63, 'rebufRatio=', 0.0, 'QoE=', 2.3316326530612246)
 1710115 online-tuner
+49
+
+robustmpc_mobile_dash_trace_92_10714_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190700.0)
+('avgBitrate=', 3891.84, 'rebufRatio=', 0.0, 'QoE=', 3.8918367346938774)
+9210714 robustmpc
 49
 
 robustmpc_desktop_dash_trace_215_2730_out_txt
@@ -1884,6 +2596,14 @@ robustmpc_desktop_dash_trace_150_1372_out_txt
 ('total bitrate=', 175800.0)
 ('avgBitrate=', 3587.76, 'rebufRatio=', 0.0, 'QoE=', 3.5877551020408167)
 1501372 robustmpc
+49
+
+robustmpc_desktop_dash_trace_79_11981_out_txt
+('total quality change events=', 32, 'total_quality_change=', 56100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 72700.0)
+('avgBitrate=', 1483.67, 'rebufRatio=', 0.0, 'QoE=', 1.4836734693877551)
+7911981 robustmpc
 49
 
 online-tuner_mobile_dash_trace_33_10239_out_txt
@@ -1918,6 +2638,30 @@ robustmpc_mobile_dash_trace_126_11010_out_txt
 12611010 robustmpc
 49
 
+robustmpc_mobile_dash_trace_132_11037_out_txt
+('total quality change events=', 17, 'total_quality_change=', 29100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169650.0)
+('avgBitrate=', 3462.24, 'rebufRatio=', 0.0, 'QoE=', 3.462244897959184)
+13211037 robustmpc
+49
+
+robustmpc_mobile_dash_trace_103_10816_out_txt
+('total quality change events=', 20, 'total_quality_change=', 41300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 156350.0)
+('avgBitrate=', 3190.82, 'rebufRatio=', 0.0, 'QoE=', 3.190816326530612)
+10310816 robustmpc
+49
+
+robustmpc_mobile_dash_trace_56_10445_out_txt
+('total quality change events=', 36, 'total_quality_change=', 60950)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 123200.0)
+('avgBitrate=', 2514.29, 'rebufRatio=', 0.0, 'QoE=', 2.5142857142857142)
+5610445 robustmpc
+49
+
 online-tuner_desktop_dash_trace_180_1775_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 12200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1926,12 +2670,28 @@ online-tuner_desktop_dash_trace_180_1775_out_txt
 1801775 online-tuner
 49
 
+robustmpc_mobile_dash_trace_244_12099_out_txt
+('total quality change events=', 26, 'total_quality_change=', 45900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 163200.0)
+('avgBitrate=', 3330.61, 'rebufRatio=', 0.0, 'QoE=', 3.330612244897959)
+24412099 robustmpc
+49
+
 online-tuner_desktop_dash_trace_143_13581_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 17600)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 126650.0)
 ('avgBitrate=', 2584.69, 'rebufRatio=', 0.0, 'QoE=', 2.5846938775510204)
 14313581 online-tuner
+49
+
+robustmpc_mobile_dash_trace_111_10868_out_txt
+('total quality change events=', 5, 'total_quality_change=', 8900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 187700.0)
+('avgBitrate=', 3830.61, 'rebufRatio=', 0.0, 'QoE=', 3.830612244897959)
+11110868 robustmpc
 49
 
 online-tuner_desktop_dash_trace_238_3197_out_txt
@@ -1948,6 +2708,14 @@ online-tuner_desktop_dash_trace_153_13772_out_txt
 ('total bitrate=', 92050.0)
 ('avgBitrate=', 1878.57, 'rebufRatio=', 0.0, 'QoE=', 1.8785714285714286)
 15313772 online-tuner
+49
+
+robustmpc_desktop_dash_trace_71_1177_out_txt
+('total quality change events=', 24, 'total_quality_change=', 40200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 141400.0)
+('avgBitrate=', 2885.71, 'rebufRatio=', 0.0, 'QoE=', 2.8857142857142857)
+711177 robustmpc
 49
 
 online-tuner_desktop_dash_trace_114_12998_out_txt
@@ -1998,6 +2766,14 @@ robustmpc_mobile_dash_trace_48_10392_out_txt
 4810392 robustmpc
 49
 
+robustmpc_desktop_dash_trace_48_11090_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191150.0)
+('avgBitrate=', 3901.02, 'rebufRatio=', 0.0, 'QoE=', 3.9010204081632653)
+4811090 robustmpc
+49
+
 robustmpc_desktop_dash_trace_49_111_out_txt
 ('total quality change events=', 5, 'total_quality_change=', 8200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2046,12 +2822,28 @@ online-tuner_desktop_dash_trace_167_1457_out_txt
 1671457 online-tuner
 49
 
+robustmpc_desktop_dash_trace_218_2816_out_txt
+('total quality change events=', 39, 'total_quality_change=', 64500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 95350.0)
+('avgBitrate=', 1945.92, 'rebufRatio=', 0.0, 'QoE=', 1.9459183673469387)
+2182816 robustmpc
+49
+
 online-tuner_mobile_dash_trace_97_10779_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 19050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 67000.0)
 ('avgBitrate=', 1367.35, 'rebufRatio=', 0.0, 'QoE=', 1.3673469387755102)
 9710779 online-tuner
+49
+
+robustmpc_mobile_dash_trace_151_11176_out_txt
+('total quality change events=', 10, 'total_quality_change=', 18900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 185550.0)
+('avgBitrate=', 3786.73, 'rebufRatio=', 0.0, 'QoE=', 3.7867346938775515)
+15111176 robustmpc
 49
 
 online-tuner_desktop_dash_trace_109_12826_out_txt
@@ -2062,12 +2854,44 @@ online-tuner_desktop_dash_trace_109_12826_out_txt
 10912826 online-tuner
 49
 
+robustmpc_mobile_dash_trace_240_12022_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194800.0)
+('avgBitrate=', 3975.51, 'rebufRatio=', 0.0, 'QoE=', 3.975510204081633)
+24012022 robustmpc
+49
+
+robustmpc_mobile_dash_trace_146_1114_out_txt
+('total quality change events=', 5, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 200250.0)
+('avgBitrate=', 4086.73, 'rebufRatio=', 0.0, 'QoE=', 4.086734693877551)
+1461114 robustmpc
+49
+
+robustmpc_mobile_dash_trace_86_10680_out_txt
+('total quality change events=', 23, 'total_quality_change=', 34500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159300.0)
+('avgBitrate=', 3251.02, 'rebufRatio=', 0.0, 'QoE=', 3.2510204081632654)
+8610680 robustmpc
+49
+
 robustmpc_desktop_dash_trace_87_12238_out_txt
 ('total quality change events=', 7, 'total_quality_change=', 12000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 186400.0)
 ('avgBitrate=', 3804.08, 'rebufRatio=', 0.0, 'QoE=', 3.8040816326530615)
 8712238 robustmpc
+49
+
+robustmpc_mobile_dash_trace_121_10981_out_txt
+('total quality change events=', 43, 'total_quality_change=', 84600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 126300.0)
+('avgBitrate=', 2577.55, 'rebufRatio=', 0.0, 'QoE=', 2.5775510204081633)
+12110981 robustmpc
 49
 
 online-tuner_mobile_dash_trace_200_11684_out_txt
@@ -2116,6 +2940,22 @@ online-tuner_mobile_dash_trace_132_11037_out_txt
 ('total bitrate=', 166250.0)
 ('avgBitrate=', 3392.86, 'rebufRatio=', 0.0, 'QoE=', 3.392857142857143)
 13211037 online-tuner
+49
+
+robustmpc_desktop_dash_trace_199_2212_out_txt
+('total quality change events=', 5, 'total_quality_change=', 14000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190800.0)
+('avgBitrate=', 3893.88, 'rebufRatio=', 0.0, 'QoE=', 3.8938775510204082)
+1992212 robustmpc
+49
+
+robustmpc_desktop_dash_trace_157_13829_out_txt
+('total quality change events=', 8, 'total_quality_change=', 15100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194350.0)
+('avgBitrate=', 3966.33, 'rebufRatio=', 0.0, 'QoE=', 3.966326530612245)
+15713829 robustmpc
 49
 
 online-tuner_mobile_dash_trace_164_11267_out_txt
@@ -2190,6 +3030,14 @@ online-tuner_mobile_dash_trace_219_1185_out_txt
 2191185 online-tuner
 49
 
+robustmpc_mobile_dash_trace_100_10792_out_txt
+('total quality change events=', 28, 'total_quality_change=', 47700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 143100.0)
+('avgBitrate=', 2920.41, 'rebufRatio=', 0.0, 'QoE=', 2.920408163265306)
+10010792 robustmpc
+49
+
 online-tuner_desktop_dash_trace_8_10202_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2214,6 +3062,14 @@ robustmpc_mobile_dash_trace_31_10225_out_txt
 3110225 robustmpc
 49
 
+robustmpc_mobile_dash_trace_96_10773_out_txt
+('total quality change events=', 3, 'total_quality_change=', 6000)
+('total buffering events=', 8, 'total buffering time=', 7.968000000000007)
+('total bitrate=', 18150.0)
+('avgBitrate=', 370.41, 'rebufRatio=', 0.03906495136492002, 'QoE=', -1.0280571428571441)
+9610773 robustmpc
+49
+
 robustmpc_desktop_dash_trace_104_12649_out_txt
 ('total quality change events=', 19, 'total_quality_change=', 34700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2230,6 +3086,14 @@ robustmpc_desktop_dash_trace_8_10202_out_txt
 810202 robustmpc
 49
 
+robustmpc_mobile_dash_trace_184_1148_out_txt
+('total quality change events=', 29, 'total_quality_change=', 47600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 156600.0)
+('avgBitrate=', 3195.92, 'rebufRatio=', 0.0, 'QoE=', 3.1959183673469385)
+1841148 robustmpc
+49
+
 robustmpc_desktop_dash_trace_35_10680_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 7100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2244,6 +3108,14 @@ robustmpc_desktop_dash_trace_212_2619_out_txt
 ('total bitrate=', 22700.0)
 ('avgBitrate=', 463.27, 'rebufRatio=', 0.0, 'QoE=', 0.463265306122449)
 2122619 robustmpc
+49
+
+robustmpc_mobile_dash_trace_53_10415_out_txt
+('total quality change events=', 9, 'total_quality_change=', 19100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186800.0)
+('avgBitrate=', 3812.24, 'rebufRatio=', 0.0, 'QoE=', 3.812244897959184)
+5310415 robustmpc
 49
 
 robustmpc_mobile_dash_trace_76_10632_out_txt
@@ -2286,6 +3158,14 @@ online-tuner_mobile_dash_trace_94_10743_out_txt
 9410743 online-tuner
 49
 
+robustmpc_mobile_dash_trace_221_11876_out_txt
+('total quality change events=', 17, 'total_quality_change=', 27100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 125350.0)
+('avgBitrate=', 2558.16, 'rebufRatio=', 0.0, 'QoE=', 2.5581632653061224)
+22111876 robustmpc
+49
+
 online-tuner_mobile_dash_trace_220_11851_out_txt
 ('total quality change events=', 12, 'total_quality_change=', 9050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2326,6 +3206,14 @@ online-tuner_mobile_dash_trace_247_1212_out_txt
 2471212 online-tuner
 49
 
+robustmpc_desktop_dash_trace_50_11121_out_txt
+('total quality change events=', 23, 'total_quality_change=', 43300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 53150.0)
+('avgBitrate=', 1084.69, 'rebufRatio=', 0.0, 'QoE=', 1.0846938775510204)
+5011121 robustmpc
+49
+
 online-tuner_desktop_dash_trace_91_12382_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 29400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2342,12 +3230,28 @@ online-tuner_mobile_dash_trace_106_10833_out_txt
 10610833 online-tuner
 49
 
+robustmpc_desktop_dash_trace_244_3285_out_txt
+('total quality change events=', 34, 'total_quality_change=', 53300)
+('total buffering events=', 1, 'total buffering time=', 0.2339999999999982)
+('total bitrate=', 62950.0)
+('avgBitrate=', 1284.69, 'rebufRatio=', 0.0011924539070701213, 'QoE=', 1.2436244897959188)
+2443285 robustmpc
+49
+
 robustmpc_mobile_dash_trace_236_11992_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 53000)
 ('total buffering events=', 3, 'total buffering time=', 1.0000000000000284)
 ('total bitrate=', 59500.0)
 ('avgBitrate=', 1214.29, 'rebufRatio=', 0.005076142131979839, 'QoE=', 1.0387755102040768)
 23611992 robustmpc
+49
+
+robustmpc_mobile_dash_trace_203_11691_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 206700.0)
+('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
+20311691 robustmpc
 49
 
 robustmpc_mobile_dash_trace_5_10050_out_txt
@@ -2358,12 +3262,36 @@ robustmpc_mobile_dash_trace_5_10050_out_txt
 510050 robustmpc
 49
 
+robustmpc_desktop_dash_trace_173_1614_out_txt
+('total quality change events=', 24, 'total_quality_change=', 46800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 153250.0)
+('avgBitrate=', 3127.55, 'rebufRatio=', 0.0, 'QoE=', 3.127551020408163)
+1731614 robustmpc
+49
+
+robustmpc_desktop_dash_trace_225_2951_out_txt
+('total quality change events=', 35, 'total_quality_change=', 64100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 79300.0)
+('avgBitrate=', 1618.37, 'rebufRatio=', 0.0, 'QoE=', 1.6183673469387754)
+2252951 robustmpc
+49
+
 robustmpc_desktop_dash_trace_113_1298_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 24500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 178500.0)
 ('avgBitrate=', 3642.86, 'rebufRatio=', 0.0, 'QoE=', 3.642857142857143)
 1131298 robustmpc
+49
+
+robustmpc_desktop_dash_trace_209_2565_out_txt
+('total quality change events=', 35, 'total_quality_change=', 62500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 74800.0)
+('avgBitrate=', 1526.53, 'rebufRatio=', 0.0, 'QoE=', 1.5265306122448978)
+2092565 robustmpc
 49
 
 online-tuner_mobile_dash_trace_20_10128_out_txt
@@ -2374,12 +3302,28 @@ online-tuner_mobile_dash_trace_20_10128_out_txt
 2010128 online-tuner
 49
 
+robustmpc_mobile_dash_trace_164_11267_out_txt
+('total quality change events=', 38, 'total_quality_change=', 62400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 96800.0)
+('avgBitrate=', 1975.51, 'rebufRatio=', 0.0, 'QoE=', 1.9755102040816326)
+16411267 robustmpc
+49
+
 online-tuner_mobile_dash_trace_231_11935_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 6000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 184550.0)
 ('avgBitrate=', 3766.33, 'rebufRatio=', 0.0, 'QoE=', 3.766326530612245)
 23111935 online-tuner
+49
+
+robustmpc_desktop_dash_trace_51_11136_out_txt
+('total quality change events=', 12, 'total_quality_change=', 17300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 161800.0)
+('avgBitrate=', 3302.04, 'rebufRatio=', 0.0, 'QoE=', 3.3020408163265307)
+5111136 robustmpc
 49
 
 online-tuner_mobile_dash_trace_124_11000_out_txt
@@ -2454,6 +3398,14 @@ online-tuner_mobile_dash_trace_232_11952_out_txt
 23211952 online-tuner
 49
 
+robustmpc_mobile_dash_trace_21_10150_out_txt
+('total quality change events=', 17, 'total_quality_change=', 28700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 164300.0)
+('avgBitrate=', 3353.06, 'rebufRatio=', 0.0, 'QoE=', 3.353061224489796)
+2110150 robustmpc
+49
+
 online-tuner_mobile_dash_trace_58_10458_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 23300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2510,6 +3462,14 @@ robustmpc_desktop_dash_trace_138_13452_out_txt
 13813452 robustmpc
 49
 
+robustmpc_desktop_dash_trace_200_2296_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 109400.0)
+('avgBitrate=', 2232.65, 'rebufRatio=', 0.0, 'QoE=', 2.23265306122449)
+2002296 robustmpc
+49
+
 robustmpc_mobile_dash_trace_229_11932_out_txt
 ('total quality change events=', 7, 'total_quality_change=', 11100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2550,6 +3510,30 @@ online-tuner_desktop_dash_trace_39_10940_out_txt
 3910940 online-tuner
 49
 
+robustmpc_desktop_dash_trace_24_1050_out_txt
+('total quality change events=', 26, 'total_quality_change=', 48400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 118950.0)
+('avgBitrate=', 2427.55, 'rebufRatio=', 0.0, 'QoE=', 2.4275510204081634)
+241050 robustmpc
+49
+
+robustmpc_desktop_dash_trace_96_1247_out_txt
+('total quality change events=', 34, 'total_quality_change=', 49100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 77750.0)
+('avgBitrate=', 1586.73, 'rebufRatio=', 0.0, 'QoE=', 1.586734693877551)
+961247 robustmpc
+49
+
+robustmpc_mobile_dash_trace_105_10829_out_txt
+('total quality change events=', 35, 'total_quality_change=', 58600)
+('total buffering events=', 1, 'total buffering time=', 0.3990000000000009)
+('total bitrate=', 63950.0)
+('avgBitrate=', 1305.1, 'rebufRatio=', 0.0020315785721923274, 'QoE=', 1.235073469387755)
+10510829 robustmpc
+49
+
 online-tuner_desktop_dash_trace_135_13396_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 32500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2566,12 +3550,28 @@ online-tuner_mobile_dash_trace_79_10662_out_txt
 7910662 online-tuner
 49
 
+robustmpc_desktop_dash_trace_68_11720_out_txt
+('total quality change events=', 44, 'total_quality_change=', 71400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 104600.0)
+('avgBitrate=', 2134.69, 'rebufRatio=', 0.0, 'QoE=', 2.1346938775510202)
+6811720 robustmpc
+49
+
 robustmpc_desktop_dash_trace_176_1658_out_txt
 ('total quality change events=', 36, 'total_quality_change=', 64200)
 ('total buffering events=', 1, 'total buffering time=', 0.6080000000000005)
 ('total bitrate=', 130850.0)
 ('avgBitrate=', 2670.41, 'rebufRatio=', 0.0030924479166666696, 'QoE=', 2.5636979591836733)
 1761658 robustmpc
+49
+
+robustmpc_mobile_dash_trace_88_10685_out_txt
+('total quality change events=', 16, 'total_quality_change=', 24700)
+('total buffering events=', 1, 'total buffering time=', 0.5289999999999964)
+('total bitrate=', 143850.0)
+('avgBitrate=', 2935.71, 'rebufRatio=', 0.0026917147087706975, 'QoE=', 2.8428693877551026)
+8810685 robustmpc
 49
 
 online-tuner_mobile_dash_trace_119_1094_out_txt
@@ -2582,12 +3582,28 @@ online-tuner_mobile_dash_trace_119_1094_out_txt
 1191094 online-tuner
 49
 
+robustmpc_desktop_dash_trace_136_13404_out_txt
+('total quality change events=', 10, 'total_quality_change=', 15300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 189350.0)
+('avgBitrate=', 3864.29, 'rebufRatio=', 0.0, 'QoE=', 3.8642857142857143)
+13613404 robustmpc
+49
+
 online-tuner_mobile_dash_trace_43_10326_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 24500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 169700.0)
 ('avgBitrate=', 3463.27, 'rebufRatio=', 0.0, 'QoE=', 3.4632653061224485)
 4310326 online-tuner
+49
+
+robustmpc_mobile_dash_trace_79_10662_out_txt
+('total quality change events=', 3, 'total_quality_change=', 7300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 198150.0)
+('avgBitrate=', 4043.88, 'rebufRatio=', 0.0, 'QoE=', 4.043877551020408)
+7910662 robustmpc
 49
 
 online-tuner_mobile_dash_trace_170_11294_out_txt
@@ -2604,6 +3620,14 @@ robustmpc_desktop_dash_trace_164_14026_out_txt
 ('total bitrate=', 161250.0)
 ('avgBitrate=', 3290.82, 'rebufRatio=', 0.0, 'QoE=', 3.2908163265306123)
 16414026 robustmpc
+49
+
+robustmpc_desktop_dash_trace_40_10949_out_txt
+('total quality change events=', 29, 'total_quality_change=', 43500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 55700.0)
+('avgBitrate=', 1136.73, 'rebufRatio=', 0.0, 'QoE=', 1.136734693877551)
+4010949 robustmpc
 49
 
 robustmpc_desktop_dash_trace_97_12470_out_txt
@@ -2654,12 +3678,36 @@ robustmpc_mobile_dash_trace_245_12103_out_txt
 24512103 robustmpc
 49
 
+robustmpc_desktop_dash_trace_144_13582_out_txt
+('total quality change events=', 34, 'total_quality_change=', 63900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 115400.0)
+('avgBitrate=', 2355.1, 'rebufRatio=', 0.0, 'QoE=', 2.355102040816327)
+14413582 robustmpc
+49
+
+robustmpc_desktop_dash_trace_28_10593_out_txt
+('total quality change events=', 40, 'total_quality_change=', 69000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 94850.0)
+('avgBitrate=', 1935.71, 'rebufRatio=', 0.0, 'QoE=', 1.9357142857142855)
+2810593 robustmpc
+49
+
 robustmpc_mobile_dash_trace_36_10286_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 32200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 169100.0)
 ('avgBitrate=', 3451.02, 'rebufRatio=', 0.0, 'QoE=', 3.451020408163265)
 3610286 robustmpc
+49
+
+robustmpc_desktop_dash_trace_106_12713_out_txt
+('total quality change events=', 13, 'total_quality_change=', 21300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 113350.0)
+('avgBitrate=', 2313.27, 'rebufRatio=', 0.0, 'QoE=', 2.313265306122449)
+10612713 robustmpc
 49
 
 online-tuner_desktop_dash_trace_88_12276_out_txt
@@ -2806,6 +3854,14 @@ online-tuner_mobile_dash_trace_32_10232_out_txt
 3210232 online-tuner
 49
 
+robustmpc_desktop_dash_trace_169_1546_out_txt
+('total quality change events=', 36, 'total_quality_change=', 73100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 77000.0)
+('avgBitrate=', 1571.43, 'rebufRatio=', 0.0, 'QoE=', 1.5714285714285714)
+1691546 robustmpc
+49
+
 online-tuner_desktop_dash_trace_215_2730_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 25950)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2830,12 +3886,36 @@ online-tuner_mobile_dash_trace_115_10895_out_txt
 11510895 online-tuner
 49
 
+robustmpc_mobile_dash_trace_91_10699_out_txt
+('total quality change events=', 38, 'total_quality_change=', 57300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 69600.0)
+('avgBitrate=', 1420.41, 'rebufRatio=', 0.0, 'QoE=', 1.420408163265306)
+9110699 robustmpc
+49
+
+robustmpc_desktop_dash_trace_219_2827_out_txt
+('total quality change events=', 6, 'total_quality_change=', 8700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191700.0)
+('avgBitrate=', 3912.24, 'rebufRatio=', 0.0, 'QoE=', 3.9122448979591833)
+2192827 robustmpc
+49
+
 robustmpc_desktop_dash_trace_120_13097_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 6000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 185350.0)
 ('avgBitrate=', 3782.65, 'rebufRatio=', 0.0, 'QoE=', 3.7826530612244897)
 12013097 robustmpc
+49
+
+robustmpc_desktop_dash_trace_44_11017_out_txt
+('total quality change events=', 40, 'total_quality_change=', 83900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 119650.0)
+('avgBitrate=', 2441.84, 'rebufRatio=', 0.0, 'QoE=', 2.4418367346938776)
+4411017 robustmpc
 49
 
 robustmpc_desktop_dash_trace_88_12276_out_txt
@@ -2868,6 +3948,14 @@ online-tuner_mobile_dash_trace_27_10194_out_txt
 ('total bitrate=', 188450.0)
 ('avgBitrate=', 3845.92, 'rebufRatio=', 0.0, 'QoE=', 3.8459183673469384)
 2710194 online-tuner
+49
+
+robustmpc_desktop_dash_trace_30_10601_out_txt
+('total quality change events=', 17, 'total_quality_change=', 22900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 31750.0)
+('avgBitrate=', 647.96, 'rebufRatio=', 0.0, 'QoE=', 0.6479591836734694)
+3010601 robustmpc
 49
 
 online-tuner_desktop_dash_trace_119_13082_out_txt
@@ -2926,12 +4014,36 @@ robustmpc_mobile_dash_trace_176_11352_out_txt
 17611352 robustmpc
 49
 
+robustmpc_desktop_dash_trace_137_13435_out_txt
+('total quality change events=', 5, 'total_quality_change=', 8900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 201350.0)
+('avgBitrate=', 4109.18, 'rebufRatio=', 0.0, 'QoE=', 4.109183673469388)
+13713435 robustmpc
+49
+
+robustmpc_desktop_dash_trace_102_12589_out_txt
+('total quality change events=', 30, 'total_quality_change=', 49600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 139600.0)
+('avgBitrate=', 2848.98, 'rebufRatio=', 0.0, 'QoE=', 2.8489795918367347)
+10212589 robustmpc
+49
+
 robustmpc_mobile_dash_trace_166_11275_out_txt
 ('total quality change events=', 29, 'total_quality_change=', 39900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 74550.0)
 ('avgBitrate=', 1521.43, 'rebufRatio=', 0.0, 'QoE=', 1.5214285714285714)
 16611275 robustmpc
+49
+
+robustmpc_mobile_dash_trace_35_10250_out_txt
+('total quality change events=', 27, 'total_quality_change=', 50600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 44250.0)
+('avgBitrate=', 903.06, 'rebufRatio=', 0.0, 'QoE=', 0.9030612244897959)
+3510250 robustmpc
 49
 
 online-tuner_mobile_dash_trace_205_11708_out_txt
@@ -2974,6 +4086,22 @@ robustmpc_mobile_dash_trace_59_1046_out_txt
 591046 robustmpc
 49
 
+robustmpc_desktop_dash_trace_229_3020_out_txt
+('total quality change events=', 25, 'total_quality_change=', 42400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 47400.0)
+('avgBitrate=', 967.35, 'rebufRatio=', 0.0, 'QoE=', 0.9673469387755101)
+2293020 robustmpc
+49
+
+robustmpc_desktop_dash_trace_201_2300_out_txt
+('total quality change events=', 28, 'total_quality_change=', 59500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 115500.0)
+('avgBitrate=', 2357.14, 'rebufRatio=', 0.0, 'QoE=', 2.357142857142857)
+2012300 robustmpc
+49
+
 robustmpc_desktop_dash_trace_208_2493_out_txt
 ('total quality change events=', 1, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2988,6 +4116,14 @@ online-tuner_desktop_dash_trace_239_3234_out_txt
 ('total bitrate=', 91850.0)
 ('avgBitrate=', 1874.49, 'rebufRatio=', 0.0, 'QoE=', 1.8744897959183673)
 2393234 online-tuner
+49
+
+robustmpc_desktop_dash_trace_217_2803_out_txt
+('total quality change events=', 35, 'total_quality_change=', 66400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 143900.0)
+('avgBitrate=', 2936.73, 'rebufRatio=', 0.0, 'QoE=', 2.936734693877551)
+2172803 robustmpc
 49
 
 online-tuner_desktop_dash_trace_146_13669_out_txt
@@ -3022,6 +4158,14 @@ online-tuner_mobile_dash_trace_172_11304_out_txt
 17211304 online-tuner
 49
 
+robustmpc_mobile_dash_trace_109_10851_out_txt
+('total quality change events=', 22, 'total_quality_change=', 32100)
+('total buffering events=', 1, 'total buffering time=', 0.14700000000001978)
+('total bitrate=', 186200.0)
+('avgBitrate=', 3800.0, 'rebufRatio=', 0.0007494379215589316, 'QoE=', 3.7741999999999964)
+10910851 robustmpc
+49
+
 robustmpc_mobile_dash_trace_170_11294_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 10000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3036,6 +4180,14 @@ online-tuner_desktop_dash_trace_59_11472_out_txt
 ('total bitrate=', 84150.0)
 ('avgBitrate=', 1717.35, 'rebufRatio=', 0.0, 'QoE=', 1.7173469387755103)
 5911472 online-tuner
+49
+
+robustmpc_mobile_dash_trace_23_10160_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 205250.0)
+('avgBitrate=', 4188.78, 'rebufRatio=', 0.0, 'QoE=', 4.188775510204081)
+2310160 robustmpc
 49
 
 online-tuner_mobile_dash_trace_177_11381_out_txt
@@ -3054,6 +4206,14 @@ online-tuner_desktop_dash_trace_83_12150_out_txt
 8312150 online-tuner
 49
 
+robustmpc_desktop_dash_trace_16_1031_out_txt
+('total quality change events=', 15, 'total_quality_change=', 37300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182250.0)
+('avgBitrate=', 3719.39, 'rebufRatio=', 0.0, 'QoE=', 3.7193877551020407)
+161031 robustmpc
+49
+
 online-tuner_desktop_dash_trace_224_2945_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 26650)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3070,12 +4230,44 @@ online-tuner_mobile_dash_trace_4_10034_out_txt
 410034 online-tuner
 49
 
+robustmpc_mobile_dash_trace_177_11381_out_txt
+('total quality change events=', 27, 'total_quality_change=', 42800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 141650.0)
+('avgBitrate=', 2890.82, 'rebufRatio=', 0.0, 'QoE=', 2.8908163265306124)
+17711381 robustmpc
+49
+
+robustmpc_desktop_dash_trace_117_13053_out_txt
+('total quality change events=', 31, 'total_quality_change=', 47750)
+('total buffering events=', 1, 'total buffering time=', 3.6769999999999996)
+('total bitrate=', 57800.0)
+('avgBitrate=', 1179.59, 'rebufRatio=', 0.018414739804784724, 'QoE=', 0.5342408163265306)
+11713053 robustmpc
+49
+
+robustmpc_desktop_dash_trace_231_304_out_txt
+('total quality change events=', 12, 'total_quality_change=', 20900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 188350.0)
+('avgBitrate=', 3843.88, 'rebufRatio=', 0.0, 'QoE=', 3.843877551020408)
+231304 robustmpc
+49
+
 robustmpc_desktop_dash_trace_75_11905_out_txt
 ('total quality change events=', 5, 'total_quality_change=', 10200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 181800.0)
 ('avgBitrate=', 3710.2, 'rebufRatio=', 0.0, 'QoE=', 3.710204081632653)
 7511905 robustmpc
+49
+
+robustmpc_mobile_dash_trace_127_11019_out_txt
+('total quality change events=', 4, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 199800.0)
+('avgBitrate=', 4077.55, 'rebufRatio=', 0.0, 'QoE=', 4.077551020408164)
+12711019 robustmpc
 49
 
 robustmpc_mobile_dash_trace_22_1016_out_txt
@@ -3094,12 +4286,44 @@ online-tuner_desktop_dash_trace_54_11178_out_txt
 5411178 online-tuner
 49
 
+robustmpc_mobile_dash_trace_84_10675_out_txt
+('total quality change events=', 10, 'total_quality_change=', 15100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 173700.0)
+('avgBitrate=', 3544.9, 'rebufRatio=', 0.0, 'QoE=', 3.544897959183673)
+8410675 robustmpc
+49
+
+robustmpc_mobile_dash_trace_145_11135_out_txt
+('total quality change events=', 24, 'total_quality_change=', 48700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146550.0)
+('avgBitrate=', 2990.82, 'rebufRatio=', 0.0, 'QoE=', 2.9908163265306125)
+14511135 robustmpc
+49
+
+robustmpc_mobile_dash_trace_68_10560_out_txt
+('total quality change events=', 8, 'total_quality_change=', 14000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194900.0)
+('avgBitrate=', 3977.55, 'rebufRatio=', 0.0, 'QoE=', 3.977551020408163)
+6810560 robustmpc
+49
+
 robustmpc_mobile_dash_trace_162_11249_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 20700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 177800.0)
 ('avgBitrate=', 3628.57, 'rebufRatio=', 0.0, 'QoE=', 3.628571428571429)
 16211249 robustmpc
+49
+
+robustmpc_desktop_dash_trace_206_2431_out_txt
+('total quality change events=', 27, 'total_quality_change=', 42200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 120000.0)
+('avgBitrate=', 2448.98, 'rebufRatio=', 0.0, 'QoE=', 2.4489795918367347)
+2062431 robustmpc
 49
 
 online-tuner_desktop_dash_trace_9_10228_out_txt
@@ -3110,6 +4334,14 @@ online-tuner_desktop_dash_trace_9_10228_out_txt
 910228 online-tuner
 49
 
+robustmpc_mobile_dash_trace_67_10536_out_txt
+('total quality change events=', 3, 'total_quality_change=', 6200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 192700.0)
+('avgBitrate=', 3932.65, 'rebufRatio=', 0.0, 'QoE=', 3.9326530612244897)
+6710536 robustmpc
+49
+
 robustmpc_desktop_dash_trace_128_13294_out_txt
 ('total quality change events=', 28, 'total_quality_change=', 48900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3118,12 +4350,36 @@ robustmpc_desktop_dash_trace_128_13294_out_txt
 12813294 robustmpc
 49
 
+robustmpc_mobile_dash_trace_215_11784_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 200700.0)
+('avgBitrate=', 4095.92, 'rebufRatio=', 0.0, 'QoE=', 4.095918367346939)
+21511784 robustmpc
+49
+
+robustmpc_desktop_dash_trace_130_13337_out_txt
+('total quality change events=', 10, 'total_quality_change=', 22900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169450.0)
+('avgBitrate=', 3458.16, 'rebufRatio=', 0.0, 'QoE=', 3.4581632653061223)
+13013337 robustmpc
+49
+
 online-tuner_mobile_dash_trace_75_10601_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 29200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 168400.0)
 ('avgBitrate=', 3436.73, 'rebufRatio=', 0.0, 'QoE=', 3.436734693877551)
 7510601 online-tuner
+49
+
+robustmpc_mobile_dash_trace_165_11273_out_txt
+('total quality change events=', 39, 'total_quality_change=', 71700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 83650.0)
+('avgBitrate=', 1707.14, 'rebufRatio=', 0.0, 'QoE=', 1.7071428571428573)
+16511273 robustmpc
 49
 
 online-tuner_mobile_dash_trace_52_1041_out_txt
@@ -3174,6 +4430,22 @@ online-tuner_mobile_dash_trace_174_1132_out_txt
 1741132 online-tuner
 49
 
+robustmpc_desktop_dash_trace_235_3089_out_txt
+('total quality change events=', 13, 'total_quality_change=', 19800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169300.0)
+('avgBitrate=', 3455.1, 'rebufRatio=', 0.0, 'QoE=', 3.455102040816327)
+2353089 robustmpc
+49
+
+robustmpc_desktop_dash_trace_210_2579_out_txt
+('total quality change events=', 21, 'total_quality_change=', 34150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 35700.0)
+('avgBitrate=', 728.57, 'rebufRatio=', 0.0, 'QoE=', 0.7285714285714286)
+2102579 robustmpc
+49
+
 online-tuner_mobile_dash_trace_238_1201_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 39550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3196,6 +4468,14 @@ online-tuner_mobile_dash_trace_181_11455_out_txt
 ('total bitrate=', 158350.0)
 ('avgBitrate=', 3231.63, 'rebufRatio=', 0.0, 'QoE=', 3.2316326530612245)
 18111455 online-tuner
+49
+
+robustmpc_mobile_dash_trace_226_11914_out_txt
+('total quality change events=', 23, 'total_quality_change=', 33300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 37400.0)
+('avgBitrate=', 763.27, 'rebufRatio=', 0.0, 'QoE=', 0.7632653061224489)
+22611914 robustmpc
 49
 
 online-tuner_mobile_dash_trace_212_1175_out_txt
@@ -3278,6 +4558,30 @@ robustmpc_mobile_dash_trace_52_1041_out_txt
 521041 robustmpc
 49
 
+robustmpc_mobile_dash_trace_12_10091_out_txt
+('total quality change events=', 18, 'total_quality_change=', 28800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 152750.0)
+('avgBitrate=', 3117.35, 'rebufRatio=', 0.0, 'QoE=', 3.11734693877551)
+1210091 robustmpc
+49
+
+robustmpc_mobile_dash_trace_169_11291_out_txt
+('total quality change events=', 15, 'total_quality_change=', 30600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 156600.0)
+('avgBitrate=', 3195.92, 'rebufRatio=', 0.0, 'QoE=', 3.1959183673469385)
+16911291 robustmpc
+49
+
+robustmpc_desktop_dash_trace_11_10253_out_txt
+('total quality change events=', 18, 'total_quality_change=', 27700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159450.0)
+('avgBitrate=', 3254.08, 'rebufRatio=', 0.0, 'QoE=', 3.254081632653061)
+1110253 robustmpc
+49
+
 online-tuner_mobile_dash_trace_31_10225_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3294,12 +4598,44 @@ robustmpc_desktop_dash_trace_245_3313_out_txt
 2453313 robustmpc
 49
 
+robustmpc_desktop_dash_trace_13_1029_out_txt
+('total quality change events=', 11, 'total_quality_change=', 21850)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 26900.0)
+('avgBitrate=', 548.98, 'rebufRatio=', 0.0, 'QoE=', 0.5489795918367346)
+131029 robustmpc
+49
+
+robustmpc_desktop_dash_trace_183_1826_out_txt
+('total quality change events=', 29, 'total_quality_change=', 41800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 40300.0)
+('avgBitrate=', 822.45, 'rebufRatio=', 0.0, 'QoE=', 0.8224489795918367)
+1831826 robustmpc
+49
+
 online-tuner_mobile_dash_trace_70_10575_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 200250.0)
 ('avgBitrate=', 4086.73, 'rebufRatio=', 0.0, 'QoE=', 4.086734693877551)
 7010575 online-tuner
+49
+
+robustmpc_mobile_dash_trace_156_11210_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 203800.0)
+('avgBitrate=', 4159.18, 'rebufRatio=', 0.0, 'QoE=', 4.159183673469388)
+15611210 robustmpc
+49
+
+robustmpc_mobile_dash_trace_40_10314_out_txt
+('total quality change events=', 20, 'total_quality_change=', 37100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146900.0)
+('avgBitrate=', 2997.96, 'rebufRatio=', 0.0, 'QoE=', 2.9979591836734696)
+4010314 robustmpc
 49
 
 online-tuner_mobile_dash_trace_21_10150_out_txt
@@ -3366,6 +4702,14 @@ online-tuner_mobile_dash_trace_64_10500_out_txt
 6410500 online-tuner
 49
 
+robustmpc_desktop_dash_trace_46_11077_out_txt
+('total quality change events=', 15, 'total_quality_change=', 30400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169250.0)
+('avgBitrate=', 3454.08, 'rebufRatio=', 0.0, 'QoE=', 3.454081632653061)
+4611077 robustmpc
+49
+
 online-tuner_mobile_dash_trace_51_10404_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 20550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3398,6 +4742,14 @@ online-tuner_mobile_dash_trace_8_10069_out_txt
 810069 online-tuner
 49
 
+robustmpc_desktop_dash_trace_38_10931_out_txt
+('total quality change events=', 6, 'total_quality_change=', 14200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 24250.0)
+('avgBitrate=', 494.9, 'rebufRatio=', 0.0, 'QoE=', 0.49489795918367346)
+3810931 robustmpc
+49
+
 online-tuner_mobile_dash_trace_122_10985_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 12250)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3414,12 +4766,44 @@ robustmpc_desktop_dash_trace_188_1891_out_txt
 1881891 robustmpc
 49
 
+robustmpc_mobile_dash_trace_49_10393_out_txt
+('total quality change events=', 7, 'total_quality_change=', 13300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184800.0)
+('avgBitrate=', 3771.43, 'rebufRatio=', 0.0, 'QoE=', 3.771428571428572)
+4910393 robustmpc
+49
+
+robustmpc_desktop_dash_trace_20_10409_out_txt
+('total quality change events=', 18, 'total_quality_change=', 31300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 35800.0)
+('avgBitrate=', 730.61, 'rebufRatio=', 0.0, 'QoE=', 0.7306122448979592)
+2010409 robustmpc
+49
+
 online-tuner_desktop_dash_trace_140_13513_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 190150.0)
 ('avgBitrate=', 3880.61, 'rebufRatio=', 0.0, 'QoE=', 3.8806122448979594)
 14013513 online-tuner
+49
+
+robustmpc_mobile_dash_trace_123_10990_out_txt
+('total quality change events=', 18, 'total_quality_change=', 28200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 33150.0)
+('avgBitrate=', 676.53, 'rebufRatio=', 0.0, 'QoE=', 0.676530612244898)
+12310990 robustmpc
+49
+
+robustmpc_mobile_dash_trace_89_1069_out_txt
+('total quality change events=', 4, 'total_quality_change=', 9100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 195800.0)
+('avgBitrate=', 3995.92, 'rebufRatio=', 0.0, 'QoE=', 3.995918367346939)
+891069 robustmpc
 49
 
 online-tuner_mobile_dash_trace_74_10597_out_txt
@@ -3446,6 +4830,14 @@ robustmpc_desktop_dash_trace_93_12447_out_txt
 9312447 robustmpc
 49
 
+robustmpc_mobile_dash_trace_115_10895_out_txt
+('total quality change events=', 31, 'total_quality_change=', 41700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 67800.0)
+('avgBitrate=', 1383.67, 'rebufRatio=', 0.0, 'QoE=', 1.383673469387755)
+11510895 robustmpc
+49
+
 online-tuner_mobile_dash_trace_1_10016_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 32000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3462,12 +4854,44 @@ robustmpc_desktop_dash_trace_247_3503_out_txt
 2473503 robustmpc
 49
 
+robustmpc_desktop_dash_trace_152_13756_out_txt
+('total quality change events=', 5, 'total_quality_change=', 9800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184900.0)
+('avgBitrate=', 3773.47, 'rebufRatio=', 0.0, 'QoE=', 3.773469387755102)
+15213756 robustmpc
+49
+
 online-tuner_desktop_dash_trace_211_2612_out_txt
 ('total quality change events=', 7, 'total_quality_change=', 8900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 183750.0)
 ('avgBitrate=', 3750.0, 'rebufRatio=', 0.0, 'QoE=', 3.75)
 2112612 online-tuner
+49
+
+robustmpc_desktop_dash_trace_76_11917_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 206700.0)
+('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
+7611917 robustmpc
+49
+
+robustmpc_desktop_dash_trace_134_13395_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 206700.0)
+('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
+13413395 robustmpc
+49
+
+robustmpc_mobile_dash_trace_239_12016_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 187800.0)
+('avgBitrate=', 3832.65, 'rebufRatio=', 0.0, 'QoE=', 3.83265306122449)
+23912016 robustmpc
 49
 
 online-tuner_desktop_dash_trace_205_2361_out_txt
@@ -3500,6 +4924,14 @@ robustmpc_mobile_dash_trace_107_10844_out_txt
 ('total bitrate=', 190450.0)
 ('avgBitrate=', 3886.73, 'rebufRatio=', 0.0, 'QoE=', 3.8867346938775507)
 10710844 robustmpc
+49
+
+robustmpc_desktop_dash_trace_39_10940_out_txt
+('total quality change events=', 38, 'total_quality_change=', 61900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 82650.0)
+('avgBitrate=', 1686.73, 'rebufRatio=', 0.0, 'QoE=', 1.6867346938775512)
+3910940 robustmpc
 49
 
 robustmpc_desktop_dash_trace_84_12162_out_txt
@@ -3542,6 +4974,14 @@ online-tuner_desktop_dash_trace_228_2994_out_txt
 2282994 online-tuner
 49
 
+robustmpc_desktop_dash_trace_175_1632_out_txt
+('total quality change events=', 31, 'total_quality_change=', 56950)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 75550.0)
+('avgBitrate=', 1541.84, 'rebufRatio=', 0.0, 'QoE=', 1.5418367346938775)
+1751632 robustmpc
+49
+
 online-tuner_desktop_dash_trace_128_13294_out_txt
 ('total quality change events=', 29, 'total_quality_change=', 37400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3556,6 +4996,14 @@ online-tuner_mobile_dash_trace_66_10510_out_txt
 ('total bitrate=', 150750.0)
 ('avgBitrate=', 3076.53, 'rebufRatio=', 0.0, 'QoE=', 3.076530612244898)
 6610510 online-tuner
+49
+
+robustmpc_desktop_dash_trace_167_1457_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59600)
+('total buffering events=', 1, 'total buffering time=', 3.0109999999999957)
+('total bitrate=', 77850.0)
+('avgBitrate=', 1588.78, 'rebufRatio=', 0.015129816944791975, 'QoE=', 1.0603142857142864)
+1671457 robustmpc
 49
 
 online-tuner_mobile_dash_trace_244_12099_out_txt
@@ -3598,12 +5046,28 @@ online-tuner_desktop_dash_trace_53_11172_out_txt
 5311172 online-tuner
 49
 
+robustmpc_desktop_dash_trace_234_3060_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 206700.0)
+('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
+2343060 robustmpc
+49
+
 robustmpc_mobile_dash_trace_104_10818_out_txt
 ('total quality change events=', 28, 'total_quality_change=', 47800)
 ('total buffering events=', 1, 'total buffering time=', 0.05099999999999971)
 ('total bitrate=', 154050.0)
 ('avgBitrate=', 3143.88, 'rebufRatio=', 0.00026013639308139063, 'QoE=', 3.134926530612245)
 10410818 robustmpc
+49
+
+robustmpc_desktop_dash_trace_5_10126_out_txt
+('total quality change events=', 21, 'total_quality_change=', 42600)
+('total buffering events=', 2, 'total buffering time=', 1.7989999999999968)
+('total bitrate=', 66450.0)
+('avgBitrate=', 1356.12, 'rebufRatio=', 0.009095091481756716, 'QoE=', 1.0403795918367353)
+510126 robustmpc
 49
 
 online-tuner_mobile_dash_trace_146_1114_out_txt
@@ -3620,6 +5084,22 @@ robustmpc_mobile_dash_trace_139_11071_out_txt
 ('total bitrate=', 198150.0)
 ('avgBitrate=', 4043.88, 'rebufRatio=', 0.0, 'QoE=', 4.043877551020408)
 13911071 robustmpc
+49
+
+robustmpc_mobile_dash_trace_63_10485_out_txt
+('total quality change events=', 2, 'total_quality_change=', 1800)
+('total buffering events=', 2, 'total buffering time=', 0.8010000000000161)
+('total bitrate=', 15600.0)
+('avgBitrate=', 318.37, 'rebufRatio=', 0.004070101269810703, 'QoE=', 0.17778367346938492)
+6310485 robustmpc
+49
+
+robustmpc_mobile_dash_trace_39_10304_out_txt
+('total quality change events=', 41, 'total_quality_change=', 73900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 86350.0)
+('avgBitrate=', 1762.24, 'rebufRatio=', 0.0, 'QoE=', 1.7622448979591836)
+3910304 robustmpc
 49
 
 robustmpc_mobile_dash_trace_182_11458_out_txt
@@ -3734,6 +5214,30 @@ robustmpc_mobile_dash_trace_58_10458_out_txt
 5810458 robustmpc
 49
 
+robustmpc_desktop_dash_trace_202_2303_out_txt
+('total quality change events=', 36, 'total_quality_change=', 72500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 78800.0)
+('avgBitrate=', 1608.16, 'rebufRatio=', 0.0, 'QoE=', 1.6081632653061224)
+2022303 robustmpc
+49
+
+robustmpc_desktop_dash_trace_34_10648_out_txt
+('total quality change events=', 31, 'total_quality_change=', 50850)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 53550.0)
+('avgBitrate=', 1092.86, 'rebufRatio=', 0.0, 'QoE=', 1.0928571428571427)
+3410648 robustmpc
+49
+
+robustmpc_mobile_dash_trace_143_11118_out_txt
+('total quality change events=', 18, 'total_quality_change=', 32200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 168550.0)
+('avgBitrate=', 3439.8, 'rebufRatio=', 0.0, 'QoE=', 3.439795918367347)
+14311118 robustmpc
+49
+
 online-tuner_desktop_dash_trace_157_13829_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 8900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3756,6 +5260,22 @@ online-tuner_mobile_dash_trace_240_12022_out_txt
 ('total bitrate=', 201250.0)
 ('avgBitrate=', 4107.14, 'rebufRatio=', 0.0, 'QoE=', 4.107142857142857)
 24012022 online-tuner
+49
+
+robustmpc_mobile_dash_trace_196_11593_out_txt
+('total quality change events=', 5, 'total_quality_change=', 8200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 183700.0)
+('avgBitrate=', 3748.98, 'rebufRatio=', 0.0, 'QoE=', 3.7489795918367346)
+19611593 robustmpc
+49
+
+robustmpc_mobile_dash_trace_197_11675_out_txt
+('total quality change events=', 21, 'total_quality_change=', 42600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 147350.0)
+('avgBitrate=', 3007.14, 'rebufRatio=', 0.0, 'QoE=', 3.007142857142857)
+19711675 robustmpc
 49
 
 online-tuner_mobile_dash_trace_142_11111_out_txt
@@ -3820,6 +5340,14 @@ robustmpc_desktop_dash_trace_43_11010_out_txt
 ('total bitrate=', 76550.0)
 ('avgBitrate=', 1562.24, 'rebufRatio=', 0.0, 'QoE=', 1.5622448979591836)
 4311010 robustmpc
+49
+
+robustmpc_desktop_dash_trace_42_10994_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 206700.0)
+('avgBitrate=', 4218.37, 'rebufRatio=', 0.0, 'QoE=', 4.218367346938775)
+4210994 robustmpc
 49
 
 robustmpc_desktop_dash_trace_103_1262_out_txt
@@ -3926,6 +5454,22 @@ online-tuner_desktop_dash_trace_164_14026_out_txt
 16414026 online-tuner
 49
 
+robustmpc_mobile_dash_trace_15_10113_out_txt
+('total quality change events=', 24, 'total_quality_change=', 44900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 135700.0)
+('avgBitrate=', 2769.39, 'rebufRatio=', 0.0, 'QoE=', 2.7693877551020405)
+1510113 robustmpc
+49
+
+robustmpc_desktop_dash_trace_132_13355_out_txt
+('total quality change events=', 36, 'total_quality_change=', 61800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 121900.0)
+('avgBitrate=', 2487.76, 'rebufRatio=', 0.0, 'QoE=', 2.4877551020408166)
+13213355 robustmpc
+49
+
 online-tuner_mobile_dash_trace_3_10029_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 21150)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3958,6 +5502,14 @@ robustmpc_mobile_dash_trace_136_11043_out_txt
 13611043 robustmpc
 49
 
+robustmpc_mobile_dash_trace_97_10779_out_txt
+('total quality change events=', 37, 'total_quality_change=', 61850)
+('total buffering events=', 1, 'total buffering time=', 0.27599999999998204)
+('total bitrate=', 75500.0)
+('avgBitrate=', 1540.82, 'rebufRatio=', 0.0014061831298782432, 'QoE=', 1.492375510204085)
+9710779 robustmpc
+49
+
 online-tuner_desktop_dash_trace_30_10601_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 9900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3972,6 +5524,14 @@ online-tuner_mobile_dash_trace_148_1115_out_txt
 ('total bitrate=', 165250.0)
 ('avgBitrate=', 3372.45, 'rebufRatio=', 0.0, 'QoE=', 3.372448979591837)
 1481115 online-tuner
+49
+
+robustmpc_desktop_dash_trace_203_2306_out_txt
+('total quality change events=', 9, 'total_quality_change=', 14000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186350.0)
+('avgBitrate=', 3803.06, 'rebufRatio=', 0.0, 'QoE=', 3.8030612244897957)
+2032306 robustmpc
 49
 
 robustmpc_desktop_dash_trace_139_13492_out_txt
@@ -3998,6 +5558,14 @@ robustmpc_desktop_dash_trace_211_2612_out_txt
 2112612 robustmpc
 49
 
+robustmpc_mobile_dash_trace_98_10783_out_txt
+('total quality change events=', 29, 'total_quality_change=', 51050)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 45700.0)
+('avgBitrate=', 932.65, 'rebufRatio=', 0.0, 'QoE=', 0.9326530612244899)
+9810783 robustmpc
+49
+
 robustmpc_desktop_dash_trace_112_12872_out_txt
 ('total quality change events=', 11, 'total_quality_change=', 12200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4012,6 +5580,14 @@ online-tuner_desktop_dash_trace_82_12129_out_txt
 ('total bitrate=', 44850.0)
 ('avgBitrate=', 915.31, 'rebufRatio=', 0.0, 'QoE=', 0.9153061224489796)
 8212129 online-tuner
+49
+
+robustmpc_desktop_dash_trace_182_1808_out_txt
+('total quality change events=', 37, 'total_quality_change=', 58150)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 55700.0)
+('avgBitrate=', 1136.73, 'rebufRatio=', 0.0, 'QoE=', 1.136734693877551)
+1821808 robustmpc
 49
 
 robustmpc_mobile_dash_trace_148_1115_out_txt
@@ -4044,6 +5620,22 @@ online-tuner_desktop_dash_trace_21_10432_out_txt
 ('total bitrate=', 50150.0)
 ('avgBitrate=', 1023.47, 'rebufRatio=', 0.0, 'QoE=', 1.023469387755102)
 2110432 online-tuner
+49
+
+robustmpc_mobile_dash_trace_112_10874_out_txt
+('total quality change events=', 18, 'total_quality_change=', 26700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174950.0)
+('avgBitrate=', 3570.41, 'rebufRatio=', 0.0, 'QoE=', 3.5704081632653057)
+11210874 robustmpc
+49
+
+robustmpc_desktop_dash_trace_70_11752_out_txt
+('total quality change events=', 30, 'total_quality_change=', 53000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 140900.0)
+('avgBitrate=', 2875.51, 'rebufRatio=', 0.0, 'QoE=', 2.8755102040816327)
+7011752 robustmpc
 49
 
 online-tuner_mobile_dash_trace_48_10392_out_txt
@@ -4102,12 +5694,28 @@ robustmpc_desktop_dash_trace_114_12998_out_txt
 11412998 robustmpc
 49
 
+robustmpc_desktop_dash_trace_100_12504_out_txt
+('total quality change events=', 37, 'total_quality_change=', 58350)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 72800.0)
+('avgBitrate=', 1485.71, 'rebufRatio=', 0.0, 'QoE=', 1.4857142857142858)
+10012504 robustmpc
+49
+
 online-tuner_desktop_dash_trace_40_10949_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 17250)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 58700.0)
 ('avgBitrate=', 1197.96, 'rebufRatio=', 0.0, 'QoE=', 1.1979591836734695)
 4010949 online-tuner
+49
+
+robustmpc_desktop_dash_trace_74_11899_out_txt
+('total quality change events=', 11, 'total_quality_change=', 17600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191650.0)
+('avgBitrate=', 3911.22, 'rebufRatio=', 0.0, 'QoE=', 3.9112244897959183)
+7411899 robustmpc
 49
 
 online-tuner_mobile_dash_trace_206_11709_out_txt
@@ -4126,12 +5734,44 @@ online-tuner_mobile_dash_trace_7_10068_out_txt
 710068 online-tuner
 49
 
+robustmpc_mobile_dash_trace_8_10069_out_txt
+('total quality change events=', 8, 'total_quality_change=', 14650)
+('total buffering events=', 1, 'total buffering time=', 0.7110000000000056)
+('total bitrate=', 26250.0)
+('avgBitrate=', 535.71, 'rebufRatio=', 0.003614439456868226, 'QoE=', 0.4109265306122439)
+810069 robustmpc
+49
+
 online-tuner_mobile_dash_trace_169_11291_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 31400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 154950.0)
 ('avgBitrate=', 3162.24, 'rebufRatio=', 0.0, 'QoE=', 3.1622448979591833)
 16911291 online-tuner
+49
+
+robustmpc_mobile_dash_trace_38_10289_out_txt
+('total quality change events=', 29, 'total_quality_change=', 53500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 56150.0)
+('avgBitrate=', 1145.92, 'rebufRatio=', 0.0, 'QoE=', 1.1459183673469386)
+3810289 robustmpc
+49
+
+robustmpc_desktop_dash_trace_80_12_out_txt
+('total quality change events=', 34, 'total_quality_change=', 54800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 112700.0)
+('avgBitrate=', 2300.0, 'rebufRatio=', 0.0, 'QoE=', 2.3000000000000003)
+8012 robustmpc
+49
+
+robustmpc_desktop_dash_trace_82_12129_out_txt
+('total quality change events=', 33, 'total_quality_change=', 51700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 50600.0)
+('avgBitrate=', 1032.65, 'rebufRatio=', 0.0, 'QoE=', 1.0326530612244897)
+8212129 robustmpc
 49
 
 online-tuner_mobile_dash_trace_214_11762_out_txt
@@ -4156,6 +5796,30 @@ online-tuner_mobile_dash_trace_123_10990_out_txt
 ('total bitrate=', 31800.0)
 ('avgBitrate=', 648.98, 'rebufRatio=', 0.0, 'QoE=', 0.6489795918367347)
 12310990 online-tuner
+49
+
+robustmpc_desktop_dash_trace_177_166_out_txt
+('total quality change events=', 16, 'total_quality_change=', 21800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 28500.0)
+('avgBitrate=', 581.63, 'rebufRatio=', 0.0, 'QoE=', 0.5816326530612245)
+177166 robustmpc
+49
+
+robustmpc_mobile_dash_trace_241_12059_out_txt
+('total quality change events=', 8, 'total_quality_change=', 12200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 187900.0)
+('avgBitrate=', 3834.69, 'rebufRatio=', 0.0, 'QoE=', 3.8346938775510204)
+24112059 robustmpc
+49
+
+robustmpc_mobile_dash_trace_141_11104_out_txt
+('total quality change events=', 5, 'total_quality_change=', 6000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184800.0)
+('avgBitrate=', 3771.43, 'rebufRatio=', 0.0, 'QoE=', 3.771428571428572)
+14111104 robustmpc
 49
 
 robustmpc_mobile_dash_trace_189_11533_out_txt
@@ -4238,12 +5902,52 @@ online-tuner_desktop_dash_trace_197_2149_out_txt
 1972149 online-tuner
 49
 
+robustmpc_desktop_dash_trace_4_10071_out_txt
+('total quality change events=', 26, 'total_quality_change=', 39300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 149550.0)
+('avgBitrate=', 3052.04, 'rebufRatio=', 0.0, 'QoE=', 3.0520408163265307)
+410071 robustmpc
+49
+
 robustmpc_mobile_dash_trace_248_12130_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 205250.0)
 ('avgBitrate=', 4188.78, 'rebufRatio=', 0.0, 'QoE=', 4.188775510204081)
 24812130 robustmpc
+49
+
+robustmpc_mobile_dash_trace_51_10404_out_txt
+('total quality change events=', 36, 'total_quality_change=', 56400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 124150.0)
+('avgBitrate=', 2533.67, 'rebufRatio=', 0.0, 'QoE=', 2.533673469387755)
+5110404 robustmpc
+49
+
+robustmpc_desktop_dash_trace_189_1939_out_txt
+('total quality change events=', 34, 'total_quality_change=', 57400)
+('total buffering events=', 1, 'total buffering time=', 0.546999999999997)
+('total bitrate=', 148500.0)
+('avgBitrate=', 3030.61, 'rebufRatio=', 0.0027830493469755174, 'QoE=', 2.9346081632653065)
+1891939 robustmpc
+49
+
+robustmpc_mobile_dash_trace_173_11305_out_txt
+('total quality change events=', 32, 'total_quality_change=', 56600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 92250.0)
+('avgBitrate=', 1882.65, 'rebufRatio=', 0.0, 'QoE=', 1.8826530612244898)
+17311305 robustmpc
+49
+
+robustmpc_desktop_dash_trace_158_13836_out_txt
+('total quality change events=', 21, 'total_quality_change=', 34200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159550.0)
+('avgBitrate=', 3256.12, 'rebufRatio=', 0.0, 'QoE=', 3.256122448979592)
+15813836 robustmpc
 49
 
 online-tuner_mobile_dash_trace_78_10660_out_txt
@@ -4278,12 +5982,36 @@ online-tuner_desktop_dash_trace_212_2619_out_txt
 2122619 online-tuner
 49
 
+robustmpc_desktop_dash_trace_154_13780_out_txt
+('total quality change events=', 32, 'total_quality_change=', 53700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 124100.0)
+('avgBitrate=', 2532.65, 'rebufRatio=', 0.0, 'QoE=', 2.5326530612244897)
+15413780 robustmpc
+49
+
 robustmpc_mobile_dash_trace_238_1201_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 47700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 157100.0)
 ('avgBitrate=', 3206.12, 'rebufRatio=', 0.0, 'QoE=', 3.206122448979592)
 2381201 robustmpc
+49
+
+robustmpc_desktop_dash_trace_1_10014_out_txt
+('total quality change events=', 33, 'total_quality_change=', 56900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 100350.0)
+('avgBitrate=', 2047.96, 'rebufRatio=', 0.0, 'QoE=', 2.0479591836734694)
+110014 robustmpc
+49
+
+robustmpc_mobile_dash_trace_29_1022_out_txt
+('total quality change events=', 21, 'total_quality_change=', 30100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186850.0)
+('avgBitrate=', 3813.27, 'rebufRatio=', 0.0, 'QoE=', 3.813265306122449)
+291022 robustmpc
 49
 
 online-tuner_desktop_dash_trace_100_12504_out_txt
@@ -4350,6 +6078,14 @@ robustmpc_mobile_dash_trace_242_12065_out_txt
 24212065 robustmpc
 49
 
+robustmpc_desktop_dash_trace_198_2169_out_txt
+('total quality change events=', 43, 'total_quality_change=', 85100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 120200.0)
+('avgBitrate=', 2453.06, 'rebufRatio=', 0.0, 'QoE=', 2.453061224489796)
+1982169 robustmpc
+49
+
 online-tuner_desktop_dash_trace_160_13972_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 7200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4364,6 +6100,14 @@ online-tuner_desktop_dash_trace_136_13404_out_txt
 ('total bitrate=', 192550.0)
 ('avgBitrate=', 3929.59, 'rebufRatio=', 0.0, 'QoE=', 3.9295918367346943)
 13613404 online-tuner
+49
+
+robustmpc_desktop_dash_trace_95_12460_out_txt
+('total quality change events=', 24, 'total_quality_change=', 38400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 130550.0)
+('avgBitrate=', 2664.29, 'rebufRatio=', 0.0, 'QoE=', 2.6642857142857146)
+9512460 robustmpc
 49
 
 online-tuner_desktop_dash_trace_172_1583_out_txt
@@ -4388,6 +6132,14 @@ online-tuner_desktop_dash_trace_70_11752_out_txt
 ('total bitrate=', 136150.0)
 ('avgBitrate=', 2778.57, 'rebufRatio=', 0.0, 'QoE=', 2.7785714285714285)
 7011752 online-tuner
+49
+
+robustmpc_desktop_dash_trace_31_10635_out_txt
+('total quality change events=', 37, 'total_quality_change=', 67700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 75650.0)
+('avgBitrate=', 1543.88, 'rebufRatio=', 0.0, 'QoE=', 1.5438775510204084)
+3110635 robustmpc
 49
 
 robustmpc_desktop_dash_trace_53_11172_out_txt
@@ -4430,6 +6182,14 @@ online-tuner_desktop_dash_trace_69_11728_out_txt
 6911728 online-tuner
 49
 
+robustmpc_mobile_dash_trace_37_10288_out_txt
+('total quality change events=', 30, 'total_quality_change=', 58200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122050.0)
+('avgBitrate=', 2490.82, 'rebufRatio=', 0.0, 'QoE=', 2.490816326530612)
+3710288 robustmpc
+49
+
 online-tuner_mobile_dash_trace_28_1021_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4468,6 +6228,38 @@ online-tuner_mobile_dash_trace_149_11160_out_txt
 ('total bitrate=', 123250.0)
 ('avgBitrate=', 2515.31, 'rebufRatio=', 0.0, 'QoE=', 2.5153061224489797)
 14911160 online-tuner
+49
+
+robustmpc_mobile_dash_trace_142_11111_out_txt
+('total quality change events=', 28, 'total_quality_change=', 61350)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 57800.0)
+('avgBitrate=', 1179.59, 'rebufRatio=', 0.0, 'QoE=', 1.1795918367346938)
+14211111 robustmpc
+49
+
+robustmpc_desktop_dash_trace_129_13319_out_txt
+('total quality change events=', 5, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 201350.0)
+('avgBitrate=', 4109.18, 'rebufRatio=', 0.0, 'QoE=', 4.109183673469388)
+12913319 robustmpc
+49
+
+robustmpc_desktop_dash_trace_227_2978_out_txt
+('total quality change events=', 31, 'total_quality_change=', 52600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 109050.0)
+('avgBitrate=', 2225.51, 'rebufRatio=', 0.0, 'QoE=', 2.225510204081633)
+2272978 robustmpc
+49
+
+robustmpc_mobile_dash_trace_192_11566_out_txt
+('total quality change events=', 31, 'total_quality_change=', 51900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 67250.0)
+('avgBitrate=', 1372.45, 'rebufRatio=', 0.0, 'QoE=', 1.3724489795918366)
+19211566 robustmpc
 49
 
 online-tuner_mobile_dash_trace_250_12143_out_txt
@@ -4550,6 +6342,30 @@ online-tuner_mobile_dash_trace_130_11028_out_txt
 13011028 online-tuner
 49
 
+robustmpc_desktop_dash_trace_186_1863_out_txt
+('total quality change events=', 27, 'total_quality_change=', 37200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 150550.0)
+('avgBitrate=', 3072.45, 'rebufRatio=', 0.0, 'QoE=', 3.072448979591837)
+1861863 robustmpc
+49
+
+robustmpc_desktop_dash_trace_187_189_out_txt
+('total quality change events=', 24, 'total_quality_change=', 46000)
+('total buffering events=', 2, 'total buffering time=', 1.460000000000008)
+('total bitrate=', 45250.0)
+('avgBitrate=', 923.47, 'rebufRatio=', 0.007393902562544353, 'QoE=', 0.667224489795917)
+187189 robustmpc
+49
+
+robustmpc_mobile_dash_trace_209_1172_out_txt
+('total quality change events=', 29, 'total_quality_change=', 38000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 120150.0)
+('avgBitrate=', 2452.04, 'rebufRatio=', 0.0, 'QoE=', 2.4520408163265306)
+2091172 robustmpc
+49
+
 online-tuner_mobile_dash_trace_18_10122_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 26850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4566,12 +6382,52 @@ robustmpc_mobile_dash_trace_41_10322_out_txt
 4110322 robustmpc
 49
 
+robustmpc_desktop_dash_trace_90_12320_out_txt
+('total quality change events=', 13, 'total_quality_change=', 17100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 177900.0)
+('avgBitrate=', 3630.61, 'rebufRatio=', 0.0, 'QoE=', 3.6306122448979594)
+9012320 robustmpc
+49
+
+robustmpc_mobile_dash_trace_10_10083_out_txt
+('total quality change events=', 35, 'total_quality_change=', 66800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122050.0)
+('avgBitrate=', 2490.82, 'rebufRatio=', 0.0, 'QoE=', 2.490816326530612)
+1010083 robustmpc
+49
+
+robustmpc_mobile_dash_trace_179_11398_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194150.0)
+('avgBitrate=', 3962.24, 'rebufRatio=', 0.0, 'QoE=', 3.962244897959184)
+17911398 robustmpc
+49
+
 online-tuner_mobile_dash_trace_226_11914_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 4500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 31800.0)
 ('avgBitrate=', 648.98, 'rebufRatio=', 0.0, 'QoE=', 0.6489795918367347)
 22611914 online-tuner
+49
+
+robustmpc_mobile_dash_trace_204_11692_out_txt
+('total quality change events=', 24, 'total_quality_change=', 35200)
+('total buffering events=', 2, 'total buffering time=', 0.48699999999996635)
+('total bitrate=', 178750.0)
+('avgBitrate=', 3647.96, 'rebufRatio=', 0.00247853547562926, 'QoE=', 3.56248571428572)
+20411692 robustmpc
+49
+
+robustmpc_mobile_dash_trace_81_10669_out_txt
+('total quality change events=', 18, 'total_quality_change=', 29500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 40350.0)
+('avgBitrate=', 823.47, 'rebufRatio=', 0.0, 'QoE=', 0.823469387755102)
+8110669 robustmpc
 49
 
 online-tuner_mobile_dash_trace_156_11210_out_txt
@@ -4598,6 +6454,14 @@ online-tuner_mobile_dash_trace_131_11035_out_txt
 13111035 online-tuner
 49
 
+robustmpc_mobile_dash_trace_119_1094_out_txt
+('total quality change events=', 36, 'total_quality_change=', 73200)
+('total buffering events=', 1, 'total buffering time=', 0.6139999999999759)
+('total bitrate=', 67000.0)
+('avgBitrate=', 1367.35, 'rebufRatio=', 0.003122870192356475, 'QoE=', 1.259583673469392)
+1191094 robustmpc
+49
+
 online-tuner_desktop_dash_trace_4_10071_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 36100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4614,6 +6478,14 @@ online-tuner_mobile_dash_trace_166_11275_out_txt
 16611275 online-tuner
 49
 
+robustmpc_desktop_dash_trace_21_10432_out_txt
+('total quality change events=', 24, 'total_quality_change=', 53900)
+('total buffering events=', 2, 'total buffering time=', 6.691000000000001)
+('total bitrate=', 55250.0)
+('avgBitrate=', 1127.55, 'rebufRatio=', 0.033010839159114125, 'QoE=', -0.046787755102040966)
+2110432 robustmpc
+49
+
 online-tuner_mobile_dash_trace_67_10536_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4628,6 +6500,14 @@ online-tuner_desktop_dash_trace_104_12649_out_txt
 ('total bitrate=', 154000.0)
 ('avgBitrate=', 3142.86, 'rebufRatio=', 0.0, 'QoE=', 3.142857142857143)
 10412649 online-tuner
+49
+
+robustmpc_mobile_dash_trace_235_11964_out_txt
+('total quality change events=', 20, 'total_quality_change=', 42600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 39150.0)
+('avgBitrate=', 798.98, 'rebufRatio=', 0.0, 'QoE=', 0.7989795918367346)
+23511964 robustmpc
 49
 
 online-tuner_mobile_dash_trace_248_12130_out_txt
@@ -4652,6 +6532,22 @@ online-tuner_desktop_dash_trace_203_2306_out_txt
 ('total bitrate=', 190100.0)
 ('avgBitrate=', 3879.59, 'rebufRatio=', 0.0, 'QoE=', 3.8795918367346935)
 2032306 online-tuner
+49
+
+robustmpc_desktop_dash_trace_179_1664_out_txt
+('total quality change events=', 22, 'total_quality_change=', 47100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146100.0)
+('avgBitrate=', 2981.63, 'rebufRatio=', 0.0, 'QoE=', 2.9816326530612245)
+1791664 robustmpc
+49
+
+robustmpc_desktop_dash_trace_32_10638_out_txt
+('total quality change events=', 8, 'total_quality_change=', 6450)
+('total buffering events=', 8, 'total buffering time=', 4.051000000000009)
+('total bitrate=', 19600.0)
+('avgBitrate=', 400.0, 'rebufRatio=', 0.02024983629174565, 'QoE=', -0.31099183673469544)
+3210638 robustmpc
 49
 
 online-tuner_mobile_dash_trace_2_10027_out_txt
@@ -4742,6 +6638,30 @@ online-tuner_desktop_dash_trace_192_2037_out_txt
 1922037 online-tuner
 49
 
+robustmpc_desktop_dash_trace_131_1335_out_txt
+('total quality change events=', 24, 'total_quality_change=', 41200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 177300.0)
+('avgBitrate=', 3618.37, 'rebufRatio=', 0.0, 'QoE=', 3.6183673469387756)
+1311335 robustmpc
+49
+
+robustmpc_desktop_dash_trace_69_11728_out_txt
+('total quality change events=', 40, 'total_quality_change=', 76900)
+('total buffering events=', 1, 'total buffering time=', 1.0309999999999988)
+('total bitrate=', 94350.0)
+('avgBitrate=', 1925.51, 'rebufRatio=', 0.005232679121559545, 'QoE=', 1.7445591836734695)
+6911728 robustmpc
+49
+
+robustmpc_mobile_dash_trace_19_10125_out_txt
+('total quality change events=', 22, 'total_quality_change=', 43100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146350.0)
+('avgBitrate=', 2986.73, 'rebufRatio=', 0.0, 'QoE=', 2.9867346938775508)
+1910125 robustmpc
+49
+
 robustmpc_desktop_dash_trace_213_2626_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 39100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4774,6 +6694,38 @@ robustmpc_desktop_dash_trace_180_1775_out_txt
 1801775 robustmpc
 49
 
+robustmpc_mobile_dash_trace_14_1011_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 201250.0)
+('avgBitrate=', 4107.14, 'rebufRatio=', 0.0, 'QoE=', 4.107142857142857)
+141011 robustmpc
+49
+
+robustmpc_desktop_dash_trace_220_2878_out_txt
+('total quality change events=', 30, 'total_quality_change=', 53200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 52900.0)
+('avgBitrate=', 1079.59, 'rebufRatio=', 0.0, 'QoE=', 1.079591836734694)
+2202878 robustmpc
+49
+
+robustmpc_mobile_dash_trace_117_10918_out_txt
+('total quality change events=', 23, 'total_quality_change=', 27400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 34850.0)
+('avgBitrate=', 711.22, 'rebufRatio=', 0.0, 'QoE=', 0.7112244897959183)
+11710918 robustmpc
+49
+
+robustmpc_mobile_dash_trace_101_10803_out_txt
+('total quality change events=', 9, 'total_quality_change=', 15300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 185250.0)
+('avgBitrate=', 3780.61, 'rebufRatio=', 0.0, 'QoE=', 3.7806122448979593)
+10110803 robustmpc
+49
+
 robustmpc_mobile_dash_trace_199_11683_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 9100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4782,12 +6734,44 @@ robustmpc_mobile_dash_trace_199_11683_out_txt
 19911683 robustmpc
 49
 
+robustmpc_desktop_dash_trace_27_10553_out_txt
+('total quality change events=', 15, 'total_quality_change=', 21600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 180950.0)
+('avgBitrate=', 3692.86, 'rebufRatio=', 0.0, 'QoE=', 3.6928571428571426)
+2710553 robustmpc
+49
+
+robustmpc_desktop_dash_trace_171_1557_out_txt
+('total quality change events=', 13, 'total_quality_change=', 21100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 178450.0)
+('avgBitrate=', 3641.84, 'rebufRatio=', 0.0, 'QoE=', 3.6418367346938774)
+1711557 robustmpc
+49
+
 online-tuner_desktop_dash_trace_184_1829_out_txt
 ('total quality change events=', 14, 'total_quality_change=', 6950)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 29300.0)
 ('avgBitrate=', 597.96, 'rebufRatio=', 0.0, 'QoE=', 0.5979591836734695)
 1841829 online-tuner
+49
+
+robustmpc_desktop_dash_trace_197_2149_out_txt
+('total quality change events=', 32, 'total_quality_change=', 67000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 138250.0)
+('avgBitrate=', 2821.43, 'rebufRatio=', 0.0, 'QoE=', 2.8214285714285716)
+1972149 robustmpc
+49
+
+robustmpc_mobile_dash_trace_230_11934_out_txt
+('total quality change events=', 36, 'total_quality_change=', 56100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122850.0)
+('avgBitrate=', 2507.14, 'rebufRatio=', 0.0, 'QoE=', 2.507142857142857)
+23011934 robustmpc
 49
 
 online-tuner_mobile_dash_trace_71_10583_out_txt
@@ -4830,6 +6814,14 @@ online-tuner_desktop_dash_trace_32_10638_out_txt
 3210638 online-tuner
 49
 
+robustmpc_mobile_dash_trace_42_10324_out_txt
+('total quality change events=', 31, 'total_quality_change=', 55100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 58400.0)
+('avgBitrate=', 1191.84, 'rebufRatio=', 0.0, 'QoE=', 1.1918367346938776)
+4210324 robustmpc
+49
+
 online-tuner_mobile_dash_trace_39_10304_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 10450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4844,6 +6836,14 @@ robustmpc_desktop_dash_trace_240_3246_out_txt
 ('total bitrate=', 203150.0)
 ('avgBitrate=', 4145.92, 'rebufRatio=', 0.0, 'QoE=', 4.145918367346939)
 2403246 robustmpc
+49
+
+robustmpc_desktop_dash_trace_47_1109_out_txt
+('total quality change events=', 28, 'total_quality_change=', 54800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122800.0)
+('avgBitrate=', 2506.12, 'rebufRatio=', 0.0, 'QoE=', 2.5061224489795917)
+471109 robustmpc
 49
 
 online-tuner_mobile_dash_trace_229_11932_out_txt
@@ -4868,6 +6868,14 @@ online-tuner_mobile_dash_trace_213_11751_out_txt
 ('total bitrate=', 146400.0)
 ('avgBitrate=', 2987.76, 'rebufRatio=', 0.0, 'QoE=', 2.9877551020408166)
 21311751 online-tuner
+49
+
+robustmpc_mobile_dash_trace_72_10587_out_txt
+('total quality change events=', 16, 'total_quality_change=', 32400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 153900.0)
+('avgBitrate=', 3140.82, 'rebufRatio=', 0.0, 'QoE=', 3.1408163265306124)
+7210587 robustmpc
 49
 
 robustmpc_mobile_dash_trace_95_10761_out_txt
@@ -4902,6 +6910,14 @@ online-tuner_desktop_dash_trace_95_12460_out_txt
 9512460 online-tuner
 49
 
+robustmpc_mobile_dash_trace_43_10326_out_txt
+('total quality change events=', 20, 'total_quality_change=', 32000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174200.0)
+('avgBitrate=', 3555.1, 'rebufRatio=', 0.0, 'QoE=', 3.555102040816326)
+4310326 robustmpc
+49
+
 online-tuner_mobile_dash_trace_153_11201_out_txt
 ('total quality change events=', 27, 'total_quality_change=', 40100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4918,12 +6934,36 @@ online-tuner_mobile_dash_trace_241_12059_out_txt
 24112059 online-tuner
 49
 
+robustmpc_desktop_dash_trace_25_10531_out_txt
+('total quality change events=', 7, 'total_quality_change=', 15300)
+('total buffering events=', 2, 'total buffering time=', 2.4550000000000005)
+('total bitrate=', 191800.0)
+('avgBitrate=', 3914.29, 'rebufRatio=', 0.012370562596054523, 'QoE=', 3.4834081632653064)
+2510531 robustmpc
+49
+
+robustmpc_mobile_dash_trace_45_10375_out_txt
+('total quality change events=', 16, 'total_quality_change=', 26900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 31050.0)
+('avgBitrate=', 633.67, 'rebufRatio=', 0.0, 'QoE=', 0.6336734693877552)
+4510375 robustmpc
+49
+
 online-tuner_desktop_dash_trace_113_1298_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 41700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 173950.0)
 ('avgBitrate=', 3550.0, 'rebufRatio=', 0.0, 'QoE=', 3.55)
 1131298 online-tuner
+49
+
+robustmpc_mobile_dash_trace_57_1045_out_txt
+('total quality change events=', 4, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 199800.0)
+('avgBitrate=', 4077.55, 'rebufRatio=', 0.0, 'QoE=', 4.077551020408164)
+571045 robustmpc
 49
 
 online-tuner_desktop_dash_trace_246_3437_out_txt
@@ -4958,6 +6998,14 @@ online-tuner_mobile_dash_trace_105_10829_out_txt
 10510829 online-tuner
 49
 
+robustmpc_desktop_dash_trace_237_3161_out_txt
+('total quality change events=', 12, 'total_quality_change=', 18700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170450.0)
+('avgBitrate=', 3478.57, 'rebufRatio=', 0.0, 'QoE=', 3.478571428571428)
+2373161 robustmpc
+49
+
 robustmpc_mobile_dash_trace_17_10115_out_txt
 ('total quality change events=', 32, 'total_quality_change=', 59700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4972,6 +7020,14 @@ online-tuner_desktop_dash_trace_61_11601_out_txt
 ('total bitrate=', 125350.0)
 ('avgBitrate=', 2558.16, 'rebufRatio=', 0.0, 'QoE=', 2.5581632653061224)
 6111601 online-tuner
+49
+
+robustmpc_mobile_dash_trace_195_11592_out_txt
+('total quality change events=', 5, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193350.0)
+('avgBitrate=', 3945.92, 'rebufRatio=', 0.0, 'QoE=', 3.9459183673469385)
+19511592 robustmpc
 49
 
 robustmpc_desktop_dash_trace_174_1626_out_txt
@@ -5062,6 +7118,14 @@ online-tuner_mobile_dash_trace_89_1069_out_txt
 891069 online-tuner
 49
 
+robustmpc_mobile_dash_trace_9_10082_out_txt
+('total quality change events=', 7, 'total_quality_change=', 15100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182250.0)
+('avgBitrate=', 3719.39, 'rebufRatio=', 0.0, 'QoE=', 3.7193877551020407)
+910082 robustmpc
+49
+
 robustmpc_mobile_dash_trace_2_10027_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 8900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5094,6 +7158,14 @@ online-tuner_desktop_dash_trace_129_13319_out_txt
 12913319 online-tuner
 49
 
+robustmpc_mobile_dash_trace_13_10095_out_txt
+('total quality change events=', 32, 'total_quality_change=', 61500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 119850.0)
+('avgBitrate=', 2445.92, 'rebufRatio=', 0.0, 'QoE=', 2.4459183673469385)
+1310095 robustmpc
+49
+
 robustmpc_mobile_dash_trace_69_10574_out_txt
 ('total quality change events=', 37, 'total_quality_change=', 69000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5108,6 +7180,30 @@ online-tuner_mobile_dash_trace_144_1112_out_txt
 ('total bitrate=', 139700.0)
 ('avgBitrate=', 2851.02, 'rebufRatio=', 0.0, 'QoE=', 2.851020408163265)
 1441112 online-tuner
+49
+
+robustmpc_desktop_dash_trace_155_1379_out_txt
+('total quality change events=', 18, 'total_quality_change=', 26700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 175300.0)
+('avgBitrate=', 3577.55, 'rebufRatio=', 0.0, 'QoE=', 3.5775510204081633)
+1551379 robustmpc
+49
+
+robustmpc_mobile_dash_trace_231_11935_out_txt
+('total quality change events=', 8, 'total_quality_change=', 13100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 180100.0)
+('avgBitrate=', 3675.51, 'rebufRatio=', 0.0, 'QoE=', 3.6755102040816325)
+23111935 robustmpc
+49
+
+robustmpc_desktop_dash_trace_7_10176_out_txt
+('total quality change events=', 42, 'total_quality_change=', 82050)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 75400.0)
+('avgBitrate=', 1538.78, 'rebufRatio=', 0.0, 'QoE=', 1.5387755102040817)
+710176 robustmpc
 49
 
 online-tuner_desktop_dash_trace_138_13452_out_txt
@@ -5134,6 +7230,14 @@ online-tuner_desktop_dash_trace_229_3020_out_txt
 2293020 online-tuner
 49
 
+robustmpc_desktop_dash_trace_168_1516_out_txt
+('total quality change events=', 29, 'total_quality_change=', 47500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 119850.0)
+('avgBitrate=', 2445.92, 'rebufRatio=', 0.0, 'QoE=', 2.4459183673469385)
+1681516 robustmpc
+49
+
 online-tuner_mobile_dash_trace_36_10286_out_txt
 ('total quality change events=', 14, 'total_quality_change=', 20000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5150,12 +7254,44 @@ online-tuner_mobile_dash_trace_134_11040_out_txt
 13411040 online-tuner
 49
 
+robustmpc_desktop_dash_trace_178_1663_out_txt
+('total quality change events=', 28, 'total_quality_change=', 48400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 59650.0)
+('avgBitrate=', 1217.35, 'rebufRatio=', 0.0, 'QoE=', 1.2173469387755103)
+1781663 robustmpc
+49
+
+robustmpc_mobile_dash_trace_7_10068_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191150.0)
+('avgBitrate=', 3901.02, 'rebufRatio=', 0.0, 'QoE=', 3.9010204081632653)
+710068 robustmpc
+49
+
+robustmpc_desktop_dash_trace_58_11387_out_txt
+('total quality change events=', 18, 'total_quality_change=', 31300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 144350.0)
+('avgBitrate=', 2945.92, 'rebufRatio=', 0.0, 'QoE=', 2.9459183673469385)
+5811387 robustmpc
+49
+
 robustmpc_desktop_dash_trace_77_11969_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 35750)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 87100.0)
 ('avgBitrate=', 1777.55, 'rebufRatio=', 0.0, 'QoE=', 1.777551020408163)
 7711969 robustmpc
+49
+
+robustmpc_mobile_dash_trace_73_10591_out_txt
+('total quality change events=', 13, 'total_quality_change=', 18400)
+('total buffering events=', 1, 'total buffering time=', 1.4380000000000006)
+('total bitrate=', 143150.0)
+('avgBitrate=', 2921.43, 'rebufRatio=', 0.0072832990609710425, 'QoE=', 2.6690448979591834)
+7310591 robustmpc
 49
 
 online-tuner_mobile_dash_trace_81_10669_out_txt
@@ -5206,6 +7342,14 @@ online-tuner_desktop_dash_trace_57_11343_out_txt
 5711343 online-tuner
 49
 
+robustmpc_desktop_dash_trace_63_11616_out_txt
+('total quality change events=', 12, 'total_quality_change=', 19300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 178700.0)
+('avgBitrate=', 3646.94, 'rebufRatio=', 0.0, 'QoE=', 3.646938775510204)
+6311616 robustmpc
+49
+
 online-tuner_mobile_dash_trace_204_11692_out_txt
 ('total quality change events=', 34, 'total_quality_change=', 47500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5238,6 +7382,30 @@ online-tuner_desktop_dash_trace_65_11673_out_txt
 6511673 online-tuner
 49
 
+robustmpc_mobile_dash_trace_155_11207_out_txt
+('total quality change events=', 28, 'total_quality_change=', 43700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 46350.0)
+('avgBitrate=', 945.92, 'rebufRatio=', 0.0, 'QoE=', 0.9459183673469388)
+15511207 robustmpc
+49
+
+robustmpc_desktop_dash_trace_207_2464_out_txt
+('total quality change events=', 24, 'total_quality_change=', 45100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 138650.0)
+('avgBitrate=', 2829.59, 'rebufRatio=', 0.0, 'QoE=', 2.829591836734694)
+2072464 robustmpc
+49
+
+robustmpc_desktop_dash_trace_2_10036_out_txt
+('total quality change events=', 36, 'total_quality_change=', 69700)
+('total buffering events=', 1, 'total buffering time=', 0.30400000000000027)
+('total bitrate=', 122100.0)
+('avgBitrate=', 2491.84, 'rebufRatio=', 0.0015486184693129037, 'QoE=', 2.438481632653061)
+210036 robustmpc
+49
+
 online-tuner_mobile_dash_trace_30_10220_out_txt
 ('total quality change events=', 14, 'total_quality_change=', 6300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5246,12 +7414,44 @@ online-tuner_mobile_dash_trace_30_10220_out_txt
 3010220 online-tuner
 49
 
+robustmpc_mobile_dash_trace_172_11304_out_txt
+('total quality change events=', 3, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190150.0)
+('avgBitrate=', 3880.61, 'rebufRatio=', 0.0, 'QoE=', 3.8806122448979594)
+17211304 robustmpc
+49
+
+robustmpc_mobile_dash_trace_50_1040_out_txt
+('total quality change events=', 2, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 201250.0)
+('avgBitrate=', 4107.14, 'rebufRatio=', 0.0, 'QoE=', 4.107142857142857)
+501040 robustmpc
+49
+
 online-tuner_desktop_dash_trace_207_2464_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 22900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 133850.0)
 ('avgBitrate=', 2731.63, 'rebufRatio=', 0.0, 'QoE=', 2.7316326530612245)
 2072464 online-tuner
+49
+
+robustmpc_mobile_dash_trace_222_11878_out_txt
+('total quality change events=', 4, 'total_quality_change=', 6200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 197150.0)
+('avgBitrate=', 4023.47, 'rebufRatio=', 0.0, 'QoE=', 4.023469387755102)
+22211878 robustmpc
+49
+
+robustmpc_mobile_dash_trace_187_11519_out_txt
+('total quality change events=', 34, 'total_quality_change=', 63200)
+('total buffering events=', 1, 'total buffering time=', 0.1740000000000066)
+('total bitrate=', 62000.0)
+('avgBitrate=', 1265.31, 'rebufRatio=', 0.0008869676919469787, 'QoE=', 1.2347673469387743)
+18711519 robustmpc
 49
 
 online-tuner_mobile_dash_trace_110_10865_out_txt
@@ -5294,12 +7494,28 @@ online-tuner_desktop_dash_trace_245_3313_out_txt
 2453313 online-tuner
 49
 
+robustmpc_desktop_dash_trace_91_12382_out_txt
+('total quality change events=', 21, 'total_quality_change=', 42200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159900.0)
+('avgBitrate=', 3263.27, 'rebufRatio=', 0.0, 'QoE=', 3.2632653061224492)
+9112382 robustmpc
+49
+
 online-tuner_mobile_dash_trace_96_10773_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 1350)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 16050.0)
 ('avgBitrate=', 327.55, 'rebufRatio=', 0.0, 'QoE=', 0.3275510204081633)
 9610773 online-tuner
+49
+
+robustmpc_mobile_dash_trace_191_11536_out_txt
+('total quality change events=', 15, 'total_quality_change=', 33300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170250.0)
+('avgBitrate=', 3474.49, 'rebufRatio=', 0.0, 'QoE=', 3.4744897959183674)
+19111536 robustmpc
 49
 
 online-tuner_desktop_dash_trace_193_208_out_txt
@@ -5316,6 +7532,30 @@ robustmpc_desktop_dash_trace_233_3051_out_txt
 ('total bitrate=', 77000.0)
 ('avgBitrate=', 1571.43, 'rebufRatio=', 0.0, 'QoE=', 1.5714285714285714)
 2333051 robustmpc
+49
+
+robustmpc_desktop_dash_trace_55_11302_out_txt
+('total quality change events=', 33, 'total_quality_change=', 69300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 141850.0)
+('avgBitrate=', 2894.9, 'rebufRatio=', 0.0, 'QoE=', 2.894897959183673)
+5511302 robustmpc
+49
+
+robustmpc_mobile_dash_trace_32_10232_out_txt
+('total quality change events=', 19, 'total_quality_change=', 30900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 166100.0)
+('avgBitrate=', 3389.8, 'rebufRatio=', 0.0, 'QoE=', 3.389795918367347)
+3210232 robustmpc
+49
+
+robustmpc_mobile_dash_trace_137_11044_out_txt
+('total quality change events=', 12, 'total_quality_change=', 19600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181750.0)
+('avgBitrate=', 3709.18, 'rebufRatio=', 0.0, 'QoE=', 3.7091836734693877)
+13711044 robustmpc
 49
 
 online-tuner_desktop_dash_trace_111_12840_out_txt
@@ -5342,12 +7582,36 @@ robustmpc_mobile_dash_trace_46_10379_out_txt
 4610379 robustmpc
 49
 
+robustmpc_mobile_dash_trace_207_1171_out_txt
+('total quality change events=', 4, 'total_quality_change=', 7100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193800.0)
+('avgBitrate=', 3955.1, 'rebufRatio=', 0.0, 'QoE=', 3.955102040816327)
+2071171 robustmpc
+49
+
 robustmpc_desktop_dash_trace_123_13181_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 30400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 158750.0)
 ('avgBitrate=', 3239.8, 'rebufRatio=', 0.0, 'QoE=', 3.239795918367347)
 12313181 robustmpc
+49
+
+robustmpc_desktop_dash_trace_205_2361_out_txt
+('total quality change events=', 36, 'total_quality_change=', 77500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 63850.0)
+('avgBitrate=', 1303.06, 'rebufRatio=', 0.0, 'QoE=', 1.3030612244897959)
+2052361 robustmpc
+49
+
+robustmpc_mobile_dash_trace_185_11496_out_txt
+('total quality change events=', 19, 'total_quality_change=', 39650)
+('total buffering events=', 5, 'total buffering time=', 10.558000000000003)
+('total bitrate=', 48900.0)
+('avgBitrate=', 997.96, 'rebufRatio=', 0.051113972830875605, 'QoE=', -0.8550775510204087)
+18511496 robustmpc
 49
 
 online-tuner_mobile_dash_trace_11_10089_out_txt
@@ -5422,6 +7686,14 @@ online-tuner_desktop_dash_trace_93_12447_out_txt
 9312447 online-tuner
 49
 
+robustmpc_desktop_dash_trace_89_12304_out_txt
+('total quality change events=', 17, 'total_quality_change=', 31500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146350.0)
+('avgBitrate=', 2986.73, 'rebufRatio=', 0.0, 'QoE=', 2.9867346938775508)
+8912304 robustmpc
+49
+
 online-tuner_mobile_dash_trace_107_10844_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 12700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5452,6 +7724,14 @@ robustmpc_desktop_dash_trace_127_13270_out_txt
 ('total bitrate=', 131200.0)
 ('avgBitrate=', 2677.55, 'rebufRatio=', 0.0, 'QoE=', 2.677551020408163)
 12713270 robustmpc
+49
+
+robustmpc_mobile_dash_trace_193_11570_out_txt
+('total quality change events=', 34, 'total_quality_change=', 71200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 97200.0)
+('avgBitrate=', 1983.67, 'rebufRatio=', 0.0, 'QoE=', 1.9836734693877551)
+19311570 robustmpc
 49
 
 online-tuner_desktop_dash_trace_50_11121_out_txt
@@ -5486,6 +7766,14 @@ online-tuner_mobile_dash_trace_223_11880_out_txt
 22311880 online-tuner
 49
 
+robustmpc_mobile_dash_trace_210_11724_out_txt
+('total quality change events=', 1, 'total_quality_change=', 4000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190700.0)
+('avgBitrate=', 3891.84, 'rebufRatio=', 0.0, 'QoE=', 3.8918367346938774)
+21011724 robustmpc
+49
+
 online-tuner_mobile_dash_trace_68_10560_out_txt
 ('total quality change events=', 5, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5510,12 +7798,68 @@ online-tuner_desktop_dash_trace_24_1050_out_txt
 241050 online-tuner
 49
 
+robustmpc_desktop_dash_trace_192_2037_out_txt
+('total quality change events=', 26, 'total_quality_change=', 42950)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 83550.0)
+('avgBitrate=', 1705.1, 'rebufRatio=', 0.0, 'QoE=', 1.7051020408163264)
+1922037 robustmpc
+49
+
+robustmpc_mobile_dash_trace_183_11468_out_txt
+('total quality change events=', 16, 'total_quality_change=', 20650)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 30700.0)
+('avgBitrate=', 626.53, 'rebufRatio=', 0.0, 'QoE=', 0.6265306122448979)
+18311468 robustmpc
+49
+
+robustmpc_mobile_dash_trace_60_10468_out_txt
+('total quality change events=', 33, 'total_quality_change=', 53750)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 119650.0)
+('avgBitrate=', 2441.84, 'rebufRatio=', 0.0, 'QoE=', 2.4418367346938776)
+6010468 robustmpc
+49
+
+robustmpc_desktop_dash_trace_166_1456_out_txt
+('total quality change events=', 19, 'total_quality_change=', 40000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169550.0)
+('avgBitrate=', 3460.2, 'rebufRatio=', 0.0, 'QoE=', 3.460204081632653)
+1661456 robustmpc
+49
+
+robustmpc_mobile_dash_trace_133_1104_out_txt
+('total quality change events=', 8, 'total_quality_change=', 16700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 179000.0)
+('avgBitrate=', 3653.06, 'rebufRatio=', 0.0, 'QoE=', 3.6530612244897958)
+1331104 robustmpc
+49
+
 online-tuner_desktop_dash_trace_226_2955_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 9600)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 55300.0)
 ('avgBitrate=', 1128.57, 'rebufRatio=', 0.0, 'QoE=', 1.1285714285714286)
 2262955 online-tuner
+49
+
+robustmpc_mobile_dash_trace_158_11214_out_txt
+('total quality change events=', 39, 'total_quality_change=', 67550)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 66150.0)
+('avgBitrate=', 1350.0, 'rebufRatio=', 0.0, 'QoE=', 1.35)
+15811214 robustmpc
+49
+
+robustmpc_desktop_dash_trace_78_11980_out_txt
+('total quality change events=', 34, 'total_quality_change=', 53500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 61050.0)
+('avgBitrate=', 1245.92, 'rebufRatio=', 0.0, 'QoE=', 1.2459183673469387)
+7811980 robustmpc
 49
 
 online-tuner_mobile_dash_trace_159_11217_out_txt
@@ -5550,6 +7894,14 @@ robustmpc_mobile_dash_trace_216_11798_out_txt
 21611798 robustmpc
 49
 
+robustmpc_desktop_dash_trace_221_2887_out_txt
+('total quality change events=', 24, 'total_quality_change=', 31800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 62600.0)
+('avgBitrate=', 1277.55, 'rebufRatio=', 0.0, 'QoE=', 1.2775510204081633)
+2212887 robustmpc
+49
+
 robustmpc_mobile_dash_trace_220_11851_out_txt
 ('total quality change events=', 34, 'total_quality_change=', 64800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5566,12 +7918,28 @@ online-tuner_mobile_dash_trace_127_11019_out_txt
 12711019 online-tuner
 49
 
+robustmpc_mobile_dash_trace_200_11684_out_txt
+('total quality change events=', 31, 'total_quality_change=', 53850)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 54250.0)
+('avgBitrate=', 1107.14, 'rebufRatio=', 0.0, 'QoE=', 1.1071428571428572)
+20011684 robustmpc
+49
+
 online-tuner_mobile_dash_trace_72_10587_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 28150)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 169750.0)
 ('avgBitrate=', 3464.29, 'rebufRatio=', 0.0, 'QoE=', 3.4642857142857144)
 7210587 online-tuner
+49
+
+robustmpc_desktop_dash_trace_230_3028_out_txt
+('total quality change events=', 6, 'total_quality_change=', 8200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193250.0)
+('avgBitrate=', 3943.88, 'rebufRatio=', 0.0, 'QoE=', 3.943877551020408)
+2303028 robustmpc
 49
 
 online-tuner_mobile_dash_trace_133_1104_out_txt
@@ -5632,17 +8000,17 @@ online-tuner_mobile_dash_trace_13_10095_out_txt
 
 
 avg. bitrate
-robustmpc 2719.90779412 1206.40401598 3039.29 204
-online-tuner 2700.3847549 1243.75122301 3070.92 204
+online-tuner 2633.51612 1232.41287627 2887.755 500
+robustmpc 2655.2733 1190.58361982 2914.795 500
 
 rebuf
-robustmpc 0.16001521845 0.702240508362 0.0 1.37613087867 204
-online-tuner 0.0331362304901 0.390280568262 0.0 0.284971582215 204
+online-tuner 0.0406886060179 0.583632540846 0.0 0.349922011754 500
+robustmpc 0.131014296665 0.596199336824 0.0 1.12672295132 500
 
 change
-robustmpc 674.68987595 471.456407266 623.469387755 0.0 204
-online-tuner 317.647058824 217.708078542 255.612244898 0.0 204
+online-tuner 328.940816327 216.17403885 290.306122449 0.0 500
+robustmpc 707.526530612 461.606860897 688.775510204 0.0 500
 
 QoE
-robustmpc 2.6630005002 1.31045983166 3.03928571429 2.6630005002 204
-online-tuner 2.68842809124 1.26981491245 3.07091836735 2.68842809124 204
+online-tuner 2.61820516735 1.27349623578 2.88775510204 2.61820516735 500
+robustmpc 2.60887067755 1.26489918162 2.89285714286 2.60887067755 500
