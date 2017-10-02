@@ -7,6 +7,7 @@ import math
 import random
 import statistics
 import numpy as np
+import itertools
 # utility function:
 # pick the highest bitrate that will not introduce buffering
 
@@ -36,7 +37,68 @@ def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid,
     #print bufferlen,est_bandwidth,br,new_chunkid,size_envivo[br][new_chunkid],estBufferingTime
   return tempquality
 
-def getMPCDecision(sessionHistory, bufferlen, candidateBitrates, chunkid, CHUNKSIZE):
+def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize):
+  # VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
+  # VIDEO_BIT_RATE_TO_INDEX = {300:0,750:1,1200:2,1850:3,2850:4,4300:5}
+  VIDEO_BIT_RATE = [350,600,1000,2000,3000]
+  VIDEO_BIT_RATE_TO_INDEX = {350:0,600:1,1000:2,2000:3,3000:4}
+  REBUF_PENALTY = 4.3
+  SMOOTH_PENALTY = 1.0
+  TOTAL_CHUNKS = 49
+  if chunkid + windowSize > 49:
+    windowSize = TOTAL_CHUNKS - chunkid - 1
+
+  CHUNK_COMBO_OPTIONS = list()
+  for combo in itertools.product([0,1,2,3,4], repeat=windowSize):
+    CHUNK_COMBO_OPTIONS.append(combo)
+
+  max_reward = -100000000
+  best_combo = ()
+  start_buffer = bufferlen
+  #start = time.time()
+  for full_combo in CHUNK_COMBO_OPTIONS:
+      # combo = full_combo[0:future_chunk_length]
+      # calculate total rebuffer time for this combination (start with start_buffer and subtract
+      # each download time and add 2 seconds in that order)
+      curr_rebuffer_time = 0
+      curr_buffer = start_buffer
+      bitrate_sum = 0
+      smoothness_diffs = 0
+      last_quality = bitrate #VIDEO_BIT_RATE_TO_INDEX[bitrate]
+      for position in range(0, len(combo)):
+          chunk_quality = combo[position]
+          index = chunkid + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
+          download_time = ((size_envivo[chunk_quality][index] * 8)/1000.)/future_bandwidth # this is MB/MB/s --> seconds
+          if ( curr_buffer < download_time ):
+              curr_rebuffer_time += (download_time - curr_buffer)
+              curr_buffer = 0
+          else:
+              curr_buffer -= download_time
+          curr_buffer += 4
+          
+          # linear reward
+          bitrate_sum += VIDEO_BIT_RATE[chunk_quality]
+          smoothness_diffs += abs(VIDEO_BIT_RATE[chunk_quality] - VIDEO_BIT_RATE[last_quality])
+
+          last_quality = chunk_quality
+      # compute reward for this combination (one reward per 5-chunk combo)
+      # bitrates are in Mbits/s, rebuffer in seconds, and smoothness_diffs in Mbits/s
+      
+      # linear reward 
+      reward = (bitrate_sum) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs)
+
+      if ( reward > max_reward ):
+          max_reward = reward
+          best_combo = combo
+  # send data to html side (first chunk of best combo)
+  bitrate = 0 # no combo had reward better than -1000000 (ERROR) so send 0
+  if ( best_combo != () ): # some combo was good
+      bitrate = best_combo[0]
+  return bitrate
+
+
+
+
 
 
 def getUtilityBitrateDecision(bufferlen, candidateBitrates, bandwidth, chunkid, CHUNKSIZE, BUFFER_SAFETY_MARGIN, buffering_weight, sessionHistory, chunk_residue, currbitratePlaying, clock, decision_cycle, bwArray, usedBWArray, sessiontimems, oldbw, attempt_id):
