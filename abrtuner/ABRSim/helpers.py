@@ -432,8 +432,12 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     sessionHistory = updateSessionHistory(bitrateAtIntervalStart, completionTime, chunkid, CHUNKSIZE, sessionHistory, first_chunk,
                                               nextChunkDelay, attempt_id, True, chunk_residue)
     #print "id=",chunkid,"quality=",bitrateAtIntervalStart,"start=",sessionHistory[chunkid][0],"end=",sessionHistory[chunkid][1],"bufferlength=",BLEN+CHUNKSIZE,"currentPlaylocation=",PLAYTIME
-    # print bitrate, bitrateAtIntervalStart, next_chunk_bitrate
-    AVG_SESSION_BITRATE+=size_envivo[bitrateAtIntervalStart][chunkid]
+    if TRUE_AVG_BITRATE:
+      # true bitrate using chunksize
+      AVG_SESSION_BITRATE+=size_envivo[bitrateAtIntervalStart][chunkid]
+    else:
+      # label bitrate
+      AVG_SESSION_BITRATE+=(VIDEO_BIT_RATE[bitrateAtIntervalStart] * CHUNKSIZE * 1000.0) / 8.0
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
     ######## MPC code
@@ -601,8 +605,9 @@ def parseSessionStateFromTrace(filename):
   ts, bw = [], []
   init_br = 0
   #bitrates = [1002, 1434, 2738, 3585, 4661, 5885] # candidate bitrates are in kbps, you can change these to suite your values
-  bitrates = [0, 1, 2, 3, 4] # candidate bitrates are in kbps, you can change these to suite your values
+  #bitrates = [0, 1, 2, 3, 4] # candidate bitrates are in kbps, you can change these to suite your values
   #bitrates = [1183, 1620, 2332, 3463, 4994]
+  bitrates = range(0, NUM_BITRATES)
   try:  
     ls = open(filename).readlines()
     for l in ls:
@@ -632,7 +637,7 @@ def parseSessionStateFromTrace(filename):
   except IndexError:
     print >> sys.stderr, sys.argv[1]
     sys.exit()
-  chunkDuration = 4
+  chunkDuration = CHUNKSIZE
   jointimems = 0 #ts[0] + 1
   total_chunks = TOTAL_CHUNKS
   #init_br = bitrates[0]

@@ -70,7 +70,7 @@ except IndexError:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for minCellSize in [100]:
-  for windowSize in [1,2,3,4,5,6,7]:
+  for windowSize in [1]:
     minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
   #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
@@ -96,7 +96,7 @@ for initialBSM in [0.25]:
     p1_min = initialBSM
 
     oldbw = 0
-    if DEBUG:
+    if DEBUG or VERBOSE_DEBUG:
         printHeader()
     upr = -10000000
     A = initialBSM
@@ -163,7 +163,7 @@ for initialBSM in [0.25]:
         chd_thisInterval = 0
         blenAdded_thisInterval = 0
     
-        if  (VERBOSE_DEBUG == True or DEBUG == True and 0) and not sessionFullyDownloaded:
+        if  (VERBOSE_DEBUG == True or DEBUG == True) and not sessionFullyDownloaded:
             printStats(CLOCK, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue)
     
         if CHUNKS_DOWNLOADED * CHUNKSIZE * 1000 < 30000 or CLOCK < 30000:
@@ -246,8 +246,8 @@ for initialBSM in [0.25]:
         else:
             dominantBitrate[BR] = int(chd_thisInterval)
         #print CHUNKS_DOWNLOADED 
-        if first_chunk and CHUNKS_DOWNLOADED >= 1:
-            first_chunk = False
+        #if first_chunk and CHUNKS_DOWNLOADED >= 1:
+        #    first_chunk = False
         blenAdded_thisInterval = int(chd_thisInterval) * CHUNKSIZE
     
         #if CHUNKS_DOWNLOADED <= math.ceil((playtimems) / float(
@@ -268,6 +268,9 @@ for initialBSM in [0.25]:
           firstRebuf = True
         if not first_chunk: 
           BUFFTIME += float(playStalled_thisInterval)
+
+        if first_chunk and CHUNKS_DOWNLOADED >= 1:
+            first_chunk = False
         # if float(playStalled_thisInterval) > 0:
         #   print CHUNKS_DOWNLOADED
         PLAYTIME += float(interval) / float(1000) - playStalled_thisInterval  # add float
@@ -305,75 +308,51 @@ for initialBSM in [0.25]:
             BSM = getDynamicBSM(nSamples, hbCount, BSM)
         oldBR = BR
 
-        # change detection onlineCD
-        #if int(chd_thisInterval == 1):
-        #     CDinterval = 5
-        #     ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
-        #     if ch_detected:
-        #       #print ch_index,len(playerVisibleBW), CLOCK
-        #       chunk_when_last_chd_ran = ch_index
-
-        # change detection onlineCD at every second
-        #if CLOCK % 1000 == 0:
-        #if int(chd_thisInterval == 1):
-        #  CDinterval = 5
-        #  ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
-        #  if ch_detected:
-        #    chunk_when_last_chd_ran = ch_index
-        #    est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, chunk_when_last_chd_ran)
-        #    print CLOCK/1000.0, est_bandwidth, est_std, ch_index
-        #    dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
-        #    performance_t = (globals()[dict_name_backup])
-        #    ABRChoice, p1_min, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 300) 
-
-
-
-        #print window_avg_BW
-        if not first_chunk and not sessionFullyDownloaded and timeSinceLastDecision == decision_cycle and False:
-            window_avg_BW, window_std_BW = getBWFeaturesWeighted(CLOCK, sessionHistory, ATTEMPT_ID, window_mode, CHUNKS_DOWNLOADED, chunk_residue, BR, CHUNKSIZE)
-            hbCount += 1
-            print window_avg_BW
-            #timeP, timeN, bwP, bwN = findNearestTimeStampsAndBandwidths(CLOCK, usedBWArray, bwArray)
-            #bwArray[i][0] bwArray[i][1]
-            #_sample = bwArray.index((timeP, bwP))
-            b_ratio =1        
-            if EXPERIMENT_MODE == True and hbCount > 5 and _sample >= 1:
-    	        lastABR = ABRChoice
-                b_ratio = 0.0
+        #if not first_chunk and not sessionFullyDownloaded and timeSinceLastDecision == decision_cycle and False:
+        #    window_avg_BW, window_std_BW = getBWFeaturesWeighted(CLOCK, sessionHistory, ATTEMPT_ID, window_mode, CHUNKS_DOWNLOADED, chunk_residue, BR, CHUNKSIZE)
+        #    hbCount += 1
+        #    print window_avg_BW
+        #    #timeP, timeN, bwP, bwN = findNearestTimeStampsAndBandwidths(CLOCK, usedBWArray, bwArray)
+        #    #bwArray[i][0] bwArray[i][1]
+        #    #_sample = bwArray.index((timeP, bwP))
+        #    b_ratio =1        
+        #    if EXPERIMENT_MODE == True and hbCount > 5 and _sample >= 1:
+    	#        lastABR = ABRChoice
+        #        b_ratio = 0.0
     
-            if (COMBINATION_ABR and ABRChoice == 'HYB') or UTILITY_BITRATE_SELECTION:# and firstRebuf == False:
-                buffering_weight = upr
-                newBR = getUtilityBitrateDecision(BLEN, candidateBR, BW, CHUNKS_DOWNLOADED+1, CHUNKSIZE, BSM,
-                                                  buffering_weight, sessionHistory, chunk_residue, BR, CLOCK,
-                                                  decision_cycle, bwArray, usedBWArray, sessiontimems, oldbw, ATTEMPT_ID)
-            elif (COMBINATION_ABR and ABRChoice == 'BB') or BUFFERLEN_UTILITY:
+        #    if (COMBINATION_ABR and ABRChoice == 'HYB') or UTILITY_BITRATE_SELECTION:# and firstRebuf == False:
+        #        buffering_weight = upr
+        #        newBR = getUtilityBitrateDecision(BLEN, candidateBR, BW, CHUNKS_DOWNLOADED+1, CHUNKSIZE, BSM,
+        #                                          buffering_weight, sessionHistory, chunk_residue, BR, CLOCK,
+        #                                          decision_cycle, bwArray, usedBWArray, sessiontimems, oldbw, ATTEMPT_ID)
+        #    elif (COMBINATION_ABR and ABRChoice == 'BB') or BUFFERLEN_UTILITY:
     
-    	        configsUsed.append((CLOCK/1000.0, 'BB', BW, int(window_avg_BW), int(window_std_BW), round(A,2), round(upr_b,2), round(chunk_residue,2), round(BLEN,2), CHUNKS_DOWNLOADED, BR, round(BUFFTIME,2)))
-    	        conf['r'] = A
-    	        conf['maxRPct'] = upr_b
-                newBR = getBitrateBBA0(BLEN, candidateBR, conf)
-            elif BUFFERLEN_BBA1_UTILITY:
-                newBR = getBitrateBBA1(BLEN, candidateBR, conf, CHUNKS_DOWNLOADED, CHUNKSIZE, BR, BW)
-            elif BUFFERLEN_BBA2_UTILITY:
-                newBR = getBitrateBBA2(BLEN, candidateBR, conf, CHUNKS_DOWNLOADED, CHUNKSIZE, BR, BW, blen_decrease)
-            elif BANDWIDTH_UTILITY:
-                newBR = getBitrateDecisionBandwidth(BLEN, candidateBR, BW)
-            elif WEIGHTED_BANDWIDTH:
-                newBR = getBitrateWeightedBandwidth(candidateBR, BW, nSamples, 0.35)  # last parameter is the weight
-            else:
-                newBR = getBitrateDecision(BLEN, candidateBR, BW)
+    	#        configsUsed.append((CLOCK/1000.0, 'BB', BW, int(window_avg_BW), int(window_std_BW), round(A,2), round(upr_b,2), round(chunk_residue,2), round(BLEN,2), CHUNKS_DOWNLOADED, BR, round(BUFFTIME,2)))
+    	#        conf['r'] = A
+    	#        conf['maxRPct'] = upr_b
+        #        newBR = getBitrateBBA0(BLEN, candidateBR, conf)
+        #    elif BUFFERLEN_BBA1_UTILITY:
+        #        newBR = getBitrateBBA1(BLEN, candidateBR, conf, CHUNKS_DOWNLOADED, CHUNKSIZE, BR, BW)
+        #    elif BUFFERLEN_BBA2_UTILITY:
+        #        newBR = getBitrateBBA2(BLEN, candidateBR, conf, CHUNKS_DOWNLOADED, CHUNKSIZE, BR, BW, blen_decrease)
+        #    elif BANDWIDTH_UTILITY:
+        #        newBR = getBitrateDecisionBandwidth(BLEN, candidateBR, BW)
+        #    elif WEIGHTED_BANDWIDTH:
+        #        newBR = getBitrateWeightedBandwidth(candidateBR, BW, nSamples, 0.35)  # last parameter is the weight
+        #    else:
+        #        newBR = getBitrateDecision(BLEN, candidateBR, BW)
+        #else:
+        if NOINTERUPT:
+          if switchFlag and newBR!=BR:
+            newBR = newBR
+            BR = BR
+          elif switchFlag and newBR==BR:
+            newBR = BR
+            switchFlag = False
+          else:
+            newBR = BR
         else:
-            if NOINTERUPT:
-                if switchFlag and newBR!=BR:
-                    newBR = newBR
-                    BR = BR
-                elif switchFlag and newBR==BR:
-                    newBR = BR
-                    switchFlag = False
-                else:
-                    newBR = BR
-            else:
-                newBR = BR
+          newBR = BR
         if ALLINTERUPT == True or SMARTINTERUPT==True: 
             if timeSinceLastDecision == decision_cycle:
                 timeSinceLastDecision = 0
@@ -441,3 +420,6 @@ for initialBSM in [0.25]:
     + " size: " + str(AVG_SESSION_BITRATE_sum) \
     + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
     # print sessionHistory
+
+    #for c in sessionHistory.keys():
+    #  print sessionHistory[c]
