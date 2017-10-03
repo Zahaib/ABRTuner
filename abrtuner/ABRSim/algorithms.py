@@ -24,7 +24,7 @@ def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid,
   estBufferingTime = 0.0
   est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, lastest_chunkid)
   #print est_bandwidth
-  if new_chunkid > 63: 
+  if new_chunkid > 48: 
     #exit()
     return new_chunkid;
   for br in candidateBitrates:
@@ -38,19 +38,16 @@ def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid,
   return tempquality
 
 def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize):
-  # VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
-  # VIDEO_BIT_RATE_TO_INDEX = {300:0,750:1,1200:2,1850:3,2850:4,4300:5}
   # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
-  # TOTAL_CHUNKS = 49
-  if chunkid + windowSize > 48:
-    windowSize = TOTAL_CHUNKS - chunkid
+  if chunkid + windowSize > TOTAL_CHUNKS - 1:
+    windowSize = TOTAL_CHUNKS - 1 - chunkid
 
   if windowSize < 0:
     windowSize = 0
 
   CHUNK_COMBO_OPTIONS = list()
   try:
-    for combo in itertools.product([0,1,2,3,4], repeat=windowSize):
+    for combo in itertools.product(range(NUM_BITRATES), repeat=windowSize):
       CHUNK_COMBO_OPTIONS.append(combo)
   except ValueError:
     print windowSize, chunkid, TOTAL_CHUNKS
@@ -93,7 +90,7 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
       
       # linear reward 
       reward = (bitrate_sum/1000.0) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs/1000.0)
-      # print combo, reward, curr_rebuffer_time
+      #print combo, reward, future_bandwidth, curr_rebuffer_time
       if ( reward > max_reward ):
           max_reward = reward
           best_combo = combo
@@ -101,6 +98,7 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
   bitrate = 0 # no combo had reward better than -1000000 (ERROR) so send 0
   if ( best_combo != () ): # some combo was good
       bitrate = best_combo[0]
+  #print "bitrate selected: ", bitrate
   return bitrate
 
 

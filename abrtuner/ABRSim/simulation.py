@@ -70,7 +70,9 @@ except IndexError:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for minCellSize in [100]:
-  for windowSize in [1]:
+  # for windowSize in [1,2,3,4,5,6,7]:
+  for discount in range(25,301,25):
+    windowSize = 5
     minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
   #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
@@ -197,7 +199,49 @@ for initialBSM in [0.25]:
             #if CHUNKS_DOWNLOADED > 113: exit()
             #window_avg_BW, window_std_BW = getBWFeaturesWeighted(CLOCK, sessionHistory, ATTEMPT_ID, window_mode, CHUNKS_DOWNLOADED, chunk_residue, BR, CHUNKSIZE)
             #print BR
-            configsUsed, numChunks, completionTimeStamps, chunk_sched_time_delay, sessionHistory, BR, AVG_SESSION_BITRATE, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, change_magnitude = chunksDownloaded(configsUsed, CLOCK - interval, CLOCK, BR, BW,CHUNKS_DOWNLOADED, CHUNKSIZE,chunk_residue, usedBWArray, bwArray,chunk_sched_time_delay, BLEN, sessionHistory, first_chunk,ATTEMPT_ID,PLAYTIME, AVG_SESSION_BITRATE, A, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude)
+            configsUsed, \
+            numChunks, \
+            completionTimeStamps, \
+            chunk_sched_time_delay, \
+            sessionHistory, \
+            BR, \
+            AVG_SESSION_BITRATE, \
+            chunk_when_last_chd_ran, \
+            p1_min, \
+            gradual_transition, \
+            additive_inc, \
+            bandwidthEsts, \
+            pastErrors, \
+            change_magnitude = chunksDownloaded(configsUsed, \
+                               CLOCK - interval, \
+                               CLOCK, \
+                               BR, \
+                               BW,\
+                               CHUNKS_DOWNLOADED, \
+                               CHUNKSIZE,\
+                               chunk_residue, \
+                               usedBWArray, \
+                               bwArray,\
+                               chunk_sched_time_delay, \
+                               BLEN, \
+                               sessionHistory, \
+                               first_chunk,\
+                               ATTEMPT_ID,\
+                               PLAYTIME, \
+                               AVG_SESSION_BITRATE, \
+                               A, \
+                               minCellSize, \
+                               BUFFTIME, \
+                               playerVisibleBW, \
+                               chunk_when_last_chd_ran, \
+                               p1_min, \
+                               gradual_transition, \
+                               additive_inc, \
+                               bandwidthEsts, \
+                               pastErrors, \
+                               windowSize, \
+                               change_magnitude, \
+                               discount)
             #print numChunks, completionTimeStamps, chunk_sched_time_delay
             chd_thisInterval = chunk_residue + numChunks
     #        if int(chd_thisInterval) >= 1 and chunk_sched_time_delay < interval:
@@ -418,7 +462,8 @@ for initialBSM in [0.25]:
     + " playtime: " + str(PLAYTIME) \
     + " buftime: " + str(BUFFTIME) \
     + " size: " + str(AVG_SESSION_BITRATE_sum) \
-    + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    + " discount: " + str(discount)
+    #+ " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
     # print sessionHistory
 
     #for c in sessionHistory.keys():

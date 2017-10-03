@@ -372,7 +372,7 @@ def getPastFiveBW(sessionHistory, chunkid):
   return past_five
 
 # function returns the BW needed by MPC
-def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid):
+def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
   curr_error = 0
   if len(bandwidthEsts) > 0:
     last_chunk_bw = (sessionHistory[chunkid][2] / 8) / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0]) / 1000.0 # KBytes/ms or MBytes/sec
@@ -385,24 +385,30 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid):
   for past_val in past_five:
       bandwidth_sum += (1/float(past_val))
   harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_five))
-  # print chunkid, harmonic_bandwidth
-  max_error = 0
-  error_pos = -5
-  if ( len(pastErrors) < 5 ):
-      error_pos = -len(pastErrors)
-  max_error = float(max(pastErrors[error_pos:]))
+  
+  #### Original code start ####
+  # max_error = 0
+  # error_pos = -5
+  # if ( len(pastErrors) < 5 ):
+  #     error_pos = -len(pastErrors)
+  # max_error = float(max(pastErrors[error_pos:]))
+  # future_bandwidth = harmonic_bandwidth/(1+max_error)
+  #### Original code end.. ####
+
+  max_error = harmonic_bandwidth * (discount / 100.0)
   future_bandwidth = harmonic_bandwidth/(1+max_error)
   bandwidthEsts.append(harmonic_bandwidth)
   future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
   # print chunkid, future_bandwidth, harmonic_bandwidth, max_error
   # print future_bandwidth, max_error #, bandwidthEsts, pastErrors
+  # print chunkid, harmonic_bandwidth* 8 * 1000.0, discount, future_bandwidth
 
   return future_bandwidth, bandwidthEsts, pastErrors
 
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay
-def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude):
+def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount):
   chunkCount = 0.0
   time_residue_thisInterval = 0.0
   completionTimeStamps = []
@@ -441,27 +447,29 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
     ######## MPC code
-    future_bandwidth, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid)
+    future_bandwidth, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     ######## MPC code
 
-    CDinterval = 2
-    ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
-    est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, ch_index)
-    #additive_inc = 0.0
-    nsteps = 2.0
-    p1_min_new = 0.0
-    if ch_detected:
-      chunk_when_last_chd_ran = ch_index
-      gradual_transition = nsteps
-      #print time_curr/1000.0,est_bandwidth, est_std, chunk_when_last_chd_ran
-      dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
-      performance_t = (globals()[dict_name_backup])
-      ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 300)
-      additive_inc = (p1_min_new - p1_min) / nsteps
-    if gradual_transition > 0:
-      p1_min += additive_inc
-      gradual_transition -= 1
-      #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
+    est_bandwidth = est_std = 0
+    if ONCD:
+      CDinterval = 2
+      ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
+      est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, ch_index)
+      #additive_inc = 0.0
+      nsteps = 2.0
+      p1_min_new = 0.0
+      if ch_detected:
+        chunk_when_last_chd_ran = ch_index
+        gradual_transition = nsteps
+        #print time_curr/1000.0,est_bandwidth, est_std, chunk_when_last_chd_ran
+        dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
+        performance_t = (globals()[dict_name_backup])
+        ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 300)
+        additive_inc = (p1_min_new - p1_min) / nsteps
+      if gradual_transition > 0:
+        p1_min += additive_inc
+        gradual_transition -= 1
+        #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
     # MPC Bitrate
     # windowSize = 2
