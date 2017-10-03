@@ -385,19 +385,21 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
   for past_val in past_five:
       bandwidth_sum += (1/float(past_val))
   harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_five))
-  
-  #### Original code start ####
-  # max_error = 0
-  # error_pos = -5
-  # if ( len(pastErrors) < 5 ):
-  #     error_pos = -len(pastErrors)
-  # max_error = float(max(pastErrors[error_pos:]))
-  # future_bandwidth = harmonic_bandwidth/(1+max_error)
-  #### Original code end.. ####
-
-  max_error = harmonic_bandwidth * (discount / 100.0)
-  future_bandwidth = harmonic_bandwidth/(1+max_error)
   bandwidthEsts.append(harmonic_bandwidth)
+
+  max_error = 0
+
+  if discount == 0:
+  #### Original code start ####
+    error_pos = -5
+    if ( len(pastErrors) < 5 ):
+      error_pos = -len(pastErrors)
+    max_error = float(max(pastErrors[error_pos:]))
+    future_bandwidth = harmonic_bandwidth/(1+max_error)
+  #### Original code end.. ####
+  else:
+    max_error = harmonic_bandwidth * (discount / 100.0)
+    future_bandwidth = harmonic_bandwidth/(1+max_error)
   future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
   # print chunkid, future_bandwidth, harmonic_bandwidth, max_error
   # print future_bandwidth, max_error #, bandwidthEsts, pastErrors
