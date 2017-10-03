@@ -238,7 +238,8 @@ def make_request_handler(input_dict):
                     # compute reward for this combination (one reward per 5-chunk combo)
                     # bitrates are in Mbits/s, rebuffer in seconds, and smoothness_diffs in Mbits/s
                     
-                    # linear reward 
+                    # linear reward
+                    print bitrate_sum 
                     reward = (bitrate_sum/1000.) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs/1000.)
 
                     # log reward

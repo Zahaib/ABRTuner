@@ -40,24 +40,29 @@ def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid,
 def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize):
   # VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
   # VIDEO_BIT_RATE_TO_INDEX = {300:0,750:1,1200:2,1850:3,2850:4,4300:5}
-  VIDEO_BIT_RATE = [350,600,1000,2000,3000]
-  VIDEO_BIT_RATE_TO_INDEX = {350:0,600:1,1000:2,2000:3,3000:4}
-  REBUF_PENALTY = 4.3
-  SMOOTH_PENALTY = 1.0
-  TOTAL_CHUNKS = 49
-  if chunkid + windowSize > 49:
-    windowSize = TOTAL_CHUNKS - chunkid - 1
+  # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
+  # TOTAL_CHUNKS = 49
+  if chunkid + windowSize > 48:
+    windowSize = TOTAL_CHUNKS - chunkid
+
+  if windowSize < 0:
+    windowSize = 0
 
   CHUNK_COMBO_OPTIONS = list()
-  for combo in itertools.product([0,1,2,3,4], repeat=windowSize):
-    CHUNK_COMBO_OPTIONS.append(combo)
+  try:
+    for combo in itertools.product([0,1,2,3,4], repeat=windowSize):
+      CHUNK_COMBO_OPTIONS.append(combo)
+  except ValueError:
+    print windowSize, chunkid, TOTAL_CHUNKS
+    sys.exit()
 
   max_reward = -100000000
   best_combo = ()
   start_buffer = bufferlen
   #start = time.time()
   for full_combo in CHUNK_COMBO_OPTIONS:
-      # combo = full_combo[0:future_chunk_length]
+      combo = full_combo[0:windowSize]
+      # print combo
       # calculate total rebuffer time for this combination (start with start_buffer and subtract
       # each download time and add 2 seconds in that order)
       curr_rebuffer_time = 0
@@ -68,7 +73,9 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
       for position in range(0, len(combo)):
           chunk_quality = combo[position]
           index = chunkid + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
-          download_time = ((size_envivo[chunk_quality][index] * 8)/1000.)/future_bandwidth # this is MB/MB/s --> seconds
+          download_time = ((size_envivo[chunk_quality][index] * 8)/1000.)/future_bandwidth # this is Kb/Kb/s --> seconds
+          # print chunk_quality, download_time, future_bandwidth
+          # print size_envivo[chunk_quality][index], ((size_envivo[chunk_quality][index] * 8)/1000.), future_bandwidth
           if ( curr_buffer < download_time ):
               curr_rebuffer_time += (download_time - curr_buffer)
               curr_buffer = 0
@@ -85,8 +92,8 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
       # bitrates are in Mbits/s, rebuffer in seconds, and smoothness_diffs in Mbits/s
       
       # linear reward 
-      reward = (bitrate_sum) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs)
-
+      reward = (bitrate_sum/1000.0) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs/1000.0)
+      # print combo, reward, curr_rebuffer_time
       if ( reward > max_reward ):
           max_reward = reward
           best_combo = combo

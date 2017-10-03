@@ -364,9 +364,10 @@ def timeRemainingFinishChunk(chunk_residue, bitrate, bandwidth, chunkid, chunksi
 # function returns the past 5 BW samples
 def getPastFiveBW(sessionHistory, chunkid):
   past_five = list()
-  start = max(chunkid - 5, 0)
+  start = max(chunkid - 5 + 1, 0)
+  # print start, chunkid, len(sessionHistory.keys()), sessionHistory[len(sessionHistory.keys()) - 1]
   for i in range(start, chunkid + 1):
-    bw_sample = sessionHistory[i][2] / float(sessionHistory[i][1] - sessionHistory[i][0])
+    bw_sample = (sessionHistory[i][2] / 8) / (float(sessionHistory[i][1] - sessionHistory[i][0])) / 1000.0 # KBytes/ms or MBytes/sec
     past_five.append(bw_sample)
   return past_five
 
@@ -374,17 +375,17 @@ def getPastFiveBW(sessionHistory, chunkid):
 def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid):
   curr_error = 0
   if len(bandwidthEsts) > 0:
-    last_chunk_bw = sessionHistory[chunkid][2] / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0])
-    # print last_chunk_bw
+    last_chunk_bw = (sessionHistory[chunkid][2] / 8) / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0]) / 1000.0 # KBytes/ms or MBytes/sec
     curr_error = abs(bandwidthEsts[-1] - last_chunk_bw)
   pastErrors.append(curr_error)
-
+  # print chunkid, len(bandwidthEsts), len(sessionHistory)
   past_five = getPastFiveBW(sessionHistory, chunkid)
   # print past_five
   bandwidth_sum = 0
   for past_val in past_five:
       bandwidth_sum += (1/float(past_val))
   harmonic_bandwidth = 1.0/(bandwidth_sum/len(past_five))
+  # print chunkid, harmonic_bandwidth
   max_error = 0
   error_pos = -5
   if ( len(pastErrors) < 5 ):
@@ -392,7 +393,8 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid):
   max_error = float(max(pastErrors[error_pos:]))
   future_bandwidth = harmonic_bandwidth/(1+max_error)
   bandwidthEsts.append(harmonic_bandwidth)
-  # print future_bandwidth, harmonic_bandwidth, max_error
+  future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
+  # print chunkid, future_bandwidth, harmonic_bandwidth, max_error
   # print future_bandwidth, max_error #, bandwidthEsts, pastErrors
 
   return future_bandwidth, bandwidthEsts, pastErrors
@@ -400,11 +402,12 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid):
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay
-def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors):
+def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude):
   chunkCount = 0.0
   time_residue_thisInterval = 0.0
   completionTimeStamps = []
   bitrateAtIntervalStart = bitrate
+  next_chunk_bitrate = -2
   if bandwidth == 0.0:
     return chunkCount, completionTimeStamps, time_residue_thisInterval
 
@@ -429,6 +432,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     sessionHistory = updateSessionHistory(bitrateAtIntervalStart, completionTime, chunkid, CHUNKSIZE, sessionHistory, first_chunk,
                                               nextChunkDelay, attempt_id, True, chunk_residue)
     #print "id=",chunkid,"quality=",bitrateAtIntervalStart,"start=",sessionHistory[chunkid][0],"end=",sessionHistory[chunkid][1],"bufferlength=",BLEN+CHUNKSIZE,"currentPlaylocation=",PLAYTIME
+    # print bitrate, bitrateAtIntervalStart, next_chunk_bitrate
     AVG_SESSION_BITRATE+=size_envivo[bitrateAtIntervalStart][chunkid]
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
@@ -436,7 +440,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     future_bandwidth, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid)
     ######## MPC code
 
-    CDinterval = 5
+    CDinterval = 2
     ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
     est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, ch_index)
     #additive_inc = 0.0
@@ -456,17 +460,27 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
       #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
     # MPC Bitrate
-    # windowSize = 5
-    # bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
-    # print bitrateMPC
+    # windowSize = 2
+    # future_bandwidth = 3000.0
+    bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
+    # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
     # Do We need to select bitrate before or after the delay??
     #print "Bitrate selection for next chunk!"
     bitrateAtIntervalStart1 = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, margin)
-    bitrateAtIntervalStart = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, p1_min)
+    # bitrateAtIntervalStart 
+    bitrateDASH = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, p1_min)
     # print bitrateAtIntervalStart
     #print chunkid, p1_min
     chunkid+=1
+    
+    ############ MPC bitrate ############
+    # bitrateAtIntervalStart = bitrateMPC
+    change_magnitude += abs(VIDEO_BIT_RATE[bitrateMPC] - VIDEO_BIT_RATE[bitrateAtIntervalStart])
+    bitrateAtIntervalStart = bitrateMPC
+
+    ############ MPC bitrate ############
+
     configsUsed.append((time_curr/1000.0, 'HYB', bandwidth, int(est_bandwidth), int(est_std), round(p1_min,2), round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
     #print bitrateAtIntervalStart, bitrateAtIntervalStart1
     #if chunkid==64:
@@ -508,7 +522,20 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
   # if the delay was enough to make time_prev greater than time_curr then we need to transfer over the remaining delay to next interval
   if time_prev >= time_curr:
     time_residue_thisInterval = time_prev - time_curr
-  return configsUsed, chunkCount, completionTimeStamps, time_residue_thisInterval, sessionHistory,bitrateAtIntervalStart,AVG_SESSION_BITRATE, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors
+  return configsUsed, \
+         chunkCount, \
+         completionTimeStamps, \
+         time_residue_thisInterval, \
+         sessionHistory,\
+         bitrateAtIntervalStart,\
+         AVG_SESSION_BITRATE, \
+         chunk_when_last_chd_ran, \
+         p1_min, \
+         gradual_transition, \
+         additive_inc, \
+         bandwidthEsts, \
+         pastErrors, \
+         change_magnitude
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):
@@ -607,8 +634,9 @@ def parseSessionStateFromTrace(filename):
     sys.exit()
   chunkDuration = 4
   jointimems = 0 #ts[0] + 1
+  total_chunks = TOTAL_CHUNKS
   #init_br = bitrates[0]
-  return bitrates, jointimems, totalTraceTime, totalTraceTime + jointimems, 1, 1, init_br, zip(ts,bw), chunkDuration, 64 #10 , 75 # 
+  return bitrates, jointimems, totalTraceTime, totalTraceTime + jointimems, 1, 1, init_br, zip(ts,bw), chunkDuration, total_chunks #10 , 75 # 
 
 def parseSessionStateFromTrace_p(filename, s_id):
   ts, bw = [], []

@@ -69,7 +69,9 @@ except IndexError:
 #for initialBSM in [0.01, 0.05, 0.09, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77, 0.81, 0.08, 0.89, 0.93, 0.97,1.00]:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
-  for minCellSize in [100]:
+  # for minCellSize in [100]:
+  for windowSize in [1,2,3,4,5,6,7]:
+    minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
   #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
     ###### Change detection variables start ######
@@ -88,6 +90,7 @@ for initialBSM in [0.25]:
     ###### MPC variables start ###################
     bandwidthEsts = list()
     pastErrors = list()
+    change_magnitude = 0
     ###### MPC variables end.. ###################
 
     p1_min = initialBSM
@@ -194,7 +197,7 @@ for initialBSM in [0.25]:
             #if CHUNKS_DOWNLOADED > 113: exit()
             #window_avg_BW, window_std_BW = getBWFeaturesWeighted(CLOCK, sessionHistory, ATTEMPT_ID, window_mode, CHUNKS_DOWNLOADED, chunk_residue, BR, CHUNKSIZE)
             #print BR
-            configsUsed, numChunks, completionTimeStamps, chunk_sched_time_delay, sessionHistory, BR, AVG_SESSION_BITRATE, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors = chunksDownloaded(configsUsed, CLOCK - interval, CLOCK, BR, BW,CHUNKS_DOWNLOADED, CHUNKSIZE,chunk_residue, usedBWArray, bwArray,chunk_sched_time_delay, BLEN, sessionHistory, first_chunk,ATTEMPT_ID,PLAYTIME, AVG_SESSION_BITRATE, A, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors)
+            configsUsed, numChunks, completionTimeStamps, chunk_sched_time_delay, sessionHistory, BR, AVG_SESSION_BITRATE, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, change_magnitude = chunksDownloaded(configsUsed, CLOCK - interval, CLOCK, BR, BW,CHUNKS_DOWNLOADED, CHUNKSIZE,chunk_residue, usedBWArray, bwArray,chunk_sched_time_delay, BLEN, sessionHistory, first_chunk,ATTEMPT_ID,PLAYTIME, AVG_SESSION_BITRATE, A, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude)
             #print numChunks, completionTimeStamps, chunk_sched_time_delay
             chd_thisInterval = chunk_residue + numChunks
     #        if int(chd_thisInterval) >= 1 and chunk_sched_time_delay < interval:
@@ -263,7 +266,10 @@ for initialBSM in [0.25]:
     
         if not first_chunk and playStalled_thisInterval > 0:
           firstRebuf = True
-        if not first_chunk: BUFFTIME += float(playStalled_thisInterval)
+        if not first_chunk: 
+          BUFFTIME += float(playStalled_thisInterval)
+        # if float(playStalled_thisInterval) > 0:
+        #   print CHUNKS_DOWNLOADED
         PLAYTIME += float(interval) / float(1000) - playStalled_thisInterval  # add float
         lastBlen = BLEN
     
@@ -423,4 +429,15 @@ for initialBSM in [0.25]:
 #    print kk, allPerf[kk]
     #for i in configsUsed:
     #  print i
-    print traceFile + " initialBSM: "+str(initialBSM)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    print traceFile + " initialBSM: " + str(initialBSM) \
+    + " minCell: " +str(minCellSize) \
+    + " MPCwindow: " + str(windowSize) \
+    + " change_magnitude: " + str(change_magnitude/float(CHUNKS_DOWNLOADED))\
+    + " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \
+    + " avg. bitrate: " + str(AVG_SESSION_BITRATE) \
+    + " buf. ratio: " + str(REBUF_RATIO) \
+    + " playtime: " + str(PLAYTIME) \
+    + " buftime: " + str(BUFFTIME) \
+    + " size: " + str(AVG_SESSION_BITRATE_sum) \
+    + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    # print sessionHistory
