@@ -389,7 +389,7 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
 
   max_error = 0
 
-  if discount == 0:
+  if discount < 0:
   #### Original code start ####
     error_pos = -5
     if ( len(pastErrors) < 5 ):

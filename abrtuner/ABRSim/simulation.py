@@ -71,8 +71,8 @@ except IndexError:
 for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
-  for discount in range(0,301,25):
-    windowSize = 5
+  for discount in range(-5,101,5):
+    windowSize = WINDOWSIZE
     minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
   #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:

@@ -62,6 +62,9 @@ REBUF_PENALTY = 100000.0#4.3
 SMOOTH_PENALTY = 0.0
 CHUNKSIZE = 4.0
 
+### MPC settings
+WINDOWSIZE = 5
+
 ### Output stats settings
 TRUE_AVG_BITRATE = False
 

@@ -43,3 +43,51 @@ set yrange [0:9000]
 set xrange[0:210]
 plot "16772_3000_1835.txt" u ($1/1000):2 with lines lw 3 notitle
 unset multiplot
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window5_bestdiscount.png'
+set title 'Lookahead windowsize = 5'
+set xlabel 'Coefficient of Variation of BW'
+set ylabel 'Best Discount Percentage'
+plot "<(python discount_factor.py results_focused_filelist_window=5.txt)" u 4:5 with points pt 3 ps 2 lw 3 notitle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window1_bestdiscount.png'
+set title 'Lookahead windowsize = 1'
+set xlabel 'Coefficient of Variation of BW'
+set ylabel 'Best Discount Percentage'
+plot "<(python discount_factor.py results_focused_filelist_window=1.txt)" u 4:5 with points pt 3 ps 2 lw 3 notitle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window5_bestdiscount_10gap.png'
+set title 'Lookahead windowsize = 5'
+set xlabel 'Coefficient of Variation of BW'
+set ylabel 'Best Discount Percentage'
+plot "<(python discount_factor.py results_focused_filelist_window5_gap10.txt)" u 4:5 with points pt 3 ps 2 lw 3 notitle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window5_bestdiscount_10gap_avgbw_stdbw.png'
+set title 'Lookahead windowsize = 5'
+set xlabel 'Avg BW'
+set ylabel 'StdBW'
+plot "<(python discount_factor.py results_focused_filelist_window5_gap10.txt)" u 2:3:5 with points pt 3 ps 2 lw 3 palette notitle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window5_bestdiscount_5gap_avgbw_stdbw.png'
+set title 'Lookahead windowsize = 5'
+set xlabel 'Avg BW'
+set ylabel 'StdBW'
+plot "<(python discount_factor.py results_focused_filelist_window5_gap5.txt)" u 2:3:5 with points pt 3 ps 2 lw 3 palette notitle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'window1_bestdiscount_10gap.png'
+set title 'Lookahead windowsize = 1'
+set xlabel 'Coefficient of Variation of BW'
+set ylabel 'Best Discount Percentage'
+plot "<(python discount_factor.py results_focused_filelist_window1_gap10.txt)" u 4:5 with points pt 3 ps 2 lw 3 notitle
