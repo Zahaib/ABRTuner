@@ -42,9 +42,23 @@ for l in lines:
     result[name]['avgbw'] = avgbw
     result[name]['stdbw'] = stdbw
 
-
 for name in result.keys():
   try:
     print name,  float(result[name]['avgbw']), float(result[name]['stdbw']), result[name]['stdbw'] / float(result[name]['avgbw']), result[name]['best_disc']
   except ZeroDivisionError:
     print name,  float(result[name]['avgbw']), float(result[name]['stdbw']), 0, result[name]['best_disc']
+
+#avgbr_diff = list()
+#rebuf_diff = list()
+#for name in result.keys():
+#  mpc_def = result[name]['default_perf']
+#  avgbr_per_diff = ((result[name]['best_avgbr'] - mpc_def[0]) / mpc_def[0]) * 100
+#  rebuf_per_diff = (mpc_def[1] - result[name]['best_rebuf']) * 100
+#  avgbr_diff.append(avgbr_per_diff)
+#  rebuf_diff.append(rebuf_per_diff)
+#
+#f_out = open('avgbr_rebuff_percentage_diff.dat', 'w')
+#for i in range(0,101):
+#  f_out.write(str(i) + " " +  str(np.percentile(avgbr_diff, i)) + " " + str(np.percentile(rebuf_diff,i)) + "\n")
+#f_out.close()
+#
