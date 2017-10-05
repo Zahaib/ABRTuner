@@ -23,17 +23,16 @@ for l in lines:
     result[name]['best_rebuf'] = 1.0
     result[name]['avgbw'] = -1.0
     result[name]['stdbw'] = -1.0
+  win = int(row[6])
+  avgbr = float(row[13])
+  rebuf = float(row[16])
+  disc = int(row[-1])
+  avgbw = float(name.split("_")[1])
+  stdbw = float(name.split("_")[2].split(".")[0])
   try:
-    win = int(row[6])
-    avgbr = float(row[13])
-    rebuf = float(row[16])
-    disc = int(row[-1])
-    avgbw = float(name.split("_")[1])
-    stdbw = float(name.split("_")[2].split(".")[0])
     cv = stdbw / avgbw
-  except ValueError:
-    print row
-    sys.exit()
+  except ZeroDivisionError:
+    cv = 0
   if disc < 0:
     result[name]['default_perf'] = [avgbr, rebuf, avgbw, stdbw]
   if avgbr > result[name]['best_avgbr'] and rebuf <= result[name]['best_rebuf'] or avgbr >= result[name]['best_avgbr'] and rebuf < result[name]['best_rebuf']:
@@ -45,4 +44,7 @@ for l in lines:
 
 
 for name in result.keys():
-  print name,  float(result[name]['avgbw']), float(result[name]['stdbw']), result[name]['stdbw'] / float(result[name]['avgbw']), result[name]['best_disc']
+  try:
+    print name,  float(result[name]['avgbw']), float(result[name]['stdbw']), result[name]['stdbw'] / float(result[name]['avgbw']), result[name]['best_disc']
+  except ZeroDivisionError:
+    print name,  float(result[name]['avgbw']), float(result[name]['stdbw']), 0, result[name]['best_disc']

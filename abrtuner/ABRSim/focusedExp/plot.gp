@@ -91,3 +91,14 @@ set title 'Lookahead windowsize = 1'
 set xlabel 'Coefficient of Variation of BW'
 set ylabel 'Best Discount Percentage'
 plot "<(python discount_factor.py results_focused_filelist_window1_gap10.txt)" u 4:5 with points pt 3 ps 2 lw 3 notitle
+
+
+reset
+set term pngcairo size 1280,960 dashed dl 2.0 font ",16"
+set output 'discount_factor_heatmap.png'
+set title 'Lookahead windowsize = 5'
+set xlabel 'Avg BW'
+set ylabel 'Std BW'
+set xrange [0:6000]
+set cbrange [-5:100]
+plot "discount_factor_heatmap.dat" u 2:3:5 with points pt 3 ps 2 lw 3 palette notitle # pt 7 is solid circle
