@@ -47,6 +47,8 @@ def getDynamicconfig_mpc(pv_list_hyb, bw, std, step):
 
     if len(current_list_hyb)==0:
         return 'MPC', 0.0, 0.0, 0.0
+    if max(current_list_hyb) ==-1.0:
+        return 'MPC', 0.0, 0.0, 0.0
     return ABRAlgo, min(current_list_hyb), np.percentile(current_list_hyb,50), max(current_list_hyb)
 
 

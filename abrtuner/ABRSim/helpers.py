@@ -469,14 +469,16 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
         if HYB_ABR:
           dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
-          ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 1000)
+          ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, minCellSize)
 
           additive_inc = (p1_min_new - p1_min) / nsteps
           if gradual_transition > 0:
             p1_min += additive_inc
             gradual_transition -= 1
         elif MPC_ABR:
-          ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(mpc_dash_syth_hyb_pen_table_1000, est_bandwidth, est_std, 1000)
+          dict_name_backup = "mpc_dash_syth_hyb_pen_table_"+str(minCellSize)
+          performance_t = (globals()[dict_name_backup])
+          ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
           discount = disc_max
           #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
@@ -511,7 +513,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
 
     ############ MPC bitrate ############
 
-    configsUsed.append((time_curr/1000.0, 'HYB', bandwidth, int(est_bandwidth), int(est_std), round(p1_min,2), round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
+    configsUsed.append((time_curr/1000.0, 'MPC', bandwidth, int(est_bandwidth), int(est_std), discount, round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
     #print bitrateAtIntervalStart, bitrateAtIntervalStart1
     #if chunkid==64:
     #  #print "return"

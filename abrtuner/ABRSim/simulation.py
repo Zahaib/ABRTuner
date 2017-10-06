@@ -72,11 +72,12 @@ for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
   #for discount in range(-5,-4,5):
-  for discount in [-5]:
-    windowSize = WINDOWSIZE
-    minCellSize = 100
-  # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
-  #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
+  #for discount in [-5]:
+  windowSize = WINDOWSIZE
+  #  minCellSize = 100
+  #for minCellSize in [100, 300]:
+  for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
+    discount = 0
     ###### Change detection variables start ######
     q = deque(maxlen = 2)
     last_chd_interval = 0
@@ -447,22 +448,22 @@ for initialBSM in [0.25]:
     #allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)
     allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)+" " + str(PLAYTIME)+" " + str(BUFFTIME)+" " + str(AVG_SESSION_BITRATE_sum)
     
-
+    print traceFile + " initialBSM: "+str(initialBSM)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: " + str(allPerf)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: "
 #for kk in allPerf.keys():
 #    print kk, allPerf[kk]
-    #for i in configsUsed:
-    #  print i
+#    for i in configsUsed:
+#      print i
 
-    print traceFile + " initialBSM: " + str(initialBSM) \
-    + " minCell: " +str(minCellSize) \
-    + " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \
-    + " avg. bitrate: " + str(AVG_SESSION_BITRATE) \
-    + " buf. ratio: " + str(REBUF_RATIO) \
-    + " playtime: " + str(PLAYTIME) \
-    + " buftime: " + str(BUFFTIME) \
-    + " size: " + str(AVG_SESSION_BITRATE_sum) \
+    #print traceFile + " initialBSM: " + str(initialBSM) \
+    #+ " minCell: " +str(minCellSize) \
+    #+ " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \
+    #+ " avg. bitrate: " + str(AVG_SESSION_BITRATE) \
+    #+ " buf. ratio: " + str(REBUF_RATIO) \
+    #+ " playtime: " + str(PLAYTIME) \
+    #+ " buftime: " + str(BUFFTIME) \
+    #+ " size: " + str(AVG_SESSION_BITRATE_sum) \
 
     #print traceFile + " initialBSM: " + str(initialBSM) \
     #+ " minCell: " +str(minCellSize) \
