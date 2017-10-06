@@ -94,11 +94,20 @@ plot "<(python discount_factor.py results_focused_filelist_window1_gap10.txt)" u
 
 
 reset
-set term pngcairo size 1280,960 dashed dl 2.0 font ",16"
+set term pngcairo size 960,640 dashed dl 2.0 font ",16"
 set output 'discount_factor_heatmap.png'
 set title 'Lookahead windowsize = 5'
 set xlabel 'Avg BW'
 set ylabel 'Std BW'
-set xrange [0:6000]
+set xrange [0:4000]
+set yrange [0:4000]
 set cbrange [-5:100]
-plot "discount_factor_heatmap.dat" u 2:3:5 with points pt 3 ps 2 lw 3 palette notitle # pt 7 is solid circle
+plot "discount_factor_heatmap.dat" u 2:3:5 with points pt 3 ps 2 lw 4 palette notitle # pt 7 is solid circle
+
+reset
+set term pngcairo size 640,480 dashed dl 2.0 font ",16"
+set output 'percentage_diff.png'
+set xlabel 'Percentage difference'
+set ylabel 'CDF'
+plot 'avgbr_rebuff_percentage_diff.dat' u 2:1 with lines lw 3 t 'Avgbr %age diff', \
+'avgbr_rebuff_percentage_diff.dat' u 3:1 with lines lw 3 t 'Rebuf %age diff'

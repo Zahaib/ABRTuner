@@ -81,6 +81,9 @@ def printHeader():
 def printStats(CANONICAL_TIME, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue):
   print str(round(CANONICAL_TIME/1000.0,2)) + "\t" + str(round(BW,2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(CHUNKS_DOWNLOADED) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2))
 
+def printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, oldBR, BR, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error):
+  print str(round(time_curr/1000.0,2)) + "\t" + str(round(bandwidth,2)) + "\t" + str(round(future_bandwidth, 2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(chunkid) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2)) + "\t" + str(round(max_error,2))
+
 # function initializes the state variables
 def initSysState():
   BLEN = 0
@@ -405,7 +408,7 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
   # print future_bandwidth, max_error #, bandwidthEsts, pastErrors
   # print chunkid, harmonic_bandwidth* 8 * 1000.0, discount, future_bandwidth
 
-  return future_bandwidth, bandwidthEsts, pastErrors
+  return future_bandwidth, max_error * 8 * 1000.0, bandwidthEsts, pastErrors
 
 
 
@@ -449,7 +452,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
     ######## MPC code
-    future_bandwidth, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
+    future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     ######## MPC code
 
     est_bandwidth = est_std = 0
@@ -488,6 +491,9 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #print chunkid, p1_min
     chunkid+=1
     
+    if CHUNK_DEBUG == True:
+      printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, bitrateAtIntervalStart, bitrateMPC, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error)
+
     ############ MPC bitrate ############
     # bitrateAtIntervalStart = bitrateMPC
     change_magnitude += abs(VIDEO_BIT_RATE[bitrateMPC] - VIDEO_BIT_RATE[bitrateAtIntervalStart])

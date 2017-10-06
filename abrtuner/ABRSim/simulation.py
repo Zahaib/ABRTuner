@@ -71,7 +71,8 @@ except IndexError:
 for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
-  for discount in range(-5,101,5):
+  #for discount in range(-5,-4,5):
+  for discount in [-5,80]:
     windowSize = WINDOWSIZE
     minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
@@ -452,17 +453,27 @@ for initialBSM in [0.25]:
 #    print kk, allPerf[kk]
     #for i in configsUsed:
     #  print i
+
     print traceFile + " initialBSM: " + str(initialBSM) \
     + " minCell: " +str(minCellSize) \
-    + " MPCwindow: " + str(windowSize) \
-    + " change_magnitude: " + str(change_magnitude/float(CHUNKS_DOWNLOADED))\
     + " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \
     + " avg. bitrate: " + str(AVG_SESSION_BITRATE) \
     + " buf. ratio: " + str(REBUF_RATIO) \
     + " playtime: " + str(PLAYTIME) \
     + " buftime: " + str(BUFFTIME) \
     + " size: " + str(AVG_SESSION_BITRATE_sum) \
-    + " discount: " + str(discount)
+
+    #print traceFile + " initialBSM: " + str(initialBSM) \
+    #+ " minCell: " +str(minCellSize) \
+    #+ " MPCwindow: " + str(windowSize) \
+    #+ " change_magnitude: " + str(change_magnitude/float(CHUNKS_DOWNLOADED))\
+    #+ " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \
+    #+ " avg. bitrate: " + str(AVG_SESSION_BITRATE) \
+    #+ " buf. ratio: " + str(REBUF_RATIO) \
+    #+ " playtime: " + str(PLAYTIME) \
+    #+ " buftime: " + str(BUFFTIME) \
+    #+ " size: " + str(AVG_SESSION_BITRATE_sum) \
+    #+ " discount: " + str(discount)
     #+ " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
     # print sessionHistory
 
