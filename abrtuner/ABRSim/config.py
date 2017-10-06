@@ -1,7 +1,7 @@
 ### debug configuration
 DEBUG = False
 VERBOSE_DEBUG = False
-CHUNK_DEBUG = True
+CHUNK_DEBUG = False
 
 ### simulation configuration
 # MEDIAN_BITRATE_MODE = True
@@ -49,7 +49,7 @@ COMBINATION_ABR_CV_THRESHOLD = 1.0
 
 ### DYNAMIC settings
 DYNAMIC_BSM = False
-ONCD = False
+ONCD = True
 
 ### Simulation settings
 SIMULATION_STEP = 50

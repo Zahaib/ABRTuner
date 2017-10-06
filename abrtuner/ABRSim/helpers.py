@@ -8,6 +8,7 @@ from config import *
 from chunkMap import *
 #from low_bw_syth_no_abort_bugfix1224_performance_vector import *
 from dash_syn_simulation_hyb_performance_table import *
+from mpc_performancetable_syn import *
 from simulation_performance_vector import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
@@ -376,6 +377,7 @@ def getPastFiveBW(sessionHistory, chunkid):
 
 # function returns the BW needed by MPC
 def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
+  #print discount
   curr_error = 0
   if len(bandwidthEsts) > 0:
     last_chunk_bw = (sessionHistory[chunkid][2] / 8) / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0]) / 1000.0 # KBytes/ms or MBytes/sec
@@ -451,9 +453,6 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
       AVG_SESSION_BITRATE+=(VIDEO_BIT_RATE[bitrateAtIntervalStart] * CHUNKSIZE * 1000.0) / 8.0
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
-    ######## MPC code
-    future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
-    ######## MPC code
 
     est_bandwidth = est_std = 0
     if ONCD:
@@ -467,19 +466,26 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
         chunk_when_last_chd_ran = ch_index
         gradual_transition = nsteps
         #print time_curr/1000.0,est_bandwidth, est_std, chunk_when_last_chd_ran
-        dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
-        performance_t = (globals()[dict_name_backup])
-        ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 300)
-        additive_inc = (p1_min_new - p1_min) / nsteps
-      if gradual_transition > 0:
-        p1_min += additive_inc
-        gradual_transition -= 1
+        if HYB_ABR:
+          dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
+          performance_t = (globals()[dict_name_backup])
+          ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 1000)
+
+          additive_inc = (p1_min_new - p1_min) / nsteps
+          if gradual_transition > 0:
+            p1_min += additive_inc
+            gradual_transition -= 1
+        elif MPC_ABR:
+          ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(mpc_dash_syth_hyb_pen_table_1000, est_bandwidth, est_std, 1000)
+          discount = disc_max
+          #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
-    # MPC Bitrate
-    # windowSize = 2
-    # future_bandwidth = 3000.0
+    ######## MPC code
+    future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
+    ######## MPC code
+
     # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
     # Do We need to select bitrate before or after the delay??
@@ -497,7 +503,11 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     ############ MPC bitrate ############
     # bitrateAtIntervalStart = bitrateMPC
     change_magnitude += abs(VIDEO_BIT_RATE[bitrateMPC] - VIDEO_BIT_RATE[bitrateAtIntervalStart])
-    bitrateAtIntervalStart = bitrateMPC
+    if MPC_ABR:
+      bitrateAtIntervalStart = bitrateMPC
+    elif HYB_ABR:
+      bitrateAtIntervalStart = bitrateDASH
+      
 
     ############ MPC bitrate ############
 
@@ -555,7 +565,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
          additive_inc, \
          bandwidthEsts, \
          pastErrors, \
-         change_magnitude
+         change_magnitude, \
+         discount
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):

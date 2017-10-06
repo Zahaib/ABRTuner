@@ -8,6 +8,48 @@ import numpy as np
 import collections
 import statistics
 
+def getDynamicconfig_mpc(pv_list_hyb, bw, std, step):
+    bw_step = step
+    std_step = step
+    ABRAlgo = ''
+    bw_cut =int(float(bw)/bw_step)*bw_step
+    std_cut = int(float(std)/std_step)*std_step
+    abr_list = list()
+    current_list_1 = list()
+    current_list_2 = list()
+    current_list_bb_1 = list()
+    current_list_bb_2 = list()
+    current_list_hyb = list()
+    count = 0
+    if True:
+        if bw==-1 and std==-1:
+            return 'MPC', 0.0, 0.0, 0.0
+        # if key not in performance vector
+        if (bw_cut, std_cut) not in pv_list_hyb.keys():
+            for i in range(2, 1000, 1):
+                count += 1
+                for bw_ in [bw_cut - (i - 1) * bw_step, bw_cut + (i-1) * bw_step]:
+                    for std_ in range(std_cut - (i - 1) * std_step, std_cut + (i-1) * std_step + std_step, std_step):
+                        if (bw_, std_) in pv_list_hyb.keys():
+                            current_list_hyb = current_list_hyb + pv_list_hyb[(bw_, std_)]
+                for std_ in [std_cut - (i - 1) * std_step, std_cut + (i-1) * std_step]:
+                    for bw_ in range(bw_cut - (i - 2) * bw_step, bw_cut + (i-1) * bw_step, bw_step):
+                        if (bw_, std_) in pv_list_hyb.keys():
+                            current_list_hyb = current_list_hyb + pv_list_hyb[(bw_, std_)]
+                if len(current_list_hyb)==0:
+                    continue
+                else:# len(abr_list)>0 and 'BB' not in abr_list:
+                    ABRAlgo = 'MPC'
+                    break
+        else:
+            current_list_hyb = current_list_hyb + pv_list_hyb[(bw_cut, std_cut)]
+            ABRAlgo = 'MPC'
+
+    if len(current_list_hyb)==0:
+        return 'MPC', 0.0, 0.0, 0.0
+    return ABRAlgo, min(current_list_hyb), np.percentile(current_list_hyb,50), max(current_list_hyb)
+
+
 def getDynamicconfig_self(pv_list_hyb, bw, std, step):
     bw_step = step
     std_step = step

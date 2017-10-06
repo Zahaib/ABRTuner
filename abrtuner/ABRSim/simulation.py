@@ -72,7 +72,7 @@ for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
   #for discount in range(-5,-4,5):
-  for discount in [-5,80]:
+  for discount in [-5]:
     windowSize = WINDOWSIZE
     minCellSize = 100
   # for minCellSize in [100, 300,500,700,900,1100,1300,1500, 1700, 1900,2100,2300,2500,2700,3000]:
@@ -213,7 +213,8 @@ for initialBSM in [0.25]:
             additive_inc, \
             bandwidthEsts, \
             pastErrors, \
-            change_magnitude = chunksDownloaded(configsUsed, \
+            change_magnitude, \
+            discount = chunksDownloaded(configsUsed, \
                                CLOCK - interval, \
                                CLOCK, \
                                BR, \
