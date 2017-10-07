@@ -1,11 +1,10 @@
 import numpy as np
 import tensorflow as tf
 import tflearn
-import sys
+
 
 GAMMA = 0.99
 A_DIM = 6
-#A_DIM = 5
 ENTROPY_WEIGHT = 0.5
 ENTROPY_EPS = 1e-6
 S_INFO = 4
@@ -28,10 +27,6 @@ class ActorNetwork(object):
         # Get all network parameters
         self.network_params = \
             tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope='actor')
-
-        #for param in self.network_params:
-        #  print param
-        #sys.exit()
 
         # Set all network parameters
         self.input_network_params = []
@@ -67,7 +62,6 @@ class ActorNetwork(object):
         with tf.variable_scope('actor'):
             inputs = tflearn.input_data(shape=[None, self.s_dim[0], self.s_dim[1]])
 
-            # original code for the weight envivio video
             split_0 = tflearn.fully_connected(inputs[:, 0:1, -1], 128, activation='relu')
             split_1 = tflearn.fully_connected(inputs[:, 1:2, -1], 128, activation='relu')
             split_2 = tflearn.conv_1d(inputs[:, 2:3, :], 128, 4, activation='relu')
@@ -80,7 +74,6 @@ class ActorNetwork(object):
             split_4_flat = tflearn.flatten(split_4)
 
             merge_net = tflearn.merge([split_0, split_1, split_2_flat, split_3_flat, split_4_flat, split_5], 'concat')
-
 
             dense_net_0 = tflearn.fully_connected(merge_net, 128, activation='relu')
             out = tflearn.fully_connected(dense_net_0, self.a_dim, activation='softmax')
@@ -137,10 +130,6 @@ class CriticNetwork(object):
         # Get all network parameters
         self.network_params = \
             tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope='critic')
-
-        #for param in self.network_params:
-        #  print param
-        #sys.exit()
 
         # Set all network parameters
         self.input_network_params = []
