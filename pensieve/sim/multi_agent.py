@@ -9,22 +9,19 @@ import a3c
 import load_trace
 
 
+
 S_INFO = 6  # bit_rate, buffer_size, next_chunk_size, bandwidth_measurement(throughput and time), chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
-#A_DIM = 6
-A_DIM = 5
+A_DIM = 6
 ACTOR_LR_RATE = 0.0001
 CRITIC_LR_RATE = 0.001
 NUM_AGENTS = 16
 TRAIN_SEQ_LEN = 100  # take as a train batch
 MODEL_SAVE_INTERVAL = 100
-#VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
-VIDEO_BIT_RATE = [350,600,1000,2000,3000]
-#HD_REWARD = [1, 2, 3, 12, 15, 20]
-HD_REWARD = [1, 2, 3, 12, 15]
+VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+HD_REWARD = [1, 2, 3, 12, 15, 20]
 BUFFER_NORM_FACTOR = 10.0
-#CHUNK_TIL_VIDEO_END_CAP = 48.0
-CHUNK_TIL_VIDEO_END_CAP = 64.0
+CHUNK_TIL_VIDEO_END_CAP = 48.0
 M_IN_K = 1000.0
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
@@ -36,8 +33,8 @@ LOG_FILE = './results/log'
 TEST_LOG_FOLDER = './test_results/'
 TRAIN_TRACES = './cooked_traces/'
 # NN_MODEL = './results/pretrain_linear_reward.ckpt'
-#NN_MODEL = './results/racecar_linear_reward.ckpt'
 NN_MODEL = None
+
 
 def testing(epoch, nn_model, log_file):
     # clean up the test results folder
@@ -201,9 +198,6 @@ def central_agent(net_params_queues, exp_queues):
                 testing(epoch, 
                     SUMMARY_DIR + "/nn_model_ep_" + str(epoch) + ".ckpt", 
                     test_log_file)
-
-            if epoch == 100000:
-              return
 
 
 def agent(agent_id, all_cooked_time, all_cooked_bw, net_params_queue, exp_queue):
@@ -383,8 +377,6 @@ def main():
     # wait unit training is done
     coordinator.join()
 
-    for i in xrange(NUM_AGENTS):
-        agents[i].terminate()
 
 if __name__ == '__main__':
     main()
