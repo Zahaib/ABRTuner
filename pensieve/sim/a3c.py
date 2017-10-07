@@ -3,6 +3,7 @@ import tensorflow as tf
 import tflearn
 
 
+
 GAMMA = 0.99
 A_DIM = 6
 ENTROPY_WEIGHT = 0.5

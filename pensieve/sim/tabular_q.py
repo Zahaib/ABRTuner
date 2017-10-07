@@ -11,6 +11,7 @@
 # - Online learning adaptation strategy for DASH clients - http://dl.acm.org/citation.cfm?id=2910603
 #
 
+
 import os
 import sys
 import numpy as np

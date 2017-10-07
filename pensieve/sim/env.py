@@ -1,5 +1,6 @@
 import numpy as np
 
+
 MILLISECONDS_IN_SECOND = 1000.0
 B_IN_MB = 1000000.0
 BITS_IN_BYTE = 8.0
