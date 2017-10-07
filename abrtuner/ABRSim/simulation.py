@@ -71,13 +71,13 @@ except IndexError:
 for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
-  #for discount in range(-5,-4,5):
+  for discount in range(-10,201,10):
+    #discount = 0
   #for discount in [-5]:
-  windowSize = WINDOWSIZE
-  #  minCellSize = 100
+    windowSize = WINDOWSIZE
   #for minCellSize in [100, 300]:
-  for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
-    discount = 0
+  #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
+    minCellSize = 100
     ###### Change detection variables start ######
     q = deque(maxlen = 2)
     last_chd_interval = 0
