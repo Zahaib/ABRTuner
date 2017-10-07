@@ -11,6 +11,7 @@
 # - Online learning adaptation strategy for DASH clients - http://dl.acm.org/citation.cfm?id=2910603
 #
 
+
 import os
 import sys
 import numpy as np
@@ -24,18 +25,14 @@ BW_MIN = 0  # minimum bandwidth in Mbit/sec
 BW_MAX = 10  # maximum bandwidth in Mbit/sec
 D_BW = 1  # bandwidth granularity
 BF_MIN = 0  # minimum buffer in sec
-#BF_MAX = 60  # maxiimum buffer in sec
-BF_MAX = 600
+BF_MAX = 60  # maxiimum buffer in sec
 D_BF = 1  # buffer granularity
-#BR_LV = 6  # number of bitrate levels
-BR_LV = 5
-#N_CHUNK = 50  # number of chunk until the end
-N_CHUNK = 66
+BR_LV = 6  # number of bitrate levels
+N_CHUNK = 50  # number of chunk until the end
 LR_RATE = 1e-3  # learning rate
 GAMMA = 0.99  # discount factor
 DEFAULT_QUALITY = 1  # default video quality without agent
-#VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
-VIDEO_BIT_RATE = [350,600,1000,2000,3000]
+VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 1
 M_IN_K = 1000.0
