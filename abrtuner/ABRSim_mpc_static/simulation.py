@@ -72,7 +72,7 @@ for initialBSM in [0.25]:
   # for minCellSize in [100]:
   # for windowSize in [1,2,3,4,5,6,7]:
   #for discount in range(-5,-4,5):
-  for discount in range(-5, 101, 5):
+  for discount in range(-10, 201, 10):
     #print discount
     #continue
     windowSize = WINDOWSIZE
