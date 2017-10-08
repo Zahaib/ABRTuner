@@ -199,6 +199,9 @@ def central_agent(net_params_queues, exp_queues):
                     SUMMARY_DIR + "/nn_model_ep_" + str(epoch) + ".ckpt", 
                     test_log_file)
 
+            if epoch == 300:
+              return
+
 
 def agent(agent_id, all_cooked_time, all_cooked_bw, net_params_queue, exp_queue):
 
@@ -377,6 +380,8 @@ def main():
     # wait unit training is done
     coordinator.join()
 
+    for i in xrange(NUM_AGENTS):
+        agents[i].terminate()
 
 if __name__ == '__main__':
     main()
