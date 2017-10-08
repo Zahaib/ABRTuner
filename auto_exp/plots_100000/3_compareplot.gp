@@ -110,3 +110,26 @@ plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lt 4 lw 3 t 'MPC-1
 #plot '../plots/cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lt 2 lw 3 t 'MPC', \
 #'../plots/cdf_qoe_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lt 3 lw 3 t 'Penseive', \
 #'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lt 4 lw 3 t 'MPC-100000', \
+
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'mpcRebuff.png'
+set xlabel 'Rebuf'
+set ylabel 'CDF'
+set key bottom right
+set yrange [80:100]
+plot 'cdf_rebuf_robustmpc.txt' u 2:1 with lines lt 1 lw 3 t 'MPC-100000', \
+'../plots_8600/cdf_rebuf_robustmpc.txt' u 2:1 with lines lt 2 lw 3 t 'MPC 8600', \
+'../plots_4300/cdf_rebuf_robustmpc.txt' u 2:1 with lines lt 3 lw 3 t 'MPC 4300'
+
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'mpcBitrate.png'
+set xlabel 'Bitrate'
+set ylabel 'CDF'
+set key bottom right
+plot 'cdf_bitrate_robustmpc.txt' u 2:1 with lines lt 1 lw 3 t 'MPC-100000', \
+'../plots_8600/cdf_bitrate_robustmpc.txt' u 2:1 with lines lt 2 lw 3 t 'MPC 8600', \
+'../plots_4300/cdf_bitrate_robustmpc.txt' u 2:1 with lines lt 3 lw 3 t 'MPC 4300'

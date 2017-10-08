@@ -108,7 +108,7 @@ Chrome(function (chrome) {
                         	process.exit();
     			}
 		}
-                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc")){
+                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc") || (scheme=="hyb")){
                         if (params.request.url.match(/finishme.txt/)) {
                                 console.log("Weird video Yun Final : Timeout - End experiment");
                                 close();
