@@ -18,37 +18,58 @@ import timeit
 #  print(*args, file=sys.stderr, **kwargs)
 
 def onlineCD(sessionHistory, chunk_when_last_chd, interval, playerVisibleBW):
-  #start_time = timeit.default_timer()
-  #print chunk_when_last_chd_ran
   chd_detected = False
   chd_index = chunk_when_last_chd
-  #bw = list()
-  #for i in range(0, len(sessionHistory.keys()) - 1):
-  #  bw.append(sessionHistory[i][2] / (sessionHistory[i][1]/1000 - sessionHistory[i][0]/1000))
-  #print bw
+  trimThresh = 200
+  lenarray = len(playerVisibleBW)
+  playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
   R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
   #interval = 5
   interval = min(interval, len(playerVisibleBW))
   changeArray = R[interval,interval:-1]
-  #print chunk_when_last_chd, bw
-  #try:
   for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
-    if v > 0.01 and i > chunk_when_last_chd:
-      chd_index = i
+   # if v > 0.01 and i > chunk_when_last_chd:
+   #   chd_index = i
+   #   chd_detected = True
+   #   print chd_index, chd_detected
+   #   break
+    if v > 0.01 and i + cutoff > chunk_when_last_chd and not (i == 0 and chunk_when_last_chd > -1):
+      chd_index = i + cutoff
       chd_detected = True
+      #print chd_index, chd_detected, cutoff
       break
-    #cx = next(x[0] for x in reversed(list(enumerate(changeArray))) if x[1] > 0.0)
-    #if cx > chunk_when_last_chd_ran:
-    #   chd_index = cx
-    #   chd_detected = True
-  #except StopIteration:
-    #a = 1
-    #chd_index = chunk_when_last_chd_ran
-  #print chd_index, chd_detected
-  #elapsed = timeit.default_timer() - start_time
-  #print elapsed, len(playerVisibleBW)
   return chd_detected, chd_index
 
+
+#def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
+#  chd_detected = False
+#  chd_index = chunk_when_last_chd
+#  # threshold for the amount to samples to consider for change point
+#  trimThresh = 100
+#  lenarray = len(playerVisibleBW)
+#  playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
+#  R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
+#  #interval = 5
+#  interval = min(interval, len(playerVisibleBW))
+#  changeArray = R[interval,interval:-1]
+#  for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
+#    if v > 0.01 and i + cutoff > chunk_when_last_chd and not (i == 0 and chunk_when_last_chd > -1) :
+#      chd_index = i + cutoff
+#      chd_detected = True
+#      print "change detected i = ", i, " cutoff = ", cutoff, " chd_index = ", chd_index, " chunk_when_last_chd =", chunk_when_last_chd, " len = ", lenarray
+#      break
+#  return chd_detected, chd_index
+
+def trimPlayerVisibleBW(playerVisibleBW, thresh):
+  ret = []
+  cutoff = 0
+  lenarray = len(playerVisibleBW)
+  if lenarray <= thresh:
+    return playerVisibleBW, cutoff
+
+  cutoff = lenarray - thresh
+  ret = playerVisibleBW[cutoff:]
+  return ret, cutoff
 
 
 # function returns the most dominant bitrate played, if two are dominant it returns the bigger of two
