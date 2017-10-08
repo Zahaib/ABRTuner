@@ -23,7 +23,7 @@ HD_REWARD = [1, 2, 3, 12, 15, 20]
 BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 M_IN_K = 1000.0
-REBUF_PENALTY = 100000.0 #4.3  # 1 sec rebuffering -> 3 Mbps
+REBUF_PENALTY = 8.6 #100000.0 #4.3  # 1 sec rebuffering -> 3 Mbps
 SMOOTH_PENALTY = 0.0 #1
 DEFAULT_QUALITY = 1  # default video quality without agent
 RANDOM_SEED = 42
@@ -199,7 +199,7 @@ def central_agent(net_params_queues, exp_queues):
                     SUMMARY_DIR + "/nn_model_ep_" + str(epoch) + ".ckpt", 
                     test_log_file)
 
-            if epoch == 300:
+            if epoch == 100000:
               return
 
 
