@@ -26,7 +26,7 @@ BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 TOTAL_VIDEO_CHUNKS = 48
 DEFAULT_QUALITY = 0  # default video quality without agent
-REBUF_PENALTY = 4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+REBUF_PENALTY = 100000.0 #4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
 SMOOTH_PENALTY = 0.0 #1
 TRAIN_SEQ_LEN = 100  # take as a train batch
 MODEL_SAVE_INTERVAL = 100
@@ -239,7 +239,7 @@ def make_request_handler(input_dict):
                     # bitrates are in Mbits/s, rebuffer in seconds, and smoothness_diffs in Mbits/s
                     
                     # linear reward
-                    print bitrate_sum 
+                    #print bitrate_sum 
                     reward = (bitrate_sum/1000.) - (REBUF_PENALTY * curr_rebuffer_time) - (SMOOTH_PENALTY * smoothness_diffs/1000.)
 
                     # log reward

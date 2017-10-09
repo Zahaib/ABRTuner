@@ -9,25 +9,22 @@ import a3c
 import load_trace
 
 
+
 S_INFO = 6  # bit_rate, buffer_size, next_chunk_size, bandwidth_measurement(throughput and time), chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
-#A_DIM = 6
-A_DIM = 5
+A_DIM = 6
 ACTOR_LR_RATE = 0.0001
 CRITIC_LR_RATE = 0.001
 NUM_AGENTS = 16
 TRAIN_SEQ_LEN = 100  # take as a train batch
 MODEL_SAVE_INTERVAL = 100
-#VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
-VIDEO_BIT_RATE = [350,600,1000,2000,3000]
-#HD_REWARD = [1, 2, 3, 12, 15, 20]
-HD_REWARD = [1, 2, 3, 12, 15]
+VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+HD_REWARD = [1, 2, 3, 12, 15, 20]
 BUFFER_NORM_FACTOR = 10.0
-#CHUNK_TIL_VIDEO_END_CAP = 48.0
-CHUNK_TIL_VIDEO_END_CAP = 64.0
+CHUNK_TIL_VIDEO_END_CAP = 48.0
 M_IN_K = 1000.0
-REBUF_PENALTY = 4.3  # 1 sec rebuffering -> 3 Mbps
-SMOOTH_PENALTY = 1
+REBUF_PENALTY = 8.6 #100000.0 #4.3  # 1 sec rebuffering -> 3 Mbps
+SMOOTH_PENALTY = 0.0 #1
 DEFAULT_QUALITY = 1  # default video quality without agent
 RANDOM_SEED = 42
 RAND_RANGE = 1000
@@ -36,8 +33,8 @@ LOG_FILE = './results/log'
 TEST_LOG_FOLDER = './test_results/'
 TRAIN_TRACES = './cooked_traces/'
 # NN_MODEL = './results/pretrain_linear_reward.ckpt'
-#NN_MODEL = './results/racecar_linear_reward.ckpt'
 NN_MODEL = None
+
 
 def testing(epoch, nn_model, log_file):
     # clean up the test results folder

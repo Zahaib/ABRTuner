@@ -8,6 +8,7 @@ from config import *
 from chunkMap import *
 #from low_bw_syth_no_abort_bugfix1224_performance_vector import *
 from dash_syn_simulation_hyb_performance_table import *
+from mpc_performancetable_syn import *
 from simulation_performance_vector import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
@@ -17,37 +18,58 @@ import timeit
 #  print(*args, file=sys.stderr, **kwargs)
 
 def onlineCD(sessionHistory, chunk_when_last_chd, interval, playerVisibleBW):
-  #start_time = timeit.default_timer()
-  #print chunk_when_last_chd_ran
   chd_detected = False
   chd_index = chunk_when_last_chd
-  #bw = list()
-  #for i in range(0, len(sessionHistory.keys()) - 1):
-  #  bw.append(sessionHistory[i][2] / (sessionHistory[i][1]/1000 - sessionHistory[i][0]/1000))
-  #print bw
+  trimThresh = 200
+  lenarray = len(playerVisibleBW)
+  playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
   R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
   #interval = 5
   interval = min(interval, len(playerVisibleBW))
   changeArray = R[interval,interval:-1]
-  #print chunk_when_last_chd, bw
-  #try:
   for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
-    if v > 0.01 and i > chunk_when_last_chd:
-      chd_index = i
+   # if v > 0.01 and i > chunk_when_last_chd:
+   #   chd_index = i
+   #   chd_detected = True
+   #   print chd_index, chd_detected
+   #   break
+    if v > 0.01 and i + cutoff > chunk_when_last_chd and not (i == 0 and chunk_when_last_chd > -1):
+      chd_index = i + cutoff
       chd_detected = True
+      #print chd_index, chd_detected, cutoff
       break
-    #cx = next(x[0] for x in reversed(list(enumerate(changeArray))) if x[1] > 0.0)
-    #if cx > chunk_when_last_chd_ran:
-    #   chd_index = cx
-    #   chd_detected = True
-  #except StopIteration:
-    #a = 1
-    #chd_index = chunk_when_last_chd_ran
-  #print chd_index, chd_detected
-  #elapsed = timeit.default_timer() - start_time
-  #print elapsed, len(playerVisibleBW)
   return chd_detected, chd_index
 
+
+#def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
+#  chd_detected = False
+#  chd_index = chunk_when_last_chd
+#  # threshold for the amount to samples to consider for change point
+#  trimThresh = 100
+#  lenarray = len(playerVisibleBW)
+#  playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
+#  R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
+#  #interval = 5
+#  interval = min(interval, len(playerVisibleBW))
+#  changeArray = R[interval,interval:-1]
+#  for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
+#    if v > 0.01 and i + cutoff > chunk_when_last_chd and not (i == 0 and chunk_when_last_chd > -1) :
+#      chd_index = i + cutoff
+#      chd_detected = True
+#      print "change detected i = ", i, " cutoff = ", cutoff, " chd_index = ", chd_index, " chunk_when_last_chd =", chunk_when_last_chd, " len = ", lenarray
+#      break
+#  return chd_detected, chd_index
+
+def trimPlayerVisibleBW(playerVisibleBW, thresh):
+  ret = []
+  cutoff = 0
+  lenarray = len(playerVisibleBW)
+  if lenarray <= thresh:
+    return playerVisibleBW, cutoff
+
+  cutoff = lenarray - thresh
+  ret = playerVisibleBW[cutoff:]
+  return ret, cutoff
 
 
 # function returns the most dominant bitrate played, if two are dominant it returns the bigger of two
@@ -376,6 +398,7 @@ def getPastFiveBW(sessionHistory, chunkid):
 
 # function returns the BW needed by MPC
 def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
+  #print discount
   curr_error = 0
   if len(bandwidthEsts) > 0:
     last_chunk_bw = (sessionHistory[chunkid][2] / 8) / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0]) / 1000.0 # KBytes/ms or MBytes/sec
@@ -451,9 +474,6 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
       AVG_SESSION_BITRATE+=(VIDEO_BIT_RATE[bitrateAtIntervalStart] * CHUNKSIZE * 1000.0) / 8.0
     #est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, chunkid)
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
-    ######## MPC code
-    future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
-    ######## MPC code
 
     est_bandwidth = est_std = 0
     if ONCD:
@@ -467,19 +487,28 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
         chunk_when_last_chd_ran = ch_index
         gradual_transition = nsteps
         #print time_curr/1000.0,est_bandwidth, est_std, chunk_when_last_chd_ran
-        dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
-        performance_t = (globals()[dict_name_backup])
-        ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, 300)
-        additive_inc = (p1_min_new - p1_min) / nsteps
-      if gradual_transition > 0:
-        p1_min += additive_inc
-        gradual_transition -= 1
+        if HYB_ABR:
+          dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
+          performance_t = (globals()[dict_name_backup])
+          ABRChoice, p1_min_new, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, minCellSize)
+
+          additive_inc = (p1_min_new - p1_min) / nsteps
+          if gradual_transition > 0:
+            p1_min += additive_inc
+            gradual_transition -= 1
+        elif MPC_ABR:
+          dict_name_backup = "mpc_dash_syth_hyb_pen_table_"+str(minCellSize)
+          performance_t = (globals()[dict_name_backup])
+          ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
+          discount = disc_max
+          #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
-    # MPC Bitrate
-    # windowSize = 2
-    # future_bandwidth = 3000.0
+    ######## MPC code
+    future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
+    ######## MPC code
+
     # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
     # Do We need to select bitrate before or after the delay??
@@ -497,11 +526,15 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     ############ MPC bitrate ############
     # bitrateAtIntervalStart = bitrateMPC
     change_magnitude += abs(VIDEO_BIT_RATE[bitrateMPC] - VIDEO_BIT_RATE[bitrateAtIntervalStart])
-    bitrateAtIntervalStart = bitrateMPC
+    if MPC_ABR:
+      bitrateAtIntervalStart = bitrateMPC
+    elif HYB_ABR:
+      bitrateAtIntervalStart = bitrateDASH
+      
 
     ############ MPC bitrate ############
 
-    configsUsed.append((time_curr/1000.0, 'HYB', bandwidth, int(est_bandwidth), int(est_std), round(p1_min,2), round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
+    configsUsed.append((time_curr/1000.0, 'MPC', bandwidth, int(est_bandwidth), int(est_std), discount, round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
     #print bitrateAtIntervalStart, bitrateAtIntervalStart1
     #if chunkid==64:
     #  #print "return"
@@ -555,7 +588,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
          additive_inc, \
          bandwidthEsts, \
          pastErrors, \
-         change_magnitude
+         change_magnitude, \
+         discount
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):
