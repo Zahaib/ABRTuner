@@ -93,6 +93,8 @@ def getDynamicconfig_self(pv_list_hyb, bw, std, step):
   current_list_bb_2 = list()
   current_list_hyb = list()
   count = 0
+  if bw > 9000:
+    return 'HYB', 0.97, 0.97, 0.97, 5, 5, 5, 0.4, 0.4, 0.4
   if True:
     if bw==-1 and std==-1:
       return 'HYB', 0.25, 0.25, 0.25, 5, 5, 5, 0.4, 0.4, 0.4
