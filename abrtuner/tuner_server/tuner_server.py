@@ -107,7 +107,8 @@ def make_request_handler(input_dict):
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
                 cellsize = 900
-                table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
+                #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
+                table = dash_syth_hyb_pen_table_8600_1000
                 ABRChoice, \
                 p1_min_new, \
                 p1_median, \
