@@ -19,7 +19,8 @@ def getUtilityBitrateDecision_dash(est_bandwidth, new_chunkid, bufferlen, margin
   candidateBitrates = [0,1,2,3,4,5]
   index_to_bitrate = {0:300,1:750,2:1200,3:1850,4:2850,5:4300}
   BUFFER_SAFETY_MARGIN = margin
-  BUFFERING_WEIGHT = -100000000.0
+  #BUFFERING_WEIGHT = -100000000.0
+  BUFFERING_WEIGHT = 8600
   BITRATE_WEIGHT = 1
   tempbitrate = -1
   tempquality = 0
