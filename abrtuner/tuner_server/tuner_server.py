@@ -13,6 +13,7 @@ import tensorflow as tf
 import time
 import tuner_logic
 import tuner_lookup_tables
+import dash_syn_simulation_hyb_pen_performance_table_8600
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -25,8 +26,8 @@ BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 TOTAL_VIDEO_CHUNKS = 48
 DEFAULT_QUALITY = 0  # default video quality without agent
-REBUF_PENALTY = 4.3  # 1 sec rebuffering -> this number of Mbps
-SMOOTH_PENALTY = 1
+#REBUF_PENALTY = 4.3  # 1 sec rebuffering -> this number of Mbps
+#SMOOTH_PENALTY = 1
 ACTOR_LR_RATE = 0.0001
 CRITIC_LR_RATE = 0.001
 TRAIN_SEQ_LEN = 100  # take as a train batch
@@ -107,7 +108,8 @@ def make_request_handler(input_dict):
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
                 cellsize = 900
-                table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
+                #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
+                table = dash_syn_simulation_hyb_pen_performance_table_8600.dash_syth_hyb_pen_table_8600_1000
                 ABRChoice, \
                 p1_min_new, \
                 p1_median, \

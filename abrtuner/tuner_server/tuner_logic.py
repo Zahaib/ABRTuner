@@ -3,6 +3,7 @@
 import sys, os
 import numpy as np
 from tuner_lookup_tables import *
+from dash_syn_simulation_hyb_pen_performance_table_8600 import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
 
@@ -19,7 +20,8 @@ def getUtilityBitrateDecision_dash(est_bandwidth, new_chunkid, bufferlen, margin
   candidateBitrates = [0,1,2,3,4,5]
   index_to_bitrate = {0:300,1:750,2:1200,3:1850,4:2850,5:4300}
   BUFFER_SAFETY_MARGIN = margin
-  BUFFERING_WEIGHT = -100000000.0
+  #BUFFERING_WEIGHT = -100000000.0
+  BUFFERING_WEIGHT = -8600
   BITRATE_WEIGHT = 1
   tempbitrate = -1
   tempquality = 0
@@ -93,6 +95,8 @@ def getDynamicconfig_self(pv_list_hyb, bw, std, step):
   current_list_bb_2 = list()
   current_list_hyb = list()
   count = 0
+  if bw > 9000:
+    return 'HYB', 0.97, 0.97, 0.97, 5, 5, 5, 0.4, 0.4, 0.4
   if True:
     if bw==-1 and std==-1:
       return 'HYB', 0.25, 0.25, 0.25, 5, 5, 5, 0.4, 0.4, 0.4
