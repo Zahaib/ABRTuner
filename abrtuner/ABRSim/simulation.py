@@ -69,15 +69,17 @@ except IndexError:
 #for initialBSM in [0.01, 0.05, 0.09, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77, 0.81, 0.08, 0.89, 0.93, 0.97,1.00]:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
-  # for minCellSize in [100]:
+  for discount in [0, -1]:
+  #for minCellSize in [400]:
   # for windowSize in [1,2,3,4,5,6,7]:
-  for discount in range(-10,201,10):
+  #for discount in range(-10,201,10):
     #discount = 0
-  #for discount in [-5]:
+    minCellSize = 400
     windowSize = WINDOWSIZE
+    max_error = 0
   #for minCellSize in [100, 300]:
   #for minCellSize in [100, 200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500, 1600, 1700, 1800, 1900, 2000,2100,2200,2300,2400,2500,2700,2800,3000]:
-    minCellSize = 100
+    #minCellSize = 100
     ###### Change detection variables start ######
     q = deque(maxlen = 2)
     last_chd_interval = 0
@@ -170,6 +172,9 @@ for initialBSM in [0.25]:
         if  (VERBOSE_DEBUG == True or DEBUG == True) and not sessionFullyDownloaded:
             printStats(CLOCK, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue)
     
+        if CHUNK_DEBUG:
+          printStats_chd(CLOCK, BW, BLEN, 1000, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount)
+
         if CHUNKS_DOWNLOADED * CHUNKSIZE * 1000 < 30000 or CLOCK < 30000:
             decision_cycle = INIT_HB
         elif CHUNKS_DOWNLOADED * CHUNKSIZE * 1000 >= 30000:
@@ -215,7 +220,8 @@ for initialBSM in [0.25]:
             bandwidthEsts, \
             pastErrors, \
             change_magnitude, \
-            discount = chunksDownloaded(configsUsed, \
+            discount, \
+            max_error  = chunksDownloaded(configsUsed, \
                                CLOCK - interval, \
                                CLOCK, \
                                BR, \
@@ -244,7 +250,8 @@ for initialBSM in [0.25]:
                                pastErrors, \
                                windowSize, \
                                change_magnitude, \
-                               discount)
+                               discount, \
+                               max_error)
             #print numChunks, completionTimeStamps, chunk_sched_time_delay
             chd_thisInterval = chunk_residue + numChunks
     #        if int(chd_thisInterval) >= 1 and chunk_sched_time_delay < interval:
