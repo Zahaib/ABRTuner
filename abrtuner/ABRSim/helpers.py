@@ -10,6 +10,7 @@ from chunkMap import *
 from dash_syn_simulation_hyb_performance_table import *
 from mpc_performancetable_syn import *
 from simulation_performance_vector import *
+from dash_syn_simulation_mpc_pen_performance_table_4300 import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
 #from __future__ import print_function
@@ -103,8 +104,8 @@ def printHeader():
 def printStats(CANONICAL_TIME, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue):
   print str(round(CANONICAL_TIME/1000.0,2)) + "\t" + str(round(BW,2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(CHUNKS_DOWNLOADED) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2))
 
-def printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, oldBR, BR, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error):
-  print str(round(time_curr/1000.0,2)) + "\t" + str(round(bandwidth,2)) + "\t" + str(round(future_bandwidth, 2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(chunkid) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2)) + "\t" + str(round(max_error,2))
+def printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, oldBR, BR, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount):
+  print str(round(time_curr/1000.0,2)) + "\t" + str(round(bandwidth,2)) + "\t" + str(round(future_bandwidth, 2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(chunkid) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2)) + "\t" + str(round(max_error,4)) + "\t" + str(discount)
 
 # function initializes the state variables
 def initSysState():
@@ -402,7 +403,7 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
   curr_error = 0
   if len(bandwidthEsts) > 0:
     last_chunk_bw = (sessionHistory[chunkid][2] / 8) / float(sessionHistory[chunkid][1] - sessionHistory[chunkid][0]) / 1000.0 # KBytes/ms or MBytes/sec
-    curr_error = abs(bandwidthEsts[-1] - last_chunk_bw)
+    curr_error = abs(bandwidthEsts[-1] - last_chunk_bw) / float(last_chunk_bw)
   pastErrors.append(curr_error)
   # print chunkid, len(bandwidthEsts), len(sessionHistory)
   past_five = getPastFiveBW(sessionHistory, chunkid)
@@ -424,19 +425,19 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
     future_bandwidth = harmonic_bandwidth/(1+max_error)
   #### Original code end.. ####
   else:
-    max_error = harmonic_bandwidth * (discount / 100.0)
+    max_error = discount / 100.0
     future_bandwidth = harmonic_bandwidth/(1+max_error)
   future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
   # print chunkid, future_bandwidth, harmonic_bandwidth, max_error
   # print future_bandwidth, max_error #, bandwidthEsts, pastErrors
   # print chunkid, harmonic_bandwidth* 8 * 1000.0, discount, future_bandwidth
 
-  return future_bandwidth, max_error * 8 * 1000.0, bandwidthEsts, pastErrors
+  return future_bandwidth, max_error, bandwidthEsts, pastErrors
 
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay
-def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount):
+def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount, max_error):
   chunkCount = 0.0
   time_residue_thisInterval = 0.0
   completionTimeStamps = []
@@ -476,6 +477,11 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
 
     est_bandwidth = est_std = 0
+    ONCD = True
+    # just a hacky way to adjust ONCD for time series experiments
+    if discount < 0:
+      ONCD = False
+
     if ONCD:
       CDinterval = 2
       ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
@@ -497,7 +503,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
             p1_min += additive_inc
             gradual_transition -= 1
         elif MPC_ABR:
-          dict_name_backup = "mpc_dash_syth_hyb_pen_table_"+str(minCellSize)
+          dict_name_backup = "mpc_dash_syth_hyb_pen_table_4300_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
           ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
           discount = disc_max
@@ -520,8 +526,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #print chunkid, p1_min
     chunkid+=1
     
-    if CHUNK_DEBUG == True:
-      printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, bitrateAtIntervalStart, bitrateMPC, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error)
+    #if CHUNK_DEBUG == True:
+    #  printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, bitrateAtIntervalStart, bitrateMPC, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error * 100, discount)
 
     ############ MPC bitrate ############
     # bitrateAtIntervalStart = bitrateMPC
@@ -589,7 +595,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
          bandwidthEsts, \
          pastErrors, \
          change_magnitude, \
-         discount
+         discount, \
+         max_error
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):

@@ -98,6 +98,9 @@ def make_request_handler(input_dict):
             self.input_dict['chunkBWSamples'].append(lastChunkBW)
             self.input_dict['chunksDownloaded'] = lastChunkID
 
+            # print lastChunkID, "len", len(self.input_dict['chunkBWSamples'])
+            
+
             chpd_interval = 5
             chd_detected, chd_index = tuner_logic.onlineCD(self.input_dict['chunk_when_last_chd_ran'], \
             	                                           chpd_interval, \
