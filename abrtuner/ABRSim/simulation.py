@@ -173,7 +173,7 @@ for initialBSM in [0.25]:
             printStats(CLOCK, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue)
     
         if CHUNK_DEBUG:
-          printStats_chd(CLOCK, BW, BLEN, 1000, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount)
+          printStats_chd(CLOCK, BW, BLEN, 1000, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount, chunk_when_last_chd_ran)
 
         if CHUNKS_DOWNLOADED * CHUNKSIZE * 1000 < 30000 or CLOCK < 30000:
             decision_cycle = INIT_HB
@@ -456,6 +456,7 @@ for initialBSM in [0.25]:
     allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)+" " + str(PLAYTIME)+" " + str(BUFFTIME)+" " + str(AVG_SESSION_BITRATE_sum)
     
     print traceFile + " initialBSM: "+str(initialBSM)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    #print playerVisibleBW
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: " + str(allPerf)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: "
 #for kk in allPerf.keys():
