@@ -13,6 +13,7 @@ import tensorflow as tf
 import time
 import mpc_tuner_logic
 import mpc_lookup_table_4300
+import mpc_lookup_table_4300_fix
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -112,7 +113,7 @@ def make_request_handler(input_dict):
                                  self.input_dict['chunk_when_last_chd_ran'])
                 cellsize = 1000
                 #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-                table = mpc_lookup_table_4300.mpc_dash_syth_hyb_pen_table_4300_1000
+                table = mpc_lookup_table_4300_fix.mpc_dash_syth_hyb_pen_table_4300_fix1010_1000
                 ABRChoice, \
                 p1_min, \
                 p1_median, \
