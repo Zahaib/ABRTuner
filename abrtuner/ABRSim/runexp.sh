@@ -32,7 +32,6 @@ while read line; do
         tail -n $tailcond tmp.txt > b.txt
         #gnuplot -e "set output '1.png'" time_series_plot.gp
         echo $tl
-        a="asdf_adfai_asdfa_adf_asdf_asdf asdf asdf asdfasdf asdf asdf asdf asdf"
         gnuplot -c time_series_plot.gp $tl
         name=$(echo $line | cut -d\/ -f1 --complement)
         mv 1.png time_series2/$name.png

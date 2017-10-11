@@ -23,9 +23,9 @@
 #"<(sed -n '51,99p' tmp.txt)" u 7:6 with lines lw 2 t 'disc factor = 80%'
 #unset multiplot
 
-set term pngcairo size 1280,1280 dashed dl 2.0 font ",16"
+set term pngcairo size 1280,1580 dashed dl 2.0 font ",16"
 set output '1.png'
-set multiplot layout 4,1
+set multiplot layout 5,1
 set title ARG1
 #set title 'BW'
 set xlabel "Time (sec)"
@@ -39,6 +39,13 @@ set ylabel "Discount factor (%)"
 set yrange [0:200]
 plot "a.txt" u 1:($11*100) with lines lw 2 t 'tuner mpc', \
 "b.txt" u 1:($11*100) with lines lw 2 t 'mpc default'
+
+set title 'When Ch pt Runs'
+set xlabel "Time (sec)"
+set ylabel "Chunk Downloaded"
+set yrange [0:50]
+plot "a.txt" u 1:7 with lines lw 2 t 'tuner mpc', \
+"b.txt" u 1:7 with lines lw 2 t 'mpc default'
 
 set title 'Ch pt Detection'
 set xlabel "Time (sec)"

@@ -22,13 +22,16 @@ import timeit
 def onlineCD(sessionHistory, chunk_when_last_chd, interval, playerVisibleBW):
   chd_detected = False
   chd_index = chunk_when_last_chd
-  trimThresh = 100
+  trimThresh = 1000
   lenarray = len(playerVisibleBW)
   playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
   R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
   #interval = 5
   interval = min(interval, len(playerVisibleBW))
   changeArray = R[interval,interval:-1]
+  #for i ,v in list(enumerate(changeArray)):
+  #  if v > 0.01:
+  #    print "loop",i + cutoff, playerVisibleBW[i], v
   for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
    # if v > 0.01 and i > chunk_when_last_chd:
    #   chd_index = i
@@ -43,6 +46,7 @@ def onlineCD(sessionHistory, chunk_when_last_chd, interval, playerVisibleBW):
       chd_detected = True
       #print chd_index, chd_detected, cutoff
       break
+  #print chd_detected, chd_index
   return chd_detected, chd_index
 
 
@@ -490,6 +494,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
       CDinterval = 5
       ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
       est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, ch_index)
+      #if ch_detected:
+      #  print time_curr, ch_index, len(playerVisibleBW), " new state = ", est_bandwidth, est_std
       #additive_inc = 0.0
       nsteps = 2.0
       p1_min_new = 0.0
@@ -510,7 +516,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
           dict_name_backup = "mpc_dash_syth_hyb_pen_table_4300_fix1010_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
           ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
-          discount = disc_max
+          discount = disc_median
           #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
