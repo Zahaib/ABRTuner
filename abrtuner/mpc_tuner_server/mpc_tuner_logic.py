@@ -26,6 +26,8 @@ SMOOTH_PENALTY = 0.0
 
 def getMPCDecision(bufferlen, bitrate, chunkid, future_bandwidth):
   # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
+  if chunkid > 48:
+    return chunkid
   windowSize = 5
   if chunkid + windowSize > TOTAL_VIDEO_CHUNKS:
     windowSize = TOTAL_VIDEO_CHUNKS - chunkid

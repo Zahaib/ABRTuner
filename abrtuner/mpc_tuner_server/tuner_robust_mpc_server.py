@@ -111,9 +111,9 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = mpc_tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                                  self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                cellsize = 1000
+                cellsize = 800
                 #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-                table = mpc_lookup_table_4300_fix.mpc_dash_syth_hyb_pen_table_4300_fix1010_1000
+                table = mpc_lookup_table_4300_fix.mpc_dash_syth_hyb_pen_table_4300_fix1010_800
                 ABRChoice, \
                 p1_min, \
                 p1_median, \
@@ -122,7 +122,7 @@ def make_request_handler(input_dict):
                                                           std_bw, \
                                                           cellsize)
                 # here we will get the discount factor from the table lookup
-                self.input_dict['discount'] = p1_min
+                self.input_dict['discount'] = p1_max
 
             mpcBW, \
             bandwidthEsts, \
@@ -138,7 +138,7 @@ def make_request_handler(input_dict):
 
             quality = mpc_tuner_logic.getMPCDecision(bufferLen, \
                     lastChunkBR, \
-                    self.input_dict['chunksDownloaded'], \
+                    lastChunkID + 1, \
                     mpcBW)
 
             end_of_video = False
@@ -152,7 +152,7 @@ def make_request_handler(input_dict):
                 self.input_dict['pastErrors'] = []
                 self.input_dict['chunksDownloaded'] = 0
                 self.input_dict['chunk_when_last_chd_ran'] = -1
-                self.input_dict['beta']
+                self.input_dict['discount'] = 0
 
 
             send_data = str(quality)
