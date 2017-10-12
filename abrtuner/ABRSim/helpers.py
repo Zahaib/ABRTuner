@@ -11,6 +11,7 @@ from dash_syn_simulation_hyb_performance_table import *
 from mpc_performancetable_syn import *
 from simulation_performance_vector import *
 from dash_syn_simulation_mpc_pen_performance_table_4300 import *
+from dash_syn_simulation_mpc_pen_performance_table_4300_fix1010 import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
 #from __future__ import print_function
@@ -21,24 +22,31 @@ import timeit
 def onlineCD(sessionHistory, chunk_when_last_chd, interval, playerVisibleBW):
   chd_detected = False
   chd_index = chunk_when_last_chd
-  trimThresh = 200
+  trimThresh = 1000
   lenarray = len(playerVisibleBW)
   playerVisibleBW, cutoff = trimPlayerVisibleBW(playerVisibleBW, trimThresh)
   R, maxes = oncd.online_changepoint_detection(np.asanyarray(playerVisibleBW), partial(oncd.constant_hazard, 250), oncd.StudentT(0.1,0.01,1,0))
   #interval = 5
   interval = min(interval, len(playerVisibleBW))
   changeArray = R[interval,interval:-1]
+  #for i ,v in list(enumerate(changeArray)):
+  #  if v > 0.01:
+  #    print "loop",i + cutoff, playerVisibleBW[i], v
   for i,v in reversed(list(enumerate(changeArray))): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
    # if v > 0.01 and i > chunk_when_last_chd:
    #   chd_index = i
    #   chd_detected = True
    #   print chd_index, chd_detected
    #   break
+    #print changeArray
+
+  #for i,v in list(enumerate(changeArray)): #reversed(list(enumerate(changeArray))): # enumerate(changeArray):
     if v > 0.01 and i + cutoff > chunk_when_last_chd and not (i == 0 and chunk_when_last_chd > -1):
       chd_index = i + cutoff
       chd_detected = True
       #print chd_index, chd_detected, cutoff
       break
+  #print chd_detected, chd_index
   return chd_detected, chd_index
 
 
@@ -104,8 +112,8 @@ def printHeader():
 def printStats(CANONICAL_TIME, BW, BLEN, BR, oldBR, CHUNKS_DOWNLOADED, BUFFTIME, PLAYTIME, chunk_residue):
   print str(round(CANONICAL_TIME/1000.0,2)) + "\t" + str(round(BW,2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(CHUNKS_DOWNLOADED) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2))
 
-def printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, oldBR, BR, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount):
-  print str(round(time_curr/1000.0,2)) + "\t" + str(round(bandwidth,2)) + "\t" + str(round(future_bandwidth, 2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(chunkid) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2)) + "\t" + str(round(max_error,4)) + "\t" + str(discount)
+def printStats_chd(time_curr, bandwidth, BLEN, future_bandwidth, oldBR, BR, chunkid, BUFFTIME, PLAYTIME, chunk_residue, max_error, discount, chunk_when_last_chd_ran):
+  print str(round(time_curr/1000.0,2)) + "\t" + str(round(bandwidth,2)) + "\t" + str(round(future_bandwidth, 2)) + "\t" + str(round(BLEN,2)) + "\t" + str(oldBR) + "\t" + str(BR) + "\t" + str(chunkid) + "\t" + str(round(chunk_residue,2)) + "\t" + str(round(BUFFTIME,2)) + "\t" + str(round(PLAYTIME,2)) + "\t" + str(round(max_error,4)) + "\t" + str(discount) + "\t" + str(chunk_when_last_chd_ran)
 
 # function initializes the state variables
 def initSysState():
@@ -483,9 +491,11 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
       ONCD = False
 
     if ONCD:
-      CDinterval = 2
+      CDinterval = 5
       ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
       est_bandwidth, est_std = getBWFeaturesWeightedPlayerVisible(playerVisibleBW, ch_index)
+      #if ch_detected:
+      #  print time_curr, ch_index, len(playerVisibleBW), " new state = ", est_bandwidth, est_std
       #additive_inc = 0.0
       nsteps = 2.0
       p1_min_new = 0.0
@@ -503,10 +513,10 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
             p1_min += additive_inc
             gradual_transition -= 1
         elif MPC_ABR:
-          dict_name_backup = "mpc_dash_syth_hyb_pen_table_4300_"+str(minCellSize)
+          dict_name_backup = "mpc_dash_syth_hyb_pen_table_4300_fix1010_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
           ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
-          discount = disc_max
+          discount = disc_median
           #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     

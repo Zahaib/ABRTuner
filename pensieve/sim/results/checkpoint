@@ -1,0 +1,6 @@
+model_checkpoint_path: "nn_model_ep_40800.ckpt"
+all_model_checkpoint_paths: "nn_model_ep_40400.ckpt"
+all_model_checkpoint_paths: "nn_model_ep_40500.ckpt"
+all_model_checkpoint_paths: "nn_model_ep_40600.ckpt"
+all_model_checkpoint_paths: "nn_model_ep_40700.ckpt"
+all_model_checkpoint_paths: "nn_model_ep_40800.ckpt"

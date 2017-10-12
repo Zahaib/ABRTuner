@@ -20,12 +20,14 @@ size_envivo = {0:[181801, 155580, 139857, 155432, 163442, 126289, 153295, 173849
 NUM_BITRATES = 6
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 TOTAL_VIDEO_CHUNKS = 48
-REBUF_PENALTY = 8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+REBUF_PENALTY = 4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
 SMOOTH_PENALTY = 0.0
 
 
 def getMPCDecision(bufferlen, bitrate, chunkid, future_bandwidth):
   # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
+  if chunkid > 48:
+    return chunkid
   windowSize = 5
   if chunkid + windowSize > TOTAL_VIDEO_CHUNKS:
     windowSize = TOTAL_VIDEO_CHUNKS - chunkid
@@ -179,7 +181,7 @@ def getMPCBW(chunkBWSamples, bandwidthEsts, pastErrors, chunkid, discount):
   curr_error = 0
   if len(bandwidthEsts) > 0:
     last_chunk_bw = (chunkBWSamples[-1] / 8) / 1000.0 # KBytes/ms or MBytes/sec
-    curr_error = abs(bandwidthEsts[-1] - last_chunk_bw)
+    curr_error = abs(bandwidthEsts[-1] - last_chunk_bw) / float(last_chunk_bw)
   pastErrors.append(curr_error)
   past_five = getPastFiveBW(chunkBWSamples, chunkid)
   bandwidth_sum = 0
@@ -199,7 +201,7 @@ def getMPCBW(chunkBWSamples, bandwidthEsts, pastErrors, chunkid, discount):
     future_bandwidth = harmonic_bandwidth/(1+max_error)
   #### Original code end.. ####
   else:
-    max_error = harmonic_bandwidth * (discount / 100.0)
+    max_error = discount / 100.0
     future_bandwidth = harmonic_bandwidth/(1+max_error)
   future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
 

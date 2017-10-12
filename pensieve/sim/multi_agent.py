@@ -23,8 +23,8 @@ HD_REWARD = [1, 2, 3, 12, 15, 20]
 BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 M_IN_K = 1000.0
-REBUF_PENALTY = 4.3 #8.6 #100000.0 #4.3  # 1 sec rebuffering -> 3 Mbps
-SMOOTH_PENALTY = 1.0 #0.0 #1
+REBUF_PENALTY = 8.6 #4.3 #8.6 #100000.0 #4.3  # 1 sec rebuffering -> 3 Mbps
+SMOOTH_PENALTY = 0.0 #1.0 #0.0 #1
 DEFAULT_QUALITY = 1  # default video quality without agent
 RANDOM_SEED = 42
 RAND_RANGE = 1000
@@ -33,8 +33,8 @@ LOG_FILE = './results/log'
 TEST_LOG_FOLDER = './test_results/'
 TRAIN_TRACES = './cooked_traces/'
 # NN_MODEL = './results/pretrain_linear_reward.ckpt'
-NN_MODEL = None
-
+#NN_MODEL = None
+NN_MODEL = './results/nn_model_ep_40000.ckpt'
 
 def testing(epoch, nn_model, log_file):
     # clean up the test results folder
@@ -107,7 +107,7 @@ def central_agent(net_params_queues, exp_queues):
             saver.restore(sess, nn_model)
             print("Model restored.")
 
-        epoch = 0
+        epoch = 40000
 
         # assemble experiences from agents, compute the gradients
         while True:
@@ -199,7 +199,7 @@ def central_agent(net_params_queues, exp_queues):
                     SUMMARY_DIR + "/nn_model_ep_" + str(epoch) + ".ckpt", 
                     test_log_file)
 
-            if epoch == 100000:
+            if epoch == 60000:
               return
 
 
