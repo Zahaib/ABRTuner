@@ -535,7 +535,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevelAdjusted,
+									                				'buffer': bufferLevel,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,

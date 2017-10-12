@@ -14,6 +14,7 @@ import time
 import mpc_tuner_logic
 import mpc_lookup_table_4300
 import mpc_lookup_table_4300_fix
+import mpc_lookup_table_4300_fix1012
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -111,9 +112,9 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = mpc_tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                                  self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                cellsize = 800
+                cellsize = 600
                 #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-                table = mpc_lookup_table_4300_fix.mpc_dash_syth_hyb_pen_table_4300_fix1010_800
+                table = mpc_lookup_table_4300_fix1012.mpc_dash_syth_hyb_pen_table_4300_fix1012_600
                 ABRChoice, \
                 p1_min, \
                 p1_median, \

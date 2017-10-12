@@ -2,6 +2,7 @@
 
 import sys, os
 import numpy as np
+from mpc_lookup_table_4300_fix1012 import *
 from mpc_lookup_table_4300 import *
 # from dash_syn_simulation_hyb_pen_performance_table_8600 import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
