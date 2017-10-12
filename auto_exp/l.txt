@@ -6,6 +6,22 @@ online-tuner_mobile_dash_trace_40_10314_out_txt
 4010314 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_143_13581_out_txt
+('total quality change events=', 25, 'total_quality_change=', 38400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 120900.0)
+('avgBitrate=', 2467.35, 'rebufRatio=', 0.0, 'QoE=', 2.4673469387755103)
+14313581 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_72_10587_out_txt
+('total quality change events=', 23, 'total_quality_change=', 42000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 156000.0)
+('avgBitrate=', 3183.67, 'rebufRatio=', 0.0, 'QoE=', 3.183673469387755)
+7210587 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_117_13053_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 12850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -70,6 +86,14 @@ online-tuner_desktop_dash_trace_49_111_out_txt
 49111 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_20_10409_out_txt
+('total quality change events=', 20, 'total_quality_change=', 26200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 30050.0)
+('avgBitrate=', 613.27, 'rebufRatio=', 0.0, 'QoE=', 0.613265306122449)
+2010409 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_123_13181_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 15100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -84,6 +108,14 @@ online-tuner_desktop_dash_trace_186_1863_out_txt
 ('total bitrate=', 137850.0)
 ('avgBitrate=', 2813.27, 'rebufRatio=', 0.0, 'QoE=', 2.813265306122449)
 1861863 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_184_1148_out_txt
+('total quality change events=', 26, 'total_quality_change=', 39600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 151150.0)
+('avgBitrate=', 3084.69, 'rebufRatio=', 0.0, 'QoE=', 3.0846938775510204)
+1841148 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_198_11677_out_txt
@@ -142,12 +174,28 @@ online-tuner_desktop_dash_trace_179_1664_out_txt
 1791664 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_100_12504_out_txt
+('total quality change events=', 36, 'total_quality_change=', 66800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 66450.0)
+('avgBitrate=', 1356.12, 'rebufRatio=', 0.0, 'QoE=', 1.356122448979592)
+10012504 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_59_1046_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 30100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 150750.0)
 ('avgBitrate=', 3076.53, 'rebufRatio=', 0.0, 'QoE=', 3.076530612244898)
 591046 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_67_10536_out_txt
+('total quality change events=', 5, 'total_quality_change=', 10000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184100.0)
+('avgBitrate=', 3757.14, 'rebufRatio=', 0.0, 'QoE=', 3.757142857142857)
+6710536 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_168_11288_out_txt
@@ -164,6 +212,14 @@ mpc-tuner_desktop_dash_trace_59_11472_out_txt
 ('total bitrate=', 83700.0)
 ('avgBitrate=', 1708.16, 'rebufRatio=', 0.0, 'QoE=', 1.7081632653061225)
 5911472 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_7_10068_out_txt
+('total quality change events=', 7, 'total_quality_change=', 17100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 188800.0)
+('avgBitrate=', 3853.06, 'rebufRatio=', 0.0, 'QoE=', 3.853061224489796)
+710068 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_87_10681_out_txt
@@ -246,6 +302,14 @@ online-tuner_desktop_dash_trace_242_3260_out_txt
 2423260 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_42_10994_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 195150.0)
+('avgBitrate=', 3982.65, 'rebufRatio=', 0.0, 'QoE=', 3.98265306122449)
+4210994 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_202_11689_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 25950)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -326,6 +390,14 @@ online-tuner_desktop_dash_trace_85_12172_out_txt
 8512172 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_130_13337_out_txt
+('total quality change events=', 23, 'total_quality_change=', 45300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159650.0)
+('avgBitrate=', 3258.16, 'rebufRatio=', 0.0, 'QoE=', 3.2581632653061225)
+13013337 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_225_2951_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 18000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -334,12 +406,28 @@ online-tuner_desktop_dash_trace_225_2951_out_txt
 2252951 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_208_11710_out_txt
+('total quality change events=', 39, 'total_quality_change=', 65000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 89250.0)
+('avgBitrate=', 1821.43, 'rebufRatio=', 0.0, 'QoE=', 1.8214285714285714)
+20811710 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_134_13395_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 201250.0)
 ('avgBitrate=', 4107.14, 'rebufRatio=', 0.0, 'QoE=', 4.107142857142857)
 13413395 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_43_10326_out_txt
+('total quality change events=', 26, 'total_quality_change=', 46500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 159500.0)
+('avgBitrate=', 3255.1, 'rebufRatio=', 0.0, 'QoE=', 3.2551020408163267)
+4310326 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_211_11746_out_txt
@@ -374,12 +462,36 @@ online-tuner_mobile_dash_trace_60_10468_out_txt
 6010468 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_175_11320_out_txt
+('total quality change events=', 6, 'total_quality_change=', 16000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 178250.0)
+('avgBitrate=', 3637.76, 'rebufRatio=', 0.0, 'QoE=', 3.6377551020408165)
+17511320 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_83_10674_out_txt
+('total quality change events=', 8, 'total_quality_change=', 13100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182800.0)
+('avgBitrate=', 3730.61, 'rebufRatio=', 0.0, 'QoE=', 3.7306122448979595)
+8310674 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_154_13780_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 29300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 124650.0)
 ('avgBitrate=', 2543.88, 'rebufRatio=', 0.0, 'QoE=', 2.543877551020408)
 15413780 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_28_1021_out_txt
+('total quality change events=', 18, 'total_quality_change=', 35800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170200.0)
+('avgBitrate=', 3473.47, 'rebufRatio=', 0.0, 'QoE=', 3.473469387755102)
+281021 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_103_1262_out_txt
@@ -404,6 +516,22 @@ mpc-tuner_mobile_dash_trace_171_1130_out_txt
 ('total bitrate=', 77150.0)
 ('avgBitrate=', 1574.49, 'rebufRatio=', 0.0, 'QoE=', 1.5744897959183675)
 1711130 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_105_10829_out_txt
+('total quality change events=', 32, 'total_quality_change=', 60800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 53100.0)
+('avgBitrate=', 1083.67, 'rebufRatio=', 0.0, 'QoE=', 1.0836734693877552)
+10510829 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_80_12_out_txt
+('total quality change events=', 39, 'total_quality_change=', 72200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 103850.0)
+('avgBitrate=', 2119.39, 'rebufRatio=', 0.0, 'QoE=', 2.1193877551020406)
+8012 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_140_13513_out_txt
@@ -454,6 +582,30 @@ mpc-tuner_desktop_dash_trace_250_3580_out_txt
 2503580 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_51_11136_out_txt
+('total quality change events=', 14, 'total_quality_change=', 21300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 155950.0)
+('avgBitrate=', 3182.65, 'rebufRatio=', 0.0, 'QoE=', 3.1826530612244897)
+5111136 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_89_1069_out_txt
+('total quality change events=', 12, 'total_quality_change=', 19600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182350.0)
+('avgBitrate=', 3721.43, 'rebufRatio=', 0.0, 'QoE=', 3.7214285714285715)
+891069 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_179_1664_out_txt
+('total quality change events=', 25, 'total_quality_change=', 52900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 154650.0)
+('avgBitrate=', 3156.12, 'rebufRatio=', 0.0, 'QoE=', 3.156122448979592)
+1791664 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_209_2565_out_txt
 ('total quality change events=', 19, 'total_quality_change=', 14850)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -486,6 +638,14 @@ mpc-tuner_desktop_dash_trace_216_2784_out_txt
 2162784 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_49_10393_out_txt
+('total quality change events=', 14, 'total_quality_change=', 26500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 180900.0)
+('avgBitrate=', 3691.84, 'rebufRatio=', 0.0, 'QoE=', 3.6918367346938776)
+4910393 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_114_10883_out_txt
 ('total quality change events=', 27, 'total_quality_change=', 22450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -500,6 +660,14 @@ mpc-tuner_mobile_dash_trace_180_11412_out_txt
 ('total bitrate=', 38800.0)
 ('avgBitrate=', 791.84, 'rebufRatio=', 0.0, 'QoE=', 0.7918367346938775)
 18011412 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_200_2296_out_txt
+('total quality change events=', 36, 'total_quality_change=', 67100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 104450.0)
+('avgBitrate=', 2131.63, 'rebufRatio=', 0.0, 'QoE=', 2.1316326530612244)
+2002296 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_62_10479_out_txt
@@ -574,6 +742,14 @@ mpc-tuner_desktop_dash_trace_97_12470_out_txt
 9712470 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_78_11980_out_txt
+('total quality change events=', 31, 'total_quality_change=', 52400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 54450.0)
+('avgBitrate=', 1111.22, 'rebufRatio=', 0.0, 'QoE=', 1.1112244897959185)
+7811980 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_240_3246_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -606,6 +782,14 @@ online-tuner_mobile_dash_trace_29_1022_out_txt
 291022 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_229_3020_out_txt
+('total quality change events=', 20, 'total_quality_change=', 45300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 40450.0)
+('avgBitrate=', 825.51, 'rebufRatio=', 0.0, 'QoE=', 0.8255102040816327)
+2293020 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_27_10553_out_txt
 ('total quality change events=', 24, 'total_quality_change=', 33000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -620,6 +804,14 @@ mpc-tuner_mobile_dash_trace_212_1175_out_txt
 ('total bitrate=', 194800.0)
 ('avgBitrate=', 3975.51, 'rebufRatio=', 0.0, 'QoE=', 3.975510204081633)
 2121175 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_200_11684_out_txt
+('total quality change events=', 25, 'total_quality_change=', 45700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 47700.0)
+('avgBitrate=', 973.47, 'rebufRatio=', 0.0, 'QoE=', 0.9734693877551021)
+20011684 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_228_2994_out_txt
@@ -660,6 +852,14 @@ online-tuner_desktop_dash_trace_248_3513_out_txt
 ('total bitrate=', 92000.0)
 ('avgBitrate=', 1877.55, 'rebufRatio=', 0.0, 'QoE=', 1.8775510204081634)
 2483513 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_1_10016_out_txt
+('total quality change events=', 40, 'total_quality_change=', 80400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 124400.0)
+('avgBitrate=', 2538.78, 'rebufRatio=', 0.0, 'QoE=', 2.538775510204082)
+110016 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_126_11010_out_txt
@@ -718,6 +918,14 @@ mpc-tuner_mobile_dash_trace_242_12065_out_txt
 24212065 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_7_10176_out_txt
+('total quality change events=', 41, 'total_quality_change=', 78300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 70450.0)
+('avgBitrate=', 1437.76, 'rebufRatio=', 0.0, 'QoE=', 1.4377551020408164)
+710176 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_48_10392_out_txt
 ('total quality change events=', 35, 'total_quality_change=', 63300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -774,12 +982,28 @@ online-tuner_mobile_dash_trace_102_10814_out_txt
 10210814 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_107_12761_out_txt
+('total quality change events=', 7, 'total_quality_change=', 16000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181350.0)
+('avgBitrate=', 3701.02, 'rebufRatio=', 0.0, 'QoE=', 3.701020408163265)
+10712761 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_162_13996_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 20000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 182000.0)
 ('avgBitrate=', 3714.29, 'rebufRatio=', 0.0, 'QoE=', 3.7142857142857144)
 16213996 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_158_13836_out_txt
+('total quality change events=', 25, 'total_quality_change=', 40500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 155350.0)
+('avgBitrate=', 3170.41, 'rebufRatio=', 0.0, 'QoE=', 3.170408163265306)
+15813836 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_217_11823_out_txt
@@ -790,12 +1014,36 @@ online-tuner_mobile_dash_trace_217_11823_out_txt
 21711823 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_117_13053_out_txt
+('total quality change events=', 29, 'total_quality_change=', 52600)
+('total buffering events=', 1, 'total buffering time=', 4.861999999999998)
+('total bitrate=', 53900.0)
+('avgBitrate=', 1100.0, 'rebufRatio=', 0.02420567354701237, 'QoE=', 0.24666938775510241)
+11713053 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_151_13754_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 47100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 151350.0)
 ('avgBitrate=', 3088.78, 'rebufRatio=', 0.0, 'QoE=', 3.0887755102040817)
 15113754 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_213_11751_out_txt
+('total quality change events=', 30, 'total_quality_change=', 52300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 145900.0)
+('avgBitrate=', 2977.55, 'rebufRatio=', 0.0, 'QoE=', 2.977551020408163)
+21311751 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_156_13817_out_txt
+('total quality change events=', 7, 'total_quality_change=', 16000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 189350.0)
+('avgBitrate=', 3864.29, 'rebufRatio=', 0.0, 'QoE=', 3.8642857142857143)
+15613817 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_53_11172_out_txt
@@ -838,12 +1086,44 @@ mpc-tuner_mobile_dash_trace_234_11958_out_txt
 23411958 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_209_2565_out_txt
+('total quality change events=', 30, 'total_quality_change=', 62400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 69350.0)
+('avgBitrate=', 1415.31, 'rebufRatio=', 0.0, 'QoE=', 1.4153061224489796)
+2092565 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_185_1854_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 52000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 78000.0)
 ('avgBitrate=', 1591.84, 'rebufRatio=', 0.0, 'QoE=', 1.5918367346938775)
 1851854 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_92_12422_out_txt
+('total quality change events=', 10, 'total_quality_change=', 19500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170600.0)
+('avgBitrate=', 3481.63, 'rebufRatio=', 0.0, 'QoE=', 3.4816326530612245)
+9212422 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_155_11207_out_txt
+('total quality change events=', 18, 'total_quality_change=', 31300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 36150.0)
+('avgBitrate=', 737.76, 'rebufRatio=', 0.0, 'QoE=', 0.7377551020408163)
+15511207 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_47_1109_out_txt
+('total quality change events=', 35, 'total_quality_change=', 66800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122050.0)
+('avgBitrate=', 2490.82, 'rebufRatio=', 0.0, 'QoE=', 2.490816326530612)
+471109 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_227_2978_out_txt
@@ -1014,6 +1294,30 @@ online-tuner_desktop_dash_trace_210_2579_out_txt
 2102579 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_143_11118_out_txt
+('total quality change events=', 22, 'total_quality_change=', 44600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 152900.0)
+('avgBitrate=', 3120.41, 'rebufRatio=', 0.0, 'QoE=', 3.1204081632653065)
+14311118 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_103_10816_out_txt
+('total quality change events=', 30, 'total_quality_change=', 53800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 148950.0)
+('avgBitrate=', 3039.8, 'rebufRatio=', 0.0, 'QoE=', 3.039795918367347)
+10310816 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_38_10931_out_txt
+('total quality change events=', 5, 'total_quality_change=', 6900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 21250.0)
+('avgBitrate=', 433.67, 'rebufRatio=', 0.0, 'QoE=', 0.4336734693877551)
+3810931 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_188_11529_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 37400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1038,6 +1342,14 @@ online-tuner_desktop_dash_trace_127_13270_out_txt
 12713270 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_235_3089_out_txt
+('total quality change events=', 18, 'total_quality_change=', 38400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 168450.0)
+('avgBitrate=', 3437.76, 'rebufRatio=', 0.0, 'QoE=', 3.437755102040816)
+2353089 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_97_12470_out_txt
 ('total quality change events=', 8, 'total_quality_change=', 9300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1052,6 +1364,14 @@ online-tuner_mobile_dash_trace_120_10941_out_txt
 ('total bitrate=', 190100.0)
 ('avgBitrate=', 3879.59, 'rebufRatio=', 0.0, 'QoE=', 3.8795918367346935)
 12010941 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_112_10874_out_txt
+('total quality change events=', 17, 'total_quality_change=', 26500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 164950.0)
+('avgBitrate=', 3366.33, 'rebufRatio=', 0.0, 'QoE=', 3.3663265306122447)
+11210874 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_186_11497_out_txt
@@ -1070,6 +1390,14 @@ online-tuner_desktop_dash_trace_77_11969_out_txt
 7711969 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_126_13250_out_txt
+('total quality change events=', 36, 'total_quality_change=', 69500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 65700.0)
+('avgBitrate=', 1340.82, 'rebufRatio=', 0.0, 'QoE=', 1.3408163265306123)
+12613250 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_15_10308_out_txt
 ('total quality change events=', 31, 'total_quality_change=', 49500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1084,6 +1412,14 @@ mpc-tuner_mobile_dash_trace_22_1016_out_txt
 ('total bitrate=', 47050.0)
 ('avgBitrate=', 960.2, 'rebufRatio=', 0.0, 'QoE=', 0.960204081632653)
 221016 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_149_11160_out_txt
+('total quality change events=', 35, 'total_quality_change=', 64400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 121650.0)
+('avgBitrate=', 2482.65, 'rebufRatio=', 0.0, 'QoE=', 2.48265306122449)
+14911160 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_126_13250_out_txt
@@ -1158,6 +1494,14 @@ mpc-tuner_mobile_dash_trace_18_10122_out_txt
 1810122 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_18_10372_out_txt
+('total quality change events=', 29, 'total_quality_change=', 53000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 155600.0)
+('avgBitrate=', 3175.51, 'rebufRatio=', 0.0, 'QoE=', 3.1755102040816325)
+1810372 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_116_10903_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1198,6 +1542,14 @@ mpc-tuner_mobile_dash_trace_154_11204_out_txt
 15411204 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_101_12569_out_txt
+('total quality change events=', 29, 'total_quality_change=', 47000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 142800.0)
+('avgBitrate=', 2914.29, 'rebufRatio=', 0.0, 'QoE=', 2.9142857142857146)
+10112569 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_77_11969_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 43100)
 ('total buffering events=', 1, 'total buffering time=', 1.4309999999999974)
@@ -1220,6 +1572,14 @@ online-tuner_mobile_dash_trace_88_10685_out_txt
 ('total bitrate=', 136700.0)
 ('avgBitrate=', 2789.8, 'rebufRatio=', 0.0, 'QoE=', 2.789795918367347)
 8810685 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_3_10068_out_txt
+('total quality change events=', 36, 'total_quality_change=', 82300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 94900.0)
+('avgBitrate=', 1936.73, 'rebufRatio=', 0.0, 'QoE=', 1.9367346938775512)
+310068 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_88_12276_out_txt
@@ -1246,6 +1606,14 @@ online-tuner_desktop_dash_trace_230_3028_out_txt
 2303028 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_54_10418_out_txt
+('total quality change events=', 2, 'total_quality_change=', 3100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 16250.0)
+('avgBitrate=', 331.63, 'rebufRatio=', 0.0, 'QoE=', 0.33163265306122447)
+5410418 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_211_11746_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1270,6 +1638,14 @@ online-tuner_desktop_dash_trace_17_10324_out_txt
 1710324 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_160_11224_out_txt
+('total quality change events=', 6, 'total_quality_change=', 9800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 19600.0)
+('avgBitrate=', 400.0, 'rebufRatio=', 0.0, 'QoE=', 0.4)
+16011224 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_150_1372_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 12050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1292,6 +1668,46 @@ online-tuner_desktop_dash_trace_166_1456_out_txt
 ('total bitrate=', 165650.0)
 ('avgBitrate=', 3380.61, 'rebufRatio=', 0.0, 'QoE=', 3.3806122448979594)
 1661456 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_11_10253_out_txt
+('total quality change events=', 21, 'total_quality_change=', 39300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 153300.0)
+('avgBitrate=', 3128.57, 'rebufRatio=', 0.0, 'QoE=', 3.128571428571429)
+1110253 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_206_11709_out_txt
+('total quality change events=', 24, 'total_quality_change=', 39000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170600.0)
+('avgBitrate=', 3481.63, 'rebufRatio=', 0.0, 'QoE=', 3.4816326530612245)
+20611709 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_231_11935_out_txt
+('total quality change events=', 13, 'total_quality_change=', 31300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 169800.0)
+('avgBitrate=', 3465.31, 'rebufRatio=', 0.0, 'QoE=', 3.46530612244898)
+23111935 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_198_11677_out_txt
+('total quality change events=', 28, 'total_quality_change=', 49100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 44400.0)
+('avgBitrate=', 906.12, 'rebufRatio=', 0.0, 'QoE=', 0.9061224489795918)
+19811677 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_21_10150_out_txt
+('total quality change events=', 34, 'total_quality_change=', 52800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 156250.0)
+('avgBitrate=', 3188.78, 'rebufRatio=', 0.0, 'QoE=', 3.188775510204082)
+2110150 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_148_1115_out_txt
@@ -1334,12 +1750,28 @@ online-tuner_desktop_dash_trace_106_12713_out_txt
 10612713 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_230_3028_out_txt
+('total quality change events=', 11, 'total_quality_change=', 24200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 179900.0)
+('avgBitrate=', 3671.43, 'rebufRatio=', 0.0, 'QoE=', 3.6714285714285717)
+2303028 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_20_10409_out_txt
 ('total quality change events=', 20, 'total_quality_change=', 9000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 31350.0)
 ('avgBitrate=', 639.8, 'rebufRatio=', 0.0, 'QoE=', 0.639795918367347)
 2010409 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_110_10865_out_txt
+('total quality change events=', 31, 'total_quality_change=', 53700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 50550.0)
+('avgBitrate=', 1031.63, 'rebufRatio=', 0.0, 'QoE=', 1.0316326530612245)
+11010865 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_55_10441_out_txt
@@ -1366,12 +1798,36 @@ online-tuner_desktop_dash_trace_92_12422_out_txt
 9212422 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_197_2149_out_txt
+('total quality change events=', 33, 'total_quality_change=', 60400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 130200.0)
+('avgBitrate=', 2657.14, 'rebufRatio=', 0.0, 'QoE=', 2.657142857142857)
+1972149 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_243_3278_out_txt
+('total quality change events=', 8, 'total_quality_change=', 15800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190900.0)
+('avgBitrate=', 3895.92, 'rebufRatio=', 0.0, 'QoE=', 3.895918367346939)
+2433278 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_227_11920_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 17300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 44700.0)
 ('avgBitrate=', 912.24, 'rebufRatio=', 0.0, 'QoE=', 0.9122448979591837)
 22711920 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_163_14016_out_txt
+('total quality change events=', 31, 'total_quality_change=', 52000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 124150.0)
+('avgBitrate=', 2533.67, 'rebufRatio=', 0.0, 'QoE=', 2.533673469387755)
+16314016 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_46_11077_out_txt
@@ -1382,12 +1838,36 @@ online-tuner_desktop_dash_trace_46_11077_out_txt
 4611077 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_55_11302_out_txt
+('total quality change events=', 33, 'total_quality_change=', 79300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 130450.0)
+('avgBitrate=', 2662.24, 'rebufRatio=', 0.0, 'QoE=', 2.6622448979591833)
+5511302 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_97_10779_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 63600.0)
+('avgBitrate=', 1297.96, 'rebufRatio=', 0.0, 'QoE=', 1.2979591836734694)
+9710779 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_44_11017_out_txt
 ('total quality change events=', 34, 'total_quality_change=', 34000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 113600.0)
 ('avgBitrate=', 2318.37, 'rebufRatio=', 0.0, 'QoE=', 2.3183673469387753)
 4411017 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_127_11019_out_txt
+('total quality change events=', 8, 'total_quality_change=', 15800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191900.0)
+('avgBitrate=', 3916.33, 'rebufRatio=', 0.0, 'QoE=', 3.916326530612245)
+12711019 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_220_2878_out_txt
@@ -1414,12 +1894,28 @@ online-tuner_desktop_dash_trace_165_1445_out_txt
 1651445 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_209_1172_out_txt
+('total quality change events=', 31, 'total_quality_change=', 56600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 113400.0)
+('avgBitrate=', 2314.29, 'rebufRatio=', 0.0, 'QoE=', 2.3142857142857145)
+2091172 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_192_11566_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 10450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 59600.0)
 ('avgBitrate=', 1216.33, 'rebufRatio=', 0.0, 'QoE=', 1.2163265306122448)
 19211566 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_124_13183_out_txt
+('total quality change events=', 34, 'total_quality_change=', 69000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 96300.0)
+('avgBitrate=', 1965.31, 'rebufRatio=', 0.0, 'QoE=', 1.9653061224489796)
+12413183 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_163_14016_out_txt
@@ -1436,6 +1932,14 @@ online-tuner_desktop_dash_trace_51_11136_out_txt
 ('total bitrate=', 165400.0)
 ('avgBitrate=', 3375.51, 'rebufRatio=', 0.00024993751562112836, 'QoE=', 3.3669102040816314)
 5111136 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_31_10635_out_txt
+('total quality change events=', 39, 'total_quality_change=', 70800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 68150.0)
+('avgBitrate=', 1390.82, 'rebufRatio=', 0.0, 'QoE=', 1.3908163265306124)
+3110635 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_182_11458_out_txt
@@ -1460,6 +1964,14 @@ online-tuner_mobile_dash_trace_82_10673_out_txt
 ('total bitrate=', 194250.0)
 ('avgBitrate=', 3964.29, 'rebufRatio=', 0.0, 'QoE=', 3.9642857142857144)
 8210673 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_73_10591_out_txt
+('total quality change events=', 25, 'total_quality_change=', 41100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 123350.0)
+('avgBitrate=', 2517.35, 'rebufRatio=', 0.0, 'QoE=', 2.51734693877551)
+7310591 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_16_1031_out_txt
@@ -1566,6 +2078,14 @@ online-tuner_desktop_dash_trace_3_10068_out_txt
 310068 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_203_11691_out_txt
+('total quality change events=', 4, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194800.0)
+('avgBitrate=', 3975.51, 'rebufRatio=', 0.0, 'QoE=', 3.975510204081633)
+20311691 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_147_13680_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 10350)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1588,6 +2108,14 @@ online-tuner_mobile_dash_trace_242_12065_out_txt
 ('total bitrate=', 194450.0)
 ('avgBitrate=', 3968.37, 'rebufRatio=', 0.0, 'QoE=', 3.9683673469387752)
 24212065 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_25_10531_out_txt
+('total quality change events=', 9, 'total_quality_change=', 18000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181250.0)
+('avgBitrate=', 3698.98, 'rebufRatio=', 0.0, 'QoE=', 3.6989795918367347)
+2510531 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_66_11678_out_txt
@@ -1646,6 +2174,14 @@ online-tuner_mobile_dash_trace_61_10471_out_txt
 6110471 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_76_11917_out_txt
+('total quality change events=', 8, 'total_quality_change=', 17800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182550.0)
+('avgBitrate=', 3725.51, 'rebufRatio=', 0.0, 'QoE=', 3.725510204081633)
+7611917 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_244_3285_out_txt
 ('total quality change events=', 19, 'total_quality_change=', 13550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1654,12 +2190,28 @@ online-tuner_desktop_dash_trace_244_3285_out_txt
 2443285 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_39_10940_out_txt
+('total quality change events=', 39, 'total_quality_change=', 72600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 75100.0)
+('avgBitrate=', 1532.65, 'rebufRatio=', 0.0, 'QoE=', 1.5326530612244897)
+3910940 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_236_3126_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 195700.0)
 ('avgBitrate=', 3993.88, 'rebufRatio=', 0.0, 'QoE=', 3.993877551020408)
 2363126 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_159_13897_out_txt
+('total quality change events=', 42, 'total_quality_change=', 80000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 91700.0)
+('avgBitrate=', 1871.43, 'rebufRatio=', 0.0, 'QoE=', 1.8714285714285714)
+15913897 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_165_11273_out_txt
@@ -1678,12 +2230,36 @@ online-tuner_desktop_dash_trace_201_2300_out_txt
 2012300 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_24_1050_out_txt
+('total quality change events=', 25, 'total_quality_change=', 44200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 110500.0)
+('avgBitrate=', 2255.1, 'rebufRatio=', 0.0, 'QoE=', 2.2551020408163267)
+241050 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_86_10680_out_txt
+('total quality change events=', 28, 'total_quality_change=', 44500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 153350.0)
+('avgBitrate=', 3129.59, 'rebufRatio=', 0.0, 'QoE=', 3.1295918367346935)
+8610680 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_185_11496_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 36050)
 ('total buffering events=', 4, 'total buffering time=', 25.905999999999988)
 ('total bitrate=', 51300.0)
 ('avgBitrate=', 1046.94, 'rebufRatio=', 0.11674312546754027, 'QoE=', -3.4998285714285693)
 18511496 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_190_11535_out_txt
+('total quality change events=', 9, 'total_quality_change=', 16700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191450.0)
+('avgBitrate=', 3907.14, 'rebufRatio=', 0.0, 'QoE=', 3.907142857142857)
+19011535 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_201_11685_out_txt
@@ -1726,6 +2302,22 @@ online-tuner_desktop_dash_trace_222_2892_out_txt
 2222892 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_36_10689_out_txt
+('total quality change events=', 19, 'total_quality_change=', 36900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 167900.0)
+('avgBitrate=', 3426.53, 'rebufRatio=', 0.0, 'QoE=', 3.426530612244898)
+3610689 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_91_12382_out_txt
+('total quality change events=', 21, 'total_quality_change=', 45300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 154450.0)
+('avgBitrate=', 3152.04, 'rebufRatio=', 0.0, 'QoE=', 3.1520408163265303)
+9112382 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_34_10244_out_txt
 ('total quality change events=', 28, 'total_quality_change=', 31450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1756,6 +2348,22 @@ online-tuner_desktop_dash_trace_118_13079_out_txt
 ('total bitrate=', 64250.0)
 ('avgBitrate=', 1311.22, 'rebufRatio=', 0.0, 'QoE=', 1.3112244897959184)
 11813079 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_177_11381_out_txt
+('total quality change events=', 29, 'total_quality_change=', 54400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 130750.0)
+('avgBitrate=', 2668.37, 'rebufRatio=', 0.0, 'QoE=', 2.6683673469387754)
+17711381 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_65_11673_out_txt
+('total quality change events=', 19, 'total_quality_change=', 31400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 171450.0)
+('avgBitrate=', 3498.98, 'rebufRatio=', 0.0, 'QoE=', 3.4989795918367346)
+6511673 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_50_1040_out_txt
@@ -1798,6 +2406,14 @@ online-tuner_desktop_dash_trace_249_3539_out_txt
 2493539 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_145_11135_out_txt
+('total quality change events=', 31, 'total_quality_change=', 59800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 139300.0)
+('avgBitrate=', 2842.86, 'rebufRatio=', 0.0, 'QoE=', 2.842857142857143)
+14511135 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_105_1265_out_txt
 ('total quality change events=', 9, 'total_quality_change=', 8000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1814,12 +2430,28 @@ online-tuner_mobile_dash_trace_41_10322_out_txt
 4110322 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_189_1939_out_txt
+('total quality change events=', 35, 'total_quality_change=', 74700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 137850.0)
+('avgBitrate=', 2813.27, 'rebufRatio=', 0.0, 'QoE=', 2.813265306122449)
+1891939 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_76_10632_out_txt
 ('total quality change events=', 8, 'total_quality_change=', 18000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 189150.0)
 ('avgBitrate=', 3860.2, 'rebufRatio=', 0.0, 'QoE=', 3.860204081632653)
 7610632 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_137_13435_out_txt
+('total quality change events=', 12, 'total_quality_change=', 20000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 179550.0)
+('avgBitrate=', 3664.29, 'rebufRatio=', 0.0, 'QoE=', 3.6642857142857146)
+13713435 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_125_11002_out_txt
@@ -1836,6 +2468,14 @@ online-tuner_mobile_dash_trace_37_10288_out_txt
 ('total bitrate=', 119800.0)
 ('avgBitrate=', 2444.9, 'rebufRatio=', 0.0, 'QoE=', 2.4448979591836735)
 3710288 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_222_11878_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193250.0)
+('avgBitrate=', 3943.88, 'rebufRatio=', 0.0, 'QoE=', 3.943877551020408)
+22211878 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_162_11249_out_txt
@@ -1878,6 +2518,14 @@ mpc-tuner_mobile_dash_trace_69_10574_out_txt
 6910574 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_234_3060_out_txt
+('total quality change events=', 6, 'total_quality_change=', 12900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 192350.0)
+('avgBitrate=', 3925.51, 'rebufRatio=', 0.0, 'QoE=', 3.9255102040816325)
+2343060 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_73_11874_out_txt
 ('total quality change events=', 12, 'total_quality_change=', 14500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -1894,12 +2542,28 @@ online-tuner_desktop_dash_trace_72_11824_out_txt
 7211824 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_210_2579_out_txt
+('total quality change events=', 20, 'total_quality_change=', 33900)
+('total buffering events=', 1, 'total buffering time=', 5.442000000000007)
+('total bitrate=', 36350.0)
+('avgBitrate=', 741.84, 'rebufRatio=', 0.02701522026191165, 'QoE=', -0.2132897959183685)
+2102579 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_78_11980_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 6450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 54100.0)
 ('avgBitrate=', 1104.08, 'rebufRatio=', 0.0, 'QoE=', 1.1040816326530614)
 7811980 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_134_13395_out_txt
+('total quality change events=', 6, 'total_quality_change=', 13800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 192900.0)
+('avgBitrate=', 3936.73, 'rebufRatio=', 0.0, 'QoE=', 3.936734693877551)
+13413395 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_87_10681_out_txt
@@ -1916,6 +2580,14 @@ mpc-tuner_mobile_dash_trace_164_11267_out_txt
 ('total bitrate=', 91500.0)
 ('avgBitrate=', 1867.35, 'rebufRatio=', 0.0, 'QoE=', 1.8673469387755102)
 16411267 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_128_11026_out_txt
+('total quality change events=', 12, 'total_quality_change=', 30000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 180900.0)
+('avgBitrate=', 3691.84, 'rebufRatio=', 0.0, 'QoE=', 3.6918367346938776)
+12811026 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_131_1335_out_txt
@@ -1948,6 +2620,14 @@ online-tuner_mobile_dash_trace_17_10115_out_txt
 ('total bitrate=', 114250.0)
 ('avgBitrate=', 2331.63, 'rebufRatio=', 0.0, 'QoE=', 2.3316326530612246)
 1710115 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_233_11956_out_txt
+('total quality change events=', 21, 'total_quality_change=', 33100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 34800.0)
+('avgBitrate=', 710.2, 'rebufRatio=', 0.0, 'QoE=', 0.710204081632653)
+23311956 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_33_10239_out_txt
@@ -1990,6 +2670,14 @@ online-tuner_desktop_dash_trace_238_3197_out_txt
 2383197 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_40_10314_out_txt
+('total quality change events=', 28, 'total_quality_change=', 57800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 139650.0)
+('avgBitrate=', 2850.0, 'rebufRatio=', 0.0, 'QoE=', 2.85)
+4010314 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_227_11920_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 51300)
 ('total buffering events=', 1, 'total buffering time=', 5.656000000000006)
@@ -2030,6 +2718,22 @@ mpc-tuner_mobile_dash_trace_229_11932_out_txt
 22911932 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_53_10415_out_txt
+('total quality change events=', 9, 'total_quality_change=', 15800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186350.0)
+('avgBitrate=', 3803.06, 'rebufRatio=', 0.0, 'QoE=', 3.8030612244897957)
+5310415 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_225_2951_out_txt
+('total quality change events=', 36, 'total_quality_change=', 61900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 67250.0)
+('avgBitrate=', 1372.45, 'rebufRatio=', 0.0, 'QoE=', 1.3724489795918366)
+2252951 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_20_10128_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 18700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2062,12 +2766,44 @@ mpc-tuner_desktop_dash_trace_123_13181_out_txt
 12313181 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_109_12826_out_txt
+('total quality change events=', 34, 'total_quality_change=', 68800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122350.0)
+('avgBitrate=', 2496.94, 'rebufRatio=', 0.0, 'QoE=', 2.496938775510204)
+10912826 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_191_11536_out_txt
+('total quality change events=', 17, 'total_quality_change=', 27300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 168000.0)
+('avgBitrate=', 3428.57, 'rebufRatio=', 0.0, 'QoE=', 3.4285714285714284)
+19111536 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_108_10845_out_txt
 ('total quality change events=', 12, 'total_quality_change=', 6250)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 35600.0)
 ('avgBitrate=', 726.53, 'rebufRatio=', 0.0, 'QoE=', 0.726530612244898)
 10810845 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_123_10990_out_txt
+('total quality change events=', 11, 'total_quality_change=', 18000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 27700.0)
+('avgBitrate=', 565.31, 'rebufRatio=', 0.0, 'QoE=', 0.5653061224489796)
+12310990 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_96_1247_out_txt
+('total quality change events=', 34, 'total_quality_change=', 60200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 73350.0)
+('avgBitrate=', 1496.94, 'rebufRatio=', 0.0, 'QoE=', 1.496938775510204)
+961247 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_74_11899_out_txt
@@ -2094,12 +2830,36 @@ online-tuner_desktop_dash_trace_167_1457_out_txt
 1671457 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_121_1310_out_txt
+('total quality change events=', 2, 'total_quality_change=', 900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 15150.0)
+('avgBitrate=', 309.18, 'rebufRatio=', 0.0, 'QoE=', 0.30918367346938774)
+1211310 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_97_10779_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 19050)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 67000.0)
 ('avgBitrate=', 1367.35, 'rebufRatio=', 0.0, 'QoE=', 1.3673469387755102)
 9710779 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_178_1663_out_txt
+('total quality change events=', 35, 'total_quality_change=', 57100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 51750.0)
+('avgBitrate=', 1056.12, 'rebufRatio=', 0.0, 'QoE=', 1.0561224489795917)
+1781663 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_33_10239_out_txt
+('total quality change events=', 33, 'total_quality_change=', 60600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 129950.0)
+('avgBitrate=', 2652.04, 'rebufRatio=', 0.0, 'QoE=', 2.6520408163265303)
+3310239 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_109_12826_out_txt
@@ -2110,6 +2870,14 @@ online-tuner_desktop_dash_trace_109_12826_out_txt
 10912826 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_118_10938_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 196250.0)
+('avgBitrate=', 4005.1, 'rebufRatio=', 0.0, 'QoE=', 4.005102040816326)
+11810938 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_115_10895_out_txt
 ('total quality change events=', 29, 'total_quality_change=', 47300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2118,12 +2886,36 @@ mpc-tuner_mobile_dash_trace_115_10895_out_txt
 11510895 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_158_11214_out_txt
+('total quality change events=', 31, 'total_quality_change=', 61500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 58250.0)
+('avgBitrate=', 1188.78, 'rebufRatio=', 0.0, 'QoE=', 1.1887755102040816)
+15811214 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_220_11851_out_txt
 ('total quality change events=', 30, 'total_quality_change=', 53700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 53350.0)
 ('avgBitrate=', 1088.78, 'rebufRatio=', 0.0, 'QoE=', 1.0887755102040817)
 22011851 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_6_10145_out_txt
+('total quality change events=', 30, 'total_quality_change=', 59300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 141550.0)
+('avgBitrate=', 2888.78, 'rebufRatio=', 0.0, 'QoE=', 2.888775510204082)
+610145 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_111_10868_out_txt
+('total quality change events=', 12, 'total_quality_change=', 23600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181800.0)
+('avgBitrate=', 3710.2, 'rebufRatio=', 0.0, 'QoE=', 3.710204081632653)
+11110868 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_200_11684_out_txt
@@ -2198,6 +2990,14 @@ online-tuner_mobile_dash_trace_164_11267_out_txt
 16411267 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_203_2306_out_txt
+('total quality change events=', 10, 'total_quality_change=', 22000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 183000.0)
+('avgBitrate=', 3734.69, 'rebufRatio=', 0.0, 'QoE=', 3.7346938775510203)
+2032306 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_175_1632_out_txt
 ('total quality change events=', 26, 'total_quality_change=', 24300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2246,6 +3046,14 @@ mpc-tuner_mobile_dash_trace_130_11028_out_txt
 13011028 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_196_11593_out_txt
+('total quality change events=', 9, 'total_quality_change=', 22000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181450.0)
+('avgBitrate=', 3703.06, 'rebufRatio=', 0.0, 'QoE=', 3.7030612244897956)
+19611593 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_219_1185_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 7750)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2262,12 +3070,52 @@ online-tuner_desktop_dash_trace_8_10202_out_txt
 810202 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_179_11398_out_txt
+('total quality change events=', 5, 'total_quality_change=', 10900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194150.0)
+('avgBitrate=', 3962.24, 'rebufRatio=', 0.0, 'QoE=', 3.962244897959184)
+17911398 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_187_189_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 9150)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 40650.0)
 ('avgBitrate=', 829.59, 'rebufRatio=', 0.0, 'QoE=', 0.8295918367346938)
 187189 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_61_11601_out_txt
+('total quality change events=', 34, 'total_quality_change=', 69900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 122450.0)
+('avgBitrate=', 2498.98, 'rebufRatio=', 0.0, 'QoE=', 2.4989795918367346)
+6111601 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_117_10918_out_txt
+('total quality change events=', 16, 'total_quality_change=', 21600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 27950.0)
+('avgBitrate=', 570.41, 'rebufRatio=', 0.0, 'QoE=', 0.5704081632653061)
+11710918 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_70_11752_out_txt
+('total quality change events=', 34, 'total_quality_change=', 61100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 135400.0)
+('avgBitrate=', 2763.27, 'rebufRatio=', 0.0, 'QoE=', 2.7632653061224492)
+7011752 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_108_12811_out_txt
+('total quality change events=', 22, 'total_quality_change=', 37700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 146000.0)
+('avgBitrate=', 2979.59, 'rebufRatio=', 0.0, 'QoE=', 2.979591836734694)
+10812811 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_70_10575_out_txt
@@ -2286,6 +3134,22 @@ mpc-tuner_mobile_dash_trace_131_11035_out_txt
 13111035 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_155_1379_out_txt
+('total quality change events=', 23, 'total_quality_change=', 44300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 167200.0)
+('avgBitrate=', 3412.24, 'rebufRatio=', 0.0, 'QoE=', 3.4122448979591833)
+1551379 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_42_10324_out_txt
+('total quality change events=', 21, 'total_quality_change=', 38400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 42350.0)
+('avgBitrate=', 864.29, 'rebufRatio=', 0.0, 'QoE=', 0.8642857142857143)
+4210324 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_246_12114_out_txt
 ('total quality change events=', 7, 'total_quality_change=', 15800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2300,6 +3164,14 @@ online-tuner_desktop_dash_trace_199_2212_out_txt
 ('total bitrate=', 188450.0)
 ('avgBitrate=', 3845.92, 'rebufRatio=', 0.0, 'QoE=', 3.8459183673469384)
 1992212 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_132_13355_out_txt
+('total quality change events=', 38, 'total_quality_change=', 64300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 108300.0)
+('avgBitrate=', 2210.2, 'rebufRatio=', 0.0, 'QoE=', 2.210204081632653)
+13213355 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_41_10960_out_txt
@@ -2398,12 +3270,36 @@ online-tuner_mobile_dash_trace_106_10833_out_txt
 10610833 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_141_11104_out_txt
+('total quality change events=', 12, 'total_quality_change=', 25100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 180900.0)
+('avgBitrate=', 3691.84, 'rebufRatio=', 0.0, 'QoE=', 3.6918367346938776)
+14111104 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_205_2361_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 54050.0)
+('avgBitrate=', 1103.06, 'rebufRatio=', 0.0, 'QoE=', 1.103061224489796)
+2052361 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_20_10128_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 198800.0)
 ('avgBitrate=', 4057.14, 'rebufRatio=', 0.0, 'QoE=', 4.057142857142857)
 2010128 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_69_11728_out_txt
+('total quality change events=', 31, 'total_quality_change=', 65500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 90900.0)
+('avgBitrate=', 1855.1, 'rebufRatio=', 0.0, 'QoE=', 1.8551020408163266)
+6911728 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_231_11935_out_txt
@@ -2430,6 +3326,14 @@ online-tuner_mobile_dash_trace_124_11000_out_txt
 12411000 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_217_2803_out_txt
+('total quality change events=', 29, 'total_quality_change=', 57500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 138350.0)
+('avgBitrate=', 2823.47, 'rebufRatio=', 0.0, 'QoE=', 2.823469387755102)
+2172803 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_124_13183_out_txt
 ('total quality change events=', 29, 'total_quality_change=', 29400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2446,6 +3350,14 @@ online-tuner_mobile_dash_trace_65_10505_out_txt
 6510505 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_129_13319_out_txt
+('total quality change events=', 9, 'total_quality_change=', 17800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 185550.0)
+('avgBitrate=', 3786.73, 'rebufRatio=', 0.0, 'QoE=', 3.7867346938775515)
+12913319 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_217_11823_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 35600)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2460,6 +3372,14 @@ online-tuner_mobile_dash_trace_158_11214_out_txt
 ('total bitrate=', 59900.0)
 ('avgBitrate=', 1222.45, 'rebufRatio=', 0.0, 'QoE=', 1.2224489795918367)
 15811214 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_193_11570_out_txt
+('total quality change events=', 41, 'total_quality_change=', 91000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 92150.0)
+('avgBitrate=', 1880.61, 'rebufRatio=', 0.0, 'QoE=', 1.8806122448979592)
+19311570 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_16_10114_out_txt
@@ -2484,6 +3404,14 @@ mpc-tuner_mobile_dash_trace_82_10673_out_txt
 ('total bitrate=', 182150.0)
 ('avgBitrate=', 3717.35, 'rebufRatio=', 0.0, 'QoE=', 3.7173469387755103)
 8210673 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_96_10773_out_txt
+('total quality change events=', 4, 'total_quality_change=', 2700)
+('total buffering events=', 7, 'total buffering time=', 2.2310000000000016)
+('total bitrate=', 16500.0)
+('avgBitrate=', 336.73, 'rebufRatio=', 0.011254546463469395, 'QoE=', -0.05482857142857169)
+9610773 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_151_13754_out_txt
@@ -2574,6 +3502,14 @@ online-tuner_desktop_dash_trace_84_12162_out_txt
 8412162 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_13_10095_out_txt
+('total quality change events=', 40, 'total_quality_change=', 84400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 111850.0)
+('avgBitrate=', 2282.65, 'rebufRatio=', 0.0, 'QoE=', 2.2826530612244897)
+1310095 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_39_10940_out_txt
 ('total quality change events=', 18, 'total_quality_change=', 15000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2590,12 +3526,28 @@ online-tuner_desktop_dash_trace_135_13396_out_txt
 13513396 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_215_11784_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 197250.0)
+('avgBitrate=', 4025.51, 'rebufRatio=', 0.0, 'QoE=', 4.025510204081633)
+21511784 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_79_10662_out_txt
 ('total quality change events=', 1, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 202700.0)
 ('avgBitrate=', 4136.73, 'rebufRatio=', 0.0, 'QoE=', 4.136734693877551)
 7910662 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_26_10176_out_txt
+('total quality change events=', 38, 'total_quality_change=', 68800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 66350.0)
+('avgBitrate=', 1354.08, 'rebufRatio=', 0.0, 'QoE=', 1.3540816326530611)
+2610176 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_49_111_out_txt
@@ -2622,6 +3574,14 @@ online-tuner_mobile_dash_trace_119_1094_out_txt
 1191094 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_192_11566_out_txt
+('total quality change events=', 33, 'total_quality_change=', 64200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 58150.0)
+('avgBitrate=', 1186.73, 'rebufRatio=', 0.0, 'QoE=', 1.186734693877551)
+19211566 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_43_10326_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 24500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2644,6 +3604,14 @@ online-tuner_mobile_dash_trace_170_11294_out_txt
 ('total bitrate=', 173700.0)
 ('avgBitrate=', 3544.9, 'rebufRatio=', 0.0, 'QoE=', 3.544897959183673)
 17011294 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_46_11077_out_txt
+('total quality change events=', 23, 'total_quality_change=', 44900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 160650.0)
+('avgBitrate=', 3278.57, 'rebufRatio=', 0.0, 'QoE=', 3.2785714285714285)
+4611077 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_34_10648_out_txt
@@ -2692,6 +3660,30 @@ online-tuner_desktop_dash_trace_56_11330_out_txt
 ('total bitrate=', 77200.0)
 ('avgBitrate=', 1575.51, 'rebufRatio=', 0.0, 'QoE=', 1.5755102040816327)
 5611330 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_122_13109_out_txt
+('total quality change events=', 33, 'total_quality_change=', 64500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 78800.0)
+('avgBitrate=', 1608.16, 'rebufRatio=', 0.0, 'QoE=', 1.6081632653061224)
+12213109 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_109_10851_out_txt
+('total quality change events=', 25, 'total_quality_change=', 38300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174300.0)
+('avgBitrate=', 3557.14, 'rebufRatio=', 0.0, 'QoE=', 3.5571428571428574)
+10910851 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_214_11762_out_txt
+('total quality change events=', 36, 'total_quality_change=', 68100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 71100.0)
+('avgBitrate=', 1451.02, 'rebufRatio=', 0.0, 'QoE=', 1.4510204081632652)
+21411762 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_222_11878_out_txt
@@ -2750,12 +3742,28 @@ online-tuner_mobile_dash_trace_157_11211_out_txt
 15711211 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_171_1557_out_txt
+('total quality change events=', 17, 'total_quality_change=', 27600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 168400.0)
+('avgBitrate=', 3436.73, 'rebufRatio=', 0.0, 'QoE=', 3.436734693877551)
+1711557 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_176_1658_out_txt
 ('total quality change events=', 19, 'total_quality_change=', 21450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 127550.0)
 ('avgBitrate=', 2603.06, 'rebufRatio=', 0.0, 'QoE=', 2.603061224489796)
 1761658 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_151_11176_out_txt
+('total quality change events=', 21, 'total_quality_change=', 33200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 177850.0)
+('avgBitrate=', 3629.59, 'rebufRatio=', 0.0, 'QoE=', 3.6295918367346935)
+15111176 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_180_1775_out_txt
@@ -2772,6 +3780,14 @@ online-tuner_mobile_dash_trace_56_10445_out_txt
 ('total bitrate=', 120300.0)
 ('avgBitrate=', 2455.1, 'rebufRatio=', 0.0, 'QoE=', 2.4551020408163264)
 5610445 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_183_11468_out_txt
+('total quality change events=', 9, 'total_quality_change=', 18400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 24350.0)
+('avgBitrate=', 496.94, 'rebufRatio=', 0.0, 'QoE=', 0.4969387755102041)
+18311468 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_137_13435_out_txt
@@ -2812,6 +3828,14 @@ mpc-tuner_mobile_dash_trace_113_10879_out_txt
 ('total bitrate=', 197250.0)
 ('avgBitrate=', 4025.51, 'rebufRatio=', 0.0, 'QoE=', 4.025510204081633)
 11310879 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_34_10648_out_txt
+('total quality change events=', 23, 'total_quality_change=', 32900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 37500.0)
+('avgBitrate=', 765.31, 'rebufRatio=', 0.0, 'QoE=', 0.7653061224489796)
+3410648 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_75_11905_out_txt
@@ -2870,6 +3894,14 @@ mpc-tuner_desktop_dash_trace_23_10468_out_txt
 2310468 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_132_11037_out_txt
+('total quality change events=', 25, 'total_quality_change=', 43200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 162050.0)
+('avgBitrate=', 3307.14, 'rebufRatio=', 0.0, 'QoE=', 3.3071428571428574)
+13211037 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_80_12_out_txt
 ('total quality change events=', 22, 'total_quality_change=', 23650)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2894,6 +3926,14 @@ online-tuner_desktop_dash_trace_178_1663_out_txt
 1781663 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_10_10083_out_txt
+('total quality change events=', 33, 'total_quality_change=', 68400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 112150.0)
+('avgBitrate=', 2288.78, 'rebufRatio=', 0.0, 'QoE=', 2.288775510204082)
+1010083 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_170_1547_out_txt
 ('total quality change events=', 27, 'total_quality_change=', 47400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2908,6 +3948,14 @@ online-tuner_mobile_dash_trace_27_10194_out_txt
 ('total bitrate=', 188450.0)
 ('avgBitrate=', 3845.92, 'rebufRatio=', 0.0, 'QoE=', 3.8459183673469384)
 2710194 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_175_1632_out_txt
+('total quality change events=', 38, 'total_quality_change=', 60400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 69400.0)
+('avgBitrate=', 1416.33, 'rebufRatio=', 0.0, 'QoE=', 1.416326530612245)
+1751632 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_201_11685_out_txt
@@ -2942,6 +3990,14 @@ online-tuner_desktop_dash_trace_11_10253_out_txt
 1110253 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_37_10288_out_txt
+('total quality change events=', 27, 'total_quality_change=', 46400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 115500.0)
+('avgBitrate=', 2357.14, 'rebufRatio=', 0.0, 'QoE=', 2.357142857142857)
+3710288 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_243_3278_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -2950,12 +4006,28 @@ online-tuner_desktop_dash_trace_243_3278_out_txt
 2433278 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_2_10036_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 113650.0)
+('avgBitrate=', 2319.39, 'rebufRatio=', 0.0, 'QoE=', 2.3193877551020408)
+210036 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_81_12072_out_txt
 ('total quality change events=', 39, 'total_quality_change=', 78300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 72400.0)
 ('avgBitrate=', 1477.55, 'rebufRatio=', 0.0, 'QoE=', 1.4775510204081634)
 8112072 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_157_13829_out_txt
+('total quality change events=', 10, 'total_quality_change=', 25100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181450.0)
+('avgBitrate=', 3703.06, 'rebufRatio=', 0.0, 'QoE=', 3.7030612244897956)
+15713829 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_205_11708_out_txt
@@ -3004,6 +4076,14 @@ mpc-tuner_mobile_dash_trace_216_11798_out_txt
 ('total bitrate=', 40700.0)
 ('avgBitrate=', 830.61, 'rebufRatio=', 0.013285407195968615, 'QoE=', 0.3674408163265289)
 21611798 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_67_1171_out_txt
+('total quality change events=', 23, 'total_quality_change=', 48400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 134200.0)
+('avgBitrate=', 2738.78, 'rebufRatio=', 0.0, 'QoE=', 2.7387755102040816)
+671171 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_239_3234_out_txt
@@ -3070,6 +4150,22 @@ online-tuner_desktop_dash_trace_59_11472_out_txt
 5911472 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_52_11167_out_txt
+('total quality change events=', 12, 'total_quality_change=', 18200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 23800.0)
+('avgBitrate=', 485.71, 'rebufRatio=', 0.0, 'QoE=', 0.4857142857142857)
+5211167 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_4_10071_out_txt
+('total quality change events=', 29, 'total_quality_change=', 56300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 145600.0)
+('avgBitrate=', 2971.43, 'rebufRatio=', 0.0, 'QoE=', 2.9714285714285715)
+410071 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_177_11381_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 19450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3084,6 +4180,30 @@ online-tuner_desktop_dash_trace_83_12150_out_txt
 ('total bitrate=', 195450.0)
 ('avgBitrate=', 3988.78, 'rebufRatio=', 0.0, 'QoE=', 3.9887755102040816)
 8312150 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_194_11572_out_txt
+('total quality change events=', 16, 'total_quality_change=', 29400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 182000.0)
+('avgBitrate=', 3714.29, 'rebufRatio=', 0.0, 'QoE=', 3.7142857142857144)
+19411572 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_25_10172_out_txt
+('total quality change events=', 16, 'total_quality_change=', 26200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 162150.0)
+('avgBitrate=', 3309.18, 'rebufRatio=', 0.0, 'QoE=', 3.309183673469388)
+2510172 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_30_10601_out_txt
+('total quality change events=', 6, 'total_quality_change=', 12900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 21150.0)
+('avgBitrate=', 431.63, 'rebufRatio=', 0.0, 'QoE=', 0.43163265306122445)
+3010601 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_224_2945_out_txt
@@ -3102,6 +4222,14 @@ online-tuner_mobile_dash_trace_4_10034_out_txt
 410034 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_231_304_out_txt
+('total quality change events=', 10, 'total_quality_change=', 18700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 183900.0)
+('avgBitrate=', 3753.06, 'rebufRatio=', 0.0, 'QoE=', 3.753061224489796)
+231304 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_54_11178_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 23750)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3110,12 +4238,36 @@ online-tuner_desktop_dash_trace_54_11178_out_txt
 5411178 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_210_11724_out_txt
+('total quality change events=', 10, 'total_quality_change=', 16700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184000.0)
+('avgBitrate=', 3755.1, 'rebufRatio=', 0.0, 'QoE=', 3.7551020408163267)
+21011724 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_9_10228_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 31200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 173400.0)
 ('avgBitrate=', 3538.78, 'rebufRatio=', 0.0, 'QoE=', 3.538775510204082)
 910228 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_221_2887_out_txt
+('total quality change events=', 16, 'total_quality_change=', 28600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 54750.0)
+('avgBitrate=', 1117.35, 'rebufRatio=', 0.0, 'QoE=', 1.1173469387755102)
+2212887 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_163_11257_out_txt
+('total quality change events=', 8, 'total_quality_change=', 13800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 188800.0)
+('avgBitrate=', 3853.06, 'rebufRatio=', 0.0, 'QoE=', 3.853061224489796)
+16311257 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_75_10601_out_txt
@@ -3238,6 +4390,14 @@ online-tuner_mobile_dash_trace_187_11519_out_txt
 18711519 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_48_11090_out_txt
+('total quality change events=', 8, 'total_quality_change=', 15800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190250.0)
+('avgBitrate=', 3882.65, 'rebufRatio=', 0.0, 'QoE=', 3.88265306122449)
+4811090 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_29_10595_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 25650)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3278,6 +4438,14 @@ mpc-tuner_desktop_dash_trace_172_1583_out_txt
 1721583 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_71_1177_out_txt
+('total quality change events=', 34, 'total_quality_change=', 56500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 140850.0)
+('avgBitrate=', 2874.49, 'rebufRatio=', 0.0, 'QoE=', 2.8744897959183673)
+711177 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_31_10225_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3286,12 +4454,44 @@ online-tuner_mobile_dash_trace_31_10225_out_txt
 3110225 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_161_13982_out_txt
+('total quality change events=', 33, 'total_quality_change=', 59800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 133200.0)
+('avgBitrate=', 2718.37, 'rebufRatio=', 0.0, 'QoE=', 2.7183673469387752)
+16113982 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_68_11720_out_txt
+('total quality change events=', 43, 'total_quality_change=', 83600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 94200.0)
+('avgBitrate=', 1922.45, 'rebufRatio=', 0.0, 'QoE=', 1.9224489795918367)
+6811720 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_70_10575_out_txt
 ('total quality change events=', 2, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 200250.0)
 ('avgBitrate=', 4086.73, 'rebufRatio=', 0.0, 'QoE=', 4.086734693877551)
 7010575 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_138_11051_out_txt
+('total quality change events=', 32, 'total_quality_change=', 62400)
+('total buffering events=', 1, 'total buffering time=', 1.2710000000000008)
+('total bitrate=', 64450.0)
+('avgBitrate=', 1315.31, 'rebufRatio=', 0.006442913555464314, 'QoE=', 1.0922326530612245)
+13811051 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_27_10553_out_txt
+('total quality change events=', 17, 'total_quality_change=', 26700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 171400.0)
+('avgBitrate=', 3497.96, 'rebufRatio=', 0.0, 'QoE=', 3.4979591836734696)
+2710553 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_21_10150_out_txt
@@ -3414,6 +4614,14 @@ mpc-tuner_desktop_dash_trace_43_11010_out_txt
 4311010 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_35_10250_out_txt
+('total quality change events=', 24, 'total_quality_change=', 39100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 40050.0)
+('avgBitrate=', 817.35, 'rebufRatio=', 0.0, 'QoE=', 0.8173469387755101)
+3510250 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_242_3260_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 36400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3502,6 +4710,22 @@ mpc-tuner_desktop_dash_trace_62_11608_out_txt
 6211608 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_77_10654_out_txt
+('total quality change events=', 26, 'total_quality_change=', 51900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 128900.0)
+('avgBitrate=', 2630.61, 'rebufRatio=', 0.0, 'QoE=', 2.6306122448979594)
+7710654 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_177_166_out_txt
+('total quality change events=', 10, 'total_quality_change=', 14000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 21700.0)
+('avgBitrate=', 442.86, 'rebufRatio=', 0.0, 'QoE=', 0.44285714285714284)
+177166 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_145_11135_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 28300)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3582,6 +4806,14 @@ online-tuner_desktop_dash_trace_68_11720_out_txt
 6811720 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_119_13082_out_txt
+('total quality change events=', 18, 'total_quality_change=', 31300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 31250.0)
+('avgBitrate=', 637.76, 'rebufRatio=', 0.0, 'QoE=', 0.6377551020408163)
+11913082 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_235_3089_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 16550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3604,6 +4836,22 @@ mpc-tuner_mobile_dash_trace_188_11529_out_txt
 ('total bitrate=', 136600.0)
 ('avgBitrate=', 2787.76, 'rebufRatio=', 0.0, 'QoE=', 2.787755102040816)
 18811529 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_29_1022_out_txt
+('total quality change events=', 25, 'total_quality_change=', 39900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 177850.0)
+('avgBitrate=', 3629.59, 'rebufRatio=', 0.0, 'QoE=', 3.6295918367346935)
+291022 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_133_13362_out_txt
+('total quality change events=', 31, 'total_quality_change=', 49500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 51700.0)
+('avgBitrate=', 1055.1, 'rebufRatio=', 0.0, 'QoE=', 1.0551020408163265)
+13313362 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_146_1114_out_txt
@@ -3630,6 +4878,14 @@ mpc-tuner_desktop_dash_trace_72_11824_out_txt
 7211824 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_15_10113_out_txt
+('total quality change events=', 33, 'total_quality_change=', 65700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 128150.0)
+('avgBitrate=', 2615.31, 'rebufRatio=', 0.0, 'QoE=', 2.6153061224489798)
+1510113 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_105_1265_out_txt
 ('total quality change events=', 15, 'total_quality_change=', 32400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3644,6 +4900,14 @@ mpc-tuner_desktop_dash_trace_29_10595_out_txt
 ('total bitrate=', 83300.0)
 ('avgBitrate=', 1700.0, 'rebufRatio=', 0.0, 'QoE=', 1.7)
 2910595 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_165_11273_out_txt
+('total quality change events=', 33, 'total_quality_change=', 65500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 78900.0)
+('avgBitrate=', 1610.2, 'rebufRatio=', 0.0, 'QoE=', 1.6102040816326533)
+16511273 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_9_10082_out_txt
@@ -3678,6 +4942,14 @@ online-tuner_desktop_dash_trace_190_1979_out_txt
 1901979 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_94_12453_out_txt
+('total quality change events=', 22, 'total_quality_change=', 38400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 36600.0)
+('avgBitrate=', 746.94, 'rebufRatio=', 0.0, 'QoE=', 0.7469387755102042)
+9412453 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_11_10089_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 46700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3700,6 +4972,14 @@ online-tuner_desktop_dash_trace_161_13982_out_txt
 ('total bitrate=', 136850.0)
 ('avgBitrate=', 2792.86, 'rebufRatio=', 0.0, 'QoE=', 2.7928571428571427)
 16113982 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_185_11496_out_txt
+('total quality change events=', 24, 'total_quality_change=', 45300)
+('total buffering events=', 7, 'total buffering time=', 46.12500000000001)
+('total bitrate=', 52900.0)
+('avgBitrate=', 1079.59, 'rebufRatio=', 0.1905007743933919, 'QoE=', -7.015816326530614)
+18511496 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_5_10126_out_txt
@@ -3750,12 +5030,28 @@ mpc-tuner_mobile_dash_trace_238_1201_out_txt
 2381201 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_68_10560_out_txt
+('total quality change events=', 26, 'total_quality_change=', 51700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 154800.0)
+('avgBitrate=', 3159.18, 'rebufRatio=', 0.0, 'QoE=', 3.159183673469388)
+6810560 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_157_13829_out_txt
 ('total quality change events=', 6, 'total_quality_change=', 8900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 193000.0)
 ('avgBitrate=', 3938.78, 'rebufRatio=', 0.0, 'QoE=', 3.938775510204082)
 15713829 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_81_10669_out_txt
+('total quality change events=', 22, 'total_quality_change=', 38000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 41500.0)
+('avgBitrate=', 846.94, 'rebufRatio=', 0.0, 'QoE=', 0.8469387755102041)
+8110669 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_175_11320_out_txt
@@ -3774,6 +5070,22 @@ online-tuner_mobile_dash_trace_240_12022_out_txt
 24012022 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_249_1214_out_txt
+('total quality change events=', 42, 'total_quality_change=', 85900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 105400.0)
+('avgBitrate=', 2151.02, 'rebufRatio=', 0.0, 'QoE=', 2.1510204081632653)
+2491214 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_85_10677_out_txt
+('total quality change events=', 21, 'total_quality_change=', 36400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 43350.0)
+('avgBitrate=', 884.69, 'rebufRatio=', 0.0, 'QoE=', 0.8846938775510205)
+8510677 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_142_11111_out_txt
 ('total quality change events=', 17, 'total_quality_change=', 10400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3790,12 +5102,36 @@ online-tuner_desktop_dash_trace_170_1547_out_txt
 1701547 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_173_1614_out_txt
+('total quality change events=', 15, 'total_quality_change=', 27500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 152900.0)
+('avgBitrate=', 3120.41, 'rebufRatio=', 0.0, 'QoE=', 3.1204081632653065)
+1731614 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_237_3161_out_txt
+('total quality change events=', 19, 'total_quality_change=', 37100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 160700.0)
+('avgBitrate=', 3279.59, 'rebufRatio=', 0.0, 'QoE=', 3.2795918367346935)
+2373161 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_121_1310_out_txt
 ('total quality change events=', 1, 'total_quality_change=', 450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 15150.0)
 ('avgBitrate=', 309.18, 'rebufRatio=', 0.0, 'QoE=', 0.30918367346938774)
 1211310 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_246_3437_out_txt
+('total quality change events=', 19, 'total_quality_change=', 36500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 173300.0)
+('avgBitrate=', 3536.73, 'rebufRatio=', 0.0, 'QoE=', 3.5367346938775515)
+2463437 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_103_10816_out_txt
@@ -3828,6 +5164,14 @@ mpc-tuner_mobile_dash_trace_4_10034_out_txt
 ('total bitrate=', 191700.0)
 ('avgBitrate=', 3912.24, 'rebufRatio=', 0.0, 'QoE=', 3.9122448979591833)
 410034 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_146_1114_out_txt
+('total quality change events=', 11, 'total_quality_change=', 22900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184000.0)
+('avgBitrate=', 3755.1, 'rebufRatio=', 0.0, 'QoE=', 3.7551020408163267)
+1461114 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_239_3234_out_txt
@@ -3926,6 +5270,14 @@ online-tuner_desktop_dash_trace_19_10404_out_txt
 1910404 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_21_10432_out_txt
+('total quality change events=', 28, 'total_quality_change=', 49300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 49500.0)
+('avgBitrate=', 1010.2, 'rebufRatio=', 0.0, 'QoE=', 1.010204081632653)
+2110432 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_164_14026_out_txt
 ('total quality change events=', 11, 'total_quality_change=', 18400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -3956,6 +5308,14 @@ online-tuner_mobile_dash_trace_135_11042_out_txt
 ('total bitrate=', 34700.0)
 ('avgBitrate=', 708.16, 'rebufRatio=', 0.0, 'QoE=', 0.7081632653061225)
 13511042 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_120_10941_out_txt
+('total quality change events=', 12, 'total_quality_change=', 21600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 186550.0)
+('avgBitrate=', 3807.14, 'rebufRatio=', 0.0, 'QoE=', 3.8071428571428574)
+12010941 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_30_10601_out_txt
@@ -4006,6 +5366,14 @@ online-tuner_desktop_dash_trace_82_12129_out_txt
 8212129 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_47_10384_out_txt
+('total quality change events=', 15, 'total_quality_change=', 25800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 167750.0)
+('avgBitrate=', 3423.47, 'rebufRatio=', 0.0, 'QoE=', 3.423469387755102)
+4710384 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_89_12304_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 28000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4020,6 +5388,14 @@ online-tuner_desktop_dash_trace_21_10432_out_txt
 ('total bitrate=', 50150.0)
 ('avgBitrate=', 1023.47, 'rebufRatio=', 0.0, 'QoE=', 1.023469387755102)
 2110432 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_142_11111_out_txt
+('total quality change events=', 35, 'total_quality_change=', 59700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 56400.0)
+('avgBitrate=', 1151.02, 'rebufRatio=', 0.0, 'QoE=', 1.1510204081632653)
+14211111 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_48_10392_out_txt
@@ -4078,6 +5454,14 @@ mpc-tuner_mobile_dash_trace_59_1046_out_txt
 591046 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_218_2816_out_txt
+('total quality change events=', 44, 'total_quality_change=', 85800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 88250.0)
+('avgBitrate=', 1801.02, 'rebufRatio=', 0.0, 'QoE=', 1.8010204081632653)
+2182816 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_161_11231_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 39100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4126,6 +5510,14 @@ mpc-tuner_desktop_dash_trace_211_2612_out_txt
 2112612 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_57_1045_out_txt
+('total quality change events=', 3, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 197250.0)
+('avgBitrate=', 4025.51, 'rebufRatio=', 0.0, 'QoE=', 4.025510204081633)
+571045 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_95_10761_out_txt
 ('total quality change events=', 5, 'total_quality_change=', 12900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4158,6 +5550,14 @@ online-tuner_mobile_dash_trace_123_10990_out_txt
 12310990 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_30_10220_out_txt
+('total quality change events=', 10, 'total_quality_change=', 12900)
+('total buffering events=', 2, 'total buffering time=', 2.4399999999999977)
+('total bitrate=', 21150.0)
+('avgBitrate=', 431.63, 'rebufRatio=', 0.01229590808304776, 'QoE=', 0.0033877551020411864)
+3010220 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_208_2493_out_txt
 ('total quality change events=', 9, 'total_quality_change=', 18000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4188,6 +5588,30 @@ online-tuner_mobile_dash_trace_12_10091_out_txt
 ('total bitrate=', 155600.0)
 ('avgBitrate=', 3175.51, 'rebufRatio=', 0.0, 'QoE=', 3.1755102040816325)
 1210091 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_28_10593_out_txt
+('total quality change events=', 39, 'total_quality_change=', 74500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 88450.0)
+('avgBitrate=', 1805.1, 'rebufRatio=', 0.0, 'QoE=', 1.8051020408163265)
+2810593 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_26_10534_out_txt
+('total quality change events=', 9, 'total_quality_change=', 15800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184450.0)
+('avgBitrate=', 3764.29, 'rebufRatio=', 0.0, 'QoE=', 3.7642857142857142)
+2610534 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_224_11899_out_txt
+('total quality change events=', 4, 'total_quality_change=', 3600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 16500.0)
+('avgBitrate=', 336.73, 'rebufRatio=', 0.0, 'QoE=', 0.336734693877551)
+22411899 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_221_11876_out_txt
@@ -4238,6 +5662,14 @@ mpc-tuner_desktop_dash_trace_165_1445_out_txt
 1651445 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_80_10668_out_txt
+('total quality change events=', 5, 'total_quality_change=', 12900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 193350.0)
+('avgBitrate=', 3945.92, 'rebufRatio=', 0.0, 'QoE=', 3.9459183673469385)
+8010668 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_54_11178_out_txt
 ('total quality change events=', 36, 'total_quality_change=', 68800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4260,6 +5692,14 @@ mpc-tuner_mobile_dash_trace_219_1185_out_txt
 ('total bitrate=', 45500.0)
 ('avgBitrate=', 928.57, 'rebufRatio=', 0.0, 'QoE=', 0.9285714285714286)
 2191185 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_98_10783_out_txt
+('total quality change events=', 23, 'total_quality_change=', 45300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 41600.0)
+('avgBitrate=', 848.98, 'rebufRatio=', 0.0, 'QoE=', 0.8489795918367348)
+9810783 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_98_12485_out_txt
@@ -4294,6 +5734,22 @@ mpc-tuner_desktop_dash_trace_85_12172_out_txt
 8512172 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_95_12460_out_txt
+('total quality change events=', 28, 'total_quality_change=', 61500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 121800.0)
+('avgBitrate=', 2485.71, 'rebufRatio=', 0.0, 'QoE=', 2.4857142857142858)
+9512460 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_83_12150_out_txt
+('total quality change events=', 12, 'total_quality_change=', 26700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 184000.0)
+('avgBitrate=', 3755.1, 'rebufRatio=', 0.0, 'QoE=', 3.7551020408163267)
+8312150 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_112_10874_out_txt
 ('total quality change events=', 21, 'total_quality_change=', 29200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4316,6 +5772,14 @@ mpc-tuner_mobile_dash_trace_24_10161_out_txt
 ('total bitrate=', 189150.0)
 ('avgBitrate=', 3860.2, 'rebufRatio=', 0.0, 'QoE=', 3.860204081632653)
 2410161 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_13_1029_out_txt
+('total quality change events=', 13, 'total_quality_change=', 17800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 24050.0)
+('avgBitrate=', 490.82, 'rebufRatio=', 0.0, 'QoE=', 0.49081632653061225)
+131029 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_250_3580_out_txt
@@ -4374,6 +5838,14 @@ mpc-tuner_desktop_dash_trace_112_12872_out_txt
 11212872 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_154_13780_out_txt
+('total quality change events=', 37, 'total_quality_change=', 72600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 120900.0)
+('avgBitrate=', 2467.35, 'rebufRatio=', 0.0, 'QoE=', 2.4673469387755103)
+15413780 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_136_13404_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 15600)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4422,12 +5894,52 @@ online-tuner_desktop_dash_trace_70_11752_out_txt
 7011752 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_19_10125_out_txt
+('total quality change events=', 28, 'total_quality_change=', 54000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 142500.0)
+('avgBitrate=', 2908.16, 'rebufRatio=', 0.0, 'QoE=', 2.9081632653061225)
+1910125 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_235_11964_out_txt
+('total quality change events=', 22, 'total_quality_change=', 36600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 36800.0)
+('avgBitrate=', 751.02, 'rebufRatio=', 0.0, 'QoE=', 0.7510204081632652)
+23511964 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_90_10697_out_txt
 ('total quality change events=', 8, 'total_quality_change=', 17800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 189900.0)
 ('avgBitrate=', 3875.51, 'rebufRatio=', 0.0, 'QoE=', 3.8755102040816327)
 9010697 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_167_1457_out_txt
+('total quality change events=', 36, 'total_quality_change=', 59900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 67250.0)
+('avgBitrate=', 1372.45, 'rebufRatio=', 0.0, 'QoE=', 1.3724489795918366)
+1671457 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_183_1826_out_txt
+('total quality change events=', 20, 'total_quality_change=', 39300)
+('total buffering events=', 1, 'total buffering time=', 5.638000000000005)
+('total bitrate=', 37350.0)
+('avgBitrate=', 762.24, 'rebufRatio=', 0.02796099941479287, 'QoE=', -0.22728163265306212)
+1831826 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_50_11121_out_txt
+('total quality change events=', 26, 'total_quality_change=', 44900)
+('total buffering events=', 2, 'total buffering time=', 6.181000000000001)
+('total bitrate=', 49700.0)
+('avgBitrate=', 1014.29, 'rebufRatio=', 0.030571616521829454, 'QoE=', -0.07054285714285717)
+5011121 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_166_11275_out_txt
@@ -4460,6 +5972,22 @@ mpc-tuner_mobile_dash_trace_159_11217_out_txt
 ('total bitrate=', 48800.0)
 ('avgBitrate=', 995.92, 'rebufRatio=', 0.0, 'QoE=', 0.9959183673469387)
 15911217 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_38_10289_out_txt
+('total quality change events=', 25, 'total_quality_change=', 41700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 47800.0)
+('avgBitrate=', 975.51, 'rebufRatio=', 0.0, 'QoE=', 0.9755102040816326)
+3810289 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_37_10854_out_txt
+('total quality change events=', 14, 'total_quality_change=', 25600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 176650.0)
+('avgBitrate=', 3605.1, 'rebufRatio=', 0.0, 'QoE=', 3.605102040816327)
+3710854 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_221_11876_out_txt
@@ -4558,12 +6086,36 @@ online-tuner_mobile_dash_trace_113_10879_out_txt
 11310879 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_60_11499_out_txt
+('total quality change events=', 33, 'total_quality_change=', 65500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 125000.0)
+('avgBitrate=', 2551.02, 'rebufRatio=', 0.0, 'QoE=', 2.5510204081632653)
+6011499 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_79_11981_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 23650)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 68400.0)
 ('avgBitrate=', 1395.92, 'rebufRatio=', 0.0, 'QoE=', 1.3959183673469389)
 7911981 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_201_2300_out_txt
+('total quality change events=', 35, 'total_quality_change=', 65300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 114350.0)
+('avgBitrate=', 2333.67, 'rebufRatio=', 0.0, 'QoE=', 2.333673469387755)
+2012300 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_88_10685_out_txt
+('total quality change events=', 23, 'total_quality_change=', 41800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 136000.0)
+('avgBitrate=', 2775.51, 'rebufRatio=', 0.0, 'QoE=', 2.7755102040816326)
+8810685 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_22_10438_out_txt
@@ -4596,6 +6148,22 @@ online-tuner_mobile_dash_trace_18_10122_out_txt
 ('total bitrate=', 150200.0)
 ('avgBitrate=', 3065.31, 'rebufRatio=', 0.0, 'QoE=', 3.0653061224489795)
 1810122 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_114_10883_out_txt
+('total quality change events=', 30, 'total_quality_change=', 54300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 53450.0)
+('avgBitrate=', 1090.82, 'rebufRatio=', 0.0, 'QoE=', 1.0908163265306123)
+11410883 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_220_2878_out_txt
+('total quality change events=', 28, 'total_quality_change=', 47100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 45050.0)
+('avgBitrate=', 919.39, 'rebufRatio=', 0.0, 'QoE=', 0.9193877551020407)
+2202878 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_204_2360_out_txt
@@ -4678,12 +6246,28 @@ online-tuner_desktop_dash_trace_4_10071_out_txt
 410071 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_90_12320_out_txt
+('total quality change events=', 19, 'total_quality_change=', 32000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 164900.0)
+('avgBitrate=', 3365.31, 'rebufRatio=', 0.0, 'QoE=', 3.3653061224489798)
+9012320 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_166_11275_out_txt
 ('total quality change events=', 28, 'total_quality_change=', 28500)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 75200.0)
 ('avgBitrate=', 1534.69, 'rebufRatio=', 0.0, 'QoE=', 1.5346938775510204)
 16611275 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_137_11044_out_txt
+('total quality change events=', 24, 'total_quality_change=', 38100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170400.0)
+('avgBitrate=', 3477.55, 'rebufRatio=', 0.0, 'QoE=', 3.477551020408163)
+13711044 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_67_10536_out_txt
@@ -4798,6 +6382,22 @@ mpc-tuner_desktop_dash_trace_245_3313_out_txt
 2453313 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_79_11981_out_txt
+('total quality change events=', 37, 'total_quality_change=', 60400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 69250.0)
+('avgBitrate=', 1413.27, 'rebufRatio=', 0.0, 'QoE=', 1.413265306122449)
+7911981 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_152_13756_out_txt
+('total quality change events=', 10, 'total_quality_change=', 20900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 183350.0)
+('avgBitrate=', 3741.84, 'rebufRatio=', 0.0, 'QoE=', 3.7418367346938775)
+15213756 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_138_13452_out_txt
 ('total quality change events=', 39, 'total_quality_change=', 72800)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -4838,12 +6438,36 @@ online-tuner_desktop_dash_trace_204_2360_out_txt
 2042360 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_226_11914_out_txt
+('total quality change events=', 11, 'total_quality_change=', 23100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 26700.0)
+('avgBitrate=', 544.9, 'rebufRatio=', 0.0, 'QoE=', 0.5448979591836735)
+22611914 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_157_11211_out_txt
+('total quality change events=', 37, 'total_quality_change=', 72600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 111050.0)
+('avgBitrate=', 2266.33, 'rebufRatio=', 0.0, 'QoE=', 2.2663265306122446)
+15711211 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_55_10441_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 8000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 195150.0)
 ('avgBitrate=', 3982.65, 'rebufRatio=', 0.0, 'QoE=', 3.98265306122449)
 5510441 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_8_10069_out_txt
+('total quality change events=', 13, 'total_quality_change=', 13600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 24400.0)
+('avgBitrate=', 497.96, 'rebufRatio=', 0.0, 'QoE=', 0.49795918367346936)
+810069 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_237_11998_out_txt
@@ -4860,6 +6484,14 @@ mpc-tuner_mobile_dash_trace_223_11880_out_txt
 ('total bitrate=', 191250.0)
 ('avgBitrate=', 3903.06, 'rebufRatio=', 0.0, 'QoE=', 3.9030612244897958)
 22311880 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_205_11708_out_txt
+('total quality change events=', 17, 'total_quality_change=', 30700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 176200.0)
+('avgBitrate=', 3595.92, 'rebufRatio=', 0.0, 'QoE=', 3.5959183673469384)
+20511708 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_184_1829_out_txt
@@ -4918,12 +6550,28 @@ online-tuner_desktop_dash_trace_32_10638_out_txt
 3210638 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_16_10114_out_txt
+('total quality change events=', 23, 'total_quality_change=', 38000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 135550.0)
+('avgBitrate=', 2766.33, 'rebufRatio=', 0.0, 'QoE=', 2.766326530612245)
+1610114 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_39_10304_out_txt
 ('total quality change events=', 13, 'total_quality_change=', 10450)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 82000.0)
 ('avgBitrate=', 1673.47, 'rebufRatio=', 0.0, 'QoE=', 1.6734693877551021)
 3910304 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_108_10845_out_txt
+('total quality change events=', 25, 'total_quality_change=', 33300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 35850.0)
+('avgBitrate=', 731.63, 'rebufRatio=', 0.0, 'QoE=', 0.7316326530612245)
+10810845 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_229_11932_out_txt
@@ -4982,6 +6630,14 @@ mpc-tuner_desktop_dash_trace_93_12447_out_txt
 9312447 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_145_13640_out_txt
+('total quality change events=', 9, 'total_quality_change=', 17100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 23700.0)
+('avgBitrate=', 483.67, 'rebufRatio=', 0.0, 'QoE=', 0.4836734693877551)
+14513640 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_162_11249_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 45400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5014,12 +6670,36 @@ online-tuner_mobile_dash_trace_153_11201_out_txt
 15311201 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_84_10675_out_txt
+('total quality change events=', 14, 'total_quality_change=', 30000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 170000.0)
+('avgBitrate=', 3469.39, 'rebufRatio=', 0.0, 'QoE=', 3.4693877551020407)
+8410675 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_241_12059_out_txt
 ('total quality change events=', 14, 'total_quality_change=', 21400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 185750.0)
 ('avgBitrate=', 3790.82, 'rebufRatio=', 0.0, 'QoE=', 3.7908163265306123)
 24112059 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_207_1171_out_txt
+('total quality change events=', 20, 'total_quality_change=', 40900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 174000.0)
+('avgBitrate=', 3551.02, 'rebufRatio=', 0.0, 'QoE=', 3.5510204081632653)
+2071171 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_239_12016_out_txt
+('total quality change events=', 8, 'total_quality_change=', 13800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 190250.0)
+('avgBitrate=', 3882.65, 'rebufRatio=', 0.0, 'QoE=', 3.88265306122449)
+23912016 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_114_12998_out_txt
@@ -5052,6 +6732,14 @@ mpc-tuner_desktop_dash_trace_196_2118_out_txt
 ('total bitrate=', 78600.0)
 ('avgBitrate=', 1604.08, 'rebufRatio=', 0.0, 'QoE=', 1.6040816326530611)
 1962118 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_240_12022_out_txt
+('total quality change events=', 4, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 191900.0)
+('avgBitrate=', 3916.33, 'rebufRatio=', 0.0, 'QoE=', 3.916326530612245)
+24012022 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_246_3437_out_txt
@@ -5094,6 +6782,14 @@ online-tuner_desktop_dash_trace_61_11601_out_txt
 6111601 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_16_1031_out_txt
+('total quality change events=', 11, 'total_quality_change=', 18000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 175450.0)
+('avgBitrate=', 3580.61, 'rebufRatio=', 0.0, 'QoE=', 3.580612244897959)
+161031 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_140_11091_out_txt
 ('total quality change events=', 25, 'total_quality_change=', 32100)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5126,12 +6822,28 @@ online-tuner_desktop_dash_trace_181_1776_out_txt
 1811776 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_23_10160_out_txt
+('total quality change events=', 12, 'total_quality_change=', 24200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181250.0)
+('avgBitrate=', 3698.98, 'rebufRatio=', 0.0, 'QoE=', 3.6989795918367347)
+2310160 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_99_12489_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 10550)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 47750.0)
 ('avgBitrate=', 974.49, 'rebufRatio=', 0.0, 'QoE=', 0.9744897959183674)
 9912489 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_100_10792_out_txt
+('total quality change events=', 25, 'total_quality_change=', 62000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 131100.0)
+('avgBitrate=', 2675.51, 'rebufRatio=', 0.0, 'QoE=', 2.6755102040816325)
+10010792 mpc-tuner
 49
 
 mpc-tuner_desktop_dash_trace_104_12649_out_txt
@@ -5156,6 +6868,14 @@ online-tuner_mobile_dash_trace_167_11287_out_txt
 ('total bitrate=', 177850.0)
 ('avgBitrate=', 3629.59, 'rebufRatio=', 0.0, 'QoE=', 3.6295918367346935)
 16711287 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_172_11304_out_txt
+('total quality change events=', 12, 'total_quality_change=', 19600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 185450.0)
+('avgBitrate=', 3784.69, 'rebufRatio=', 0.0, 'QoE=', 3.78469387755102)
+17211304 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_63_11616_out_txt
@@ -5206,12 +6926,28 @@ online-tuner_desktop_dash_trace_129_13319_out_txt
 12913319 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_91_10699_out_txt
+('total quality change events=', 29, 'total_quality_change=', 58400)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 59150.0)
+('avgBitrate=', 1207.14, 'rebufRatio=', 0.0, 'QoE=', 1.207142857142857)
+9110699 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_144_1112_out_txt
 ('total quality change events=', 28, 'total_quality_change=', 36200)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 139700.0)
 ('avgBitrate=', 2851.02, 'rebufRatio=', 0.0, 'QoE=', 2.851020408163265)
 1441112 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_147_13680_out_txt
+('total quality change events=', 14, 'total_quality_change=', 20700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 25500.0)
+('avgBitrate=', 520.41, 'rebufRatio=', 0.0, 'QoE=', 0.5204081632653061)
+14713680 mpc-tuner
 49
 
 online-tuner_desktop_dash_trace_138_13452_out_txt
@@ -5262,6 +6998,14 @@ mpc-tuner_desktop_dash_trace_99_12489_out_txt
 9912489 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_187_189_out_txt
+('total quality change events=', 20, 'total_quality_change=', 41300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 40350.0)
+('avgBitrate=', 823.47, 'rebufRatio=', 0.0, 'QoE=', 0.823469387755102)
+187189 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_81_10669_out_txt
 ('total quality change events=', 23, 'total_quality_change=', 26150)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5276,6 +7020,14 @@ online-tuner_mobile_dash_trace_42_10324_out_txt
 ('total bitrate=', 51150.0)
 ('avgBitrate=', 1043.88, 'rebufRatio=', 0.0, 'QoE=', 1.0438775510204081)
 4210324 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_119_1094_out_txt
+('total quality change events=', 37, 'total_quality_change=', 55500)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 56950.0)
+('avgBitrate=', 1162.24, 'rebufRatio=', 0.0, 'QoE=', 1.1622448979591837)
+1191094 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_152_11197_out_txt
@@ -5318,12 +7070,28 @@ online-tuner_desktop_dash_trace_159_13897_out_txt
 15913897 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_146_13669_out_txt
+('total quality change events=', 18, 'total_quality_change=', 41800)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 162550.0)
+('avgBitrate=', 3317.35, 'rebufRatio=', 0.0, 'QoE=', 3.3173469387755103)
+14613669 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_214_2637_out_txt
 ('total quality change events=', 38, 'total_quality_change=', 73000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 97100.0)
 ('avgBitrate=', 1981.63, 'rebufRatio=', 0.0, 'QoE=', 1.9816326530612243)
 2142637 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_40_10949_out_txt
+('total quality change events=', 25, 'total_quality_change=', 41100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 53800.0)
+('avgBitrate=', 1097.96, 'rebufRatio=', 0.0, 'QoE=', 1.0979591836734692)
+4010949 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_44_10341_out_txt
@@ -5438,6 +7206,14 @@ online-tuner_desktop_dash_trace_245_3313_out_txt
 2453313 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_131_1335_out_txt
+('total quality change events=', 24, 'total_quality_change=', 39600)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 168300.0)
+('avgBitrate=', 3434.69, 'rebufRatio=', 0.0, 'QoE=', 3.4346938775510205)
+1311335 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_96_10773_out_txt
 ('total quality change events=', 3, 'total_quality_change=', 1350)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5454,6 +7230,14 @@ mpc-tuner_desktop_dash_trace_164_14026_out_txt
 16414026 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_51_10404_out_txt
+('total quality change events=', 34, 'total_quality_change=', 71200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 116450.0)
+('avgBitrate=', 2376.53, 'rebufRatio=', 0.0, 'QoE=', 2.376530612244898)
+5110404 mpc-tuner
+49
+
 mpc-tuner_desktop_dash_trace_14_10302_out_txt
 ('total quality change events=', 35, 'total_quality_change=', 59900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5462,12 +7246,36 @@ mpc-tuner_desktop_dash_trace_14_10302_out_txt
 1410302 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_247_1212_out_txt
+('total quality change events=', 30, 'total_quality_change=', 51900)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 148800.0)
+('avgBitrate=', 3036.73, 'rebufRatio=', 0.0, 'QoE=', 3.0367346938775515)
+2471212 mpc-tuner
+49
+
+mpc-tuner_desktop_dash_trace_44_11017_out_txt
+('total quality change events=', 36, 'total_quality_change=', 59000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 106500.0)
+('avgBitrate=', 2173.47, 'rebufRatio=', 0.0, 'QoE=', 2.173469387755102)
+4411017 mpc-tuner
+49
+
 online-tuner_desktop_dash_trace_193_208_out_txt
 ('total quality change events=', 12, 'total_quality_change=', 15600)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
 ('total bitrate=', 176850.0)
 ('avgBitrate=', 3609.18, 'rebufRatio=', 0.0, 'QoE=', 3.6091836734693876)
 193208 online-tuner
+49
+
+mpc-tuner_desktop_dash_trace_5_10126_out_txt
+('total quality change events=', 21, 'total_quality_change=', 40200)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 60450.0)
+('avgBitrate=', 1233.67, 'rebufRatio=', 0.0, 'QoE=', 1.2336734693877551)
+510126 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_139_11071_out_txt
@@ -5516,6 +7324,14 @@ mpc-tuner_desktop_dash_trace_45_11049_out_txt
 ('total bitrate=', 193800.0)
 ('avgBitrate=', 3955.1, 'rebufRatio=', 0.0, 'QoE=', 3.955102040816327)
 4511049 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_187_11519_out_txt
+('total quality change events=', 32, 'total_quality_change=', 51300)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 51700.0)
+('avgBitrate=', 1055.1, 'rebufRatio=', 0.0, 'QoE=', 1.0551020408163265)
+18711519 mpc-tuner
 49
 
 online-tuner_mobile_dash_trace_11_10089_out_txt
@@ -5590,6 +7406,22 @@ mpc-tuner_desktop_dash_trace_238_3197_out_txt
 2383197 mpc-tuner
 49
 
+mpc-tuner_desktop_dash_trace_198_2169_out_txt
+('total quality change events=', 39, 'total_quality_change=', 70700)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 108250.0)
+('avgBitrate=', 2209.18, 'rebufRatio=', 0.0, 'QoE=', 2.2091836734693877)
+1982169 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_230_11934_out_txt
+('total quality change events=', 40, 'total_quality_change=', 77100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 115400.0)
+('avgBitrate=', 2355.1, 'rebufRatio=', 0.0, 'QoE=', 2.355102040816327)
+23011934 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_107_10844_out_txt
 ('total quality change events=', 10, 'total_quality_change=', 12700)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5630,6 +7462,22 @@ online-tuner_mobile_dash_trace_223_11880_out_txt
 22311880 online-tuner
 49
 
+mpc-tuner_mobile_dash_trace_241_12059_out_txt
+('total quality change events=', 9, 'total_quality_change=', 16000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 181700.0)
+('avgBitrate=', 3708.16, 'rebufRatio=', 0.0, 'QoE=', 3.7081632653061223)
+24112059 mpc-tuner
+49
+
+mpc-tuner_mobile_dash_trace_63_10485_out_txt
+('total quality change events=', 0, 'total_quality_change=', 0)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 14700.0)
+('avgBitrate=', 300.0, 'rebufRatio=', 0.0, 'QoE=', 0.3)
+6310485 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_68_10560_out_txt
 ('total quality change events=', 5, 'total_quality_change=', 6900)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5654,6 +7502,14 @@ online-tuner_desktop_dash_trace_24_1050_out_txt
 241050 online-tuner
 49
 
+mpc-tuner_desktop_dash_trace_115_130_out_txt
+('total quality change events=', 21, 'total_quality_change=', 41100)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 160750.0)
+('avgBitrate=', 3280.61, 'rebufRatio=', 0.0, 'QoE=', 3.2806122448979593)
+115130 mpc-tuner
+49
+
 mpc-tuner_mobile_dash_trace_232_11952_out_txt
 ('total quality change events=', 16, 'total_quality_change=', 25400)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5668,6 +7524,14 @@ online-tuner_desktop_dash_trace_226_2955_out_txt
 ('total bitrate=', 55300.0)
 ('avgBitrate=', 1128.57, 'rebufRatio=', 0.0, 'QoE=', 1.1285714285714286)
 2262955 online-tuner
+49
+
+mpc-tuner_mobile_dash_trace_92_10714_out_txt
+('total quality change events=', 4, 'total_quality_change=', 8000)
+('total buffering events=', 0, 'total buffering time=', 0.0)
+('total bitrate=', 194800.0)
+('avgBitrate=', 3975.51, 'rebufRatio=', 0.0, 'QoE=', 3.975510204081633)
+9210714 mpc-tuner
 49
 
 mpc-tuner_mobile_dash_trace_134_11040_out_txt
@@ -5726,6 +7590,14 @@ mpc-tuner_mobile_dash_trace_116_10903_out_txt
 11610903 mpc-tuner
 49
 
+mpc-tuner_mobile_dash_trace_60_10468_out_txt
+('total quality change events=', 41, 'total_quality_change=', 74000)
+('total buffering events=', 1, 'total buffering time=', 1.1879999999999882)
+('total bitrate=', 118550.0)
+('avgBitrate=', 2419.39, 'rebufRatio=', 0.006024707385844921, 'QoE=', 2.2108816326530634)
+6010468 mpc-tuner
+49
+
 online-tuner_mobile_dash_trace_133_1104_out_txt
 ('total quality change events=', 4, 'total_quality_change=', 4000)
 ('total buffering events=', 0, 'total buffering time=', 0.0)
@@ -5776,17 +7648,17 @@ online-tuner_mobile_dash_trace_13_10095_out_txt
 
 
 avg. bitrate
-mpc-tuner 2523.29481982 1165.95274742 2814.8 222
-online-tuner 2670.30666667 1239.23750997 2913.775 222
+mpc-tuner 2469.77708333 1174.29205971 2699.49 456
+online-tuner 2605.43969298 1245.72856121 2848.98 456
 
 rebuf
-mpc-tuner 0.140172195221 0.820901060884 0.0 1.2054808789 222
-online-tuner 0.0304495090991 0.374233280787 0.0 0.261865778252 222
+mpc-tuner 0.141985665136 1.08977894446 0.0 1.22107672017 456
+online-tuner 0.0404804765752 0.604877867809 0.0 0.348132098547 456
 
 change
-mpc-tuner 820.417356132 416.260214921 837.755102041 0.0 222
-online-tuner 313.646810075 213.254507183 249.489795918 0.0 222
+mpc-tuner 830.755460079 426.542943759 835.714285714 0.0 456
+online-tuner 325.100698174 213.678125408 284.183673469 0.0 456
 
 QoE
-mpc-tuner 2.47253669792 1.27938334529 2.81479591837 2.47253669792 222
-online-tuner 2.65931947049 1.26303617745 2.9137755102 2.65931947049 222
+mpc-tuner 2.41605367884 1.32190724005 2.69948979592 2.41605367884 456
+online-tuner 2.59010088614 1.28699197365 2.84897959184 2.59010088614 456
