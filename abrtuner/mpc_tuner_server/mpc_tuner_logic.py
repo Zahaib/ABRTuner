@@ -95,6 +95,7 @@ def getBWFeaturesWeightedPlayerVisible(playerVisibleBW, chunk_when_last_chd_ran)
 
 
 def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
+  print "evaluating change: ",
   chd_detected = False
   chd_index = chunk_when_last_chd
   # threshold for the amount to samples to consider for change point
@@ -111,6 +112,8 @@ def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
       chd_detected = True
       print "change detected i = ", i, " chd_index = ", chd_index, " chunk_when_last_chd =", chunk_when_last_chd, " len = ", lenarray
       break
+  if chd_detected == False:
+    print "no change"
   return chd_detected, chd_index
 
 def trimPlayerVisibleBW(playerVisibleBW, thresh):

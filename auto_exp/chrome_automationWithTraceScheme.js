@@ -62,42 +62,42 @@ Chrome(function (chrome) {
         
         Page.enable();
 		if (scheme=="dash"){
-			main_html = "http://68.181.99.194/yz_index.html.en.dash"
+			main_html = "http://204.57.4.188/yz_index.html.en.dash"
 		}
 		else if (scheme=="mpc"){
-			main_html = "http://68.181.99.194/yz_index.html"
+			main_html = "http://204.57.4.188/yz_index.html"
 		}
 		else if (scheme=="hyb"){
-			main_html = "http://68.181.99.194/yz_index.html.en.hyb"
+			main_html = "http://204.57.4.188/yz_index.html.en.hyb"
 		}
 		else if(scheme=="tuner"){
-			//main_html = "http://68.181.99.194/yz_index.html.en.tuner"
-                        main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
+			//main_html = "http://204.57.4.188/yz_index.html.en.tuner"
+                        main_html = "http://204.57.4.188/yz_index.html.en.adjustbuffer.tuner"
 		}
                 else if(scheme=="online-tuner"){
-                        main_html = "http://localhost/yz_index.html.en.onlinetuner"
+                        main_html = "http://204.57.4.188/yz_index.html.en.onlinetuner"
                 }
                 else if(scheme=="pensieve-mpcvid"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
+                        main_html = "http://204.57.4.188/yz_index.html.en.pensieve.mpc-vid"
+                        //main_html = "http://204.57.4.188/myindex_RL.html"
                 }
                 else if(scheme=="pensieve-pensvid"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
+                        main_html = "http://204.57.4.188/yz_index.html.en.pensieve.pens-vid"
+                        //main_html = "http://204.57.4.188/myindex_RL.html"
                 }
                 else if(scheme=="robustmpc"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.pens-vid"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
+                        main_html = "http://204.57.4.188/yz_index.html.en.robustmpc.pens-vid"
+                        //main_html = "http://204.57.4.188/myindex_RL.html"
                 }
                 else if (scheme == "mpc-tuner"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.tuner"
+                        main_html = "http://204.57.4.188/yz_index.html.en.robustmpc.tuner"
                 }
                 else if(scheme=="pensieve-orig"){
-                        main_html = "http://68.181.99.194/myindex_RL.html"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
+                        main_html = "http://204.57.4.188/myindex_RL.html"
+                        //main_html = "http://204.57.4.188/myindex_RL.html"
                 }
 		else{
-			main_html = "http://68.181.99.194/yz_index.html.en"
+			main_html = "http://204.57.4.188/yz_index.html.en"
 		}
 		console.log("Scheme is "+ main_html)
         Page.navigate({'url': main_html});

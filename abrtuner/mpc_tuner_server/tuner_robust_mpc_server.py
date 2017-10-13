@@ -112,9 +112,9 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = mpc_tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                                  self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                cellsize = 600
+                cellsize = 800
                 #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-                table = mpc_lookup_table_4300_fix1012.mpc_dash_syth_hyb_pen_table_4300_fix1012_600
+                table = mpc_lookup_table_4300_fix1012.mpc_dash_syth_hyb_pen_table_4300_fix1012_800
                 ABRChoice, \
                 p1_min, \
                 p1_median, \
