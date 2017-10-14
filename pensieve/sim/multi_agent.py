@@ -34,7 +34,7 @@ TEST_LOG_FOLDER = './test_results/'
 TRAIN_TRACES = './cooked_traces/'
 # NN_MODEL = './results/pretrain_linear_reward.ckpt'
 #NN_MODEL = None
-NN_MODEL = './results/nn_model_ep_40000.ckpt'
+NN_MODEL = './results/nn_model_ep_100000.ckpt'
 
 def testing(epoch, nn_model, log_file):
     # clean up the test results folder
@@ -107,7 +107,7 @@ def central_agent(net_params_queues, exp_queues):
             saver.restore(sess, nn_model)
             print("Model restored.")
 
-        epoch = 40000
+        epoch = 100000
 
         # assemble experiences from agents, compute the gradients
         while True:
@@ -199,7 +199,7 @@ def central_agent(net_params_queues, exp_queues):
                     SUMMARY_DIR + "/nn_model_ep_" + str(epoch) + ".ckpt", 
                     test_log_file)
 
-            if epoch == 60000:
+            if epoch == 110000:
               return
 
 
