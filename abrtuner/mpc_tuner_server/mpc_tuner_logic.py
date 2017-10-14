@@ -2,6 +2,7 @@
 
 import sys, os
 import numpy as np
+from mpc_lookup_table_4300_fix1012 import *
 from mpc_lookup_table_4300 import *
 # from dash_syn_simulation_hyb_pen_performance_table_8600 import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
@@ -94,6 +95,7 @@ def getBWFeaturesWeightedPlayerVisible(playerVisibleBW, chunk_when_last_chd_ran)
 
 
 def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
+  print "evaluating change: ",
   chd_detected = False
   chd_index = chunk_when_last_chd
   # threshold for the amount to samples to consider for change point
@@ -110,6 +112,8 @@ def onlineCD(chunk_when_last_chd, interval, playerVisibleBW):
       chd_detected = True
       print "change detected i = ", i, " chd_index = ", chd_index, " chunk_when_last_chd =", chunk_when_last_chd, " len = ", lenarray
       break
+  if chd_detected == False:
+    print "no change"
   return chd_detected, chd_index
 
 def trimPlayerVisibleBW(playerVisibleBW, thresh):
