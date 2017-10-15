@@ -1,7 +1,7 @@
 ### debug configuration
 DEBUG = False
 VERBOSE_DEBUG = False
-CHUNK_DEBUG = True
+CHUNK_DEBUG = False
 
 ### simulation configuration
 # MEDIAN_BITRATE_MODE = True

@@ -1,0 +1,15 @@
+../trace_500_pen/mobile_dash_trace_123_10990.txt
+../trace_500_pen/desktop_dash_trace_244_3285.txt
+../trace_500_pen/desktop_dash_trace_52_11167.txt
+../trace_500_pen/desktop_dash_trace_50_11121.txt
+../trace_500_pen/desktop_dash_trace_32_10638.txt
+../trace_500_pen/desktop_dash_trace_40_10949.txt
+../trace_500_pen/mobile_dash_trace_110_10865.txt
+../trace_500_pen/mobile_dash_trace_135_11042.txt
+../trace_500_pen/desktop_dash_trace_73_11874.txt
+../trace_500_pen/mobile_dash_trace_185_11496.txt
+../trace_500_pen/mobile_dash_trace_235_11964.txt
+../trace_500_pen/mobile_dash_trace_81_10669.txt
+../trace_500_pen/mobile_dash_trace_160_11224.txt
+../trace_500_pen/mobile_dash_trace_168_11288.txt
+../trace_500_pen/desktop_dash_trace_21_10432.txt

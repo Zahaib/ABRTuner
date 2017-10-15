@@ -12,6 +12,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=''
 import numpy as np
 import time
 import itertools
+import time
 
 ################## ROBUST MPC ###################
 
@@ -26,7 +27,7 @@ BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
 TOTAL_VIDEO_CHUNKS = 48
 DEFAULT_QUALITY = 0  # default video quality without agent
-REBUF_PENALTY = 100000.0 #4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+REBUF_PENALTY = 8.6 #100000.0 #4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
 SMOOTH_PENALTY = 0.0 #1
 TRAIN_SEQ_LEN = 100  # take as a train batch
 MODEL_SAVE_INTERVAL = 100
@@ -259,6 +260,7 @@ def make_request_handler(input_dict):
                 end = time.time()
                 #print "TOOK: " + str(end-start)
 
+                #time.sleep(2)
                 end_of_video = False
                 if ( post_data['lastRequest'] == TOTAL_VIDEO_CHUNKS ):
                     print "...END VIDEO..."
@@ -299,7 +301,7 @@ def make_request_handler(input_dict):
     return Request_Handler
 
 
-def run(server_class=HTTPServer, port=8333, log_file_path=LOG_FILE):
+def run(server_class=HTTPServer, port=8334, log_file_path=LOG_FILE):
 
     np.random.seed(RANDOM_SEED)
 

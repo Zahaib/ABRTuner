@@ -21,7 +21,7 @@ size_envivo = {0:[181801, 155580, 139857, 155432, 163442, 126289, 153295, 173849
 NUM_BITRATES = 6
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 TOTAL_VIDEO_CHUNKS = 48
-REBUF_PENALTY = 4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+REBUF_PENALTY = 8.6 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
 SMOOTH_PENALTY = 0.0
 
 

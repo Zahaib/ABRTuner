@@ -26,6 +26,7 @@ file_names = os.listdir(log_path)
 dash_QoE = dict()
 average_QoE = dict()
 file_name_dict = dict()
+orig_file_name = dict()
 for file_name in file_names:
     if "DS_" in file_name: continue
     print(file_name)
@@ -34,6 +35,8 @@ for file_name in file_names:
       file_name_dict[fname] = dict()
     scheme = file_name.split("_")[0]
     name = file_name.split("_")[4] + file_name.split("_")[5]
+    if "mpc-tuner" in file_name:
+      orig_file_name[name] = file_name
     #name = '_'.join(file_name.split(" ")[1:])
     #continue    
     f = open(log_path+file_name,"r")
@@ -140,7 +143,7 @@ qoe_per_cdf = dict()
 change_per_cdf = dict()
 
 for i in dash_QoE.keys():
-    if len(dash_QoE[i]) != 3:
+    if len(dash_QoE[i]) != 2:
         continue
     for ii in dash_QoE[i].keys():
         if ii not in bitrate_cdf.keys():
@@ -151,29 +154,37 @@ for i in dash_QoE.keys():
             qoe_cdf[ii] = []            
         if ii not in change_cdf.keys():
             change_cdf[ii] = []            
-        if ii != "online-tuner" and ii not in rebuf_per_cdf.keys():
+        if ii != "mpc-tuner" and ii not in rebuf_per_cdf.keys():
             rebuf_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in bitrate_per_cdf.keys():
+        if ii != "mpc-tuner" and ii not in bitrate_per_cdf.keys():
             bitrate_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in qoe_per_cdf.keys():
+        if ii != "mpc-tuner" and ii not in qoe_per_cdf.keys():
             qoe_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in change_per_cdf.keys():
+        if ii != "mpc-tuner" and ii not in change_per_cdf.keys():
             change_per_cdf[ii] = []
 
         bitrate_cdf[ii].append(float(dash_QoE[i][ii][0]))
         rebuf_cdf[ii].append(100*float(dash_QoE[i][ii][1]))
         qoe_cdf[ii].append(float(dash_QoE[i][ii][3]))
         change_cdf[ii].append(float(dash_QoE[i][ii][4]))
-        if ii != "online-tuner":
-            bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
-            rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["online-tuner"][1])))
-            qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3])))
-            #if 100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]) < -30:
-            #    print >> sys.stderr, i, dash_QoE[i]["online-tuner"][3], dash_QoE[i][ii][3], float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3])
+        if ii != "mpc-tuner":
+            bitrate_per_diff = 100*(float(dash_QoE[i]["mpc-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0])
+            bitrate_per_cdf[ii].append(bitrate_per_diff)
+            rebuf_per_diff = 100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["mpc-tuner"][1]))
+            if bitrate_per_diff < 0.0:
+              n = '_'.join(orig_file_name[i].split("_")[1:6]) + ".txt"
+              print "../trace_500_pen/" + n
+            rebuf_per_cdf[ii].append(rebuf_per_diff)
+            try:
+              qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["mpc-tuner"][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3])))
+            except ZeroDivisionError:
+              pass
+            #if 100*(float(dash_QoE[i]["mpc-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]) < -30:
+            #    print >> sys.stderr, i, dash_QoE[i]["mpc-tuner"][3], dash_QoE[i][ii][3], float(dash_QoE[i]["mpc-tuner"][3]) - float(dash_QoE[i][ii][3])
             if float(dash_QoE[i][ii][4]) == 0:
-                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/0.01)
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["mpc-tuner"][4]))/0.01)
             else:	
-                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/float(dash_QoE[i][ii][4]))
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["mpc-tuner"][4]))/float(dash_QoE[i][ii][4]))
 
 
 for sh in bitrate_cdf.keys():
@@ -239,14 +250,14 @@ for sh in qoe_cdf.keys():
 # QoE_diff = []
 # for name in average_QoE.keys():
 #   try:
-#     percentage_diff = (average_QoE[name]["online-tuner"] - average_QoE[name]["robustmpc"]) / average_QoE[name]["robustmpc"] * 100
+#     percentage_diff = (average_QoE[name]["mpc-tuner"] - average_QoE[name]["mpc-tuner"]) / average_QoE[name]["mpc-tuner"] * 100
 #     QoE_diff.append(percentage_diff)
 #   except KeyError:
 #     pass
 #   for scheme in average_QoE[name].keys():
-#     if scheme == "robustmpc":
+#     if scheme == "mpc-tuner":
 #       pens_QoE.append(average_QoE[name][scheme])
-#     if scheme == "online-tuner":
+#     if scheme == "mpc-tuner":
 #       tuner_QoE.append(average_QoE[name][scheme])
 
 # f_out = open(output_dir + "/cdf_qoe_pensieve.txt",'w')
@@ -267,8 +278,8 @@ for sh in qoe_cdf.keys():
 # f_out = open("tuner_rebuf_bad_list.txt",'w')
 # for fname in file_name_dict.keys():
 #   try:
-#     if file_name_dict[fname]['online-tuner'][1] < file_name_dict[fname]["robustmpc"][1]:
-#       print fname, file_name_dict[fname]['online-tuner'][1], file_name_dict[fname]["robustmpc"][1]
+#     if file_name_dict[fname]['mpc-tuner'][1] < file_name_dict[fname]["mpc-tuner"][1]:
+#       print fname, file_name_dict[fname]['mpc-tuner'][1], file_name_dict[fname]["mpc-tuner"][1]
 #       #f_out.write(str(fname) + " " + str(file_name_dict[fname]['tuner'][1]) + " " + str(file_name_dict[fname]["pensieve-pensvid"][1]) + "\n")
 #   except KeyError:
 #     pass

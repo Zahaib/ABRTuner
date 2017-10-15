@@ -524,7 +524,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
     ######## MPC code
-
+    #print BLEN
     # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
     # Do We need to select bitrate before or after the delay??

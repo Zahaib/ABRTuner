@@ -484,7 +484,7 @@ MediaPlayer.dependencies.AbrController = function () {
                                     //quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
 									break;
 								case 7:
-									quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
+									quality = self.getBitrateHYB(bufferLevel, bandwidthEst, lastRequestedSegmentIndex + 1);
 									break;
 								case 5:
 								    quality = fixedQualityArray[lastRequested+1];
