@@ -209,5 +209,5 @@ def getMPCBW(chunkBWSamples, bandwidthEsts, pastErrors, chunkid, discount):
     future_bandwidth = harmonic_bandwidth/(1+max_error)
   future_bandwidth = future_bandwidth * 8 * 1000.0 # converted to kbps 
 
-  return future_bandwidth, bandwidthEsts, pastErrors            
+  return future_bandwidth, harmonic_bandwidth, bandwidthEsts, pastErrors            
 

@@ -35,7 +35,7 @@ MODEL_SAVE_INTERVAL = 100
 RANDOM_SEED = 42
 RAND_RANGE = 1000
 SUMMARY_DIR = './results'
-LOG_FILE = './results/log'
+LOG_FILE = './results/mpctuner_log'
 # in format of time_stamp bit_rate buffer_size rebuffer_time video_chunk_size download_time reward
 # NN_MODEL = None
 NN_MODEL = '../rl_server/results/pretrain_linear_reward.ckpt'
@@ -127,6 +127,7 @@ def make_request_handler(input_dict):
                 self.input_dict['discount'] = p1_max
 
             mpcBW, \
+            harmonic_bandwidth, \
             bandwidthEsts, \
             pastErrors = mpc_tuner_logic.getMPCBW(\
                         self.input_dict['chunkBWSamples'], \
@@ -142,6 +143,18 @@ def make_request_handler(input_dict):
                     lastChunkBR, \
                     lastChunkID + 1, \
                     mpcBW)
+
+
+            # log wall_time, bit_rate, buffer_size, rebuffer_time, video_chunk_size, download_time, reward
+            self.log_file.write(str(time.time()) + '\t' +
+                                str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
+                                str(post_data['buffer']) + '\t' +
+                                str(post_data['lastChunkSize']) + '\t' +
+                                str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+                                str(harmonic_bandwidth * 8 * 1000) + '\t' +
+                                str(self.input_dict['discount']) + '\n')            
+            self.log_file.flush()
+
 
             end_of_video = False
             if ( lastChunkID == TOTAL_VIDEO_CHUNKS):
@@ -220,7 +233,7 @@ def run(server_class=HTTPServer, port=8336, log_file_path=LOG_FILE):
 def main():
     if len(sys.argv) == 2:
         trace_file = sys.argv[1]
-        run(log_file_path=LOG_FILE + '_RL_' + trace_file)
+        run(log_file_path=LOG_FILE)
     else:
         run()
 

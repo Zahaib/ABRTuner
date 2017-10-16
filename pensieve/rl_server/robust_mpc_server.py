@@ -153,14 +153,6 @@ def make_request_handler(input_dict):
                         state = np.array(self.s_batch[-1], copy=True)
 
                 # log wall_time, bit_rate, buffer_size, rebuffer_time, video_chunk_size, download_time, reward
-                self.log_file.write(str(time.time()) + '\t' +
-                                    str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
-                                    str(post_data['buffer']) + '\t' +
-                                    str(rebuffer_time / M_IN_K) + '\t' +
-                                    str(video_chunk_size) + '\t' +
-                                    str(video_chunk_fetch_time) + '\t' +
-                                    str(reward) + '\n')
-                self.log_file.flush()
 
                 # pick bitrate according to MPC           
                 # first get harmonic mean of last 5 bandwidths
@@ -260,6 +252,15 @@ def make_request_handler(input_dict):
                 end = time.time()
                 #print "TOOK: " + str(end-start)
 
+                self.log_file.write(str(time.time()) + '\t' +
+                                    str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
+                                    str(post_data['buffer']) + '\t' +
+                                    str(post_data['lastChunkSize']) + '\t' +
+                                    str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+                                    str(harmonic_bandwidth * 8 * 1000) + '\t' +
+                                    str(max_error * 100) + '\n')
+                self.log_file.flush()
+
                 #time.sleep(2)
                 end_of_video = False
                 if ( post_data['lastRequest'] == TOTAL_VIDEO_CHUNKS ):
@@ -341,7 +342,7 @@ def run(server_class=HTTPServer, port=8334, log_file_path=LOG_FILE):
 def main():
     if len(sys.argv) == 2:
         trace_file = sys.argv[1]
-        run(log_file_path=LOG_FILE + '_robustMPC_' + trace_file)
+        run(log_file_path=LOG_FILE)
     else:
         run()
 

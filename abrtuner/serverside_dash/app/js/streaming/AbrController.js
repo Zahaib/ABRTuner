@@ -532,7 +532,7 @@ MediaPlayer.dependencies.AbrController = function () {
 										                }
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevel,
+									                				'buffer': bufferLevelAdjusted,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
@@ -565,7 +565,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevel,
+									                				'buffer': bufferLevelAdjusted,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
@@ -599,7 +599,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevel,
+									                				'buffer': bufferLevelAdjusted,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
@@ -615,7 +615,7 @@ MediaPlayer.dependencies.AbrController = function () {
                                                         break;
 													case 10:
 														self.debug.log("Using HYB...HHHHHHYYYYYBBBBBB");
-														quality = self.getBitrateHYB(bufferLevel, bandwidthEst, lastRequestedSegmentIndex + 1);
+														quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
 														break;
 													default:
 														self.debug.log("Using Default...DDDEEEFFFAAAUUULLLTTT"); 
