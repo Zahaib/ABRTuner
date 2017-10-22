@@ -1,0 +1,8 @@
+rebuf = 8600
+change = 0
+nn_model_ep_110000.* 
+
+
+rebuf = 8600
+change = 1
+nn_model_ep_140000.*

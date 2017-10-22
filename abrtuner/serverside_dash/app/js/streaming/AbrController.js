@@ -532,7 +532,7 @@ MediaPlayer.dependencies.AbrController = function () {
 										                }
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevelAdjusted,
+									                				'buffer': bufferLevel,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
@@ -548,7 +548,7 @@ MediaPlayer.dependencies.AbrController = function () {
 													case 8: // HYB + Tuner 
                                                     	self.debug.log("Using HYB+Tuner OnlineCD...Tuner Online CD");
                                                         var quality = 0;
-														var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
+														// var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
 
                                                         var xhr = new XMLHttpRequest();
                                                         xhr.open("POST", "http://localhost:8335", false);
@@ -582,7 +582,7 @@ MediaPlayer.dependencies.AbrController = function () {
 													case 9: // MPC + Tuner  -- this is just a copy of the HYB + Tuner code
                                                     	self.debug.log("Using MPC+Tuner OnlineCD...Tuner Online CD");
                                                         var quality = 0;
-														var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
+														// var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
 
                                                         var xhr = new XMLHttpRequest();
                                                         xhr.open("POST", "http://localhost:8336", false);
@@ -599,7 +599,7 @@ MediaPlayer.dependencies.AbrController = function () {
 
 										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevelAdjusted,
+									                				'buffer': bufferLevel,
 									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,

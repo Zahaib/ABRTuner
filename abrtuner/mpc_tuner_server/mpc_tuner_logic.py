@@ -21,14 +21,15 @@ size_envivo = {0:[181801, 155580, 139857, 155432, 163442, 126289, 153295, 173849
 NUM_BITRATES = 6
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
 TOTAL_VIDEO_CHUNKS = 48
-REBUF_PENALTY = 8.6 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
-SMOOTH_PENALTY = 0.0
+REBUF_PENALTY = 4.3 #8.6 #4.3  # 1 sec rebuffering -> this number of Mbps
+SMOOTH_PENALTY = 1.0
 
 
 def getMPCDecision(bufferlen, bitrate, chunkid, future_bandwidth):
   # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
-  if chunkid > 48:
+  if chunkid >= 48:
     return chunkid
+
   windowSize = 5
   if chunkid + windowSize > TOTAL_VIDEO_CHUNKS:
     windowSize = TOTAL_VIDEO_CHUNKS - chunkid
@@ -83,6 +84,7 @@ def getMPCDecision(bufferlen, bitrate, chunkid, future_bandwidth):
   if ( best_combo != () ): # some combo was good
       bitrate = best_combo[0]
   #print "bitrate selected: ", bitrate
+  #print chunkid, windowSize, "bitrate selected ", bitrate
   return bitrate
 
 
@@ -166,7 +168,7 @@ def getDynamicconfig_mpc(pv_list_hyb, bw, std, step):
 
     if len(current_list_hyb)==0:
         return 'MPC', 0.0, 0.0, 0.0
-    if max(current_list_hyb) ==-1.0:
+    if max(current_list_hyb) < 0.0:
         return 'MPC', 0.0, 0.0, 0.0
     return ABRAlgo, min(current_list_hyb), np.percentile(current_list_hyb,50), max(current_list_hyb)
 

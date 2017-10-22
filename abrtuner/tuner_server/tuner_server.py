@@ -13,6 +13,9 @@ import tensorflow as tf
 import time
 import tuner_logic
 import tuner_lookup_tables
+import tuner_lookup_tables_05_rebuf
+import tuner_lookup_tables_1_rebuf
+import tuner_lookup_tables_2_rebuf
 import dash_syn_simulation_hyb_pen_performance_table_8600
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
@@ -110,8 +113,8 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                cellsize = 1000
-                table = tuner_lookup_tables.dash_syth_hyb_pen_table_1000
+                cellsize = 900
+                table = tuner_lookup_tables_2_rebuf.dash_syth_hyb_pen_table_900
                 #table = dash_syn_simulation_hyb_pen_performance_table_8600.dash_syth_hyb_pen_table_8600_1000
                 ABRChoice, \
                 p1_min_new, \

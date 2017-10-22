@@ -12,10 +12,12 @@ for i in `ls trace_500_pen/*`; do
   a=$(awk '{avg += $2} END {printf "%f \n", avg/NR}' < $i)
   #echo $a
 
-  if (( $(bc <<< "$a > 3000") ))
+  if (( $(bc <<< "$a < 4500") ))
   then
       fn=$(echo $i | cut -d/ -f1 --complement | cut -d. -f1)
-      echo $fn
+      fn_dict=$(echo $i | cut -d/ -f1 --complement | cut -d. -f1 | cut -d_ -f4-5 | sed 's/_//g')
+      #echo $fn, $fn_dict
+      echo \'$fn_dict\'
       #cp tuner_pensieve_mpc_results/*$fn* tuner_pensieve_mpc_results_3000/
   fi
 

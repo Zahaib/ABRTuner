@@ -253,11 +253,13 @@ def make_request_handler(input_dict):
                 #print "TOOK: " + str(end-start)
 
                 self.log_file.write(str(time.time()) + '\t' +
+                                    str(post_data['lastRequest']) + '\t' +
                                     str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
                                     str(post_data['buffer']) + '\t' +
                                     str(post_data['lastChunkSize']) + '\t' +
                                     str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
                                     str(harmonic_bandwidth * 8 * 1000) + '\t' +
+                                    str(future_bandwidth * 8 * 1000) + '\t' +
                                     str(max_error * 100) + '\n')
                 self.log_file.flush()
 

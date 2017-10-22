@@ -14,8 +14,12 @@ import time
 import mpc_tuner_logic
 import mpc_lookup_table_4300
 import mpc_lookup_table_4300_fix
+import mpc_lookup_table_4300_default
 import mpc_lookup_table_4300_fix1012
 import mpc_lookup_table_8600_fix1012
+import mpc_lookup_table_8600_fix1012_min
+import mpc_lookup_table_8600_fix1012_range
+import mpc_lookup_table_8600_fix1012_range_pickmax
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -108,14 +112,18 @@ def make_request_handler(input_dict):
             chd_detected, chd_index = mpc_tuner_logic.onlineCD(self.input_dict['chunk_when_last_chd_ran'], \
                                                            chpd_interval, \
                                                            self.input_dict['playerVisibleBW'])
-            if chd_detected:
+            avg_bw = std_bw = 0.0
+            # get new config if change is detected. Always get new config after first chunk completes download
+            if chd_detected or lastChunkID == 0:
+                if lastChunkID:
+                  chd_index = 0
                 self.input_dict['chunk_when_last_chd_ran'] = chd_index
                 avg_bw, std_bw = mpc_tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                                  self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                cellsize = 600
+                cellsize = 1000
                 #table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-                table = mpc_lookup_table_8600_fix1012.mpc_dash_syth_hyb_pen_table_8600_fix1012_600
+                table = mpc_lookup_table_4300_default.mpc_dash_syth_hyb_pen_table_4300_default_1000
                 ABRChoice, \
                 p1_min, \
                 p1_median, \
@@ -141,18 +149,38 @@ def make_request_handler(input_dict):
 
             quality = mpc_tuner_logic.getMPCDecision(bufferLen, \
                     lastChunkBR, \
-                    lastChunkID + 1, \
+                    lastChunkID, \
                     mpcBW)
 
-
+            #print lastChunkID, lastChunkID + 1, quality
             # log wall_time, bit_rate, buffer_size, rebuffer_time, video_chunk_size, download_time, reward
             self.log_file.write(str(time.time()) + '\t' +
+                                str(self.input_dict['chunksDownloaded']) + '\t' +
                                 str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
-                                str(post_data['buffer']) + '\t' +
+                                str(round(post_data['buffer'],2)) + '\t' +
                                 str(post_data['lastChunkSize']) + '\t' +
+                                str(post_data['lastChunkStartTime']) + '\t' +
+                                str(post_data['lastChunkFinishTime']) + '\t' +
+                                str(round(avg_bw,2)) + '\t' +
+                                str(round(std_bw,2)) + '\t' +
+                                str(self.input_dict['chunk_when_last_chd_ran']) + '\t' +
+                                str(np.mean(self.input_dict['playerVisibleBW'][self.input_dict['chunk_when_last_chd_ran']:])) + '\t' +
                                 str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+                                str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
                                 str(harmonic_bandwidth * 8 * 1000) + '\t' +
-                                str(self.input_dict['discount']) + '\n')            
+                                str(mpcBW) + '\t' +
+                                str(self.input_dict['discount']) + '\n')
+#            self.log_file.write(str(time.time()) + '\t' +
+#                                str(self.input_dict['chunksDownloaded']) + '\t' +
+#                                str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
+#                                str(round(post_data['buffer'],2)) + '\t' +
+#                                str(post_data['lastChunkSize']) + '\t' +
+#                                str(post_data['lastChunkFinishTime']) + '\t' +
+#                                str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+#                                str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
+#                                str(harmonic_bandwidth * 8 * 1000) + '\t' +
+#                                str(mpcBW) + '\t' +
+#                                str(self.input_dict['discount']) + '\n')
             self.log_file.flush()
 
 
@@ -167,7 +195,8 @@ def make_request_handler(input_dict):
                 self.input_dict['pastErrors'] = []
                 self.input_dict['chunksDownloaded'] = 0
                 self.input_dict['chunk_when_last_chd_ran'] = -1
-                self.input_dict['discount'] = 0
+                self.input_dict['discount'] = 0.0
+                self.log_file.write('\n')
 
 
             send_data = str(quality)

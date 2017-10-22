@@ -116,7 +116,7 @@ rebuf_cdf = dict()
 bitrate_per_cdf = dict()
 rebuf_per_cdf = dict()
 for i in dash_QoE.keys():
-    if len(dash_QoE[i]) !=2:
+    if len(dash_QoE[i]) !=3:
         continue
     for ii in dash_QoE[i].keys():
         if ii not in bitrate_cdf.keys():
