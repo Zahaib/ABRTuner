@@ -112,6 +112,9 @@ for file_name in file_names:
             buffering_dash.append([start,play,bufferlen,end])
             #print buffering_dash[-1], buffering_dash[-1][3]-buffering_dash[-1][0]
         #break
+#    print scheme
+#    for ID in chunks_dash.keys():
+#      print ID, chunks_dash[ID]['bitrate']
     # print chunks_dash
     buffering_dash = buffering_dash[1:]
     total_size = 0.0
@@ -148,7 +151,7 @@ for file_name in file_names:
     if name not in dash_QoE.keys():
         dash_QoE[name] = dict()
     #if scheme not in dash_QoE[name].keys():
-    dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash), QoE, total_quality_change/float(num_chunks_video))
+    dash_QoE[name][scheme] = (avgBitrate,rebufRatio, len(chunks_dash), QoE, total_quality_change/float(num_chunks_video), total_size, total_quality_change)
     # average_QoE[name][scheme] = (avgBitrate - rebuf_penalty * rebufRatio * 100)
 
     file_name_dict[fname][scheme] = (avgBitrate,rebufRatio, len(chunks_dash), QoE, total_quality_change/float(num_chunks_video))
@@ -163,6 +166,10 @@ bitrate_per_cdf = dict()
 rebuf_per_cdf = dict()
 qoe_per_cdf = dict()
 change_per_cdf = dict()
+
+qoe_imp_pens = dict()
+qoe_imp_pens['imp'] = list()
+qoe_imp_pens['red'] = list()
 
 for i in dash_QoE.keys():
     if len(dash_QoE[i]) != 3:
@@ -188,6 +195,9 @@ for i in dash_QoE.keys():
         #if i in rebuf_impacted:
         #if dash_QoE[i][ii][3] > dash_QoE[i]['robustmpc'][3] and dash_QoE[i][ii][1] < dash_QoE[i]['robustmpc'][1] and dash_QoE[i]['robustmpc'][1] > 0.02:
           #print >> sys.stderr, i,ii, dash_QoE[i][ii], dash_QoE[i]['robustmpc']
+        
+        #if ii == 'mpc-tuner' and float(dash_QoE[i][ii][4]) < 100:
+        #  print >> sys.stderr, i, ii
 
         bitrate_cdf[ii].append(float(dash_QoE[i][ii][0]))
         rebuf_cdf[ii].append(100*float(dash_QoE[i][ii][1]))
@@ -197,13 +207,20 @@ for i in dash_QoE.keys():
             bitrate_per_diff = 100*(float(dash_QoE[i]["mpc-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0])
             bitrate_per_cdf[ii].append(bitrate_per_diff)
             rebuf_per_diff = 100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["mpc-tuner"][1]))
-            if bitrate_per_diff < 0.0:
+          
+            if ii == 'robustmpc' and rebuf_per_diff > 0.0:
               n = '_'.join(orig_file_name[i].split("_")[1:6]) + ".txt"
-              print "../trace_500_pen/" + n
+              print "../trace_500_pen/" + n, round(dash_QoE[i]["mpc-tuner"][1],2), round(dash_QoE[i][ii][1],2)
             rebuf_per_cdf[ii].append(rebuf_per_diff)
             #try:
             qoe_diff = 100*(float(dash_QoE[i]["mpc-tuner"][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3]))
-            #if qoe_diff > 10 and ii == 'pensieve-pensvid':
+            if ii == 'pensieve-pensvid':
+              if qoe_diff > 0:
+                qoe_imp_pens['imp'].append(qoe_diff) 
+                print i, dash_QoE[i][ii], dash_QoE[i]["mpc-tuner"]
+              else:
+                qoe_imp_pens['red'].append(qoe_diff)
+            
             #  print >> sys.stderr, dash_QoE[i]["mpc-tuner"][3], dash_QoE[i][ii][3]
             qoe_per_cdf[ii].append(qoe_diff)
             #except ZeroDivisionError:
@@ -273,6 +290,9 @@ for sh in change_cdf.keys():
 print "\nQoE"
 for sh in qoe_cdf.keys():
   print sh, np.mean(qoe_cdf[sh]), np.std(qoe_cdf[sh]), np.percentile(qoe_cdf[sh], 50), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
+
+all_qoe = qoe_imp_pens['imp'] + qoe_imp_pens['red']
+print 'improvement', np.mean(qoe_imp_pens['imp']), 'reduction', np.mean(qoe_imp_pens['red']), 'all', np.mean(all_qoe)
 
 # pens_QoE = []
 # tuner_QoE = []

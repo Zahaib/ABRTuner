@@ -56,3 +56,15 @@ set key bottom right
 set yzeroaxis lt -1
 plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t 'RobustMPC', \
 'cdf_qoe_percentage_diff_pensieve-pensvid.txt' u 2:1 with lines lw 3 t 'Pensieve'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'qoe_percentage_improvement_mpctuner_lt_3000_and_full.png'
+set xlabel 'Percentage improvement achieved by MPC Tuner'
+set ylabel 'CDF'
+#set yrange [80:100]
+set xrange [-20:60]
+set key bottom right
+set yzeroaxis lt -1
+plot 'cdf_qoe_percentage_diff_robustmpc.txt' u 2:1 with lines lw 3 t '100-9000Kbps BW', \
+'cdf_qoe_percentage_diff_robustmpc_lt3000.txt' u 2:1 with lines lw 3 t '< 3000Kbps BW'

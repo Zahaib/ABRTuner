@@ -29,6 +29,8 @@ elif bw_limit == 3:
     set_to_use = bandwidth_profile.lt_3000
 elif bw_limit == 4:
     set_to_use = bandwidth_profile.lt_4000
+elif bw_limit == 5:
+    set_to_use = bandwidth_profile.lt_4500
 else:
     set_to_use = bandwidth_profile.lt_15000
 
@@ -36,8 +38,8 @@ else:
 #log_path = "/home/zahaib/zahaibVM/convivaProj/automation_zahaib/trace_500_out/"
 log_path = sys.argv[1].rstrip("/") + "/"
 output_dir = sys.argv[2].rstrip("/") + "/"
-rebuf_penalty = 8.6 #4.3
-change_penalty = 0.0 #1
+rebuf_penalty = 4.3 #4.3
+change_penalty = 1.0 #1
 file_names = os.listdir(log_path)
 dash_QoE = dict()
 average_QoE = dict()

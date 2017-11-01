@@ -1,0 +1,37 @@
+mobile_dash_trace_236_11992.txt robustmpc 263.265306122
+desktop_dash_trace_31_10635.txt robustmpc 226.530612245
+desktop_dash_trace_175_1632.txt robustmpc 262.244897959
+desktop_dash_trace_178_1663.txt robustmpc 234.693877551
+desktop_dash_trace_207_2464.txt robustmpc 200.0
+mobile_dash_trace_144_1112.txt robustmpc 204.081632653
+desktop_dash_trace_99_12489.txt robustmpc 208.163265306
+desktop_dash_trace_182_1808.txt robustmpc 263.265306122
+mobile_dash_trace_110_10865.txt robustmpc 234.693877551
+desktop_dash_trace_14_10302.txt robustmpc 230.612244898
+mobile_dash_trace_5_10050.txt robustmpc 236.734693878
+desktop_dash_trace_82_12129.txt robustmpc 220.408163265
+desktop_dash_trace_169_1546.txt robustmpc 311.224489796
+desktop_dash_trace_245_3313.txt robustmpc 316.326530612
+mobile_dash_trace_158_11214.txt robustmpc 295.918367347
+desktop_dash_trace_3_10068.txt robustmpc 257.142857143
+mobile_dash_trace_86_10680.txt robustmpc 218.367346939
+mobile_dash_trace_97_10779.txt robustmpc 269.387755102
+desktop_dash_trace_233_3051.txt robustmpc 212.244897959
+mobile_dash_trace_187_11519.txt robustmpc 316.326530612
+mobile_dash_trace_47_10384.txt robustmpc 211.224489796
+mobile_dash_trace_105_10829.txt robustmpc 271.428571429
+desktop_dash_trace_205_2361.txt robustmpc 289.795918367
+desktop_dash_trace_23_10468.txt robustmpc 265.306122449
+mobile_dash_trace_69_10574.txt robustmpc 234.693877551
+mobile_dash_trace_119_1094.txt robustmpc 232.653061224
+mobile_dash_trace_48_10392.txt robustmpc 261.224489796
+
+
+new analysis
+../trace_500_pen/mobile_dash_trace_29_1022.txt 0.0 0.06
+../trace_500_pen/mobile_dash_trace_26_10176.txt 0.0 0.04
+../trace_500_pen/mobile_dash_trace_216_11798.txt 0.0 0.04
+../trace_500_pen/mobile_dash_trace_109_10851.txt 0.0 0.05
+../trace_500_pen/desktop_dash_trace_43_11010.txt 0.0 0.03
+../trace_500_pen/mobile_dash_trace_11_10089.txt 0.0 0.02
+../trace_500_pen/mobile_dash_trace_235_11964.txt 0.0 0.02

@@ -38,7 +38,7 @@ MODEL_SAVE_INTERVAL = 100
 RANDOM_SEED = 42
 RAND_RANGE = 1000
 SUMMARY_DIR = './results'
-LOG_FILE = './results/log'
+LOG_FILE = './results/hybtuner_log'
 # in format of time_stamp bit_rate buffer_size rebuffer_time video_chunk_size download_time reward
 # NN_MODEL = None
 NN_MODEL = '../rl_server/results/pretrain_linear_reward.ckpt'
@@ -108,13 +108,14 @@ def make_request_handler(input_dict):
             chd_detected, chd_index = tuner_logic.onlineCD(self.input_dict['chunk_when_last_chd_ran'], \
             	                                           chpd_interval, \
             	                                           self.input_dict['playerVisibleBW'])
+            avg_bw = std_bw = 0
             if chd_detected:
                 self.input_dict['chunk_when_last_chd_ran'] = chd_index
                 avg_bw, std_bw = tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
                 cellsize = 900
-                table = tuner_lookup_tables_2_rebuf.dash_syth_hyb_pen_table_900
+                table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
                 #table = dash_syn_simulation_hyb_pen_performance_table_8600.dash_syth_hyb_pen_table_8600_1000
                 ABRChoice, \
                 p1_min_new, \
@@ -134,6 +135,23 @@ def make_request_handler(input_dict):
             	                                                 lastChunkID + 1, \
             	                                                 bufferLen, \
             	                                                 self.input_dict['beta'])
+
+            self.log_file.write(str(time.time()) + '\t' +
+                                str(self.input_dict['chunksDownloaded']) + '\t' +
+                                str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
+                                str(round(post_data['buffer'],2)) + '\t' +
+                                str(post_data['lastChunkSize']) + '\t' +
+                                str(post_data['lastChunkStartTime']) + '\t' +
+                                str(post_data['lastChunkFinishTime']) + '\t' +
+                                str(round(avg_bw,2)) + '\t' +
+                                str(round(std_bw,2)) + '\t' +
+                                str(self.input_dict['chunk_when_last_chd_ran']) + '\t' +
+                                str(np.mean(self.input_dict['playerVisibleBW'][self.input_dict['chunk_when_last_chd_ran']:])) + '\t' +
+                                str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+                                str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
+                                str(self.input_dict['beta']) + '\n')
+
+
             # if chd_detected:
             # 	print "Change detected ", \
             # 	      chd_index, \
@@ -221,7 +239,7 @@ def run(server_class=HTTPServer, port=8335, log_file_path=LOG_FILE):
 def main():
     if len(sys.argv) == 2:
         trace_file = sys.argv[1]
-        run(log_file_path=LOG_FILE + '_RL_' + trace_file)
+        run(log_file_path=LOG_FILE)
     else:
         run()
 

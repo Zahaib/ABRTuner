@@ -115,9 +115,12 @@ def make_request_handler(input_dict):
             avg_bw = std_bw = 0.0
             # get new config if change is detected. Always get new config after first chunk completes download
             if chd_detected or lastChunkID == 0:
-                if lastChunkID:
+                if lastChunkID == 0:
                   chd_index = 0
+                  print "change detected i = ", 0, " chd_index = ", chd_index, " chunk_when_last_chd =", self.input_dict['chunk_when_last_chd_ran'], " len = ", len(self.input_dict['playerVisibleBW'])
+
                 self.input_dict['chunk_when_last_chd_ran'] = chd_index
+
                 avg_bw, std_bw = mpc_tuner_logic.getBWFeaturesWeightedPlayerVisible(\
                                  self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
