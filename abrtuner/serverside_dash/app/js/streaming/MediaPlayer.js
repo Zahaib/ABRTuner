@@ -281,15 +281,19 @@ MediaPlayer = function (aContext) {
             this.abrController.setAutoSwitchBitrate(value);
         },
 
-	// Xiaoqi: Visual
-	setAbrAlgorithm: function(abrAlgo) {
-	    this.abrController.setAbrAlgorithm(abrAlgo);
-	},
+    	// Xiaoqi: Visual
+    	setAbrAlgorithm: function(abrAlgo) {
+    	    this.abrController.setAbrAlgorithm(abrAlgo);
+    	},
 
-	setFixedBitrateArray: function(fixedBitrateArray) {
-	    this.abrController.setFixedBitrateArray(fixedBitrateArray);
-	},
-	// Xiaoqi: Visual
+    	setFixedBitrateArray: function(fixedBitrateArray) {
+    	    this.abrController.setFixedBitrateArray(fixedBitrateArray);
+    	},
+    	// Xiaoqi: Visual
+
+        setBolaTunerEnabled: function(value){
+            this.abrController.setBolaTunerEnabled(value);
+        },
 
         attachView: function (view) {
             if (!initialized) {

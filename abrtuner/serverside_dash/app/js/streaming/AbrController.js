@@ -26,12 +26,45 @@ MediaPlayer.dependencies.AbrController = function () {
 	//Xiaoqi
 	// Xiaoqi_new
 	bufferLevelLog = [0],
+	bitrateArray = [300,750,1200,1850,2850,4300],	
+	// BOLA variables
+	MINIMUM_BUFFER_S = 10, // BOLA should never add artificial delays if buffer is less than MINIMUM_BUFFER_S. Orig val: 10
+	BUFFER_TARGET_S = 30, // If Schedule Controller does not allow buffer level to reach BUFFER_TARGET_S, this can be a virtual buffer level. Orig val: 30
+	getBolaBitrates = function(){
+		var ret = [];
+		for (var i = 0; i < bitrateArray.length; i++){
+			ret.push(bitrateArray[i] * 1000);
+		}
+		return ret;
+	},
+	BOLA_BITRATES = getBolaBitrates(),
+	getBolaUtilities = function(){
+		var ret = [];
+		for (var i = 0; i < BOLA_BITRATES.length; i++){
+			ret.push(Math.log(BOLA_BITRATES[i]));
+		}
+		return ret;
+	},
+	BOLA_UTILITIES = getBolaUtilities(),	
+	getBolaGP = function(){
+		var gp;
+		gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[BOLA_UTILITIES.length - 1] - BOLA_UTILITIES[0]) / (BUFFER_TARGET_S / MINIMUM_BUFFER_S - 1);
+		return gp;
+	},	
+	getBolaVP = function(){
+		var vp;
+		vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1);		
+		return vp;
+	},
+	BOLA_GP = getBolaGP(),
+	BOLA_VP = getBolaVP(),
+	isBolaTuner = false,
+
 	// MPC racecar video
 	// bitrateArray = [350,600,1000,2000,3000],
 	//bitrateArray = [825,1300,1800,2500,3200,3700],
 	//bitrateArray = [825,1300,1800,2500,3200],
 	// Pensieve Video 
-	bitrateArray = [300,750,1200,1850,2850,4300],
 	reservoir = 5,
 	BUFFER_SAFETY_MARGIN = 1.0,
 	BITRATE_WEIGHT = 1,
@@ -43,9 +76,11 @@ MediaPlayer.dependencies.AbrController = function () {
 	bufferLevelAdjusted_mpc = 0,
 	// Xiaoqi_new
 	// Xiaoqi: Visual
-	abrAlgo = 0,
+	abrAlgo = 10,
 	fixedQualityArray = [],
 	// Xiaoqi: Visual
+
+
 
 	getInternalQuality = function (type) {
 		var quality;
@@ -171,6 +206,39 @@ MediaPlayer.dependencies.AbrController = function () {
 			// return 0;
 		},
 
+	    getBitrateBOLA: function (bufferLevel, stateData, isBolaTuner) {
+	        var bitrateCount = BOLA_BITRATES.length;
+	        var quality = NaN;
+	        var score = NaN;
+	        var s = NaN;
+	        console.log('using BOLA: ' + BOLA_BITRATES + ' ' + BOLA_UTILITIES + ' ' + BOLA_VP + ' ' + BOLA_GP );
+
+	        // console.log('BOLA state: ' + stateData['lastReqType'] + '  lastRequest ' + stateData['lastRequest'] + ' url ' + stateData['lastURL']);
+	        // console.log('BOLA Tuner: ' + isBolaTuner);
+	        var state = JSON.stringify(stateData);
+	        if (isBolaTuner){
+	            var xhr = new XMLHttpRequest();
+	            xhr.open("POST", "http://localhost:8337", false);
+	            xhr.onreadystatechange = function() {
+	                if ( xhr.readyState == 4 && xhr.status == 200 ) {
+	                    console.log("GOT RESPONSE:" + xhr.responseText + "---");
+	                    quality = parseInt(xhr.responseText, 10);
+	                }
+	            }
+	            xhr.send(state);
+	        }
+	        else{
+	            for (var i = 0; i < bitrateCount; ++i) {
+	                s = (BOLA_VP * (BOLA_UTILITIES[i] + BOLA_GP) - bufferLevel) / BOLA_BITRATES[i];
+	                if (isNaN(score) || s >= score) {
+	                    score = s;
+	                    quality = i;
+	                }
+	            }
+	        }
+	        return quality;
+	    },		
+
 		getAutoSwitchBitrate: function () {
 			return autoSwitchBitrate;
 		},
@@ -190,6 +258,10 @@ MediaPlayer.dependencies.AbrController = function () {
 			console.log("-----VISUAL: set fixedBitrateArray");
 		},
 		// Xiaoqi: Visual
+
+		setBolaTunerEnabled: function(value) {
+			isBolaTuner = value;
+		},
 
 		getMetricsFor: function (data) {
 			var deferred = Q.defer(),
@@ -617,6 +689,26 @@ MediaPlayer.dependencies.AbrController = function () {
 														self.debug.log("Using HYB...HHHHHHYYYYYBBBBBB");
 														quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
 														break;
+													case 11: // Use for BOLA or BOLA Tuner
+                                                    	self.debug.log("Using BOLA...");
+                                                        var quality = 0;
+
+										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
+										                			'lastquality': lastQuality,
+									                				'buffer': bufferLevel,
+									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
+									                				'bandwidthEst': bandwidthEst,
+									                				'lastRequest': lastRequested,
+									                				'RebufferTime': rebuffer,
+									                				'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
+																	'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
+									                				'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
+									                				'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
+                                                        // var dataStringified = JSON.stringify(data);
+                                                        // xhr.send(dataStringified);
+                                                        quality = self.getBitrateBOLA(bufferLevel, data, isBolaTuner);
+                                                        self.debug.log("BOLA QUALITY RETURNED IS: " + quality);
+                                                        break;
 													default:
 														self.debug.log("Using Default...DDDEEEFFFAAAUUULLLTTT"); 
 														quality = 0; 
