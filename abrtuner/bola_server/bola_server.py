@@ -88,7 +88,7 @@ def make_request_handler(input_dict):
             quality = 0
             content_length = int(self.headers['Content-Length'])
             post_data = json.loads(self.rfile.read(content_length))
-            print post_data
+            # print post_data
 
             bufferLen, \
             lastChunkBW, \
@@ -101,6 +101,8 @@ def make_request_handler(input_dict):
             self.input_dict['sessionHistory'][lastChunkID] = [lastChunkBW]
             self.input_dict['chunkBWSamples'].append(lastChunkBW)
             self.input_dict['chunksDownloaded'] = lastChunkID
+
+            print bufferLen, lastChunkBW, lastChunkID, post_data['lastURL'], post_data['lastquality']
 
             # print lastChunkID, "len", len(self.input_dict['chunkBWSamples'])
             

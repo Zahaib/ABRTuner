@@ -136,7 +136,8 @@ function BolaRule(config) {
             return initialState;
         }
 
-        initialState.state                 = BOLA_STATE_STARTUP;
+        // initialState.state                 = BOLA_STATE_STARTUP;
+        initialState.state                 = BOLA_STATE_STEADY;
 
         initialState.bitrates              = bitrates;
         initialState.utilities             = params.utilities;
@@ -174,13 +175,14 @@ function BolaRule(config) {
         return initialState;
     }
 
-    function getQualityFromBufferLevel(bolaState, bufferLevel, stateString, isBolaTuner) {
+    function getQualityFromBufferLevel(bolaState, bufferLevel, stateData, isBolaTuner) {
         let bitrateCount = bolaState.bitrates.length;
         let quality = NaN;
         let score = NaN;
-
+        console.log('BOLA state: ' + stateData['lastReqType'] + '  lastRequest ' + stateData['lastRequest'] + ' url ' + stateData['lastURL']);
         // console.log('BOLA Tuner: ' + isBolaTuner);
         // console.log('BOLA utilities ' + bolaState.utilities +' bitrates ' + bolaState.bitrates + ' Vp ' + bolaState.Vp + ' gp ' + bolaState.Vp + ' bufferLevel ' + bufferLevel + ' stateString ' + stateString);
+        var state = JSON.stringify(stateData);
         if (isBolaTuner){
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "http://localhost:8337", false);
@@ -190,7 +192,7 @@ function BolaRule(config) {
                     quality = parseInt(xhr.responseText, 10);
                 }
             }
-            xhr.send(stateString);
+            xhr.send(state);
         }
         else{
             for (let i = 0; i < bitrateCount; ++i) {
@@ -321,7 +323,7 @@ function BolaRule(config) {
         // TODO
     }
 
-    function execute(rulesContext, callback, stateString) {
+    function execute(rulesContext, callback, stateData) {
         let streamProcessor = rulesContext.getStreamProcessor();
         streamProcessor.getScheduleController().setTimeToLoadDelay(0);
 
@@ -352,6 +354,7 @@ function BolaRule(config) {
                 if (initThroughput === 0) {
                     // We don't have information about any download yet - let someone else decide quality.
                     if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality unchanged for INITIALIZE');
+                    console.log('BOLA debug: callback1 ' + ' bufferLevel ' + bufferLevel);
                     callback(switchRequest);
                     return;
                 }
@@ -364,6 +367,7 @@ function BolaRule(config) {
             }
 
             if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality ' + q + ' for INITIALIZE');
+            console.log('BOLA debug: callback2 ' + ' bufferLevel ' + bufferLevel);            
             callback(switchRequest);
             return;
         } // initialization
@@ -374,6 +378,7 @@ function BolaRule(config) {
 
         if (bolaState.state === BOLA_STATE_ONE_BITRATE) {
             if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality 0 for ONE_BITRATE');
+            console.log('BOLA debug: callback3 ' + ' bufferLevel ' + bufferLevel);
             callback(switchRequest);
             return;
         }
@@ -401,74 +406,76 @@ function BolaRule(config) {
         }
 
         let effectiveBufferLevel = bufferLevel + bolaState.virtualBuffer;
-        let bolaQuality = getQualityFromBufferLevel(bolaState, effectiveBufferLevel, stateString, mediaPlayerModel.getBolaTunerEnabled());
+        let bolaQuality = getQualityFromBufferLevel(bolaState, effectiveBufferLevel, stateData, mediaPlayerModel.getBolaTunerEnabled());
 
         if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule bufferLevel=' + bufferLevel.toFixed(3) + '(+' + bolaState.virtualBuffer.toFixed(3) + '=' + effectiveBufferLevel.toFixed(3) + ') recentThroughput=' + (0.000001 * recentThroughput).toFixed(3) + ' tentativeQuality=' + bolaQuality);
 
-        if (bolaState.state === BOLA_STATE_STARTUP) {
-            // in startup phase, use some throughput estimation
+        // This startup heuristic is not explained in the paper, deleting it.
+        // if (bolaState.state === BOLA_STATE_STARTUP) {
+        //     // in startup phase, use some throughput estimation
 
-            let q = getQualityFromThroughput(bolaState, recentThroughput * bolaState.bandwidthSafetyFactor);
+        //     let q = getQualityFromThroughput(bolaState, recentThroughput * bolaState.bandwidthSafetyFactor);
 
-            if (bufferLevel > bolaState.fragmentDuration / REBUFFER_SAFETY_FACTOR) {
-                // only switch to steady state if we believe we have enough buffer to not trigger quality drop to a safeBitrate
-                bolaState.state = BOLA_STATE_STEADY;
+        //     if (bufferLevel > bolaState.fragmentDuration / REBUFFER_SAFETY_FACTOR) {
+        //         // only switch to steady state if we believe we have enough buffer to not trigger quality drop to a safeBitrate
+        //         bolaState.state = BOLA_STATE_STEADY;
 
-                let wantEffectiveBuffer = 0;
-                for (let i = 0; i < q; ++i) {
-                    // We want minimum effective buffer (bufferLevel + virtualBuffer) that gives a higher score for q when compared with any other i < q.
-                    // We want
-                    //     (Vp * (utilities[q] + gp) - bufferLevel) / bitrates[q]
-                    // to be >= any score for i < q.
-                    // We get score equality for q and i when:
-                    let b = bolaState.Vp * (bolaState.gp + (bitrates[q] * utilities[i] - bitrates[i] * utilities[q]) / (bitrates[q] - bitrates[i]));
-                    if (b > wantEffectiveBuffer) {
-                        wantEffectiveBuffer = b;
-                    }
-                }
-                if (wantEffectiveBuffer > bufferLevel) {
-                    bolaState.virtualBuffer = wantEffectiveBuffer - bufferLevel;
-                }
-            }
+        //         let wantEffectiveBuffer = 0;
+        //         for (let i = 0; i < q; ++i) {
+        //             // We want minimum effective buffer (bufferLevel + virtualBuffer) that gives a higher score for q when compared with any other i < q.
+        //             // We want
+        //             //     (Vp * (utilities[q] + gp) - bufferLevel) / bitrates[q]
+        //             // to be >= any score for i < q.
+        //             // We get score equality for q and i when:
+        //             let b = bolaState.Vp * (bolaState.gp + (bitrates[q] * utilities[i] - bitrates[i] * utilities[q]) / (bitrates[q] - bitrates[i]));
+        //             if (b > wantEffectiveBuffer) {
+        //                 wantEffectiveBuffer = b;
+        //             }
+        //         }
+        //         if (wantEffectiveBuffer > bufferLevel) {
+        //             bolaState.virtualBuffer = wantEffectiveBuffer - bufferLevel;
+        //         }
+        //     }
 
-            if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality ' + q + ' for STARTUP');
-            bolaState.lastQuality = q;
-            metricsModel.updateBolaState(mediaType, bolaState);
-            switchRequest.value = q;
-            switchRequest.priority = SwitchRequest.DEFAULT;
-            switchRequest.reason.state = BOLA_STATE_STARTUP;
-            switchRequest.reason.throughput = recentThroughput;
-            callback(switchRequest);
-            return;
-        }
+        //     if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality ' + q + ' for STARTUP');
+        //     bolaState.lastQuality = q;
+        //     metricsModel.updateBolaState(mediaType, bolaState);
+        //     switchRequest.value = q;
+        //     switchRequest.priority = SwitchRequest.DEFAULT;
+        //     switchRequest.reason.state = BOLA_STATE_STARTUP;
+        //     switchRequest.reason.throughput = recentThroughput;
+        //     console.log('BOLA debug: callback4 ' + ' bufferLevel ' + bufferLevel + ' fragmentDuration ' + bolaState.fragmentDuration);            
+        //     callback(switchRequest);
+        //     return;
+        // }
 
         // steady state
 
         // we want to avoid oscillations
         // We implement the "BOLA-O" variant: when network bandwidth lies between two encoded bitrate levels, stick to the lowest level.
-        if (bolaQuality > bolaState.lastQuality) {
-            // do not multiply throughput by bandwidthSafetyFactor here: we are not using throughput estimation but capping bitrate to avoid oscillations
-            let q = getQualityFromThroughput(bolaState, recentThroughput);
-            if (bolaQuality > q) {
-                // only intervene if we are trying to *increase* quality to an *unsustainable* level
+        // if (bolaQuality > bolaState.lastQuality) {
+        //     // do not multiply throughput by bandwidthSafetyFactor here: we are not using throughput estimation but capping bitrate to avoid oscillations
+        //     let q = getQualityFromThroughput(bolaState, recentThroughput);
+        //     if (bolaQuality > q) {
+        //         // only intervene if we are trying to *increase* quality to an *unsustainable* level
 
-                if (q < bolaState.lastQuality) {
-                    // we are only avoid oscillations - do not drop below last quality
-                    q = bolaState.lastQuality;
-                }
-                // We are dropping to an encoding bitrate which is a little less than the network bandwidth because bitrate levels are discrete. Quality q might lead to buffer inflation, so we deflate buffer to the level that q gives postive utility. This delay will be added below.
-                bolaQuality = q;
-            }
-        }
+        //         if (q < bolaState.lastQuality) {
+        //             // we are only avoiding oscillations - do not drop below last quality
+        //             q = bolaState.lastQuality;
+        //         }
+        //         // We are dropping to an encoding bitrate which is a little less than the network bandwidth because bitrate levels are discrete. Quality q might lead to buffer inflation, so we deflate buffer to the level that q gives postive utility. This delay will be added below.
+        //         bolaQuality = q;
+        //     }
+        // }
 
-        // Try to make sure that we can download a chunk without rebuffering. This is especially important for live streaming.
-        if (recentThroughput > 0) {
-            // We can only perform this check if we have a throughput estimate.
-            let safeBitrate = REBUFFER_SAFETY_FACTOR * recentThroughput * bufferLevel / bolaState.fragmentDuration;
-            while (bolaQuality > 0 && bitrates[bolaQuality] > safeBitrate) {
-                --bolaQuality;
-            }
-        }
+        // // Try to make sure that we can download a chunk without rebuffering. This is especially important for live streaming.
+        // if (recentThroughput > 0) {
+        //     // We can only perform this check if we have a throughput estimate.
+        //     let safeBitrate = REBUFFER_SAFETY_FACTOR * recentThroughput * bufferLevel / bolaState.fragmentDuration;
+        //     while (bolaQuality > 0 && bitrates[bolaQuality] > safeBitrate) {
+        //         --bolaQuality;
+        //     }
+        // }
 
         // We do not want to overfill buffer with low quality chunks.
         // Note that there will be no delay if buffer level is below MINIMUM_BUFFER_S, probably even with some margin higher than MINIMUM_BUFFER_S.
@@ -492,7 +499,8 @@ function BolaRule(config) {
                 // At top quality, allow schedule controller to decide how far to fill buffer.
                 delaySeconds = 0;
             } else {
-                streamProcessor.getScheduleController().setTimeToLoadDelay(1000 * delaySeconds);
+                // streamProcessor.getScheduleController().setTimeToLoadDelay(1000 * delaySeconds);
+                streamProcessor.getScheduleController().setTimeToLoadDelay(0);
             }
         } else {
             delaySeconds = 0;
@@ -508,6 +516,7 @@ function BolaRule(config) {
         switchRequest.reason.bufferLevel = bufferLevel;
 
         if (BOLA_DEBUG) log('BolaDebug ' + mediaType + ' BolaRule quality ' + bolaQuality + ' delay=' + delaySeconds.toFixed(3) + ' for STEADY');
+        console.log('BOLA debug: callback5 ' + ' bufferLevel ' + bufferLevel);        
         callback(switchRequest);
     }
 

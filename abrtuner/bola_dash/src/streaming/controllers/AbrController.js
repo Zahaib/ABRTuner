@@ -667,21 +667,21 @@ function AbrController() {
             var bandwidthEst = predict_throughput(lastRequested, lastQuality, lastHTTPRequest);
             var lastChunkBW = last_chunk_bw(lastHTTPRequest);
             var bufferLevelAdjusted = buffer-0.15-0.4-4;
-            var stateData = {'nextChunkSize': next_chunk_size(lastRequested+1), 'lastquality': lastQuality, 'buffer': buffer, 'bufferAdjusted': bufferLevelAdjusted, 'bandwidthEst': bandwidthEst, 'lastRequest': lastRequested, 'RebufferTime': rebuffer, 'lastChunkFinishTime': lastHTTPRequest._tfinish.getTime(), 'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(), 'lastChunkSize': last_chunk_size(lastHTTPRequest), 'lastChunkBWArray': lastChunkBW, 'lastURL': lastHTTPRequest.url};
-            var stateString = JSON.stringify(stateData)
-            console.log('stateString ' + stateString);
+            var stateData = {'nextChunkSize': next_chunk_size(lastRequested+1), 'lastquality': lastQuality, 'buffer': buffer, 'bufferAdjusted': bufferLevelAdjusted, 'bandwidthEst': bandwidthEst, 'lastRequest': lastRequested, 'RebufferTime': rebuffer, 'lastChunkFinishTime': lastHTTPRequest._tfinish.getTime(), 'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(), 'lastChunkSize': last_chunk_size(lastHTTPRequest), 'lastChunkBWArray': lastChunkBW, 'lastURL': lastHTTPRequest.url, 'lastReqType': HTTPRequest.MEDIA_SEGMENT_TYPE};
+            // var stateString = JSON.stringify(stateData)
+            // console.log('stateString ' + stateString);
 
             const rules = abrRulesCollection.getRules(ABRRulesCollection.QUALITY_SWITCH_RULES);
-            rulesController.applyRules(rules, streamProcessor, callback, getQualityFor(type, streamInfo), stateString, function (currentValue, newValue) {
+            rulesController.applyRules(rules, streamProcessor, callback, getQualityFor(type, streamInfo), stateData, function (currentValue, newValue) {
                 currentValue = currentValue === SwitchRequest.NO_CHANGE ? 0 : currentValue;
-                // This is a really bad hacky way to make sure that we are not incrementing the count on the Header files.
                 if (lastHTTPRequest.type === HTTPRequest.MEDIA_SEGMENT_TYPE && lastHTTPRequest._tfinish && lastHTTPRequest.tresponse && lastHTTPRequest.trace) { 
+                // This is a really bad hacky way to make sure that we are not incrementing the count on the Header files.                    
                 // if (lastHTTPRequest.url.indexOf('Header') === -1){
                     // console.log('Header');
                     lastRequested = lastRequested + 1;                    
                 // }
-                }                
-                
+                }
+                console.log('BOLA debug: ' + ' curr ' + currentValue + ' new ' + newValue);
                 lastQuality = Math.max(currentValue, newValue);
                 return Math.max(currentValue, newValue);
             });

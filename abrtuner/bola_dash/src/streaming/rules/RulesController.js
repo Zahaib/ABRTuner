@@ -60,7 +60,7 @@ function RulesController() {
         }
     }
 
-    function applyRules(rulesArr, streamProcessor, callback, current, stateString, overrideFunc) {
+    function applyRules(rulesArr, streamProcessor, callback, current, stateData, overrideFunc) {
         var values = {};
         var reasons = {};
         var rule,
@@ -124,7 +124,7 @@ function RulesController() {
 
         for (i = 0; i < ln; i++) {
             rule = rulesArr[i];
-            rule.execute(rulesContext, callbackFunc, stateString);
+            rule.execute(rulesContext, callbackFunc, stateData);
         }
     }
 
