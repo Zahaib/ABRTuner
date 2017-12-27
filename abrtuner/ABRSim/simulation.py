@@ -69,7 +69,9 @@ except IndexError:
 #for initialBSM in [0.01, 0.05, 0.09, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77, 0.81, 0.08, 0.89, 0.93, 0.97,1.00]:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
-  for discount in [0, -1]:
+  # for discount in [0, -1]:
+  for bola_gp in np.arange(-1,-12.0,-0.5):    
+    discount = 0
   #for minCellSize in [400]:
   # for windowSize in [1,2,3,4,5,6,7]:
   #for discount in range(-10,201,10):
@@ -251,7 +253,8 @@ for initialBSM in [0.25]:
                                windowSize, \
                                change_magnitude, \
                                discount, \
-                               max_error)
+                               max_error, \
+                               bola_gp)
             #print numChunks, completionTimeStamps, chunk_sched_time_delay
             chd_thisInterval = chunk_residue + numChunks
     #        if int(chd_thisInterval) >= 1 and chunk_sched_time_delay < interval:
@@ -455,7 +458,7 @@ for initialBSM in [0.25]:
     #allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)
     allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)+" " + str(PLAYTIME)+" " + str(BUFFTIME)+" " + str(AVG_SESSION_BITRATE_sum)
     
-    print traceFile + " initialBSM: "+str(initialBSM)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    print traceFile + " initialBSM: "+str(bola_gp)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
     #print playerVisibleBW
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: " + str(allPerf)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: "

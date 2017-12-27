@@ -8,9 +8,29 @@ import random
 import statistics
 import numpy as np
 import itertools
+import sys
+
+def getBolaGP():
+  gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[-1] - BOLA_UTILITIES[0]) / (BUFFER_TARGET_S / MINIMUM_BUFFER_S - 1)
+  return gp
+   
+def getBolaVP(BOLA_GP):
+  vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1);    
+  return vp
+
+def getBOLADecision(bufferlen, gp):
+  Vp = getBolaVP(gp)
+  quality = None
+  score = -sys.maxint
+  for i in range(len(BOLA_BITRATES)):
+    s = (Vp * (BOLA_UTILITIES[i] + gp) - bufferlen) / BOLA_BITRATES[i]
+    if s >= score:
+      score = s
+      quality = i
+  return quality
+
 # utility function:
 # pick the highest bitrate that will not introduce buffering
-
 def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid, bufferlen, margin):
   candidateBitrates = [0,1,2,3,4]
   index_to_bitrate = {0:350,1:600,2:1000,3:2000,4:3000}
@@ -78,6 +98,8 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
               curr_buffer = 0
           else:
               curr_buffer -= download_time
+          # add the chunksize
+          # todo: replace 4 with CHUNKSIZE
           curr_buffer += 4
           
           # linear reward

@@ -445,7 +445,7 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay
-def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount, max_error):
+def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount, max_error, bola_gp):
   chunkCount = 0.0
   time_residue_thisInterval = 0.0
   completionTimeStamps = []
@@ -485,11 +485,11 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     #est_std = estimateSTD_dash(sessionHistory, chunkid)
 
     est_bandwidth = est_std = 0
-    ONCD = True
     # just a hacky way to adjust ONCD for time series experiments
     if discount < 0:
-      ONCD = False
+      config.ONCD = True
 
+    # print >> sys.stderr, ONCD, discount
     if ONCD:
       CDinterval = 5
       ch_detected, ch_index = onlineCD(sessionHistory, chunk_when_last_chd_ran, CDinterval, playerVisibleBW)
@@ -524,12 +524,14 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
     ######## MPC code
+
+    bitrateBOLA = getBOLADecision(BLEN, bola_gp)
     #print BLEN
     # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
     # Do We need to select bitrate before or after the delay??
     #print "Bitrate selection for next chunk!"
-    bitrateAtIntervalStart1 = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, margin)
+    # bitrateAtIntervalStart1 = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, margin)
     # bitrateAtIntervalStart 
     bitrateDASH = getUtilityBitrateDecision_dash(sessionHistory, chunkid, chunkid+1, BLEN+CHUNKSIZE, p1_min)
     # print bitrateAtIntervalStart
@@ -542,15 +544,20 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     ############ MPC bitrate ############
     # bitrateAtIntervalStart = bitrateMPC
     change_magnitude += abs(VIDEO_BIT_RATE[bitrateMPC] - VIDEO_BIT_RATE[bitrateAtIntervalStart])
+    active_abr = ""
     if MPC_ABR:
       bitrateAtIntervalStart = bitrateMPC
+      active_abr = "MPC"
     elif HYB_ABR:
       bitrateAtIntervalStart = bitrateDASH
-      
+      active_abr = "HYB"
+    elif BOLA_ABR:
+      bitrateAtIntervalStart = bitrateBOLA
+      active_abr = "BOLA"
 
     ############ MPC bitrate ############
 
-    configsUsed.append((time_curr/1000.0, 'MPC', bandwidth, int(est_bandwidth), int(est_std), discount, round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
+    configsUsed.append((time_curr/1000.0, active_abr, bandwidth, int(est_bandwidth), int(est_std), discount, round(chunk_residue,2), round(BLEN,2), chunkid-1, bitrateAtIntervalStart, round(BUFFTIME,2)))
     #print bitrateAtIntervalStart, bitrateAtIntervalStart1
     #if chunkid==64:
     #  #print "return"
