@@ -6,11 +6,10 @@ import urllib
 import sys
 import os
 import json
-# os.environ['CUDA_VISIBLE_DEVICES']=''
-
+import math
 import numpy as np
-# import tensorflow as tf
 import time
+import sys
 # import tuner_logic
 # import tuner_lookup_tables
 # import tuner_lookup_tables_05_rebuf
@@ -22,8 +21,10 @@ S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, ch
 S_LEN = 8  # take how many frames in the past
 A_DIM = 6
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
-BITRATE_REWARD = [1, 2, 3, 12, 15, 20]
-BITRATE_REWARD_MAP = {0: 0, 300: 1, 750: 2, 1200: 3, 1850: 12, 2850: 15, 4300: 20}
+BOLA_BITRATES = [x * 1000 for x in VIDEO_BIT_RATE]
+BOLA_UTILITIES = [math.log(x) for x in BOLA_BITRATES]
+BOLA_VP = 7.511489310136021
+BOLA_GP = -10.28024384012561
 M_IN_K = 1000.0
 BUFFER_NORM_FACTOR = 10.0
 CHUNK_TIL_VIDEO_END_CAP = 48.0
@@ -31,18 +32,8 @@ TOTAL_VIDEO_CHUNKS = 48
 DEFAULT_QUALITY = 0  # default video quality without agent
 #REBUF_PENALTY = 4.3  # 1 sec rebuffering -> this number of Mbps
 #SMOOTH_PENALTY = 1
-ACTOR_LR_RATE = 0.0001
-CRITIC_LR_RATE = 0.001
-TRAIN_SEQ_LEN = 100  # take as a train batch
-MODEL_SAVE_INTERVAL = 100
-RANDOM_SEED = 42
-RAND_RANGE = 1000
 SUMMARY_DIR = './results'
 LOG_FILE = './results/bolatuner_log'
-# in format of time_stamp bit_rate buffer_size rebuffer_time video_chunk_size download_time reward
-# NN_MODEL = None
-# NN_MODEL = '../rl_server/results/pretrain_linear_reward.ckpt'
-#NN_MODEL = '../rl_server/results/nn_model_ep_176200.ckpt'
 # video chunk sizes
 size_video1 = [2354772, 2123065, 2177073, 2160877, 2233056, 1941625, 2157535, 2290172, 2055469, 2169201, 2173522, 2102452, 2209463, 2275376, 2005399, 2152483, 2289689, 2059512, 2220726, 2156729, 2039773, 2176469, 2221506, 2044075, 2186790, 2105231, 2395588, 1972048, 2134614, 2164140, 2113193, 2147852, 2191074, 2286761, 2307787, 2143948, 1919781, 2147467, 2133870, 2146120, 2108491, 2184571, 2121928, 2219102, 2124950, 2246506, 1961140, 2155012, 1433658]
 size_video2 = [1728879, 1431809, 1300868, 1520281, 1472558, 1224260, 1388403, 1638769, 1348011, 1429765, 1354548, 1519951, 1422919, 1578343, 1231445, 1471065, 1491626, 1358801, 1537156, 1336050, 1415116, 1468126, 1505760, 1323990, 1383735, 1480464, 1547572, 1141971, 1498470, 1561263, 1341201, 1497683, 1358081, 1587293, 1492672, 1439896, 1139291, 1499009, 1427478, 1402287, 1339500, 1527299, 1343002, 1587250, 1464921, 1483527, 1231456, 1364537, 889412]
@@ -102,7 +93,7 @@ def make_request_handler(input_dict):
             self.input_dict['chunkBWSamples'].append(lastChunkBW)
             self.input_dict['chunksDownloaded'] = lastChunkID
 
-            print bufferLen, lastChunkBW, lastChunkID, post_data['lastURL'], post_data['lastquality']
+            print bufferLen, lastChunkBW, lastChunkID, post_data['lastquality'], BOLA_BITRATES, BOLA_UTILITIES
 
             # print lastChunkID, "len", len(self.input_dict['chunkBWSamples'])
             
@@ -163,6 +154,13 @@ def make_request_handler(input_dict):
             # 		  quality
 
             # print "len array sent ", len(lastChunkBWArray)
+            score = -sys.maxint
+            for i in range(len(BOLA_BITRATES)):
+                s = (BOLA_VP * (BOLA_UTILITIES[i] + BOLA_GP) - bufferLen) / BOLA_BITRATES[i]
+                if s >= score:
+                    score = s
+                    quality = i
+
 
             end_of_video = False
             if ( lastChunkID == TOTAL_VIDEO_CHUNKS ):
@@ -184,13 +182,6 @@ def make_request_handler(input_dict):
             self.end_headers()
             self.wfile.write(send_data)
 
-            # record [state, action, reward]
-            # put it here after training, notice there is a shift in reward storage
-
-            #if end_of_video:
-            #    self.s_batch = [np.zeros((S_INFO, S_LEN))]
-            #else:
-            #    self.s_batch.append(state)
 
         def do_GET(self):
             print >> sys.stderr, 'GOT REQ'

@@ -1338,6 +1338,7 @@ MediaPlayer.dependencies.BufferController = function () {
                         var quality = result.quality;
                         // var quality = 1;
                         // Xiaoqi
+                        // self.debug.log('Bufferlen: ' + self.getBuffer());
                         self.debug.log("XIAOQI: bufferController quality= " + quality);
                         // Xiaoqi
                         //self.debug.log(type + " Playback quality: " + quality);

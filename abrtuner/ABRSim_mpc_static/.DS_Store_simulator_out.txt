@@ -1,3 +1,0 @@
-
-Session joined...
-TIME	BW	BLEN	OBR	BR	CHKS	RSDU	BUFF	PLAY

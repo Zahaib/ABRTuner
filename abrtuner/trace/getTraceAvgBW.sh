@@ -4,7 +4,7 @@ dir=$(echo $1 | cut -d/ -f1)
 dir=$dir"/"
 #echo $dir
 
-limit=500
+limit=3000
 
 ls $dir* | while read line; do
   avgbw=$(awk '{ total += $2 } END { print total/NR }'  $line)

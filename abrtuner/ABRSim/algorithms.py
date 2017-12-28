@@ -18,7 +18,7 @@ def getBolaVP(BOLA_GP):
   vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1);    
   return vp
 
-def getBOLADecision(bufferlen, gp):
+def getBOLADecision(bufferlen, gp, Vp):
   Vp = getBolaVP(gp)
   quality = None
   score = -sys.maxint

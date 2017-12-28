@@ -70,7 +70,11 @@ except IndexError:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for discount in [0, -1]:
-  for bola_gp in np.arange(-1,-12.0,-0.5):    
+  # gp = getBolaGP()
+  bola_vp = getBolaVP(-1.0)
+  # print >> sys.stderr, gp, bola_vp
+  # for bola_gp in np.arange(gp, gp + 14.0, 1.0):
+  for bola_gp in np.arange(-1.0, -12.0, -0.5):
     discount = 0
   #for minCellSize in [400]:
   # for windowSize in [1,2,3,4,5,6,7]:
@@ -254,7 +258,8 @@ for initialBSM in [0.25]:
                                change_magnitude, \
                                discount, \
                                max_error, \
-                               bola_gp)
+                               bola_gp, \
+                               bola_vp)
             #print numChunks, completionTimeStamps, chunk_sched_time_delay
             chd_thisInterval = chunk_residue + numChunks
     #        if int(chd_thisInterval) >= 1 and chunk_sched_time_delay < interval:
