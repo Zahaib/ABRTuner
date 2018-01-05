@@ -83,3 +83,11 @@ sudo npm cache clean -f
 sudo npm install -g n
 
 sudo n stable
+
+6. ABRSim dependencies:
+  sudo apt-get install python-pip python-numpy python-scipy
+  sudo pip install statistics
+  
+  Inside bayesian_changepoint_detection-master
+  sudo python setup.py install
+   
