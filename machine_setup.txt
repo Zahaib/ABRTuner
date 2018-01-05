@@ -1,0 +1,98 @@
+1. VNCSERVER setting
+
+sudo apt-get update && sudo apt-get upgrade
+
+
+sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+
+sudo apt-get install xfce4
+
+
+sudo apt-get install vnc4server
+
+
+[Set security group properly for inbound traffic]
+
+
+xstartup
+
+//////////////////////////////////////////////////////
+
+#!/bin/sh
+
+
+export XKL_XMODMAP_DISABLE=1
+
+unset SESSION_MANAGER
+
+unset DBUS_SESSION_BUS_ADDRESS
+
+
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+
+xsetroot -solid grey
+
+vncconfig -iconic &
+
+
+gnome-panel &
+
+gnome-settings-daemon &
+
+metacity &
+
+nautilus &
+
+gnome-terminal &
+
+//////////////////////////////////////////////////////
+
+
+2. Apache2 setting
+
+sudo apt-get install apache2
+
+main html location : /var/www/html/
+
+
+3. Chrome setting
+
+Just go internet and install lastest chrome
+
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+
+sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+
+
+sudo apt-get install -f
+
+
+4. Dash compile requirement
+
+ later
+
+ 
+
+5. nodejs
+
+sudo apt-get install nodejs or sudo apt install nodejs-legacy
+
+if needed, sudo apt-get -f install
+
+
+sudo apt-get install nodejs
+
+
+sudo apt-get install npm
+
+
+sudo npm cache clean -f
+
+sudo npm install -g n
+
+sudo n stable
