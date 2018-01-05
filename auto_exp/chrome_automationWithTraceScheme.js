@@ -74,28 +74,32 @@ Chrome(function (chrome) {
 			//main_html = "http://68.181.99.194/yz_index.html.en.tuner"
                         main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
 		}
-                else if(scheme=="online-tuner"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
-                }
-                else if(scheme=="pensieve-mpcvid"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
-                }
-                else if(scheme=="pensieve-pensvid"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
-                }
-                else if(scheme=="robustmpc"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.robustmpc"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
-                }
-                else if (scheme == "mpc-tuner"){
-                        main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.tuner"
-                }
-                else if(scheme=="pensieve-orig"){
-                        main_html = "http://68.181.99.194/myindex_RL.html"
-                        //main_html = "http://68.181.99.194/myindex_RL.html"
-                }
+        else if(scheme=="online-tuner"){
+                main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
+        }
+        else if(scheme=="pensieve-mpcvid"){
+                main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
+                //main_html = "http://68.181.99.194/myindex_RL.html"
+        }
+        else if(scheme=="pensieve-pensvid"){
+                main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
+                //main_html = "http://68.181.99.194/myindex_RL.html"
+        }
+        else if(scheme=="robustmpc"){
+                main_html = "http://68.181.99.194/yz_index.html.en.robustmpc"
+                //main_html = "http://68.181.99.194/myindex_RL.html"
+        }
+        else if (scheme == "mpc-tuner"){
+                main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.tuner"
+        }
+        else if(scheme=="pensieve-orig"){
+                main_html = "http://68.181.99.194/myindex_RL.html"
+                //main_html = "http://68.181.99.194/myindex_RL.html"
+        }
+        else if(scheme=="bola"){
+                main_html = "http://68.181.99.194/yz_index.html.en.bola"
+                //main_html = "http://68.181.99.194/myindex_RL.html"
+        }
 		else{
 			main_html = "http://68.181.99.194/yz_index.html.en"
 		}
@@ -111,7 +115,7 @@ Chrome(function (chrome) {
                         	process.exit();
     			}
 		}
-                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc") || (scheme=="hyb") || (scheme=="mpc-tuner")){
+                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc") || (scheme=="hyb") || (scheme=="mpc-tuner") || (scheme=="bola")){
                         if (params.request.url.match(/finishme.txt/)) {
                                 console.log("Weird video Yun Final : Timeout - End experiment");
                                 close();

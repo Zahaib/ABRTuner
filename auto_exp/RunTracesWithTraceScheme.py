@@ -113,8 +113,8 @@ def traceToFile (trace, START, END, DURATION,sessionid):
 			time+=100
 	f.close()
 
-# dash, mpc, hyb, tuner, pensieve-pensvid, online-tuner, robustmpc, mpc-tuner
-schemes = ["pensieve-pensvid"]
+# dash, mpc, hyb, tuner, pensieve-pensvid, online-tuner, robustmpc, mpc-tuner, bola
+schemes = ["bola"]
 #trace_path = "/Users/ynam/emulation/automation/dash_mobile_trace/"
 #trace_path_out = "/Users/ynam/emulation/automation/dash_mobile_trace_out/"
 #trace_path = "/Users/ynam/emulation/compareWithMPC/compare_trace/"
