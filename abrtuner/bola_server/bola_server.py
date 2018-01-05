@@ -10,12 +10,8 @@ import math
 import numpy as np
 import time
 import sys
-# import tuner_logic
-# import tuner_lookup_tables
-# import tuner_lookup_tables_05_rebuf
-# import tuner_lookup_tables_1_rebuf
-# import tuner_lookup_tables_2_rebuf
-# import dash_syn_simulation_hyb_pen_performance_table_8600
+import bola_logic
+from bola_lookup_tables import *
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -93,74 +89,62 @@ def make_request_handler(input_dict):
             self.input_dict['chunkBWSamples'].append(lastChunkBW)
             self.input_dict['chunksDownloaded'] = lastChunkID
 
-            print bufferLen, lastChunkBW, lastChunkID, post_data['lastquality'], BOLA_BITRATES, BOLA_UTILITIES
+            # print bufferLen, lastChunkBW, lastChunkID, post_data['lastquality'], BOLA_BITRATES, BOLA_UTILITIES
 
             # print lastChunkID, "len", len(self.input_dict['chunkBWSamples'])
             
 
-            # chpd_interval = 5
-            # chd_detected, chd_index = tuner_logic.onlineCD(self.input_dict['chunk_when_last_chd_ran'], \
-            # 	                                           chpd_interval, \
-            # 	                                           self.input_dict['playerVisibleBW'])
-            # avg_bw = std_bw = 0
-            # if chd_detected:
-            #     self.input_dict['chunk_when_last_chd_ran'] = chd_index
-            #     avg_bw, std_bw = tuner_logic.getBWFeaturesWeightedPlayerVisible(\
-            #     	             self.input_dict['playerVisibleBW'], \
-            #                      self.input_dict['chunk_when_last_chd_ran'])
-            #     cellsize = 900
-            #     table = tuner_lookup_tables.dash_syth_hyb_pen_table_900
-            #     #table = dash_syn_simulation_hyb_pen_performance_table_8600.dash_syth_hyb_pen_table_8600_1000
-            #     ABRChoice, \
-            #     p1_min_new, \
-            #     p1_median, \
-            #     p1_max, \
-            #     p2_min, \
-            #     p2_median, \
-            #     p2_max,p3_min, \
-            #     p3_median, \
-            #     p3_max = tuner_logic.getDynamicconfig_self(table, \
-            #     	                                      avg_bw, \
-            #     	                                      std_bw, \
-            #     	                                      cellsize)
-            #     self.input_dict['beta'] = p1_min_new
+            chpd_interval = 5
+            chd_detected, chd_index = bola_logic.onlineCD(self.input_dict['chunk_when_last_chd_ran'], \
+            	                                           chpd_interval, \
+            	                                           self.input_dict['playerVisibleBW'])
+            avg_bw = std_bw = 0
+            if chd_detected:
+                self.input_dict['chunk_when_last_chd_ran'] = chd_index
+                avg_bw, std_bw = bola_logic.getBWFeaturesWeightedPlayerVisible(\
+                	             self.input_dict['playerVisibleBW'], \
+                                 self.input_dict['chunk_when_last_chd_ran'])
+                print "BW state: ( " + str(round(avg_bw),2) + ", " + str(round(std_bw),2) + " )"
+                cellsize = 900
+                table_name = 'dash_syth_bola_gamma_table_' + str(cellsize)
+                table = (globals()[table_name])
+                # table = dash_syth_bola_gamma_table_900
+                ABRChoice, \
+                p1_min, \
+                p1_median, \
+                p1_max = bola_logic.getDynamicconfig_bola(table, \
+                	                                      avg_bw, \
+                	                                      std_bw, \
+                	                                      cellsize)
+                self.input_dict['bola_gp'] = p1_max
+                # print 'new_config: ', self.input_dict['bola_gp']
 
-            # quality = tuner_logic.getUtilityBitrateDecision_dash(bandwidthEst, \
-            # 	                                                 lastChunkID + 1, \
-            # 	                                                 bufferLen, \
-            # 	                                                 self.input_dict['beta'])
+            quality = bola_logic.getBOLADecision(bufferLen, \
+            	                                self.input_dict['bola_gp'], \
+                                                self.input_dict['bola_vp'])
 
-            # self.log_file.write(str(time.time()) + '\t' +
-            #                     str(self.input_dict['chunksDownloaded']) + '\t' +
-            #                     str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
-            #                     str(round(post_data['buffer'],2)) + '\t' +
-            #                     str(post_data['lastChunkSize']) + '\t' +
-            #                     str(post_data['lastChunkStartTime']) + '\t' +
-            #                     str(post_data['lastChunkFinishTime']) + '\t' +
-            #                     str(round(avg_bw,2)) + '\t' +
-            #                     str(round(std_bw,2)) + '\t' +
-            #                     str(self.input_dict['chunk_when_last_chd_ran']) + '\t' +
-            #                     str(np.mean(self.input_dict['playerVisibleBW'][self.input_dict['chunk_when_last_chd_ran']:])) + '\t' +
-            #                     str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
-            #                     str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
-            #                     str(self.input_dict['beta']) + '\n')
+            self.log_file.write(str(time.time()) + '\t' +
+                                str(self.input_dict['chunksDownloaded']) + '\t' +
+                                str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
+                                str(round(post_data['buffer'],2)) + '\t' +
+                                str(post_data['lastChunkSize']) + '\t' +
+                                str(post_data['lastChunkStartTime']) + '\t' +
+                                str(post_data['lastChunkFinishTime']) + '\t' +
+                                str(round(avg_bw,2)) + '\t' +
+                                str(round(std_bw,2)) + '\t' +
+                                str(self.input_dict['chunk_when_last_chd_ran']) + '\t' +
+                                str(np.mean(self.input_dict['playerVisibleBW'][self.input_dict['chunk_when_last_chd_ran']:])) + '\t' +
+                                str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
+                                str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
+                                str(self.input_dict['bola_gp']) + '\n')
 
 
             # if chd_detected:
             # 	print "Change detected ", \
             # 	      chd_index, \
             # 	      len(self.input_dict['playerVisibleBW']), \
-            # 		  self.input_dict['beta'], \
+            # 		  self.input_dict['bola_gp'], \
             # 		  quality
-
-            # print "len array sent ", len(lastChunkBWArray)
-            score = -sys.maxint
-            for i in range(len(BOLA_BITRATES)):
-                s = (BOLA_VP * (BOLA_UTILITIES[i] + BOLA_GP) - bufferLen) / BOLA_BITRATES[i]
-                if s >= score:
-                    score = s
-                    quality = i
-
 
             end_of_video = False
             if ( lastChunkID == TOTAL_VIDEO_CHUNKS ):
@@ -171,7 +155,7 @@ def make_request_handler(input_dict):
                 self.input_dict['chunkBWSamples'] = []
                 self.input_dict['chunksDownloaded'] = 0
                 self.input_dict['chunk_when_last_chd_ran'] = -1
-                self.input_dict['beta']
+                self.input_dict['bola_gp'] = bola_logic.getBolaGP()
 
 
             send_data = str(quality)
@@ -207,14 +191,16 @@ def run(server_class=HTTPServer, port=8337, log_file_path=LOG_FILE):
 
     with open(log_file_path, 'wb') as log_file:
 
-        beta = 0.25
+        bola_gp = bola_logic.getBolaGP()
+        bola_vp = bola_logic.getBolaVP(bola_gp)
         chunksDownloaded = 0
         chunk_when_last_chd_ran = -1
         playerVisibleBW = []
         chunkBWSamples = []
         sessionHistory = dict()
         input_dict = {'log_file': log_file,
-                      'beta': beta,
+                      'bola_gp': bola_gp,
+                      'bola_vp': bola_vp,
                       'chunksDownloaded': chunksDownloaded,
                       'chunk_when_last_chd_ran': chunk_when_last_chd_ran,
                       'chunkBWSamples': chunkBWSamples,

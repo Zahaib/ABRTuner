@@ -71,35 +71,32 @@ Chrome(function (chrome) {
 			main_html = "http://68.181.99.194/yz_index.html.en.hyb"
 		}
 		else if(scheme=="tuner"){
-			//main_html = "http://68.181.99.194/yz_index.html.en.tuner"
-                        main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
+            main_html = "http://68.181.99.194/yz_index.html.en.adjustbuffer.tuner"
 		}
         else if(scheme=="online-tuner"){
-                main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
+            main_html = "http://68.181.99.194/yz_index.html.en.onlinetuner"
         }
         else if(scheme=="pensieve-mpcvid"){
-                main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
-                //main_html = "http://68.181.99.194/myindex_RL.html"
+            main_html = "http://68.181.99.194/yz_index.html.en.pensieve.mpc-vid"
         }
         else if(scheme=="pensieve-pensvid"){
-                main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
-                //main_html = "http://68.181.99.194/myindex_RL.html"
+            main_html = "http://68.181.99.194/yz_index.html.en.pensieve.pens-vid"
         }
         else if(scheme=="robustmpc"){
-                main_html = "http://68.181.99.194/yz_index.html.en.robustmpc"
-                //main_html = "http://68.181.99.194/myindex_RL.html"
+            main_html = "http://68.181.99.194/yz_index.html.en.robustmpc"
         }
         else if (scheme == "mpc-tuner"){
-                main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.tuner"
+            main_html = "http://68.181.99.194/yz_index.html.en.robustmpc.tuner"
         }
         else if(scheme=="pensieve-orig"){
-                main_html = "http://68.181.99.194/myindex_RL.html"
-                //main_html = "http://68.181.99.194/myindex_RL.html"
+            main_html = "http://68.181.99.194/myindex_RL.html"
         }
         else if(scheme=="bola"){
-                main_html = "http://68.181.99.194/yz_index.html.en.bola"
-                //main_html = "http://68.181.99.194/myindex_RL.html"
+            main_html = "http://68.181.99.194/yz_index.html.en.bola"
         }
+        else if(scheme=="bola-tuner"){
+            main_html = "http://68.181.99.194/yz_index.html.en.bolatuner"
+        }        
 		else{
 			main_html = "http://68.181.99.194/yz_index.html.en"
 		}
@@ -115,7 +112,14 @@ Chrome(function (chrome) {
                         	process.exit();
     			}
 		}
-                if ((scheme=="pensieve-pensvid") || (scheme=="tuner") || (scheme=="online-tuner") || (scheme=="robustmpc") || (scheme=="hyb") || (scheme=="mpc-tuner") || (scheme=="bola")){
+                if ((scheme=="pensieve-pensvid") ||
+                    (scheme=="tuner") ||
+                    (scheme=="online-tuner") ||
+                    (scheme=="robustmpc") ||
+                    (scheme=="hyb") ||
+                    (scheme=="mpc-tuner") ||
+                    (scheme=="bola") ||
+                    (scheme=="bola-tuner")){
                         if (params.request.url.match(/finishme.txt/)) {
                                 console.log("Weird video Yun Final : Timeout - End experiment");
                                 close();
