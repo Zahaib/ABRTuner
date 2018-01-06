@@ -104,7 +104,7 @@ def make_request_handler(input_dict):
                 avg_bw, std_bw = bola_logic.getBWFeaturesWeightedPlayerVisible(\
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
-                print "BW state: ( " + str(round(avg_bw),2) + ", " + str(round(std_bw),2) + " )"
+                print "BW state: ( " + str(round(avg_bw,2)) + ", " + str(round(std_bw,2)) + " )"
                 cellsize = 900
                 table_name = 'dash_syth_bola_gamma_table_' + str(cellsize)
                 table = (globals()[table_name])
