@@ -60,6 +60,9 @@ lastBlen_decisioncycle = list()
 b_ratioList = list()
 upr_end = 1.0
 ## hyb
+dash_zero_buff = 0
+if DASH_BUFFER_ADJUST:
+  dash_zero_buff = 0.45
 
 initial_clock = True
 try:
@@ -70,17 +73,19 @@ except IndexError:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for discount in [0, -1]:
-  # gp = getBolaGP()
-  bola_vp = getBolaVP(-1.0)
+  gp = getBolaGP()
+  bola_vp = getBolaVP(gp)
   # print >> sys.stderr, gp, bola_vp
-  # for bola_gp in np.arange(gp, gp + 14.0, 1.0):
-  for bola_gp in np.arange(-1.0, -12.0, -0.5):
+  #for bola_gp in np.arange(gp, gp + 0.05, 1.0):
+  for bola_gp in np.arange(gp - 0.5, gp + 6.1, 0.5):
     discount = 0
+
+    # bola_gp = getBolaGP()
   #for minCellSize in [400]:
   # for windowSize in [1,2,3,4,5,6,7]:
   #for discount in range(-10,201,10):
     #discount = 0
-    minCellSize = 400
+    minCellSize = 900
     windowSize = WINDOWSIZE
     max_error = 0
   #for minCellSize in [100, 300]:
@@ -199,7 +204,7 @@ for initialBSM in [0.25]:
         if SWITCH_LOCK > 0:
             SWITCH_LOCK -= interval / float(1000)  # add float
     
-        if BLEN > 0:
+        if BLEN > 0 + dash_zero_buff:
             buffering = False
     
         if buffering and not sessionFullyDownloaded:
@@ -227,7 +232,8 @@ for initialBSM in [0.25]:
             pastErrors, \
             change_magnitude, \
             discount, \
-            max_error  = chunksDownloaded(configsUsed, \
+            max_error, \
+            bola_gp  = chunksDownloaded(configsUsed, \
                                CLOCK - interval, \
                                CLOCK, \
                                BR, \
@@ -312,15 +318,10 @@ for initialBSM in [0.25]:
         #    first_chunk = False
         blenAdded_thisInterval = int(chd_thisInterval) * CHUNKSIZE
     
-        #if CHUNKS_DOWNLOADED <= math.ceil((playtimems) / float(
-        #                CHUNKSIZE * 1000)) and not sessionFullyDownloaded:  # check the equal to sign in less than equal to
-        #    AVG_SESSION_BITRATE += int(chd_thisInterval) * BR * CHUNKSIZE
-        #    #print AVG_SESSION_BITRATE, chd_thisInterval, BR, CHUNKSIZE
-
     
-        if not buffering and BLEN >= 0 and BLEN + blenAdded_thisInterval < interval / float(
+        if not buffering and BLEN - dash_zero_buff >= 0 and BLEN - dash_zero_buff + blenAdded_thisInterval < interval / float(
                 1000) and not sessionFullyDownloaded:
-            playStalled_thisInterval += (float(interval) / float(1000) - float(BLEN) - float(blenAdded_thisInterval))  # add float
+            playStalled_thisInterval += (float(interval) / float(1000) - (float(BLEN) - dash_zero_buff + float(blenAdded_thisInterval)) )  # add float
             buffering = True
             #if first_chunk==True:
             #  playStalled_thisInterval=0
@@ -346,7 +347,7 @@ for initialBSM in [0.25]:
             lastBlen_decisioncycle.append(BLEN)
     
         if buffering:
-            BLEN = 0.0
+            BLEN = 0.0 + dash_zero_buff
         elif not buffering and first_chunk and CHUNKS_DOWNLOADED == 0:
             #print "first chunk", interval
             BLEN = max(0, float(BLEN) - float(interval) / float(1000))

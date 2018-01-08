@@ -12,6 +12,8 @@ from mpc_performancetable_syn import *
 from simulation_performance_vector import *
 from dash_syn_simulation_mpc_pen_performance_table_4300 import *
 from dash_syn_simulation_mpc_pen_performance_table_4300_fix1010 import *
+#from dash_syn_bola_gamma_table_min_2_target_10_conservative import *
+from dash_syn_bola_gamma_table_min_5_target_15_notbufferleveladjusted import *
 import bayesian_changepoint_detection.online_changepoint_detection as oncd
 from functools import partial
 #from __future__ import print_function
@@ -517,6 +519,12 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
           performance_t = (globals()[dict_name_backup])
           ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, minCellSize)
           discount = disc_median
+        elif BOLA_ABR:
+          dict_name_backup = "dash_syth_bola_gamma_table_"+str(minCellSize)
+          performance_t = (globals()[dict_name_backup])
+          ABRChoice, bola_gp_min, bola_gp_median, bola_gp_max = getDynamicconfig_bola(performance_t, est_bandwidth, est_std, minCellSize)
+          bola_gp = bola_gp_max
+
           #print discount, disc_min, disc_median, disc_max
         #print time_curr, p1_min - additive_inc, p1_min, p1_min_new, additive_inc
     
@@ -524,8 +532,7 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
     future_bandwidth, max_error, bandwidthEsts, pastErrors = getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount)
     bitrateMPC = getMPCDecision(BLEN, bitrateAtIntervalStart, chunkid, CHUNKSIZE, future_bandwidth, windowSize)
     ######## MPC code
-
-    bitrateBOLA = getBOLADecision(BLEN, bola_gp, bola_vp)
+    bitrateBOLA = getBOLADecision(BLEN + CHUNKSIZE, bola_gp, bola_vp)
     #print BLEN
     # print "chunkid ", chunkid, " bitrate selected: ", bitrateMPC
     # TODO
@@ -613,7 +620,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
          pastErrors, \
          change_magnitude, \
          discount, \
-         max_error
+         max_error, \
+         bola_gp
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):

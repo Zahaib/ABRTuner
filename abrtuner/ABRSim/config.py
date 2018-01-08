@@ -29,6 +29,7 @@ TRACE_MODE = True
 ### Player settings ###
 MAX_BUFFLEN = 12000
 LOCK = 0
+DASH_BUFFER_ADJUST = True
 
 ### ABR selection ###
 COMBINATION_ABR = False
@@ -62,7 +63,7 @@ WINDOWSIZE = 5
 
 ### BOLA settings
 MINIMUM_BUFFER_S = 5 #10 # BOLA should never add artificial delays if buffer is less than MINIMUM_BUFFER_S. Orig val: 10
-BUFFER_TARGET_S = 30 # If Schedule Controller does not allow buffer level to reach BUFFER_TARGET_S, this can be a virtual buffer level. Orig val: 30
+BUFFER_TARGET_S = 15# If Schedule Controller does not allow buffer level to reach BUFFER_TARGET_S, this can be a virtual buffer level. Orig val: 30
 REBUFFER_SAFETY_FACTOR = 0.5 # Used when buffer level is dangerously low, might happen often in live streaming.
 BOLA_BITRATES = [br * 1000.0 for br in VIDEO_BIT_RATE]
 BOLA_UTILITIES = [math.log(br) for br in BOLA_BITRATES]

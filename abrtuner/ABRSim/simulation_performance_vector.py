@@ -8,6 +8,48 @@ import numpy as np
 import collections
 import statistics
 
+
+def getDynamicconfig_bola(pv_list, bw, std, step):
+    bw_step = step
+    std_step = step
+    ABRAlgo = ''
+    bw_cut =int(float(bw)/bw_step)*bw_step
+    std_cut = int(float(std)/std_step)*std_step
+    abr_list = list()
+    current_list = list()
+    count = 0
+    if True:
+        if bw==-1 and std==-1:
+            return 'BOLA', 0.0, 0.0, 0.0
+        # if key not in performance vector
+        if (bw_cut, std_cut) not in pv_list.keys():
+            for i in range(2, 1000, 1):
+                count += 1
+                for bw_ in [bw_cut - (i - 1) * bw_step, bw_cut + (i-1) * bw_step]:
+                    for std_ in range(std_cut - (i - 1) * std_step, std_cut + (i-1) * std_step + std_step, std_step):
+                        if (bw_, std_) in pv_list.keys():
+                            current_list = current_list + pv_list[(bw_, std_)]
+                for std_ in [std_cut - (i - 1) * std_step, std_cut + (i-1) * std_step]:
+                    for bw_ in range(bw_cut - (i - 2) * bw_step, bw_cut + (i-1) * bw_step, bw_step):
+                        if (bw_, std_) in pv_list.keys():
+                            current_list = current_list + pv_list[(bw_, std_)]
+                if len(current_list)==0:
+                    continue
+                else:# len(abr_list)>0 and 'BB' not in abr_list:
+                    ABRAlgo = 'BOLA'
+                    break
+        else:
+            current_list = current_list + pv_list[(bw_cut, std_cut)]
+            ABRAlgo = 'BOLA'
+
+    if len(current_list)==0:
+        return 'BOLA', 0.0, 0.0, 0.0
+    if max(current_list) ==-sys.maxint:
+        return 'BOLA', 0.0, 0.0, 0.0
+    # print >> sys.stderr, ABRAlgo, min(current_list), np.percentile(current_list,50), max(current_list), bw, std
+    return ABRAlgo, min(current_list), np.percentile(current_list,50), max(current_list)
+
+
 def getDynamicconfig_mpc(pv_list_hyb, bw, std, step):
     bw_step = step
     std_step = step

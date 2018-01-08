@@ -15,13 +15,15 @@ def getBolaGP():
   return gp
    
 def getBolaVP(BOLA_GP):
-  vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1);    
+  vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1)   
   return vp
 
 def getBOLADecision(bufferlen, gp, Vp):
-  Vp = getBolaVP(gp)
+  # Vp = getBolaVP(gp)
   quality = None
   score = -sys.maxint
+  #print >> sys.stderr , gp, Vp
+  #gp = -10.9458907969
   for i in range(len(BOLA_BITRATES)):
     s = (Vp * (BOLA_UTILITIES[i] + gp) - bufferlen) / BOLA_BITRATES[i]
     if s >= score:

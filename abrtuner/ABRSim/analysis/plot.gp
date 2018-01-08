@@ -39,3 +39,18 @@ plot "<(python mpc_analysis.py ../results_mpc_trace_500_pen.txt)" u 16:1 with li
 "" u 21:1 with lines lw 3 t 'win=6', \
 "" u 22:1 with lines lw 3 t 'win=7'
 
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'bola_br_CDF.png'
+set xlabel 'BR (Kbps)'
+set ylabel 'Frac. of sessions'
+plot "cdf_bola_oncd_min_5_target_30_notbufferleveladjusted.txt" u 2:1 with lines lw 3 t 'BOLA'
+
+reset
+set term pngcairo dashed dl 2.0 font ",16"
+set output 'bola_rebuf_CDF.png'
+set xlabel 'Rebuf Ratio'
+set ylabel 'Frac. of sessions'
+set yrange[80:100]
+plot "cdf_bola_oncd_min_5_target_30_notbufferleveladjusted.txt" u 3:1 with lines lw 3 t 'BOLA'
