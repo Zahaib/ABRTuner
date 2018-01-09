@@ -447,7 +447,7 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay
-def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount, max_error, bola_gp, bola_vp):
+def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chunkid, CHUNKSIZE, chunk_residue, usedBWArray, bwArray, time_residue, BLEN, sessionHistory, first_chunk, attempt_id,PLAYTIME,AVG_SESSION_BITRATE, margin, minCellSize, BUFFTIME, playerVisibleBW, chunk_when_last_chd_ran, p1_min, gradual_transition, additive_inc, bandwidthEsts, pastErrors, windowSize, change_magnitude, discount, max_error, bola_gp, bola_vp, buffer_target_s):
   chunkCount = 0.0
   time_residue_thisInterval = 0.0
   completionTimeStamps = []
@@ -621,7 +621,8 @@ def chunksDownloaded(configsUsed, time_prev, time_curr, bitrate, bandwidth, chun
          change_magnitude, \
          discount, \
          max_error, \
-         bola_gp
+         bola_gp, \
+         buffer_target_s
 
 
 def getRandomDelay(bitrate, chunkid, CHUNKSIZE, BLEN):

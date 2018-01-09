@@ -10,19 +10,24 @@ import numpy as np
 import itertools
 import sys
 
-def getBolaGP():
-  gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[-1] - BOLA_UTILITIES[0]) / (BUFFER_TARGET_S / MINIMUM_BUFFER_S - 1)
-  return gp
+# def getBolaGP():
+#   gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[-1] - BOLA_UTILITIES[0]) / (BUFFER_TARGET_S / MINIMUM_BUFFER_S - 1)
+#   return gp
    
+def getBolaGP(buffer_target_s):
+  gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[-1] - BOLA_UTILITIES[0]) / (buffer_target_s / MINIMUM_BUFFER_S - 1)
+  return gp
+
 def getBolaVP(BOLA_GP):
   vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1)   
   return vp
+   
 
 def getBOLADecision(bufferlen, gp, Vp):
   # Vp = getBolaVP(gp)
   quality = None
   score = -sys.maxint
-  #print >> sys.stderr , gp, Vp
+  # print >> sys.stderr , gp, Vp
   #gp = -10.9458907969
   for i in range(len(BOLA_BITRATES)):
     s = (Vp * (BOLA_UTILITIES[i] + gp) - bufferlen) / BOLA_BITRATES[i]
