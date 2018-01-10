@@ -3,7 +3,7 @@
 import os, sys
 import numpy as np
 import math
-from dash_syn_bola_buffer_target_s_table_min_5_target_moving import *
+from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
 
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
 BOLA_BITRATES = [br * 1000.0 for br in VIDEO_BIT_RATE]
@@ -79,8 +79,11 @@ def main():
   cellsize = 900
   table_name = 'dash_syth_bola_gamma_table_' + str(cellsize)
   table = (globals()[table_name])
-  print getDynamicconfig_bola(table, 500, 100, cellsize)
-  print getDynamicconfig_bola(table, 500, 600, cellsize)
+  # print getDynamicconfig_bola(table, 500, 100, cellsize)
+  # print getDynamicconfig_bola(table, 500, 600, cellsize)
+  print getDynamicconfig_bola(table, 1924, 36.83, cellsize)
+  print getDynamicconfig_bola(table, 564, 10.2, cellsize)
+  print getDynamicconfig_bola(table, 1122.06, 69.48, cellsize)
 
 
 
