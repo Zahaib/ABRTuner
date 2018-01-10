@@ -11,7 +11,9 @@ import numpy as np
 import time
 import sys
 import bola_logic
-from bola_lookup_tables import *
+# from bola_lookup_tables import *
+# from dash_syn_bola_buffer_target_s_table_min_5_target_moving import *
+from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -99,7 +101,11 @@ def make_request_handler(input_dict):
             	                                           chpd_interval, \
             	                                           self.input_dict['playerVisibleBW'])
             avg_bw = std_bw = 0
-            if chd_detected:
+            if chd_detected or lastChunkID == 0:
+                if lastChunkID == 0:
+                  chd_index = 0
+                  print "first chunk change ",
+
                 self.input_dict['chunk_when_last_chd_ran'] = chd_index
                 avg_bw, std_bw = bola_logic.getBWFeaturesWeightedPlayerVisible(\
                 	             self.input_dict['playerVisibleBW'], \
