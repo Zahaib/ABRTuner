@@ -8,8 +8,8 @@ from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
 BOLA_BITRATES = [br * 1000.0 for br in VIDEO_BIT_RATE]
 BOLA_UTILITIES = [math.log(br) for br in BOLA_BITRATES]
-MINIMUM_BUFFER_S = 5
-BUFFER_TARGET_S = 15
+MINIMUM_BUFFER_S = 10
+BUFFER_TARGET_S = 30
 
 def getBolaGP():
   gp = 1 - BOLA_UTILITIES[0] + (BOLA_UTILITIES[-1] - BOLA_UTILITIES[0]) / (BUFFER_TARGET_S / MINIMUM_BUFFER_S - 1)
@@ -76,6 +76,9 @@ def getDynamicconfig_bola(pv_list, bw, std, step):
 
 
 def main():
+  bola_gp = getBolaGP()
+  bola_vp = getBolaVP(bola_gp)
+  print bola_gp, bola_vp
   cellsize = 900
   table_name = 'dash_syth_bola_gamma_table_' + str(cellsize)
   table = (globals()[table_name])

@@ -13,7 +13,8 @@ import sys
 import bola_logic
 # from bola_lookup_tables import *
 # from dash_syn_bola_buffer_target_s_table_min_5_target_moving import *
-from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
+# from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
+from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust_finegrain import *
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
