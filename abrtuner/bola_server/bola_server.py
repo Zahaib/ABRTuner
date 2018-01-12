@@ -123,6 +123,10 @@ def make_request_handler(input_dict):
                 	                                      avg_bw, \
                 	                                      std_bw, \
                 	                                      cellsize)
+
+                p1_max = -12.03 if p1_max < -12.03 else p1_max
+                # if p1_max < -12.03:
+                #     p1_max = -12.03
                 self.input_dict['bola_gp'] = p1_max
                 print " New bola_gp: " + str(round(self.input_dict['bola_gp'], 2))
                 # print 'new_config: ', self.input_dict['bola_gp']
