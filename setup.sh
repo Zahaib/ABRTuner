@@ -1,29 +1,38 @@
 #!/bin/bash
 
 pass=$1
-echo $mypassword | sudo -S sudo apt-get update && sudo apt-get upgrade
-echo $mypassword | sudo -S sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-echo $mypassword | sudo -S sudo apt-get install xfce4
-echo $mypassword | sudo -S sudo apt-get install vnc4server
+echo $pass | sudo -S apt-get update && sudo apt-get upgrade
+echo $pass | sudo -S apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+echo $pass | sudo -S apt-get install xfce4
+echo $pass | sudo -S apt-get install vnc4server
+echo "VNCserver installed..."
 
-echo $mypassword | sudo -S sudo apt-get install apache2
+echo $pass | sudo -S apt-get install apache2
+echo "Apache2 installed..."
 
-echo $mypassword | sudo -S  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-echo $mypassword | sudo -S  sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+echo $pass | sudo -S dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+echo "Google Chrome installed..."
 
-
-echo $mypassword | sudo -S  sudo apt-get install build-essential libssl-dev
+echo $pass | sudo -S apt-get install build-essential libssl-dev
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 bash install_nvm.sh
 source ~/.profile
-echo $mypassword | sudo -S nvm install 6.11.3
+echo $pass | sudo -S nvm install 6.11.3
 nvm use 6.11.3  
+echo "node installed..."
+node -v
 
-echo $mypassword | sudo -S  sudo apt-get install nodejs
-echo $mypassword | sudo -S sudo apt-get install npm
+echo $pass | sudo -S apt-get install nodejs
+echo "nodejs installed..."
+nodejs -v
 
-echo $mypassword | sudo -S sudo apt-get install python-pip python-numpy python-scipy
-echo $mypassword | sudo -S sudo pip install statistics
+echo $pass | sudo -S apt-get install npm
+echo "npm installed..."
+
+echo $pass | sudo -S apt-get install python-pip python-numpy python-scipy
+echo $pass | sudo -S pip install statistics
+echo "python packages installed..."
 
 
 # sudo python setup.py install
