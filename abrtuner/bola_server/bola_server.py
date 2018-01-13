@@ -125,6 +125,7 @@ def make_request_handler(input_dict):
                 	                                      cellsize)
 
                 p1_max = -12.03 if p1_max < -12.03 else p1_max
+                p1_max = -10.28 if p1_max > -10.28 else p1_max
                 # if p1_max < -12.03:
                 #     p1_max = -12.03
                 self.input_dict['bola_gp'] = p1_max
