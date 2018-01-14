@@ -112,7 +112,7 @@ def make_request_handler(input_dict):
                 	             self.input_dict['playerVisibleBW'], \
                                  self.input_dict['chunk_when_last_chd_ran'])
                 print "BW state: ( " + str(round(avg_bw,2)) + ", " + str(round(std_bw,2)) + " )",
-                cellsize = 900
+                cellsize = 1000
                 table_name = 'dash_syth_bola_gamma_table_' + str(cellsize)
                 table = (globals()[table_name])
                 # table = dash_syth_bola_gamma_table_900
@@ -125,7 +125,7 @@ def make_request_handler(input_dict):
                 	                                      cellsize)
 
                 p1_max = -12.03 if p1_max < -12.03 else p1_max
-                p1_max = -10.28 if p1_max > -10.28 else p1_max
+                #p1_max = -10.28 if p1_max > -10.28 else p1_max
                 # if p1_max < -12.03:
                 #     p1_max = -12.03
                 self.input_dict['bola_gp'] = p1_max
