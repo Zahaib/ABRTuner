@@ -73,15 +73,16 @@ except IndexError:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for discount in [0, -1]:
-  # gp = getBolaGP()
-  # bola_vp = getBolaVP(gp)
+  gp = getBolaGP()
+  bola_vp = getBolaVP(gp)
   # print >> sys.stderr, gp, bola_vp
-  #for bola_gp in np.arange(gp, gp + 0.05, 1.0):
-  for buffer_target_s in np.arange(BUFFER_TARGET_S, BUFFER_TARGET_S + 26, 5):
-  # for bola_gp in np.arange(gp - 0.5, gp + 6.1, 0.5):
+  # for bola_gp in np.arange(gp, gp + 0.05, 1.0):
+  #for buffer_target_s in np.arange(BUFFER_TARGET_S, BUFFER_TARGET_S + 1, 5):
+  for bola_gp in np.arange(gp - 1.7,gp + 0.31,0.1):
     discount = 0
-    bola_gp = getBolaGP(buffer_target_s)
-    bola_vp = getBolaVP(bola_gp)
+    buffer_target_s = 30
+    #bola_gp = getBolaGP(buffer_target_s)
+    #bola_vp = getBolaVP(bola_gp)
 
     # bola_gp = getBolaGP()
   #for minCellSize in [400]:
@@ -469,7 +470,7 @@ for initialBSM in [0.25]:
     #allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)
     allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)+" " + str(PLAYTIME)+" " + str(BUFFTIME)+" " + str(AVG_SESSION_BITRATE_sum)
     
-    print traceFile + " initialBSM: "+str(buffer_target_s)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    print traceFile + " initialBSM: "+str(bola_gp)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
     #print playerVisibleBW
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: " + str(allPerf)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: "

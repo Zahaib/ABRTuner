@@ -26,4 +26,4 @@ for l in lines:
 
 
 for i in range(101):
-	print i, round(np.percentile(AVGBR, i),2), round(np.percentile(REBUF, i),2)
+	print i, round(np.percentile(AVGBR, i),4), round(np.percentile(REBUF, i),4)
