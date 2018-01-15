@@ -33,6 +33,7 @@ DEFAULT_QUALITY = 0  # default video quality without agent
 #SMOOTH_PENALTY = 1
 SUMMARY_DIR = './results'
 LOG_FILE = './results/bolatuner_log'
+
 # video chunk sizes
 size_video1 = [2354772, 2123065, 2177073, 2160877, 2233056, 1941625, 2157535, 2290172, 2055469, 2169201, 2173522, 2102452, 2209463, 2275376, 2005399, 2152483, 2289689, 2059512, 2220726, 2156729, 2039773, 2176469, 2221506, 2044075, 2186790, 2105231, 2395588, 1972048, 2134614, 2164140, 2113193, 2147852, 2191074, 2286761, 2307787, 2143948, 1919781, 2147467, 2133870, 2146120, 2108491, 2184571, 2121928, 2219102, 2124950, 2246506, 1961140, 2155012, 1433658]
 size_video2 = [1728879, 1431809, 1300868, 1520281, 1472558, 1224260, 1388403, 1638769, 1348011, 1429765, 1354548, 1519951, 1422919, 1578343, 1231445, 1471065, 1491626, 1358801, 1537156, 1336050, 1415116, 1468126, 1505760, 1323990, 1383735, 1480464, 1547572, 1141971, 1498470, 1561263, 1341201, 1497683, 1358081, 1587293, 1492672, 1439896, 1139291, 1499009, 1427478, 1402287, 1339500, 1527299, 1343002, 1587250, 1464921, 1483527, 1231456, 1364537, 889412]
@@ -75,6 +76,7 @@ def make_request_handler(input_dict):
                    lastChunkID
 
         def do_POST(self):
+            chpd_start_time = time.time()
             quality = 0
             content_length = int(self.headers['Content-Length'])
             post_data = json.loads(self.rfile.read(content_length))
@@ -136,7 +138,9 @@ def make_request_handler(input_dict):
             	                                self.input_dict['bola_gp'], \
                                                 self.input_dict['bola_vp'])
 
-            self.log_file.write(str(time.time()) + '\t' +
+
+            chpd_end_time = time.time()
+            self.log_file.write(str(chpd_end_time) + '\t' +
                                 str(self.input_dict['chunksDownloaded']) + '\t' +
                                 str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
                                 str(round(post_data['buffer'],2)) + '\t' +
@@ -149,8 +153,8 @@ def make_request_handler(input_dict):
                                 str(np.mean(self.input_dict['playerVisibleBW'][self.input_dict['chunk_when_last_chd_ran']:])) + '\t' +
                                 str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
                                 str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
-                                str(self.input_dict['bola_gp']) + '\n')
-
+                                str(self.input_dict['bola_gp']) + '\t' +
+                                str(chpd_end_time - chpd_start_time) + '\n')
 
             # if chd_detected:
             # 	print "Change detected ", \
@@ -178,6 +182,7 @@ def make_request_handler(input_dict):
             self.send_header('Access-Control-Allow-Origin', "*")
             self.end_headers()
             self.wfile.write(send_data)
+
 
 
         def do_GET(self):
