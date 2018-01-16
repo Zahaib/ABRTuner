@@ -45,14 +45,14 @@ print bola_gp, bola_vp
 
 
 print "buff",
-for k in np.arange(-3.25,1.01,0.25):
+for k in np.arange(-1.7,0.31,0.1):
   print "\t" + str(round(bola_gp,2) + k),
 print ""
 
-for i in np.arange(0, 36, 0.5):
+for i in np.arange(0, 36, 0.25):
   bola_br = []
   # bola_gp_tmp = bola_gp
-  for j in np.arange(-3.25,1.01,0.25):
+  for j in np.arange(-1.7,0.31,0.1):
     bola_gp_tmp = bola_gp + j
     br = getBOLADecision(i, bola_gp_tmp, bola_vp)
     bola_br.append(VIDEO_BIT_RATE[br])

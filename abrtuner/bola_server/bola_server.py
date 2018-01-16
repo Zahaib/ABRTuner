@@ -14,7 +14,8 @@ import bola_logic
 # from bola_lookup_tables import *
 # from dash_syn_bola_buffer_target_s_table_min_5_target_moving import *
 # from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust import *
-from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust_finegrain import *
+# from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust_finegrain import *
+from dash_syn_bola_gamma_table_min_10_target_30_simbufferadjust_21levels import *
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
@@ -126,7 +127,7 @@ def make_request_handler(input_dict):
                 	                                      std_bw, \
                 	                                      cellsize)
 
-                p1_max = -12.03 if p1_max < -12.03 else p1_max
+                # p1_max = -12.03 if p1_max < -12.03 else p1_max
                 #p1_max = -10.28 if p1_max > -10.28 else p1_max
                 # if p1_max < -12.03:
                 #     p1_max = -12.03
