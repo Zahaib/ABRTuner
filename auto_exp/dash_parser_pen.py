@@ -8,12 +8,17 @@ import bandwidth_profile
 size_Envivio = {5:[2354772, 2123065, 2177073, 2160877, 2233056, 1941625, 2157535, 2290172, 2055469, 2169201, 2173522, 2102452, 2209463, 2275376, 2005399, 2152483, 2289689, 2059512, 2220726, 2156729, 2039773, 2176469, 2221506, 2044075, 2186790, 2105231, 2395588, 1972048, 2134614, 2164140, 2113193, 2147852, 2191074, 2286761, 2307787, 2143948, 1919781, 2147467, 2133870, 2146120, 2108491, 2184571, 2121928, 2219102, 2124950, 2246506, 1961140, 2155012, 1433658],4:[1728879, 1431809, 1300868, 1520281, 1472558, 1224260, 1388403, 1638769, 1348011, 1429765, 1354548, 1519951, 1422919, 1578343, 1231445, 1471065, 1491626, 1358801, 1537156, 1336050, 1415116, 1468126, 1505760, 1323990, 1383735, 1480464, 1547572, 1141971, 1498470, 1561263, 1341201, 1497683, 1358081, 1587293, 1492672, 1439896, 1139291, 1499009, 1427478, 1402287, 1339500, 1527299, 1343002, 1587250, 1464921, 1483527, 1231456, 1364537, 889412],3:[1034108, 957685, 877771, 933276, 996749, 801058, 905515, 1060487, 852833, 913888, 939819, 917428, 946851, 1036454, 821631, 923170, 966699, 885714, 987708, 923755, 891604, 955231, 968026, 874175, 897976, 905935, 1076599, 758197, 972798, 975811, 873429, 954453, 885062, 1035329, 1026056, 943942, 728962, 938587, 908665, 930577, 858450, 1025005, 886255, 973972, 958994, 982064, 830730, 846370, 598850],2:[668286, 611087, 571051, 617681, 652874, 520315, 561791, 709534, 584846, 560821, 607410, 594078, 624282, 687371, 526950, 587876, 617242, 581493, 639204, 586839, 601738, 616206, 656471, 536667, 587236, 590335, 696376, 487160, 622896, 641447, 570392, 620283, 584349, 670129, 690253, 598727, 487812, 575591, 605884, 587506, 566904, 641452, 599477, 634861, 630203, 638661, 538612, 550906, 391450],1:[450283, 398865, 350812, 382355, 411561, 318564, 352642, 437162, 374758, 362795, 353220, 405134, 386351, 434409, 337059, 366214, 360831, 372963, 405596, 350713, 386472, 399894, 401853, 343800, 359903, 379700, 425781, 277716, 400396, 400508, 358218, 400322, 369834, 412837, 401088, 365161, 321064, 361565, 378327, 390680, 345516, 384505, 372093, 438281, 398987, 393804, 331053, 314107, 255954], 0:[181801, 155580, 139857, 155432, 163442, 126289, 153295, 173849, 150710, 139105, 141840, 156148, 160746, 179801, 140051, 138313, 143509, 150616, 165384, 140881, 157671, 157812, 163927, 137654, 146754, 153938, 181901, 111155, 153605, 149029, 157421, 157488, 143881, 163444, 179328, 159914, 131610, 124011, 144254, 149991, 147968, 161857, 145210, 172312, 167025, 160064, 137507, 118421, 112270]}
 
 
-if len(sys.argv) < 5:
-  print >> sys.stderr, "Incorrect usage...\nUsage: python " + sys.argv[0] + " <path to log dir> <path to output dir> <num_schemes> <bw limit>"
+if len(sys.argv) < 6:
+  print >> sys.stderr, "Incorrect usage...\nUsage: python " + sys.argv[0] + " <path to log dir> <path to output dir> <num_schemes> <reference scheme> <bw limit>"
   sys.exit()
 
 num_schemes = int(sys.argv[3])
-bw_limit = int(sys.argv[4])
+ref_scheme = sys.argv[4]
+bw_limit = int(sys.argv[5])
+
+if ref_scheme not in ['hyb', 'online-tuner', 'robustmpc', 'mpc-tuner', 'bola', 'bola-tuner']:
+	print >> sys.stderr, "ref_scheme needs to be one of " + ['hyb', 'online-tuner', 'robustmpc', 'mpc-tuner', 'bola', 'bola-tuner']
+	sys.exit()
 #Envivio
 #video_to_index = {5:0, 4:1, 3:2, 2:3, 1:4}
 video_to_index = {6:0, 5:1, 4:2, 3:3, 2:4, 1:5}
@@ -31,6 +36,20 @@ elif bw_limit == 4:
     set_to_use = bandwidth_profile.lt_4000
 elif bw_limit == 5:
     set_to_use = bandwidth_profile.lt_4500
+elif bw_limit == 6:
+    set_to_use = bandwidth_profile.lt_6000
+elif bw_limit == 33:
+    set_to_use = bandwidth_profile.gt_3000    
+elif bw_limit == 44:
+    set_to_use = bandwidth_profile.gt_4000
+elif bw_limit == 55:
+    set_to_use = bandwidth_profile.gt_5000
+elif bw_limit == 66:
+    set_to_use = bandwidth_profile.gt_6000
+elif bw_limit == 77:
+    set_to_use = bandwidth_profile.gt_7000
+elif bw_limit == 88:
+    set_to_use = bandwidth_profile.gt_8000
 else:
     set_to_use = bandwidth_profile.lt_15000
 
@@ -45,6 +64,8 @@ dash_QoE = dict()
 average_QoE = dict()
 file_name_dict = dict()
 rebuf_impacted = set()
+bitrate_pdf = dict()
+name_to_actualfilename = dict()
 for file_name in file_names:
     if "DS_" in file_name: continue
     print(file_name)
@@ -53,8 +74,11 @@ for file_name in file_names:
       file_name_dict[fname] = dict()
     scheme = file_name.split("_")[0]
     name = file_name.split("_")[4] + file_name.split("_")[5]
+    name_to_actualfilename[name] = fname
     if name not in set_to_use:
         continue
+    if scheme not in bitrate_pdf:
+        bitrate_pdf[scheme] = dict.fromkeys(range(6), 0)
     #name = '_'.join(file_name.split(" ")[1:])
     #continue    
     f = open(log_path+file_name,"r")
@@ -77,6 +101,7 @@ for file_name in file_names:
             temp1 = int(chunk[2].split("video")[1].split("/")[0])
             #print temp1, video_to_index[temp1]
             quality = video_to_index[temp1]
+            bitrate_pdf[scheme][quality] += 1
             ID = int(chunk[2].split("/")[-1].split(".")[0])
             # print quality, ID
             size = size_Envivio[quality][ID-1]
@@ -203,15 +228,15 @@ for i in dash_QoE.keys():
             change_cdf_ri[ii] = []
 
 
-        if ii != "online-tuner" and ii not in rebuf_per_cdf.keys():
+        if ii != ref_scheme and ii not in rebuf_per_cdf.keys():
             rebuf_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in bitrate_per_cdf.keys():
+        if ii != ref_scheme and ii not in bitrate_per_cdf.keys():
             bitrate_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in qoe_per_cdf.keys():
+        if ii != ref_scheme and ii not in qoe_per_cdf.keys():
             qoe_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in change_per_cdf.keys():
+        if ii != ref_scheme and ii not in change_per_cdf.keys():
             change_per_cdf[ii] = []
-        if ii != "online-tuner" and ii not in qoelog_per_cdf.keys():
+        if ii != ref_scheme and ii not in qoelog_per_cdf.keys():
             qoelog_per_cdf[ii] = []
 
         bitrate_cdf[ii].append(float(dash_QoE[i][ii][0]))
@@ -220,9 +245,9 @@ for i in dash_QoE.keys():
         change_cdf[ii].append(float(dash_QoE[i][ii][4]))
         qoelog_cdf[ii].append(float(dash_QoE[i][ii][5]))
 
-        if i == '291022':
+        #if i == '291022':
         #if float(dash_QoE[i][ii][1]) < float(dash_QoE[i]['robustmpc'][1]) and dash_QoE[i][ii][3] < dash_QoE[i]['robustmpc'][3]:
-          print >> sys.stderr, i, ii, dash_QoE[i][ii]
+          #print >> sys.stderr, i, ii, dash_QoE[i][ii]
           #print >> sys.stderr, i, ii, dash_QoE[i][ii][3], dash_QoE[i]['robustmpc'][3], dash_QoE[i][ii][1] * 100.0, dash_QoE[i]['robustmpc'][1] * 100.0
 
 
@@ -237,19 +262,22 @@ for i in dash_QoE.keys():
           qoe_cdf_ri[ii].append(float(dash_QoE[i][ii][3]))
           change_cdf_ri[ii].append(float(dash_QoE[i][ii][4]))
 
-        if ii != "online-tuner":
-            bitrate_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
-            rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i]["online-tuner"][1])))
+        if ii != ref_scheme:
+            bitrate_per_cdf[ii].append(100*(float(dash_QoE[i][ref_scheme][0]) - float(dash_QoE[i][ii][0]))/float(dash_QoE[i][ii][0]))
+            rebuf_per_cdf[ii].append(100*(float(dash_QoE[i][ii][1]) - float(dash_QoE[i][ref_scheme][1])))
             try:
-              qoe_per_cdf[ii].append(100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3])))
+              # qoe_diff = 100*(float(dash_QoE[i][ref_scheme][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3]))
+              # if ii == "robustmpc" and qoe_diff < 0:
+              #   print name_to_actualfilename[i], qoe_diff
+              qoe_per_cdf[ii].append(100*(float(dash_QoE[i][ref_scheme][3]) - float(dash_QoE[i][ii][3]))/abs(float(dash_QoE[i][ii][3])))
             except ZeroDivisionError:
               qoe_per_cdf[ii].append(0)
             #if 100*(float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3]))/float(dash_QoE[i][ii][3]) < -30:
             #    print >> sys.stderr, i, dash_QoE[i]["online-tuner"][3], dash_QoE[i][ii][3], float(dash_QoE[i]["online-tuner"][3]) - float(dash_QoE[i][ii][3])
             if float(dash_QoE[i][ii][4]) == 0:
-                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/0.01)
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i][ref_scheme][4]))/0.01)
             else:	
-                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i]["online-tuner"][4]))/float(dash_QoE[i][ii][4]))
+                change_per_cdf[ii].append(100*(float(dash_QoE[i][ii][4]) - float(dash_QoE[i][ref_scheme][4]))/float(dash_QoE[i][ii][4]))
 
 for sh in bitrate_cdf.keys():
     f_out = open(output_dir + "/cdf_bitrate_"+str(sh)+".txt",'w')
@@ -333,7 +361,18 @@ print "\nQoE"
 for sh in qoe_cdf.keys():
   print sh, np.mean(qoe_cdf[sh]), np.std(qoe_cdf[sh]), np.percentile(qoe_cdf[sh], 50), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
 
-
+print ""
+for scheme in sorted(bitrate_pdf.keys()):
+  if scheme == "online-tuner":
+    print "online-tuner",
+  elif scheme == "pensieve-pensvid":
+    print "pensieve",
+  else:
+    print scheme, 
+  for br in sorted(bitrate_pdf[scheme]):
+    print round((bitrate_pdf[scheme][br] / float(sum(bitrate_pdf[scheme].values()))) * 100, 2),
+  print ""
+#print bitrate_pdf
 # log reward
 # log_bit_rate = np.log(VIDEO_BIT_RATE[chunk_quality] / float(VIDEO_BIT_RATE[0]))
 # log_last_bit_rate = np.log(VIDEO_BIT_RATE[last_quality] / float(VIDEO_BIT_RATE[0]))
