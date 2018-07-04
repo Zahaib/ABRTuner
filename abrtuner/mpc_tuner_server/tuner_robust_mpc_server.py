@@ -9,7 +9,6 @@ import json
 os.environ['CUDA_VISIBLE_DEVICES']=''
 
 import numpy as np
-import tensorflow as tf
 import time
 import mpc_tuner_logic
 import mpc_lookup_table_4300
