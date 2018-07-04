@@ -703,15 +703,20 @@ MediaPlayer.dependencies.AbrController = function () {
 														// var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
 
                                                         var xhr = new XMLHttpRequest();
+							//xhr.responseType = 'json'
+							xhr.overrideMimeType("application/json")
                                                         xhr.open("POST", "http://localhost:8336", false);
                                                         self.debug.log("Using MPC+Tuner Online CD...Tuner Online CD, got xhr: " + xhr);
 
                                                         xhr.onreadystatechange = function() {
                                                             if ( xhr.readyState == 4 && xhr.status == 200 ) {
-                                                                console.log("GOT RESPONSE:" + xhr.responseText + "---");
-                                                                if ( xhr.responseText != "REFRESH" ) {
-                                                                    quality = parseInt(xhr.responseText, 10);
-                                                                }
+                                                                //console.log("GOT RESPONSE:" + xhr.responseText + "---");
+                                                                //if ( xhr.responseText != "REFRESH" ) {
+                                                                //    quality = parseInt(xhr.responseText, 10);
+                                                                //}
+								//quality = parseInt(xhr.quality, 10);
+								var jsonResponse = JSON.parse(xhr.responseText)
+								quality = parseInt(jsonResponse.quality, 10);
                                                             }
                                                         }
 
