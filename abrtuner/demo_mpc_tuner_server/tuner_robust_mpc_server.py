@@ -201,7 +201,7 @@ def make_request_handler(input_dict):
                 self.log_file.write('\n')
 
             
-            send_data_json = json.dumps({'quality': quality, 'config': config})
+            send_data_json = json.dumps({'quality': quality, 'config': self.input_dict['discount']})
             send_data = str(quality)
             self.send_response(200)
             #self.send_header('Content-Type', 'text/plain')
