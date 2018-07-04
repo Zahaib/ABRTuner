@@ -18,7 +18,7 @@ echo $pass | sudo -S apt-get install build-essential libssl-dev
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 bash install_nvm.sh
 source ~/.profile
-echo $pass | sudo -S nvm install 6.11.3
+nvm install 6.11.3
 nvm use 6.11.3  
 echo "node installed..."
 node -v

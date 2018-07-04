@@ -51,8 +51,8 @@ zi = griddata((BW, STD), PARAM, (xi[None,:], yi[:,None]), method='cubic')
 
 # I control the range of my colorbar by removing data 
 # outside of my range of interest
-zmin = -11.5
-zmax = -1
+zmin = -13.5302438401
+zmax = -10.0302438401
 zi[(zi<zmin) | (zi>zmax)] = None
 
 # Create the contour plot

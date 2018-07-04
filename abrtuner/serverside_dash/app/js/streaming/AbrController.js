@@ -76,8 +76,10 @@ MediaPlayer.dependencies.AbrController = function () {
 	bufferLevelAdjusted_mpc = 0,
 	// Xiaoqi_new
 	// Xiaoqi: Visual
-	abrAlgo = 10,
+	abrAlgo = -1,
 	fixedQualityArray = [],
+    maxTargetBuffer = 1200, // fairly large value, currently set to 20 minutes. Can be overridden when initializing the player
+
 	// Xiaoqi: Visual
 
 
@@ -130,6 +132,7 @@ MediaPlayer.dependencies.AbrController = function () {
 		festive: undefined,
 		// Xiaoqi_cr
 		// Xiaoqi
+		// maxTargetBuffer: maxTargetBuffer, 
 
 		getSessionStartTime: function (){
 			return sessionStartTime;
@@ -262,6 +265,15 @@ MediaPlayer.dependencies.AbrController = function () {
 		setBolaTunerEnabled: function(value) {
 			isBolaTuner = value;
 		},
+
+        setMaxTargetBuffer: function (value) {
+            maxTargetBuffer = value;
+        },
+
+        getMaxTargetBuffer: function (value) {
+            return maxTargetBuffer;
+        },
+
 
 		getMetricsFor: function (data) {
 			var deferred = Q.defer(),
@@ -579,11 +591,43 @@ MediaPlayer.dependencies.AbrController = function () {
 									                				'bandwidthEst': bandwidthEst,
 									                				'lastRequest': lastRequested,
 									                				'RebufferTime': rebuffer,
+                                                                                                                        'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
 									                				'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
 									                				'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
 									                				'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
 						                				var dataStringified = JSON.stringify(data)
 										                self.debug.log("Using Pensieve...PENSIEVE, got dataStringified: " + dataStringified);
+										                xhr.send(dataStringified);
+										                self.debug.log("QUALITY RETURNED IS: " + quality);														 
+														break;
+													case 12: // nn
+														self.debug.log("Using simple nn...NN");
+										                var quality = 0;
+										                var xhr = new XMLHttpRequest();
+										                xhr.open("POST", "http://localhost:8338", false);
+										                self.debug.log("Using simple nn, got xhr: " + xhr);
+
+										                xhr.onreadystatechange = function() {
+										                    if ( xhr.readyState == 4 && xhr.status == 200 ) {
+										                        console.log("GOT RESPONSE:" + xhr.responseText + "---");
+										                        if ( xhr.responseText != "REFRESH" ) {
+										                            quality = parseInt(xhr.responseText, 10);
+										                        } 
+										                    }
+										                }
+										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
+										                			'lastquality': lastQuality,
+									                				'buffer': bufferLevel,
+									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
+									                				'bandwidthEst': bandwidthEst,
+									                				'lastRequest': lastRequested,
+									                				'RebufferTime': rebuffer,
+                                                                                                                        'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
+									                				'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
+									                				'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
+									                				'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
+						                				var dataStringified = JSON.stringify(data)
+										                self.debug.log("Using simple nn, got dataStringified: " + dataStringified);
 										                xhr.send(dataStringified);
 										                self.debug.log("QUALITY RETURNED IS: " + quality);														 
 														break;

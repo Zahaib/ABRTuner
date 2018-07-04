@@ -6,7 +6,7 @@ sys.path.append('../')
 
 
 if len(sys.argv) < 2:
-  print >> sys.stderr, "Incorrect usage...\nUsage: python " + sys.argv[0] + " <path to file>"
+  print >> sys.stderr, "Incorrect usage...\nUsage: python " + sys.argv[0] + " <path to sim output file>"
   sys.exit()
 
 file_name = sys.argv[1]
@@ -39,6 +39,7 @@ chunks_dash = dict()
 buffering_dash = []
 quality = 0
 ID = 0
+lastID = ID
 first = True
 last_quality = 0
 bw = 0
@@ -50,7 +51,9 @@ for line in lines:
         temp1 = int(chunk[2].split("video")[1].split("/")[0])
         last_quality = quality
         quality = video_to_index[temp1]
+        lastID = ID - 1 if ID - 1 >= 0 else 0 
         ID = int(chunk[2].split("/")[-1].split(".")[0])
+        #print >> sys.stderr, ID, lastID
         size = size_Envivio[quality][ID-1]
         start = float(chunk[3].split("=")[-1]) / 1000.0
         end = float(chunk[5].split("=")[-1]) / 1000.0
@@ -70,7 +73,7 @@ for line in lines:
               str(ID) + '\t' + \
               str(max(round(bufferlen,2) - 4.0,0)) + '\t' + \
               str(index_to_bitrate[last_quality]) + '\t' + \
-              str(log_conf[ID-1]) + '\t' + \
+              str(log_conf[lastID]) + '\t' + \
               str(bw)
         print 'appended' + '\t' + \
               str(round(end,1)) + '\t' + \

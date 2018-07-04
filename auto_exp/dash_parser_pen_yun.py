@@ -54,8 +54,8 @@ for file_name in file_names:
     scheme = file_name.split("_")[0]
     #if scheme == "pensieve-pensvid": continue
     name = file_name.split("_")[4] + file_name.split("_")[5]
-    if name not in set_to_use:
-        continue
+    #if name not in set_to_use:
+    #    continue
     #name = '_'.join(file_name.split(" ")[1:])
     print(file_name)
     #continue    
@@ -122,7 +122,8 @@ for file_name in file_names:
     total_size_log = 0.0
     total_time = 0.0
     total_buffering = 0.0
-
+    if len(chunks_dash)==0: continue
+    if len(chunks_dash)!=49: continue
     # print len(buffering_dash), len(chunks_dash.keys()), buffering_dash
 
     print ("total quality change events=", total_quality_change_events, "total_quality_change=", total_quality_change)
@@ -319,6 +320,10 @@ for sh in change_cdf.keys():
 print "\nQoE"
 for sh in qoe_cdf.keys():
   print sh, np.mean(qoe_cdf[sh]), np.std(qoe_cdf[sh]), np.percentile(qoe_cdf[sh], 50), np.mean(qoe_cdf[sh]), len(qoe_cdf[sh])
+
+print "\nQoE"
+for sh in qoe_per_cdf.keys():
+  print sh, np.mean(qoe_per_cdf[sh]), np.std(qoe_per_cdf[sh]), np.percentile(qoe_per_cdf[sh], 50), np.mean(qoe_per_cdf[sh]), len(qoe_per_cdf[sh])
 
 
 # log reward

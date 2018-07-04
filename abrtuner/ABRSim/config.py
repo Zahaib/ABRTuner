@@ -1,7 +1,7 @@
 import math
 ### debug settings
 DEBUG = False
-VERBOSE_DEBUG = False
+VERBOSE_DEBUG = True
 CHUNK_DEBUG = False
 
 ### simulation settings
@@ -27,7 +27,7 @@ DATABRICKS_MODE = False
 TRACE_MODE = True
 
 ### Player settings ###
-MAX_BUFFLEN = 12000
+MAX_BUFFLEN = 15
 LOCK = 0
 DASH_BUFFER_ADJUST = True
 

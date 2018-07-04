@@ -41,7 +41,7 @@ tmp_buff = BUFFER_TARGET_S
 tmp_min = MINIMUM_BUFFER_S
 
 print bola_gp, bola_vp
-# sys.exit()
+#sys.exit()
 
 
 print "buff",

@@ -175,6 +175,7 @@ def make_request_handler(input_dict):
                 if ( len(past_errors) < 5 ):
                     error_pos = -len(past_errors)
                 max_error = float(max(past_errors[error_pos:]))
+                # max_error = 0.0
                 future_bandwidth = harmonic_bandwidth/(1+max_error)
                 past_bandwidth_ests.append(harmonic_bandwidth)
 

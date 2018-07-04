@@ -11,6 +11,7 @@ import collections
 from collections import deque
 #readPerformanceVerctor()
 #exit()
+import time
 
 #1 = 5 sec
 #3 = 20sec
@@ -47,6 +48,7 @@ optimal_bitrate = 0
 optimal_rebuf = 0
 optimal_domBR = 0
 AVG_SESSION_BITRATE = 0
+starttt = time.time()
 
 init_BLEN = 0
 #list_a = [0.01, 0.05, 0.1, 0.15, 0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95]
@@ -69,7 +71,7 @@ try:
   a_range_start = float(sys.argv[2])
 except IndexError:
   a_range_start = 1.0
-#for initialBSM in [0.01, 0.05, 0.09, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77, 0.81, 0.08, 0.89, 0.93, 0.97,1.00]:
+#for initialBSM in [0.01, 0.05, 0.09, 0.13, 0.17, 0.21, 0.25, 0.29, 0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77, 0.81, 0.85, 0.89, 0.93, 0.97,1.00]:
 #for initialBSM in [0.25,0.29,0.33,0.37,0.41,0.45,0.49,0.53,0.57,0.61,0.65,0.69,0.73,0.77]:
 for initialBSM in [0.25]:
   # for discount in [0, -1]:
@@ -78,7 +80,9 @@ for initialBSM in [0.25]:
   # print >> sys.stderr, gp, bola_vp
   # for bola_gp in np.arange(gp, gp + 0.05, 1.0):
   #for buffer_target_s in np.arange(BUFFER_TARGET_S, BUFFER_TARGET_S + 1, 5):
-  for bola_gp in np.arange(gp - 1.7,gp + 0.31,0.1):
+  # for bola_gp in np.arange(gp - 1.7,gp + 1.5,0.1):
+  for bola_gp in np.arange(gp + 1.5,gp + 1.51,0.1):
+
     discount = 0
     buffer_target_s = 30
     #bola_gp = getBolaGP(buffer_target_s)
@@ -470,7 +474,9 @@ for initialBSM in [0.25]:
     #allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)
     allPerf[str(upr) + " " + str(A)] = str(AVG_SESSION_BITRATE) + " " + str(REBUF_RATIO)+" " + str(PLAYTIME)+" " + str(BUFFTIME)+" " + str(AVG_SESSION_BITRATE_sum)
     
-    print traceFile + " initialBSM: "+str(bola_gp)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+    # print traceFile + " initialBSM: "+str(bola_gp)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME) +" size: " + str(AVG_SESSION_BITRATE_sum) + " configs used: " + str(configsUsed) #+ " bitrates: " + str(dominantBitrate)
+
+    print traceFile + " initialBSM: "+str(initialBSM)+" minCell: "+str(minCellSize)+" QoE: " + str(maxQoE) + " avg. bitrate: " + str(AVG_SESSION_BITRATE) +  " buf. ratio: " + str(REBUF_RATIO) +" playtime: " + str(PLAYTIME) +" buftime: " + str(BUFFTIME)
     #print playerVisibleBW
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: " + str(allPerf)
 #print traceFile + " QoE: " + str(maxQoE) + " avg. bitrate: " + str(optimal_bitrate) +  " buf. ratio: " + str(optimal_rebuf) + " optimal A: " + str(optimal_A) + " mapping: "
@@ -479,6 +485,8 @@ for initialBSM in [0.25]:
 #    for i in configsUsed:
 #      print i
 
+end = time.time()
+print(end - starttt)
     #print traceFile + " initialBSM: " + str(initialBSM) \
     #+ " minCell: " +str(minCellSize) \
     #+ " QoE: " + str(AVG_SESSION_BITRATE - (REBUF_PENALTY * 1000) * (BUFFTIME/float(CHUNKS_DOWNLOADED-1)) - SMOOTH_PENALTY * change_magnitude/float(CHUNKS_DOWNLOADED)) \

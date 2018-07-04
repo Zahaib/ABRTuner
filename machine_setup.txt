@@ -71,20 +71,16 @@ sudo apt-get install -f
 
 if needed, sudo apt-get -f install
 
-
-sudo apt-get install nodejs-legacy
-
-
-sudo apt-get install npm
+6. Chrome remote interface
+  sudo apt-get install npm
+  sudo npm install chrome-remote-interface
 
 
 sudo npm cache clean -f
-
 sudo npm install -g n
-
 sudo n stable
 
-6. ABRSim dependencies:
+7. ABRSim dependencies:
   sudo apt-get install python-pip python-numpy python-scipy
   sudo pip install statistics
   

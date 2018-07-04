@@ -2,53 +2,77 @@ import numpy as np
 import sys, subprocess, os
 #import pandas as pd
 import collections
+# from simulation_performance_vector import findMaxConfig
+import sys
 
-def dominantconfig(configs):
-    old_bitrate = 10000.0
-    old_rebuf = 10000.0
-    configs_dominant = collections.OrderedDict()
+if len(sys.argv) < 2:
+    print >> sys.stderr, "Incorrect usage...\nUsage: python " + sys.argv[0] + " <path to the output of compare_allconfig_bola.py>"
+    sys.exit()
 
-    configs = collections.OrderedDict(sorted(configs.items()))
-    for bit in configs.keys():
-        configs[bit] = collections.OrderedDict(sorted(configs[bit].items()))
+f_vector = sys.argv[1]
+
+# def findMaxConfig(tups):
+#     #print tups
+#     bsm = -sys.maxint
+#     for tup in tups:
+#         if bsm < tup[1]:
+#             bsm = tup[1]
+#     weight =-1000000.0
+#     for tup in tups:
+#         if tup[1]!=bsm:
+#             continue
+#         #print tup[0], weight
+#         if tup[0] > weight:
+#             weight = tup[0]
+#         #print tup[0], weight
+#     return weight, bsm
+
+# def dominantconfig(configs):
+#     old_bitrate = 10000.0
+#     old_rebuf = 10000.0
+#     configs_dominant = collections.OrderedDict()
+
+#     configs = collections.OrderedDict(sorted(configs.items()))
+#     for bit in configs.keys():
+#         configs[bit] = collections.OrderedDict(sorted(configs[bit].items()))
 
 
-    #for bit in reversed(configs.keys()):
-    #    for rebuf in reversed(configs[bit].keys()):
-    #        print bit, rebuf, configs[bit][rebuf][0]
-    #for bit in reversed(configs.keys()):
-    #    for rebuf in configs[bit].keys():
-    #        print bit, rebuf, configs[bit][rebuf][0]
-    #print ""
-    for bit in reversed(configs.keys()):
-        for rebuf in (configs[bit].keys()):
-            list_p = list()
-            if (float(old_bitrate) > float(bit) and float(old_rebuf) > float(rebuf)) or (float(old_bitrate) == float(bit) and float(old_rebuf) >  float(rebuf)) or (float(old_bitrate) < float(bit) and float(old_rebuf) == float(rebuf)):
-                old_bitrate = float(bit)
-                old_rebuf = float(rebuf)
-            #if old_bitrate != 10000 and :
-                for tup in configs[bit][rebuf]:
-                    list_p.append(tup)
-            if len(list_p) > 0:
-                configs_dominant[(bit, rebuf)] = list_p
-    #print configs_dominant
-    #for tup in configs_dominant.keys():
-    #    print tup, configs_dominant[tup]
-    #print ""
-    #print "Done to print configs_dominant"
-    for tup in configs_dominant.keys():
-        if tup[1] > 0:
-            continue
-        else:
-            #print configs_dominant[tup]
-            #print findMaxConfig(configs_dominant[tup])
-            #print  tup[0], tup[1], findMaxConfig(configs_dominant[tup])
-            #print ""
-            return tup[0], tup[1], findMaxConfig(configs_dominant[tup])
-            #return configs_dominant[tup][0], configs_dominant[tup][1]
-    #print  tup[0], tup[1], findMaxConfig(configs_dominant[tup])
-    #print "" 
-    return tup[0], tup[1], findMaxConfig(configs_dominant[tup])
+#     #for bit in reversed(configs.keys()):
+#     #    for rebuf in reversed(configs[bit].keys()):
+#     #        print bit, rebuf, configs[bit][rebuf][0]
+#     #for bit in reversed(configs.keys()):
+#     #    for rebuf in configs[bit].keys():
+#     #        print bit, rebuf, configs[bit][rebuf][0]
+#     #print ""
+#     for bit in reversed(configs.keys()):
+#         for rebuf in (configs[bit].keys()):
+#             list_p = list()
+#             if (float(old_bitrate) > float(bit) and float(old_rebuf) > float(rebuf)) or (float(old_bitrate) == float(bit) and float(old_rebuf) >  float(rebuf)) or (float(old_bitrate) < float(bit) and float(old_rebuf) == float(rebuf)):
+#                 old_bitrate = float(bit)
+#                 old_rebuf = float(rebuf)
+#             #if old_bitrate != 10000 and :
+#                 for tup in configs[bit][rebuf]:
+#                     list_p.append(tup)
+#             if len(list_p) > 0:
+#                 configs_dominant[(bit, rebuf)] = list_p
+#     #print configs_dominant
+#     #for tup in configs_dominant.keys():
+#     #    print tup, configs_dominant[tup]
+#     #print ""
+#     #print "Done to print configs_dominant"
+#     for tup in configs_dominant.keys():
+#         if tup[1] > 0:
+#             continue
+#         else:
+#             #print configs_dominant[tup]
+#             #print findMaxConfig(configs_dominant[tup])
+#             #print  tup[0], tup[1], findMaxConfig(configs_dominant[tup])
+#             #print ""
+#             return tup[0], tup[1], findMaxConfig(configs_dominant[tup])
+#             #return configs_dominant[tup][0], configs_dominant[tup][1]
+#     #print  tup[0], tup[1], findMaxConfig(configs_dominant[tup])
+#     #print "" 
+#     return tup[0], tup[1], findMaxConfig(configs_dominant[tup])
 
 def readPerformanceVerctor_multiple():
     bw_step = 100
@@ -78,8 +102,9 @@ def readPerformanceVerctor_input(x_, y_):
     #print "reading table"
     bw_step = x_
     std_step = y_
-    path = "/home/yun/simulation/fit_trace_0_7500_0_15000/"
-    f_vector = "compare_dash_simulation_result_syn_conviva_video_allconfigs_hyb.txt"
+    # path = "/home/zahaib/ABRTuner/abrtuner/trace/synth_trace_for_table/"
+    path = ""
+    # f_vector = "compare_dash_simulation_result_syn_penseive_video_allconfigs_mpc_4300_fix1010_discount_range100_delayfix_blenfix.txt"
     lines = open(f_vector).readlines()
     performanceVector_all = dict()
     pv_list = dict()
@@ -90,15 +115,15 @@ def readPerformanceVerctor_input(x_, y_):
         #    print cnt
         l = l.replace(",", "").replace(")", "").replace("(", "").replace("\'", "").rstrip().split(" ")
         #print l
-        all_avgbr = float(l[7])
-        all_rebuf = float(l[8])
-        all_bsm = float(l[10])
+        all_avgbr = float(l[1])
+        all_rebuf = float(l[2])
+        all_bsm = float(l[4])
         filePath = l[0]
         #bw_, std_ = getBWandStd(path, l[0])
         bw_, std_ = getBWandStd(path, filePath)
         #print str(bw_)+" "+str(std_)+" "+str(all_bsm)
         #continue
-        #if bw_ > 9000: continue
+        if bw_ > 9000: continue
         performanceVector_all[(int(bw_), int(std_))] = all_bsm
 
 #    pv_list = dict()
@@ -113,7 +138,7 @@ def readPerformanceVerctor_input(x_, y_):
 
         pv_list[(bw_cut, std_cut)].append(all_bsm)
     #print "reading table done"
-    print "dash_syth_hyb_con_table_"+str(x_)+" = "+str(pv_list)
+    print "dash_syth_bola_gamma_table_"+str(x_)+" = "+str(pv_list)
     #print "low_bw_syth_hyb_table_"+str(x_)+" = "+str(pv_list)
     #print "low_bw_real_ios_hyb_no_abort_conext_table_"+str(x_)+" = "+str(pv_list)
     #print "seg_threshold3_manipulated_drop_120sample_desktop_nsdi_table_"+str(x_)+" = "+str(pv_list)

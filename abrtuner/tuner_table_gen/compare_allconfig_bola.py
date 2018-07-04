@@ -21,7 +21,9 @@ def dominantconfig(configs):
     for bit in reversed(configs.keys()):
         for rebuf in (configs[bit].keys()):
             list_p = list()
-            if (float(old_bitrate) > float(bit) and float(old_rebuf) > float(rebuf)) or (float(old_bitrate) == float(bit) and float(old_rebuf) >  float(rebuf)) or (float(old_bitrate) < float(bit) and float(old_rebuf) == float(rebuf)):
+            if (float(old_bitrate) > float(bit) and float(old_rebuf) > float(rebuf)) or \
+                (float(old_bitrate) == float(bit) and float(old_rebuf) >  float(rebuf)) or \
+                (float(old_bitrate) < float(bit) and float(old_rebuf) == float(rebuf)):
                 old_bitrate = float(bit)
                 old_rebuf = float(rebuf)
             #if old_bitrate != 10000 and :
@@ -37,8 +39,15 @@ def dominantconfig(configs):
     return tup[0], tup[1], findMaxConfig(configs_dominant[tup])
 
 def findMaxConfig(tups):
+    # print >> sys.stderr, len(tups), tups
+    if len(tups) > 1:
+        print >> sys.stderr, tups
+        # sys.exit()
     bsm = -sys.maxint
     for tup in tups:
+        # the greater the value of gamma the more conservative it is
+        # this is equivalent to picking max of BSM when multiple BSM
+        # values achieve the max bitrate and rebuf
         if bsm < tup[1]:
             bsm = tup[1]
     weight =-1000000.0
@@ -84,9 +93,9 @@ for f in allconfig_f:
         sessions_10[name][avgbr] = collections.OrderedDict()
     if rebuf not in sessions_10[name][avgbr].keys():
         sessions_10[name][avgbr][rebuf] = list()
-        sessions_10[name][avgbr][rebuf].append((p1, p2))
+    sessions_10[name][avgbr][rebuf].append((p1, p2))
 
-# print >> sys.stderr, sessions_10
+# print >> sys.stderr, "\n", sessions_10
 for fileName in sessions_10.keys():
     sessions_10[fileName] = collections.OrderedDict(sorted(sessions_10[fileName].items()))
 for fileName in sessions_10.keys():
