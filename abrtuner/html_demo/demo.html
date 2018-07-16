@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Oboe demo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="node_modules/chart.js/dist/Chart.js"></script>
+	<script src="node_modules/chart.js/samples/utils.js"></script>
+        <style>
+                canvas {
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        -ms-user-select: none;
+                }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!--button id="playButton" type="button">Play</button-->
+            <input type="button" value="Play" onclick="loadPlayer(); readState();" />
+            <video id="videoPlayer" controls="controls" width="900" height="450"></video>
+        </div>
+	<div style="width: 100%; display: table;">
+    		<div style="display: table-row">
+	        	<div style="width:50%;display:table-cell;">
+        	        	<canvas id="canvas"></canvas>
+        		</div>
+	        	<div style="width:50%;display:table-cell;">
+        	        	<canvas id="canvas3"></canvas>
+        		</div>
+    		</div>
+    		<div style="display: table-row">
+	        	<div style="width:50%;display:table-cell;">
+        	        	<canvas id="canvas1"></canvas>
+        		</div>
+	        	<div style="width:50%;display:table-cell;">
+        	        	<canvas id="canvas2"></canvas>
+        		</div>
+    		</div>
+	</div>
+
+        <br>
+        <br>
+        <button id="addDataset">Add Dataset</button>
+        <button id="removeDataset">Remove Dataset</button>
+        <script src="yz_dashplayers/dash.allAlgo.js"></script>
+        <script>
+        <!--Pensieve:6,RobustMPC:7,HYB+Tuner:8,MPC+Tuner:9, HYB:10 -->
+	var chunkid = -1
+	var sessionStart = -1
+	var color = Chart.helpers.color;
+	var colorNames = Object.keys(window.chartColors);
+	var configBW = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Throughput (Kbps)',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.red,
+				fill: false,
+				data: [
+					0,
+				],
+			},{
+                                label: 'Change Points',
+                                backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                                borderColor: window.chartColors.green,
+                                fill: false,
+                                data: [{
+                                        x: 0,
+                                        y: 0
+                                }],
+				type: 'bubble'
+                        }]
+		},
+		options: {
+			title: {
+				text: 'Throughput'
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number'
+					},
+					ticks: {
+						beginAtZero: true
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Bandwidth (Kbps)'
+					},
+    					ticks: {
+        					beginAtZero: true
+    					}
+				}]
+			},
+		}
+	};
+
+	var configBuf = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Buffer (sec)',
+				backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.green,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'Buffer'
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number'
+					},
+					ticks: {
+						beginAtZero: true
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number'
+					},
+    					ticks: {
+        					beginAtZero: true
+    					}
+				}]
+			},
+		}
+	};
+
+	var configBR = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Bitrate (index)',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'Throughput'
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number'
+					},
+					ticks: {
+						beginAtZero: true
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Bitrate (index'
+					},
+    					ticks: {
+        					beginAtZero: true
+    					}
+				}]
+			},
+		}
+	};
+	var configParam = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'ABR Configuration',
+				backgroundColor: color(window.chartColors.orange).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.orange,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'ABR Configuration'
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number'
+					},
+					ticks: {
+						beginAtZero: true
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Configuration'
+					},
+    					ticks: {
+        					beginAtZero: true
+    					}
+				}]
+			},
+		}
+	};
+
+	window.onload = function() {
+		var ctx = document.getElementById('canvas').getContext('2d');
+		var ctx1 = document.getElementById('canvas1').getContext('2d');
+		var ctx2 = document.getElementById('canvas2').getContext('2d');
+		var ctx3 = document.getElementById('canvas3').getContext('2d');
+		window.myLine = new Chart(ctx, configBW);
+		window.myLine1 = new Chart(ctx1, configBuf);
+		window.myLine2 = new Chart(ctx2, configBR);
+		window.myLine3 = new Chart(ctx3, configParam);
+	};
+
+        function loadPlayer() {
+            var url = "/Manifest.mpd";
+            var context = new Dash.di.DashContext();
+            var player = new MediaPlayer(context);
+            var abr_id = 9
+	    var sessionID = Math.floor(Date.now());
+	    console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD" + sessionID)
+            player.startup();
+            player.setAbrAlgorithm(abr_id);
+            player.setSessionID(sessionID);
+            player.attachView(document.querySelector("#videoPlayer"));
+            player.attachSource(url);
+        }
+
+        function readState() {
+            setInterval(tick, 50);
+        }
+
+        function tick() {
+            var myObject = JSON.parse(sessionStorage.myObject);
+            var myResponse = JSON.parse(sessionStorage.myResponse);
+	    if (parseInt(myObject.lastRequest) == 0){
+	    	sessionStart = parseInt(myObject.lastChunkStartTime)
+	    }
+	    var sessionTimeInSec = (parseInt(myObject.lastChunkFinishTime) - sessionStart) / 1000.0
+	    if (parseInt(myObject.lastRequest) != chunkid && sessionStart != -1) {
+	    	chunkid = parseInt(myObject.lastRequest);
+	    	addPoint(myObject, myResponse);
+	    }
+        }
+
+        function display(msg) {
+            var p = document.createElement('p');
+            p.innerHTML = msg;
+            document.body.appendChild(p);
+        }
+	  
+	document.getElementById('addDataset').addEventListener('click', function() {
+		var colorName = colorNames[config.data.datasets.length % colorNames.length];
+		var newColor = window.chartColors[colorName];
+		var newDataset = {
+			label: 'Dataset ' + config.data.datasets.length,
+			borderColor: newColor,
+			backgroundColor: color(newColor).alpha(0.5).rgbString(),
+			data: [],
+		};
+
+		for (var index = 0; index < config.data.labels.length; ++index) {
+			newDataset.data.push(randomScalingFactor());
+		}
+
+		config.data.datasets.push(newDataset);
+		window.myLine.update();
+	});
+
+	document.getElementById('removeDataset').addEventListener('click', function() {
+		config.data.datasets.splice(0, 1);
+		window.myLine.update();
+	});
+
+	function addPoint(myObject, myResponse) {
+		//sessionTimeSec = parseFloat(myObject.sessionTimeSec) / 1000.0
+		chunkid = parseInt(myObject.lastRequest)
+		updateConfig(configBW, chunkid + 1, parseInt(myObject.bandwidthEst))
+		updateConfig(configBuf, chunkid + 1, parseFloat(myObject.buffer))
+		updateConfig(configBR, chunkid + 1, parseFloat(myObject.lastquality))
+		updateConfig(configParam, chunkid + 1, parseFloat(myResponse.config))
+        	window.myLine.update();
+        	window.myLine1.update();
+        	window.myLine2.update();
+        	window.myLine3.update();
+        }
+
+	function updateConfig(config, xval, yval) {
+                //if (config.data.datasets.length > 0) {
+                //        config.data.labels.push(sessionTimeInSec);
+                if (config.data.datasets.length > 0) {
+                        config.data.labels.push(xval);
+
+                        for (var index = 0; index < config.data.datasets.length; ++index) {
+                                if (typeof config.data.datasets[index].data[0] === 'object') {
+                                        config.data.datasets[index].data.push({
+                                                x: xval,
+                                                y: yval,
+                                        });
+                                } else {
+					//display(yval)
+                                        config.data.datasets[index].data.push(yval);
+                                }
+                        }
+                }
+	}
+        </script>
+    </body>
+</html>
+
