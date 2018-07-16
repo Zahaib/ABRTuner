@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-#import SocketServer
-#import base64
-#import urllib
 import sys
 import os
 import json
@@ -25,18 +22,7 @@ S_LEN = 8  # take how many frames in the past
 A_DIM = 6
 TOTAL_VIDEO_CHUNKS = 48
 VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]
-#BITRATE_REWARD = [1, 2, 3, 12, 15, 20]
-#BITRATE_REWARD_MAP = {0: 0, 300: 1, 750: 2, 1200: 3, 1850: 12, 2850: 15, 4300: 20}
-#M_IN_K = 1000.0
-#BUFFER_NORM_FACTOR = 10.0
-#CHUNK_TIL_VIDEO_END_CAP = 48.0
 DEFAULT_QUALITY = 0  # default video quality without agent
-#ACTOR_LR_RATE = 0.0001
-#CRITIC_LR_RATE = 0.001
-#TRAIN_SEQ_LEN = 100  # take as a train batch
-#MODEL_SAVE_INTERVAL = 100
-#RANDOM_SEED = 42
-#RAND_RANGE = 1000
 SUMMARY_DIR = './results'
 LOG_FILE = './results/mpctuner_log'
 # in format of time_stamp bit_rate buffer_size rebuffer_time video_chunk_size download_time reward
@@ -198,7 +184,12 @@ def make_request_handler(input_dict):
                 self.log_file.write('\n')
 
             
-            send_data_json = json.dumps({'quality': quality, 'config': self.input_dict['discount']})
+            send_data_json = json.dumps({'quality': quality, \
+                               'config': self.input_dict['discount'], \
+                               'change': chd_detected, \
+                               'avg_bw': avg_bw, \
+                               'std_bw': std_bw})
+
             send_data = str(quality)
             self.send_response(200)
             #self.send_header('Content-Type', 'text/plain')
