@@ -79,13 +79,25 @@ def make_request_handler(input_dict):
             bandwidthEst = float(post_data['bandwidthEst'])
             lastChunkID = post_data['lastRequest']
             lastChunkBR = post_data['lastquality']
+            sessionID = post_data['sessionID']
 
             return lastChunkBR, \
                    bufferLen, \
                    lastChunkBW, \
                    lastChunkBWArray, \
                    bandwidthEst, \
-                   lastChunkID
+                   lastChunkID, \
+                   sessionID
+
+        def reset_state(self):
+                self.input_dict['playerVisibleBW'] = []
+                self.input_dict['sessionHistory'] = dict()
+                self.input_dict['chunkBWSamples'] = []
+                self.input_dict['bandwidthEsts'] = []
+                self.input_dict['pastErrors'] = []
+                self.input_dict['chunksDownloaded'] = 0
+                self.input_dict['chunk_when_last_chd_ran'] = -1
+                self.input_dict['discount'] = 0.0
 
         def do_POST(self):
             content_length = int(self.headers['Content-Length'])
@@ -97,7 +109,11 @@ def make_request_handler(input_dict):
             lastChunkBW, \
             lastChunkBWArray, \
             bandwidthEst, \
-            lastChunkID = self.parse_post_data(post_data)
+            lastChunkID, \
+            sessionID = self.parse_post_data(post_data)
+
+            if sessionID not in self.input_dict['sessionIDs']:
+                self.reset_state()
 
             # omit the first and last sample, it is usually bad
             self.input_dict['playerVisibleBW'] += lastChunkBWArray[1:][:-1]
@@ -172,17 +188,6 @@ def make_request_handler(input_dict):
                                 str(harmonic_bandwidth * 8 * 1000) + '\t' +
                                 str(mpcBW) + '\t' +
                                 str(self.input_dict['discount']) + '\n')
-#            self.log_file.write(str(time.time()) + '\t' +
-#                                str(self.input_dict['chunksDownloaded']) + '\t' +
-#                                str(VIDEO_BIT_RATE[post_data['lastquality']]) + '\t' +
-#                                str(round(post_data['buffer'],2)) + '\t' +
-#                                str(post_data['lastChunkSize']) + '\t' +
-#                                str(post_data['lastChunkFinishTime']) + '\t' +
-#                                str(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime'])) + '\t' +
-#                                str((post_data['lastChunkSize'] * 8)/(float(post_data['lastChunkFinishTime'] - post_data['lastChunkStartTime']))) + '\t' +
-#                                str(harmonic_bandwidth * 8 * 1000) + '\t' +
-#                                str(mpcBW) + '\t' +
-#                                str(self.input_dict['discount']) + '\n')
             self.log_file.flush()
 
 
@@ -190,14 +195,7 @@ def make_request_handler(input_dict):
             if ( lastChunkID == TOTAL_VIDEO_CHUNKS):
                 end_of_video = True
                 print "...VIDEO END..."
-                self.input_dict['playerVisibleBW'] = []
-                self.input_dict['sessionHistory'] = dict()
-                self.input_dict['chunkBWSamples'] = []
-                self.input_dict['bandwidthEsts'] = []
-                self.input_dict['pastErrors'] = []
-                self.input_dict['chunksDownloaded'] = 0
-                self.input_dict['chunk_when_last_chd_ran'] = -1
-                self.input_dict['discount'] = 0.0
+                self.reset_state()
                 self.log_file.write('\n')
 
             
@@ -243,6 +241,7 @@ def run(server_class=HTTPServer, port=8336, log_file_path=LOG_FILE):
         chunkBWSamples = []
         bandwidthEsts = []
         pastErrors = []
+        sessionIDs = dict()
         sessionHistory = dict()
         input_dict = {'log_file': log_file,
                       'discount': discount,
@@ -252,6 +251,7 @@ def run(server_class=HTTPServer, port=8336, log_file_path=LOG_FILE):
                       'playerVisibleBW': playerVisibleBW,
                       'sessionHistory': sessionHistory,
                       'bandwidthEsts': bandwidthEsts,
+                      'sessionIDs': sessionIDs,
                       'pastErrors': pastErrors}
 
         # interface to tuner server
