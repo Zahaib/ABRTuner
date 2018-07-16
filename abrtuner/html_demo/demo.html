@@ -40,8 +40,6 @@
 
         <br>
         <br>
-        <button id="addDataset">Add Dataset</button>
-        <button id="removeDataset">Remove Dataset</button>
         <script src="yz_dashplayers/dash.allAlgo.js"></script>
         <script>
         <!--Pensieve:6,RobustMPC:7,HYB+Tuner:8,MPC+Tuner:9, HYB:10 -->
@@ -50,7 +48,7 @@
 	var color = Chart.helpers.color;
 	var colorNames = Object.keys(window.chartColors);
 	var configBW = {
-		type: 'line',
+		//type: 'line',
 		data: {
 			labels: [ // xaxis
 				0,
@@ -63,6 +61,7 @@
 				data: [
 					0,
 				],
+				type: 'line'
 			},{
                                 label: 'Change Points',
                                 backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
@@ -70,9 +69,10 @@
                                 fill: false,
                                 data: [{
                                         x: 0,
-                                        y: 0
+					y: 0
                                 }],
-				type: 'bubble'
+				type: 'bubble',
+				radius: 10
                         }]
 		},
 		options: {
@@ -247,7 +247,6 @@
             var player = new MediaPlayer(context);
             var abr_id = 9
 	    var sessionID = Math.floor(Date.now());
-	    console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD" + sessionID)
             player.startup();
             player.setAbrAlgorithm(abr_id);
             player.setSessionID(sessionID);
@@ -278,60 +277,36 @@
             document.body.appendChild(p);
         }
 	  
-	document.getElementById('addDataset').addEventListener('click', function() {
-		var colorName = colorNames[config.data.datasets.length % colorNames.length];
-		var newColor = window.chartColors[colorName];
-		var newDataset = {
-			label: 'Dataset ' + config.data.datasets.length,
-			borderColor: newColor,
-			backgroundColor: color(newColor).alpha(0.5).rgbString(),
-			data: [],
-		};
-
-		for (var index = 0; index < config.data.labels.length; ++index) {
-			newDataset.data.push(randomScalingFactor());
-		}
-
-		config.data.datasets.push(newDataset);
-		window.myLine.update();
-	});
-
-	document.getElementById('removeDataset').addEventListener('click', function() {
-		config.data.datasets.splice(0, 1);
-		window.myLine.update();
-	});
-
 	function addPoint(myObject, myResponse) {
 		//sessionTimeSec = parseFloat(myObject.sessionTimeSec) / 1000.0
 		chunkid = parseInt(myObject.lastRequest)
-		updateConfig(configBW, chunkid + 1, parseInt(myObject.bandwidthEst))
-		updateConfig(configBuf, chunkid + 1, parseFloat(myObject.buffer))
-		updateConfig(configBR, chunkid + 1, parseFloat(myObject.lastquality))
-		updateConfig(configParam, chunkid + 1, parseFloat(myResponse.config))
+		updateConfig(configBW, chunkid + 1, parseInt(myObject.bandwidthEst), 0)
+		updateConfig(configBuf, chunkid + 1, parseFloat(myObject.buffer), 0)
+		updateConfig(configBR, chunkid + 1, parseFloat(myObject.lastquality), 0)
+		updateConfig(configParam, chunkid + 1, parseFloat(myResponse.config), 0)
+		if (myResponse.change) {
+			updateConfig(configBW, chunkid + 1, parseInt(myObject.bandwidthEst), 1)
+		}
         	window.myLine.update();
         	window.myLine1.update();
         	window.myLine2.update();
         	window.myLine3.update();
         }
 
-	function updateConfig(config, xval, yval) {
-                //if (config.data.datasets.length > 0) {
-                //        config.data.labels.push(sessionTimeInSec);
-                if (config.data.datasets.length > 0) {
+	function updateConfig(config, xval, yval, index) {
+                if (index == 0 && config.data.datasets.length > 0) {
                         config.data.labels.push(xval);
-
-                        for (var index = 0; index < config.data.datasets.length; ++index) {
-                                if (typeof config.data.datasets[index].data[0] === 'object') {
-                                        config.data.datasets[index].data.push({
-                                                x: xval,
-                                                y: yval,
-                                        });
-                                } else {
-					//display(yval)
-                                        config.data.datasets[index].data.push(yval);
-                                }
-                        }
                 }
+
+                        if (typeof config.data.datasets[index].data[0] === 'object') {
+                                config.data.datasets[index].data.push({
+                                        x: xval,
+                                        y: yval,
+                                });
+                        } else {
+				//display("yval " + yval + " index " + index)
+                                config.data.datasets[index].data.push(yval);
+                        }
 	}
         </script>
     </body>
