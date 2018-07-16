@@ -1101,6 +1101,7 @@ MediaPlayer.dependencies.BufferController = function () {
 
                 // Xiaoqi
                 lastRequestedSegmentIndex = lastBufferedSegmentIndex + 1;
+		console.log("LLLLLLLLLLLLLLLLLLLLLLLL" + lastRequestedSegmentIndex)
                 // Xiaoqi
                 // If we have already loaded the given fragment ask for the next one. Otherwise prepare it to get loaded
                 if (self.fragmentController.isFragmentLoadedOrPending(self, request)) {

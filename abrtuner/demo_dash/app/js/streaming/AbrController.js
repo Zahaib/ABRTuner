@@ -77,6 +77,7 @@ MediaPlayer.dependencies.AbrController = function () {
 	// Xiaoqi_new
 	// Xiaoqi: Visual
 	abrAlgo = -1,
+	sessionID = -1,
 	fixedQualityArray = [],
     maxTargetBuffer = 1200, // fairly large value, currently set to 20 minutes. Can be overridden when initializing the player
 
@@ -217,8 +218,6 @@ MediaPlayer.dependencies.AbrController = function () {
 	        var s = NaN;
 	        console.log('using BOLA: ' + BOLA_BITRATES + ' ' + BOLA_UTILITIES + ' ' + BOLA_VP + ' ' + BOLA_GP );
 
-	        // console.log('BOLA state: ' + stateData['lastReqType'] + '  lastRequest ' + stateData['lastRequest'] + ' url ' + stateData['lastURL']);
-	        // console.log('BOLA Tuner: ' + isBolaTuner);
 	        var state = JSON.stringify(stateData);
 	        if (isBolaTuner){
 	            var xhr = new XMLHttpRequest();
@@ -251,17 +250,18 @@ MediaPlayer.dependencies.AbrController = function () {
 			autoSwitchBitrate = value;
 		},
 
-		// Xiaoqi: Visual
 		setAbrAlgorithm: function(algo) {
 			abrAlgo = algo;
-			console.log("-----VISUAL: set abrAlgo="+abrAlgo);
+		},
+
+		setSessionID: function(sID) {
+			sessionID = sID;
 		},
 
 		setFixedBitrateArray: function(fixedBitrateArray) {
 			fixedQualityArray = fixedBitrateArray;
 			console.log("-----VISUAL: set fixedBitrateArray");
 		},
-		// Xiaoqi: Visual
 
 		setBolaTunerEnabled: function(value) {
 			isBolaTuner = value;
@@ -302,14 +302,6 @@ MediaPlayer.dependencies.AbrController = function () {
 		},
 
 		next_chunk_size: function (index, quality) {
-		    // This is the Envivio video we are using.
-		    // Racecar video!
-		    // index is the index of the *next* chunk
-		    // var size_video1 = [1680951,1637558,1371111,1684293,1400042,1792609,1213669,1191552,1888982,1381292,1593129,1384566,1918298,1605664,1356382,1278860,1580165,1315506,1642869,928190,1416000,865548,1284104,1692271,1504744,1484004,1405086,891371,1401736,1743545,1084561,1099310,1789869,1675658,1636106,1492615,1200522,1787763,1690817,1459339,1250444,1691788,1403315,1732710,1270067,1514363,1615320,1507682,1260622,1784654,1352160,1115913,1637646,1546975,1637443,1475444,1616179,1113960,466635,1727956,1316739,1373312,458410,320487,573826],
-		    // size_video2 = [1184008,1123706,854424,1150093,902304,1237428,763515,840707,1279590,930828,996858,950867,1285933,1049248,984261,876058,1054391,875132,996451,660126,1032091,626844,949274,1197901,1001670,994288,925341,623084,977347,1184694,766276,834528,1285071,1017030,1080835,1078945,788728,1165402,1123991,937434,804808,1178153,922947,1175468,903392,970351,1094905,931644,854957,1179875,978233,794797,1073857,942081,1074761,1033448,1181202,660582,297985,1188866,910001,974311,314327,221329,445973],
-		    // size_video3 = [604139,577615,418531,555427,469238,614632,393715,428426,594788,527047,460827,500774,621760,556545,476734,417508,552639,462442,552256,303234,522859,337637,471941,598737,560588,487684,479873,284277,564825,546935,394056,442514,610493,523364,574457,499175,412705,586327,560284,476697,408166,570011,502061,569274,444948,507586,525450,541979,391886,539537,506089,408110,515570,462132,574826,523754,572621,344553,157240,610010,460871,480012,169331,126490,236234],
-		    // size_video4 = [361158,370284,246858,357922,264156,371586,241808,270621,327839,334864,313171,253682,348331,319047,311275,282933,308899,289234,307870,207573,354546,208087,305510,364291,331480,298846,298034,195290,327636,354076,261457,272419,344053,307537,344697,301834,261403,332467,324205,276260,260969,357539,301214,320538,292593,290952,325914,285965,266844,327707,308757,271734,313780,284833,295589,331270,307411,224531,94934,385537,306688,310705,95847,78651,162260],
-		    // size_video5 = [207189,219272,134208,204651,164461,230942,136746,150366,193697,193362,189146,153391,195591,177177,190923,155030,185660,164741,179442,131632,198676,115285,148044,181978,200708,177663,176815,109489,203211,196841,161524,151656,182521,172804,211407,171710,170866,178753,175461,184494,154382,206330,175870,178679,173567,172998,189473,172737,163181,181882,186151,164281,172026,173011,162488,201781,176856,137099,57015,234214,172494,184405,61936,43268,81580];
 
 	    	// 6 bitrate weird video
 			var size_video1 = [2354772, 2123065, 2177073, 2160877, 2233056, 1941625, 2157535, 2290172, 2055469, 2169201, 2173522, 2102452, 2209463, 2275376, 2005399, 2152483, 2289689, 2059512, 2220726, 2156729, 2039773, 2176469, 2221506, 2044075, 2186790, 2105231, 2395588, 1972048, 2134614, 2164140, 2113193, 2147852, 2191074, 2286761, 2307787, 2143948, 1919781, 2147467, 2133870, 2146120, 2108491, 2184571, 2121928, 2219102, 2124950, 2246506, 1961140, 2155012, 1433658],
@@ -484,63 +476,19 @@ MediaPlayer.dependencies.AbrController = function () {
 												ttfb_temp = lastHTTPRequest.tresponse.getTime() - sessionStartTime;
 												//self.debug.log("Yun Final Log : chunkID="+lastHTTPRequest.index+", requestStar="+lastHTTPRequest.requestStartDate+", timeToFirstByte="+lastHTTPRequest.firstByteDate+", requestEnd="+lastHTTPRequest.requestEndDate+", Bitrate="+lastHTTPRequest.quality+", availabilityStartTime="+lastHTTPRequest.availabilityStartTime+", startTime="+lastHTTPRequest.startTime);
 												self.debug.log("Yun Final Log chunk information: url="+lastHTTPRequest.url+", trequest="+start_temp+", tresponse="+ttfb_temp+", tfinish="+end_temp+", currentPlaylocation="+currentVideoTime+", bufferLength="+bufferLevel);
-			                                    //if (lastRequestedSegmentIndex === 48) {
-			                                    //    var xmlHttp = new XMLHttpRequest();
-			                                    //    xmlHttp.open( "GET", "http://localhost/finishme.txt", false);
-			                                    //    xmlHttp.send( null );
-			                                    //}
-
-												//for (var bw=0; bw<lastHTTPRequest.trace.length; bw++){
-												//	if (lastHTTPRequest.trace[bw].b!==0) self.debug.log("Yun Final Log chunk information bandwidth: url="+lastHTTPRequest.url+", start="+lastHTTPRequest.trace[bw].s+", end="+lastHTTPRequest.trace[bw].d+", byte="+lastHTTPRequest.trace[bw].b);
-												//}
-
-												// Xiaoqi_new
-												// self.debug.log("----------abrController BW Predict: lastRequested="+lastRequested+", lastQuality=" + lastQuality);
 												// Bandwidth Prediction
 												bandwidthEst = self.bwPredictor.predictBandwidth(lastRequested, lastQuality, lastHTTPRequest);
 												// Xiaoqi_cr
-												// bandwidthEstError = self.bwPredictor.getPredictionError(lastRequested);
-												// self.debug.log("----------abrController BW Predict: " + bandwidthEst + ", Error: " + bandwidthEstError);
-												// // multistep prediction error					  
-												// bandwidthEstError = self.bwPredictor.getCombinedPredictionError(lastRequested);
-												// self.debug.log("----------abrController BW Predict Combined: " + bandwidthEst + ", Error: " + bandwidthEstError);
-												// Xiaoqi_cr
-												// self.debug.log("-----FastMPC:" + self.fastMPC.getBitrate(0, 0, 350));
-												// self.debug.log("-----FastMPC:" + self.fastMPC.getBitrate(4, 20, 3000));
 												// Adjust buffer level to avoid latency, etc
 												var baseBuffer = 4;
 												bufferLevelAdjusted_mpc = bufferLevel-0.15-0.4-baseBuffer;
                                                                                                 bufferLevelAdjusted = bufferLevel-0.15-0.4-baseBuffer;
                                                                                                 bufferLevelAdjusted = bufferLevelAdjusted < 0 ? 0 : bufferLevelAdjusted;
                                                                                                 self.debug.log("-----abrController: baseBuffer="+baseBuffer);
-												// bufferLevelAdjusted = bufferLevel-0.15-0.4; // mpc_nobuffer
-												// bufferLevelAdjusted = bufferLevel-0.15-0.4-2; // mpc
-												// bufferLevelAdjusted = bufferLevel-0.15-0.4-4; // mpc
-												// // Fast MPC
-												// quality = self.fastMPC.getBitrate(lastQuality, bufferLevelAdjusted, bandwidthEst);
-												// self.debug.log("-----FastMPC:" + quality);
-												// // Robust Fast MPC
-												// quality = self.fastMPC.getBitrate(lastQuality, bufferLevelAdjusted, bandwidthEst/(1+bandwidthEstError));
-												// self.debug.log("-----Robust FastMPC:" + quality);
-												// // BB
-												// quality = self.getBitrateBB(bufferLevelAdjusted);
-												// self.debug.log("-----Buffer-Based:" + quality);
-												// // RB
-												// quality = self.getBitrateHYB(bufferLevelAdjusted, bandwidthEst, lastRequestedSegmentIndex + 1);
-												 //self.debug.log("-----Rate-Based:" + quality);
-												// // Original DASH.js
-												// quality = quality_original;
-												// self.debug.log("-----ORIGINAL DASH.js:" + quality);
-												// FESTIVE
-												// quality = self.festive.getBitrate(lastQuality, bufferLevelAdjusted, bandwidthEst, lastRequested, bitrateArray);
-												// self.debug.log("-----FESTIVE:" + quality);
-												// Xiaoqi_new
 												// Log bufferlevel
 												bufferLevelLog[lastRequested+1] = bufferLevelAdjusted;
 												self.debug.log("-----bufferLevelLog=" + bufferLevelLog[lastRequested+1]);
 
-												// Xiaoqi: Visual
-												// self.debug.log("NNNNNNNNNNNNNNNNNNNNNNNNNNNN AbrAlgo is: " + abrAlgo)
 												// abrAlgo = 7
 												switch (abrAlgo) {
 													case -1: // same as 0
@@ -697,10 +645,9 @@ MediaPlayer.dependencies.AbrController = function () {
                                                         xhr.send(dataStringified);
                                                         self.debug.log("QUALITY RETURNED IS: " + quality);
                                                         break;
-													case 9: // MPC + Tuner  -- this is just a copy of the HYB + Tuner code
+						case 9: // MPC + Tuner  -- this is just a copy of the HYB + Tuner code
                                                     	self.debug.log("Using MPC+Tuner OnlineCD...Tuner Online CD");
                                                         var quality = 0;
-														// var lastChunkBWArray = self.last_chunk_bw(lastHTTPRequest);									                				
 
                                                         var xhr = new XMLHttpRequest();
 							//xhr.responseType = 'json'
@@ -710,33 +657,31 @@ MediaPlayer.dependencies.AbrController = function () {
 
                                                         xhr.onreadystatechange = function() {
                                                             if ( xhr.readyState == 4 && xhr.status == 200 ) {
-                                                                //console.log("GOT RESPONSE:" + xhr.responseText + "---");
-                                                                //if ( xhr.responseText != "REFRESH" ) {
-                                                                //    quality = parseInt(xhr.responseText, 10);
-                                                                //}
-								//quality = parseInt(xhr.quality, 10);
 								var jsonResponse = JSON.parse(xhr.responseText)
 								quality = parseInt(jsonResponse.quality, 10);
+								sessionStorage.myResponse = JSON.stringify(jsonResponse);
                                                             }
                                                         }
 
-										                var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
-										                			'lastquality': lastQuality,
-									                				'buffer': bufferLevel,
-									                				'bufferAdjusted': bufferLevelAdjusted_mpc,
-									                				'bandwidthEst': bandwidthEst,
-									                				'lastRequest': lastRequested,
-									                				'RebufferTime': rebuffer,
-									                				'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
-																	'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
-									                				'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
-									                				'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
+						var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
+									'lastquality': lastQuality,
+									'sessionID': sessionID,
+									'buffer': bufferLevel,
+									'bufferAdjusted': bufferLevelAdjusted_mpc,
+									'bandwidthEst': bandwidthEst,
+									'lastRequest': lastRequested,
+									'RebufferTime': rebuffer,
+									'lastChunkBWArray': self.last_chunk_bw(lastHTTPRequest),
+											'lastChunkFinishTime': lastHTTPRequest.tfinish.getTime(),
+									'lastChunkStartTime': lastHTTPRequest.tresponse.getTime(),
+									'sessionTimeSec': lastHTTPRequest.tfinish.getTime() - self.getSessionStartTime(),									'lastChunkSize': self.last_chunk_size(lastHTTPRequest)};
                                                         var dataStringified = JSON.stringify(data);
+                                                        sessionStorage.myObject = JSON.stringify(data)
                                                         self.debug.log("Using MPC+Tuner Online CD..., got dataStringified: " + dataStringified);
                                                         xhr.send(dataStringified);
                                                         self.debug.log("QUALITY RETURNED IS: " + quality);
                                                         break;
-													case 10:
+						case 10:
 										                                        var data = {'nextChunkSize': self.next_chunk_size(lastRequested+1),
 										                			'lastquality': lastQuality,
 									                				'buffer': bufferLevel,
@@ -790,6 +735,7 @@ MediaPlayer.dependencies.AbrController = function () {
                                                                 xmlHttp.open( "GET", "http://localhost/finishme.txt", false);
                                                                 xmlHttp.send( null );
                                                             }
+
 										lastQuality = quality;
 										
 									}
