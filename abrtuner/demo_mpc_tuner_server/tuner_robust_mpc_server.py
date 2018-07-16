@@ -113,7 +113,8 @@ def make_request_handler(input_dict):
             sessionID = self.parse_post_data(post_data)
 
             if sessionID not in self.input_dict['sessionIDs']:
-                print "new session, reset state"
+                print "...SESSION START..."
+                self.input_dict['sessionIDs'].add(sessionID)
                 self.reset_state()
 
             # omit the first and last sample, it is usually bad
@@ -195,7 +196,7 @@ def make_request_handler(input_dict):
             end_of_video = False
             if ( lastChunkID == TOTAL_VIDEO_CHUNKS):
                 end_of_video = True
-                print "...VIDEO END..."
+                print "...SESSION END..."
                 self.reset_state()
                 self.log_file.write('\n')
 
