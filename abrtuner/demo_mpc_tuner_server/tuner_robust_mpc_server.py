@@ -79,7 +79,7 @@ def make_request_handler(input_dict):
             bandwidthEst = float(post_data['bandwidthEst'])
             lastChunkID = post_data['lastRequest']
             lastChunkBR = post_data['lastquality']
-            sessionID = post_data['sessionID']
+            sessionID = int(post_data['sessionID'])
 
             return lastChunkBR, \
                    bufferLen, \
@@ -113,6 +113,7 @@ def make_request_handler(input_dict):
             sessionID = self.parse_post_data(post_data)
 
             if sessionID not in self.input_dict['sessionIDs']:
+                print "new session, reset state"
                 self.reset_state()
 
             # omit the first and last sample, it is usually bad
@@ -241,7 +242,7 @@ def run(server_class=HTTPServer, port=8336, log_file_path=LOG_FILE):
         chunkBWSamples = []
         bandwidthEsts = []
         pastErrors = []
-        sessionIDs = dict()
+        sessionIDs = set()
         sessionHistory = dict()
         input_dict = {'log_file': log_file,
                       'discount': discount,
