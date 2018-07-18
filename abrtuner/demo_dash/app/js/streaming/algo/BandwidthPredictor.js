@@ -3,12 +3,8 @@ MediaPlayer.dependencies.BandwidthPredictor = function () {
 
     var pastThroughput = [],
     pastDownloadTime = [],
-    // Xiaoqi_final
     bandwidthEstLog = [],
-    // Xiaoqi_final
-    // Xiaoqi_cr
     horizon = 5, // number of chunks considered
-    // Xiaoqi_cr
 
     predict = function (lastRequested, lastQuality, lastHTTPRequest) {
 	var self = this,
@@ -16,9 +12,6 @@ MediaPlayer.dependencies.BandwidthPredictor = function () {
 	lastDownloadTime,
 	lastThroughput,
 	lastChunkSize,
-	// Xiaoqi_cr
-	// horizon = 5, // number of chunks considered
-	// Xiaoqi_cr
 	tmpIndex,
 	tmpSum = 0,
 	tmpDownloadTime = 0;
@@ -59,6 +52,7 @@ MediaPlayer.dependencies.BandwidthPredictor = function () {
 	    bandwidthEstLog[lastRequested] = bandwidthEst;
 	    // Xiaoqi_final
 	    self.debug.log("----------Yun BWPredict: bwEst="+ bandwidthEst+", tmpIndex="+tmpIndex+", tmpDownloadTime="+tmpDownloadTime+", cnt="+cnt);
+	    //return [bandwidthEst, lastThroughput];
 	    return bandwidthEst;
 	}
     },
