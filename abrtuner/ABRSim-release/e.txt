@@ -1,0 +1,11 @@
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.7802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 1029.59183673 buf. ratio: 0.029 playtime: 196.0 buftime: 5.95
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.6802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 1029.59183673 buf. ratio: 0.029 playtime: 196.0 buftime: 5.95
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.5802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 1020.40816327 buf. ratio: 0.029 playtime: 196.0 buftime: 5.95
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.4802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 1016.32653061 buf. ratio: 0.029 playtime: 196.0 buftime: 5.95
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.3802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 988.775510204 buf. ratio: 0.012 playtime: 196.0 buftime: 2.35
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.2802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 970.408163265 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.1802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 961.224489796 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -11.0802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 942.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -10.9802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 942.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -10.8802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 823.469387755 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt initialBSM: -10.7802438401 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 731.632653061 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0

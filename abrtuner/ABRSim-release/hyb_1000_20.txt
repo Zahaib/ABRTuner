@@ -1,0 +1,27 @@
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.01 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 324.489795918 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.05 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 330.612244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.09 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 330.612244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.13 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 330.612244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.17 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 330.612244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.21 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 342.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.25 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 342.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.29 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 361.224489796 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.33 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 538.775510204 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.37 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 942.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.41 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 942.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.45 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 952.040816327 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.49 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 952.040816327 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.53 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 961.224489796 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.57 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 961.224489796 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.61 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 965.306122449 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.65 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 974.489795918 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.69 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 974.489795918 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.73 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 974.489795918 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.77 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 974.489795918 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.81 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 983.673469388 buf. ratio: 0.006 playtime: 196.0 buftime: 1.2
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.85 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 983.673469388 buf. ratio: 0.006 playtime: 196.0 buftime: 1.2
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.89 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 983.673469388 buf. ratio: 0.006 playtime: 196.0 buftime: 1.2
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.93 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 983.673469388 buf. ratio: 0.007 playtime: 196.0 buftime: 1.35
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 0.97 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 992.857142857 buf. ratio: 0.014 playtime: 196.0 buftime: 2.85000000001
+../trace/synth_trace_for_exp/1000_20.txt initialBSM: 1.0 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 988.775510204 buf. ratio: 0.015 playtime: 196.0 buftime: 3.05000000001
+34.6168780327
