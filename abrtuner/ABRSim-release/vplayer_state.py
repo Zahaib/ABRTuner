@@ -48,9 +48,8 @@ class State:
 		self.decision_cycle = 50 
 		self.oldBR = self.BR
 		self.buffering = False
-		self.sessionFullyDownloaded = False
+		self.session_fully_downloaded = False
 		self.numSwitches = 0
-		self.dominantBitrate = dict()
 		self.timeSinceLastDecision = 0
 		self.interval = config.SIMULATION_STEP
 		self.upr_h = -1000
@@ -113,10 +112,6 @@ class State:
 		self.chunk_sched_time_delay = 0.0
 		#self.blen_decrease = False
 		#self.CHUNKS_DOWNLOADED_old = -1
-
-		self.playStalled_thisInterval = 0
-		self.chd_thisInterval = 0
-		self.blenAdded_thisInterval = 0
 
 		self.gp = getBolaGP()
 		self.bola_vp = getBolaVP(self.gp)
