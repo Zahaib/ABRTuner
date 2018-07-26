@@ -40,7 +40,6 @@ class State:
 		self.first_chunk = True if self.BLEN < self.CHUNKSIZE else False
 
 		self.avgbw, self.stdbw = self._GetBWStdDev()
-		self.newBR = self.BR
 
 		self.BW = int(self.bwArray[0][1])
 		if (self.jointime < self.bwArray[0][0]):
@@ -66,11 +65,10 @@ class State:
 		self.maxQoE = -sys.maxint
 
 		self.switchFlag = False
-		self.newBR = 0
 
 		self.lastBlen_decisioncycle = list()
 		## hyb
-		self.dash_zero_buff = 0.45 if config.DASH_BUFFER_ADJUST else 0
+		self.min_playable_buff = 0.45 if config.DASH_BUFFER_ADJUST else 0.0
 
 		self.minCellSize = 900
 		self.max_error = 0
@@ -113,8 +111,8 @@ class State:
 		self.upr_h = -10000000
 		self.upr_b = 0.4
 		self.chunk_sched_time_delay = 0.0
-		self.blen_decrease = False
-		self.CHUNKS_DOWNLOADED_old = -1
+		#self.blen_decrease = False
+		#self.CHUNKS_DOWNLOADED_old = -1
 
 		self.playStalled_thisInterval = 0
 		self.chd_thisInterval = 0

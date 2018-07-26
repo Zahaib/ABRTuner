@@ -349,6 +349,8 @@ def chunksDownloaded(s, bola_gp, time_prev):
   s.numChunks = chunk_count
   s.chunk_sched_time_delay = time_residue_this_interval
   s.BR = bitrate_at_interval_end
+  if bitrate_at_interval_start != bitrate_at_interval_end:
+    s.oldBR = bitrate_at_interval_start
   return s, bola_gp
 
 

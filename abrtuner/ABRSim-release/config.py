@@ -1,8 +1,8 @@
 import math
 ### debug settings
 DEBUG = False
-VERBOSE_DEBUG = False
-CHUNK_DEBUG = False
+#VERBOSE_DEBUG = False
+#CHUNK_DEBUG = False
 
 ### simulation settings
 SIMULATION_STEP = 50
