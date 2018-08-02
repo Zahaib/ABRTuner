@@ -18,6 +18,12 @@
         	<div style="width: 40%; display: table;float:left;">
 			<div id="intro" style=display:table-row;text-align:center>
 				<h1>Oboe Demo</h1>
+				<p>Zahaib Akhtar*, Yun Seong Nam*, Ramesh Govindan, Sanjay Rao, 
+					Jessica Chen, Ethan Katz-Bassett, Bruno Ribeiro, Jibin Zhan, 
+					Hui Zhang. 2018. Oboe: Auto-tuning Video ABR Algorithms 
+					to Network Conditions. SIGCOMM 2018 
+					<a href="https://nslcsusc.files.wordpress.com/2018/07/oboe-sigcomm18-final128.pdf" target="_blank">[PDF]</a>
+				</p>
 			</div>
 			<div style=display:table-row">
 				<div id="container">
@@ -118,7 +124,7 @@
 				yAxes: [{
 					scaleLabel: {
 						display: true,
-						labelString: 'Bandwidth (Kbps)',
+						labelString: 'Throughput (Kbps)',
 						fontSize: 20,
 						fontStyle: 'bold'
 					},
@@ -138,7 +144,7 @@
 				0,
 			],
 			datasets: [{
-				label: 'Buffer (sec)',
+				label: 'Buffer Length',
 				backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
 				borderColor: window.chartColors.green,
 				fill: false,
@@ -174,7 +180,7 @@
 				yAxes: [{
 					scaleLabel: {
 						display: true,
-						labelString: 'Chunk Number',
+						labelString: 'Buffer (sec)',
 						fontSize: 20,
 						fontStyle: 'bold'
 					},
