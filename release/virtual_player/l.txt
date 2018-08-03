@@ -1,0 +1,15 @@
+../trace/emulation_bw_out/traces/100_emulated.txt param: 0 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 362.244897959 buf. ratio: 0.001 playtime: 196.0 buftime: 0.15
+../trace/emulation_bw_out/traces/100_emulated.txt param: 10 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 315.306122449 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 20 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 342.857142857 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 30 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 315.306122449 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 40 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 330.612244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 50 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 60 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 70 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 80 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 90 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 100 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 110 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 120 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 130 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0
+../trace/emulation_bw_out/traces/100_emulated.txt param: 140 minCell: 900 QoE: -9223372036854775807 avg. bitrate: 306.12244898 buf. ratio: 0.0 playtime: 196.0 buftime: 0.0

@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Oboe demo</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="node_modules/chart.js/dist/Chart.js"></script>
+	<script src="node_modules/chart.js/samples/utils.js"></script>
+        <style>
+                canvas {
+                        -moz-user-select: none;
+                        -webkit-user-select: none;
+                        -ms-user-select: none;
+                }
+        </style>
+    </head>
+    <body>
+	<div style:"width:100%">
+        	<div style="width: 40%; display: table;float:left;">
+			<div id="intro" style=display:table-row;text-align:center>
+				<h1>Oboe Demo</h1>
+				<p>Zahaib Akhtar*, Yun Seong Nam*, Ramesh Govindan, Sanjay Rao, 
+					Jessica Chen, Ethan Katz-Bassett, Bruno Ribeiro, Jibin Zhan, 
+					Hui Zhang. 2018. Oboe: Auto-tuning Video ABR Algorithms 
+					to Network Conditions. SIGCOMM 2018 
+					<a href="https://nslcsusc.files.wordpress.com/2018/07/oboe-sigcomm18-final128.pdf" target="_blank">[PDF]</a>
+				</p>
+			</div>
+			<div style=display:table-row">
+				<div id="container">
+    					<div id="player_div">
+            					<video id="videoPlayer" style="display: block; margin: 0 auto;" controls="controls" width="500" height="250"></video>
+						<br>
+            					<input type="button" value="Play" style="display: block; margin: 0 auto;" onclick="loadPlayer(); readState();"/>
+					</div>
+				</div>
+			</div>
+    			<div id="text_div" style="display:table-row;height:500px;text-align:center">
+				<h2>Network States</h2>
+			</div>
+	        </div>
+
+		<div style="width:50%;display:table;float:right">
+        	        <div style="display:table-row">
+				<canvas id="canvas"></canvas>
+        	        </div>
+                	<div style="display:table-row">
+                                <canvas id="canvas3"></canvas>
+        	        </div>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+        <br>
+        <br>
+	<div style="width:100%;">
+		<div style="width:50%;float:left;">
+			<canvas id="canvas1"></canvas>
+		</div>
+		<div style="width:50%; float:right;">
+			<canvas id="canvas2"></canvas>
+		</div>
+	</div>
+
+        <br>
+        <br>
+        <script src="yz_dashplayers/dash.allAlgo.js"></script>
+        <script>
+        <!--Pensieve:6,RobustMPC:7,HYB+Tuner:8,MPC+Tuner:9, HYB:10 -->
+	var chunkid = -1
+	var sessionStart = -1
+	var color = Chart.helpers.color;
+	var colorNames = Object.keys(window.chartColors);
+	var configBW = {
+		//type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Throughput (Kbps)',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.red,
+				fill: false,
+				data: [
+					0,
+				],
+				type: 'line'
+			},{
+                                label: 'Change Points',
+                                backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                                borderColor: window.chartColors.green,
+                                fill: false,
+                                data: [{
+                                        x: 0,
+					y: 0
+                                }],
+				type: 'bubble',
+				radius: 10
+                        }]
+		},
+		options: {
+			title: {
+				text: 'Throughput',
+			},
+			legend: {
+				display: true,
+				labels: {
+					fontStyle: 'bold',
+					fontSize: 20
+				}
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+					ticks: {
+						beginAtZero: true,
+						fontSize: 20
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Throughput (Kbps)',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+    					ticks: {
+        					beginAtZero: true,
+						fontSize: 20
+    					}
+				}]
+			},
+		}
+	};
+
+	var configBuf = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Buffer Length',
+				backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.green,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'Buffer'
+			},
+			legend: {
+				display: true,
+				labels: {
+					fontStyle: 'bold',
+					fontSize: 20
+				}
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+					ticks: {
+						beginAtZero: true,
+						fontSize: 20
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Buffer (sec)',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+    					ticks: {
+        					beginAtZero: true,
+						fontSize: 20
+    					}
+				}]
+			},
+		}
+	};
+
+	var configBR = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'Bitrate (index)',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'Throughput'
+			},
+			legend: {
+				display: true,
+				labels: {
+					fontStyle: 'bold',
+					fontSize: 20
+				}
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+					ticks: {
+						beginAtZero: true,
+						fontSize: 20
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Bitrate (index)',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+    					ticks: {
+        					beginAtZero: true,
+						fontSize: 20
+    					}
+				}]
+			},
+		}
+	};
+	var configParam = {
+		type: 'line',
+		data: {
+			labels: [ // xaxis
+				0,
+			],
+			datasets: [{
+				label: 'ABR Configuration',
+				backgroundColor: color(window.chartColors.orange).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.orange,
+				fill: false,
+				data: [
+					0,
+				],
+			}]
+		},
+		options: {
+			title: {
+				text: 'ABR Configuration'
+			},
+			legend: {
+				display: true,
+				labels: {
+					fontStyle: 'bold',
+					fontSize: 20
+				}
+			},
+			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Chunk Number',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+					ticks: {
+						beginAtZero: true,
+						fontSize: 20
+					}
+				}],
+				yAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: 'Configuration',
+						fontSize: 20,
+						fontStyle: 'bold'
+					},
+    					ticks: {
+        					beginAtZero: true,
+						fontSize: 20
+    					}
+				}]
+			},
+		}
+	};
+
+	window.onload = function() {
+		var ctx = document.getElementById('canvas').getContext('2d');
+		var ctx1 = document.getElementById('canvas1').getContext('2d');
+		var ctx2 = document.getElementById('canvas2').getContext('2d');
+		var ctx3 = document.getElementById('canvas3').getContext('2d');
+		window.myLine = new Chart(ctx, configBW);
+		window.myLine1 = new Chart(ctx1, configBuf);
+		window.myLine2 = new Chart(ctx2, configBR);
+		window.myLine3 = new Chart(ctx3, configParam);
+	};
+
+        function loadPlayer() {
+            var url = "/Manifest.mpd";
+            var context = new Dash.di.DashContext();
+            var player = new MediaPlayer(context);
+            var abr_id = 9
+	    var sessionID = Math.floor(Date.now());
+            player.startup();
+            player.setAbrAlgorithm(abr_id);
+            player.setSessionID(sessionID);
+            player.attachView(document.querySelector("#videoPlayer"));
+            player.attachSource(url);
+        }
+
+        function readState() {
+            setInterval(tick, 50);
+        }
+
+        function tick() {
+            var myObject = JSON.parse(sessionStorage.myObject);
+            var myResponse = JSON.parse(sessionStorage.myResponse);
+	    if (parseInt(myObject.lastRequest) == 0){
+	    	sessionStart = parseInt(myObject.lastChunkStartTime)
+	    }
+	    var sessionTimeInSec = (parseInt(myObject.lastChunkFinishTime) - sessionStart) / 1000.0
+	    if (parseInt(myObject.lastRequest) != chunkid && sessionStart != -1) {
+	    	chunkid = parseInt(myObject.lastRequest);
+	    	addPoint(myObject, myResponse);
+	    }
+        }
+
+        function display(msg) {
+            var p = document.createElement('p');
+            p.innerHTML = msg;
+            document.getElementById("text_div").appendChild(p);
+        }
+	  
+	function addPoint(myObject, myResponse) {
+		//sessionTimeSec = parseFloat(myObject.sessionTimeSec) / 1000.0
+		chunkid = parseInt(myObject.lastRequest)
+		updateConfig(configBW, chunkid + 1, parseInt(myObject.lastChunkBW), 0)
+		updateConfig(configBuf, chunkid + 1, parseFloat(myObject.buffer), 0)
+		updateConfig(configBR, chunkid + 1, parseFloat(myObject.lastquality), 0)
+		updateConfig(configParam, chunkid + 1, parseFloat(myResponse.config), 0)
+		if (myResponse.change) {
+			display("(&#956, &#963) = " + "(" + parseFloat(myResponse.avg_bw).toFixed(0) + ", " + parseFloat(myResponse.std_bw).toFixed(0) + ")Kbps")
+			updateConfig(configBW, chunkid + 1, parseInt(myObject.lastChunkBW), 1)
+		}
+        	window.myLine.update();
+        	window.myLine1.update();
+        	window.myLine2.update();
+        	window.myLine3.update();
+        }
+
+	function updateConfig(config, xval, yval, index) {
+                if (index == 0 && config.data.datasets.length > 0) {
+                        config.data.labels.push(xval);
+                }
+
+                if (typeof config.data.datasets[index].data[0] === 'object') {
+                        config.data.datasets[index].data.push({
+                                x: xval,
+                                y: yval,
+                        });
+                } else {
+			//display("yval " + yval + " index " + index)
+                        config.data.datasets[index].data.push(yval);
+                }
+	}
+        </script>
+    </body>
+</html>
+
