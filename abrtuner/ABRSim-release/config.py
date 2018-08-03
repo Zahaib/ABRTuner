@@ -23,7 +23,6 @@ SMARTINTERUPT = False
 NOINTERUPT = True
 
 ### Operation mode ###
-TRACE_MODE = True
 
 ### Player settings ###
 MAX_BUFFLEN = 15

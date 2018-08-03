@@ -170,77 +170,8 @@ def getMPCBW(sessionHistory, bandwidthEsts, pastErrors, chunkid, discount):
 
   return future_bandwidth, max_error, bandwidthEsts, pastErrors
 
-	#configsUsed, 
-	#time_prev, 
-	#time_curr, 
-	#bitrate, 
-	#bandwidth, 
-	#chunkid, 
-	#CHUNKSIZE, 
-	#chunk_residue, 
-	#usedBWArray, 
-	#bwArray, 
-	#time_residue, 
-	#BLEN, 
-	#sessionHistory, 
-	#first_chunk, 
-	#attempt_id,
-	#PLAYTIME,
-	#AVG_SESSION_BITRATE, 
-	#minCellSize, 
-	#BUFFTIME, 
-	#playerVisibleBW, 
-	#chunk_when_last_chd_ran, 
-	#p1_min, 
-	#gradual_transition, 
-	#additive_inc, 
-	#bandwidthEsts, 
-	#pastErrors, 
-	#windowSize, 
-	#change_magnitude, 
-	#discount, 
-	#max_error, 
-	#bola_gp, 
-	#bola_vp, 
-	#buffer_target_s):
-
-	#s.configsUsed, \
-	#s.CLOCK - s.interval, \
-	#s.CLOCK, \
-	#s.BR, \
-	#s.BW,\
-	#s.CHUNKS_DOWNLOADED, \
-	#s.CHUNKSIZE,\
-	#s.chunk_residue, \
-	#s.usedBWArray, \
-	#s.bwArray,\
-	#s.chunk_sched_time_delay, \
-	#s.BLEN, \
-	#s.sessionHistory, \
-	#s.first_chunk,\
-	#s.ATTEMPT_ID,\
-	#s.PLAYTIME, \
-	#s.AVG_SESSION_BITRATE, \
-	#s.minCellSize, \
-	#s.BUFFTIME, \
-	#s.playerVisibleBW, \
-	#s.chunk_when_last_chd_ran, \
-	#s.p1_min, \
-	#s.gradual_transition, \
-	#s.additive_inc, \
-	#s.bandwidthEsts, \
-	#s.pastErrors, \
-	#s.windowSize, \
-	#s.change_magnitude, \
-	#s.discount, \
-	#s.max_error, \
-	#bola_gp, \
-	#s.bola_vp, \
-	#s.buffer_target_s
-
-
-def chunksDownloaded(s, bola_gp, time_prev):
-  # declaring local variables which do not need to be updated in the state yet
+def chunksDownloaded(s, param, time_prev):
+  # declaring local variables which do not need to be updated in the state
   chunk_count = 0.0
   time_residue_this_interval = 0.0
   completion_time_stamps = []
@@ -285,38 +216,39 @@ def chunksDownloaded(s, bola_gp, time_prev):
         if HYB_ABR:
           dict_name_backup = "dash_syth_hyb_table_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
-          ABRChoice, s1.p1_min, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, s.minCellSize)
+          ABRChoice, p1_min, p1_median, p1_max, p2_min, p2_median, p2_max,p3_min, p3_median, p3_max = getDynamicconfig_self(performance_t, est_bandwidth, est_std, s.minCellSize)
+          param = p1_min
         elif MPC_ABR:
           dict_name_backup = "mpc_dash_syth_hyb_pen_table_4300_fix1010_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
           ABRChoice, disc_min, disc_median, disc_max = getDynamicconfig_mpc(performance_t, est_bandwidth, est_std, s.minCellSize)
-          s.discount = disc_median
+          param = disc_median
         elif BOLA_ABR:
           dict_name_backup = "dash_syth_bola_gamma_table_"+str(minCellSize)
           performance_t = (globals()[dict_name_backup])
           ABRChoice, bola_gp_min, bola_gp_median, bola_gp_max = getDynamicconfig_bola(performance_t, est_bandwidth, est_std, s.minCellSize)
-          bola_gp = bola_gp_max
+          param = bola_gp_max
 
     active_abr = ""
     if MPC_ABR:
-      future_bandwidth, s.max_error, s.bandwidthEsts, s.pastErrors = getMPCBW(s.sessionHistory, s.bandwidthEsts, s.pastErrors, chunkid, s.discount)
+      future_bandwidth, s.max_error, s.bandwidthEsts, s.pastErrors = getMPCBW(s.sessionHistory, s.bandwidthEsts, s.pastErrors, chunkid, param)
       bitrateMPC = getMPCDecision(s.BLEN, bitrate_at_interval_start, chunkid, CHUNKSIZE, future_bandwidth, s.windowSize)
       bitrate_at_interval_end = bitrateMPC
       active_abr = "MPC"
     elif HYB_ABR:
-      bitrateDASH = getUtilityBitrateDecision_dash(s.sessionHistory, chunkid, chunkid+1, s.BLEN+CHUNKSIZE, s.p1_min)
+      bitrateDASH = getUtilityBitrateDecision_dash(s.sessionHistory, chunkid, chunkid+1, s.BLEN+CHUNKSIZE, param)
       bitrate_at_interval_end = bitrateDASH
       active_abr = "HYB"
     elif BOLA_ABR:
-      bitrateBOLA = getBOLADecision(s.BLEN + CHUNKSIZE, bola_gp, s.bola_vp)
+      bitrateBOLA = getBOLADecision(s.BLEN + CHUNKSIZE, param, s.bola_vp)
       bitrate_at_interval_end = bitrateBOLA
       active_abr = "BOLA"
-    chunkid+=1
+
     s.change_magnitude += abs(VIDEO_BIT_RATE[bitrate_at_interval_end] - VIDEO_BIT_RATE[bitrate_at_interval_start])
+    chunkid+=1
 
-#    # Do We need to select bitrate before or after the delay??
-
-    s.configsUsed.append((time_curr/1000.0, active_abr, bandwidth, int(est_bandwidth), int(est_std), s.discount, round(s.chunk_residue,2), round(s.BLEN,2), chunkid-1, bitrate_at_interval_end, round(s.BUFFTIME,2)))
+    # Selecting the bitrate after adding the delay.
+    s.configsUsed.append((time_curr/1000.0, active_abr, bandwidth, int(est_bandwidth), int(est_std), param, round(s.chunk_residue,2), round(s.BLEN,2), chunkid-1, bitrate_at_interval_end, round(s.BUFFTIME,2)))
     # residue chunk is complete so now move to next chunkid and get the actual bitrate of the next chunk
     if CHUNK_AWARE_MODE:
       bitrate = getRealBitrate(bitrate_at_interval_end, chunkid, CHUNKSIZE)
@@ -351,7 +283,7 @@ def chunksDownloaded(s, bola_gp, time_prev):
   s.BR = bitrate_at_interval_end
   if bitrate_at_interval_start != bitrate_at_interval_end:
     s.oldBR = bitrate_at_interval_start
-  return s, bola_gp
+  return s, param
 
 
 # function returns the number of chunks downloaded during the heartbeat interval and uses delay

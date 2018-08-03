@@ -22,13 +22,9 @@ def getBolaVP(BOLA_GP):
   vp = MINIMUM_BUFFER_S / (BOLA_UTILITIES[0] + BOLA_GP - 1)   
   return vp
    
-
 def getBOLADecision(bufferlen, gp, Vp):
-  # Vp = getBolaVP(gp)
   quality = None
   score = -sys.maxint
-  # print >> sys.stderr , gp, Vp
-  #gp = -10.9458907969
   for i in range(len(BOLA_BITRATES)):
     s = (Vp * (BOLA_UTILITIES[i] + gp) - bufferlen) / BOLA_BITRATES[i]
     if s >= score:
@@ -39,33 +35,24 @@ def getBOLADecision(bufferlen, gp, Vp):
 # utility function:
 # pick the highest bitrate that will not introduce buffering
 def getUtilityBitrateDecision_dash(sessionHistory, lastest_chunkid, new_chunkid, bufferlen, margin):
-  candidateBitrates = [0,1,2,3,4]
-  index_to_bitrate = {0:350,1:600,2:1000,3:2000,4:3000}
   BUFFER_SAFETY_MARGIN = margin
   BUFFERING_WEIGHT = -100000000.0 
   BITRATE_WEIGHT = 1
-  tempbitrate = -1
   tempquality = 0
   utility = -100000000.0
-  #print sessionHistory, lastest_chunkid, new_chunkid
   estBufferingTime = 0.0
   est_bandwidth = estimateSmoothBandwidth_dash(sessionHistory, lastest_chunkid)
-  #print est_bandwidth
   if new_chunkid > 48: 
-    #exit()
-    return new_chunkid;
-  for br in candidateBitrates:
-    size = size_envivo[br][new_chunkid]
+    return 0
+  for br in VIDEO_BIT_RATE:
+    size = size_envivo[VIDEO_BIT_RATE_TO_INDEX[br]][new_chunkid]
     estBufferingTime = -1*min(((float(bufferlen))*BUFFER_SAFETY_MARGIN - (float(size)*8)/(est_bandwidth*1000)),0)
-    if utility < estBufferingTime * BUFFERING_WEIGHT + index_to_bitrate[br] * BITRATE_WEIGHT:
-      tempbitrate = index_to_bitrate[br]
-      tempquality = br
-      utility = estBufferingTime * BUFFERING_WEIGHT + index_to_bitrate[br] * BITRATE_WEIGHT
-    #print bufferlen,est_bandwidth,br,new_chunkid,size_envivo[br][new_chunkid],estBufferingTime
+    if utility < estBufferingTime * BUFFERING_WEIGHT + br * BITRATE_WEIGHT:
+      tempquality = VIDEO_BIT_RATE_TO_INDEX[br]
+      utility = estBufferingTime * BUFFERING_WEIGHT + br * BITRATE_WEIGHT
   return tempquality
 
 def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize):
-  # print bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, windowSize
   if chunkid + windowSize > TOTAL_CHUNKS - 1:
     windowSize = TOTAL_CHUNKS - 1 - chunkid
 
@@ -83,7 +70,6 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
   max_reward = -100000000
   best_combo = ()
   start_buffer = bufferlen
-  #start = time.time()
   for full_combo in CHUNK_COMBO_OPTIONS:
       combo = full_combo[0:windowSize]
       # print combo
@@ -98,8 +84,6 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
           chunk_quality = combo[position]
           index = chunkid + position + 1 # e.g., if last chunk is 3, then first iter is 3+0+1=4
           download_time = ((size_envivo[chunk_quality][index] * 8)/1000.)/future_bandwidth # this is Kb/Kb/s --> seconds
-          # print chunk_quality, download_time, future_bandwidth
-          # print size_envivo[chunk_quality][index], ((size_envivo[chunk_quality][index] * 8)/1000.), future_bandwidth
           if ( curr_buffer < download_time ):
               curr_rebuffer_time += (download_time - curr_buffer)
               curr_buffer = 0
@@ -127,7 +111,6 @@ def getMPCDecision(bufferlen, bitrate, chunkid, CHUNKSIZE, future_bandwidth, win
   bitrate = 0 # no combo had reward better than -1000000 (ERROR) so send 0
   if ( best_combo != () ): # some combo was good
       bitrate = best_combo[0]
-  #print "bitrate selected: ", bitrate
   return bitrate
 
 

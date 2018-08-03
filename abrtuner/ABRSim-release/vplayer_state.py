@@ -13,15 +13,13 @@ class State:
 		self.SIMULATION_STEP = config.SIMULATION_STEP
 		self.CHUNKSIZE = config.CHUNKSIZE
 		self.TOTAL_CHUNKS = config.TOTAL_CHUNKS
-
 		self.candidateBR, \
-		self.playtimems, \
-		self.sessiontimems, \
+		self.play_time_ms, \
+		self.session_time_ms, \
 		self.bitrate_groundtruth, \
 		self.bufftimems, \
 		self.BR, \
 		self.bwArray = self._ParseTrace(config, trace_file)
-
 		self.jointime = 0
 		self.BLEN = 0
 		self.CHUNKS_DOWNLOADED = 0
@@ -32,7 +30,6 @@ class State:
 		self.BR = 0
 		self.BW = 0
 		self.AVG_SESSION_BITRATE = 0
-		self.SWITCH_LOCK = 0
 		self.ATTEMPT_ID = 0
 		self.sessionHistory = dict()
 		self.sessionHistory[0] = [self.jointime]
@@ -55,17 +52,11 @@ class State:
 		self.upr_h = -1000
 		self.upr_b = 0.4
 		self.configsUsed = []
-		self.firstRebuf = False
 		self.lastABR = ''
 		self.chunk_residue = 0.0
-
 		self.allPerf = collections.OrderedDict()
 		self.completionTimeStamps = []
 		self.maxQoE = -sys.maxint
-
-		self.switchFlag = False
-
-		self.lastBlen_decisioncycle = list()
 		## hyb
 		self.min_playable_buff = 0.45 if config.DASH_BUFFER_ADJUST else 0.0
 
@@ -85,7 +76,6 @@ class State:
 		self.additive_inc = 0.0
 		###### Change detection variables end.. ######
 		###### MPC variables start ###################
-		self.discount = 0
 		self.bandwidthEsts = list()
 		self.pastErrors = list()
 		self.change_magnitude = 0
@@ -96,22 +86,18 @@ class State:
 		###### BOLA variables end.. ###################
 
 		self.initialBSM = 0.25
-		self.p1_min = self.initialBSM
 
 		self.upr = -10000000
 		self.A = self.initialBSM
 		self.bwMap = dict()
-		self.sizeDict = dict()
+		#self.sizeDict = dict()
 		self.usedBWArray = []
 		self.nSamples = collections.deque(5 * [0], 5)
 		self.hbCount = 0
 
-		#self.BSM = A
 		self.upr_h = -10000000
 		self.upr_b = 0.4
 		self.chunk_sched_time_delay = 0.0
-		#self.blen_decrease = False
-		#self.CHUNKS_DOWNLOADED_old = -1
 
 		self.gp = getBolaGP()
 		self.bola_vp = getBolaVP(self.gp)
@@ -132,16 +118,13 @@ class State:
 				except ValueError:
 					ts.append(float(l.split(" ")[0]))
 					bw.append(float(l.split(" ")[1]))
-
 		except IOError:
 			print >> sys.stderr, ("Incorrect filepath: " + trace_file + " no such file found...")
 			sys.exit()
-
 		try:
 			init_br = int(float(ls[-1].rstrip("\n").split(" ")[9]))
 		except (IndexError, ValueError):
 			init_br = bitrates[0]
-
 		try:
 			totalTraceTime = ts[-1] # read this value as the last time stamp in the file
 		except IndexError:
@@ -201,5 +184,4 @@ class State:
 			+ str(round(self.BUFFTIME,2)) + "\t" \
 			+ str(round(self.PLAYTIME,2)) + "\t" \
 			+ str(round(self.max_error,4)) + "\t" \
-			+ str(self.discount) + "\t" \
 			+ str(self.chunk_when_last_chd_ran)
